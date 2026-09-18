@@ -16,15 +16,15 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       primary:
         "bg-brand-500 hover:bg-brand-600 text-white shadow-xs hover:shadow-md focus:ring-brand-500/20 active:bg-brand-700",
       secondary:
-        "bg-navy-100 hover:bg-navy-200 text-navy-800 focus:ring-navy-400/20",
+        "bg-navy-100 dark:bg-slate-800 hover:bg-navy-200 dark:hover:bg-slate-700 text-navy-800 dark:text-white focus:ring-navy-400/20",
       outline:
-        "border border-navy-200 hover:border-navy-300 bg-white hover:bg-navy-50 text-navy-800 focus:ring-brand-500/20 shadow-xs",
+        "border border-navy-200 dark:border-navy-700 hover:border-navy-300 dark:hover:border-navy-600 bg-white dark:bg-[#111c38] hover:bg-navy-50 dark:hover:bg-[#1a274a] text-navy-800 dark:text-white focus:ring-brand-500/20 shadow-xs",
       soft:
-        "bg-brand-50 hover:bg-brand-100 text-brand-700 border border-brand-100 focus:ring-brand-500/20",
+        "bg-brand-50 dark:bg-brand-950/80 hover:bg-brand-100 dark:hover:bg-brand-900 text-brand-700 dark:text-cyan-300 border border-brand-100 dark:border-cyan-500/40 focus:ring-brand-500/20",
       ghost:
-        "hover:bg-navy-100 text-navy-700 focus:ring-navy-400/20",
+        "hover:bg-navy-100 dark:hover:bg-slate-800 text-navy-700 dark:text-slate-200 focus:ring-navy-400/20",
       danger:
-        "bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 focus:ring-rose-500/20 font-semibold",
+        "bg-rose-50 dark:bg-rose-950/80 hover:bg-rose-100 dark:hover:bg-rose-900 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800/80 focus:ring-rose-500/20 font-semibold",
       "vanik-ai":
         "bg-gradient-to-r from-brand-700 via-brand-500 to-brand-cyan hover:opacity-95 text-white shadow-xs hover:shadow-brand-glow focus:ring-brand-cyan/30",
     };

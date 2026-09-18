@@ -63,14 +63,14 @@ function CampaignsContent() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+              <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                 Promotional Campaigns
               </h1>
-              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200">
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-cyan-300 border border-brand-200 dark:border-cyan-500/40">
                 Growth Execution
               </span>
             </div>
-            <p className="text-xs md:text-sm text-navy-500 mt-1">
+            <p className="text-xs md:text-sm text-navy-500 dark:text-slate-300 mt-1">
               Automated multi-channel promotions across Paytm Soundbox announcements, QR coupons, and SMS
             </p>
           </div>
@@ -88,38 +88,38 @@ function CampaignsContent() {
 
         {/* Top Metric Summary Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-5 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
+          <div className="p-5 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
               Total Incremental Lift
             </span>
-            <div className="text-2xl font-extrabold text-emerald-600 mt-1">
+            <div className="text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">
               +{formatCurrencyINR(totalIncrementalRevenue)}
             </div>
-            <span className="text-[11px] text-navy-500 mt-0.5 block">
+            <span className="text-[11px] text-navy-500 dark:text-slate-400 mt-0.5 block">
               Directly measured from campaign receipts
             </span>
           </div>
 
-          <div className="p-5 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
+          <div className="p-5 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
               Average Campaign ROI
             </span>
-            <div className="text-2xl font-extrabold text-brand-600 mt-1">
+            <div className="text-2xl font-extrabold text-brand-600 dark:text-cyan-400 mt-1">
               {avgRoi}
             </div>
-            <span className="text-[11px] text-navy-500 mt-0.5 block">
+            <span className="text-[11px] text-navy-500 dark:text-slate-400 mt-0.5 block">
               Directly measured from campaign lift
             </span>
           </div>
 
-          <div className="p-5 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
+          <div className="p-5 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
               Converted Customers
             </span>
-            <div className="text-2xl font-extrabold text-navy-900 mt-1">
+            <div className="text-2xl font-extrabold text-navy-900 dark:text-white mt-1">
               {conversionsDisplay}
             </div>
-            <span className="text-[11px] text-navy-500 mt-0.5 block">
+            <span className="text-[11px] text-navy-500 dark:text-slate-400 mt-0.5 block">
               Redeemed via Paytm Soundbox QR
             </span>
           </div>
