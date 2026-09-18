@@ -19,6 +19,8 @@ import { mockNotifications } from "@/lib/mock-data";
 import { vanikApi } from "@/lib/api";
 import { cn } from "@/lib/utils";
 import { LogoutModal } from "./LogoutModal";
+import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
+import { useTheme } from "@/lib/theme";
 
 interface TopbarProps {
   onToggleMobileSidebar: () => void;
@@ -31,6 +33,7 @@ export const Topbar: React.FC<TopbarProps> = ({
   currentMerchantId = "m-001",
   onMerchantChange,
 }) => {
+  const { theme, toggleTheme } = useTheme();
   const [isMerchantMenuOpen, setIsMerchantMenuOpen] = useState(false);
   const [isDateMenuOpen, setIsDateMenuOpen] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
@@ -126,8 +129,11 @@ export const Topbar: React.FC<TopbarProps> = ({
           </div>
         </div>
 
-        {/* Right: Date Selector, Notifications & Merchant Profile Pill */}
+        {/* Right: Date Selector, Theme Switcher, Notifications & Merchant Profile Pill */}
         <div className="flex items-center gap-2.5">
+          {/* Animated Sun & Half-Moon Theme Switcher */}
+          <ThemeSwitcher theme={theme} onToggle={toggleTheme} />
+
           {/* Date Selector Pill */}
           <div className="relative hidden md:block">
             <button

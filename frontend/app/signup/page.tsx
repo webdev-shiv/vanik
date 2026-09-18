@@ -23,11 +23,12 @@ import {
   Moon,
 } from "lucide-react";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
+import { useTheme } from "@/lib/theme";
 import { vanikApi } from "@/lib/api";
 
 export default function SignUpPage() {
   const router = useRouter();
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const { theme, toggleTheme } = useTheme();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -133,7 +134,7 @@ export default function SignUpPage() {
           {/* Sliding Sun and Half-Moon Light/Dark Theme Switcher */}
           <ThemeSwitcher
             theme={theme}
-            onToggle={() => setTheme(isLight ? "dark" : "light")}
+            onToggle={toggleTheme}
           />
         </div>
       </header>

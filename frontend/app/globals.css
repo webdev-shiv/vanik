@@ -78,3 +78,88 @@ body {
   border: 1px solid #dbeafe;
 }
 
+/* Dark Mode Global Design Token Overrides */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0b1329;
+  color: #f1f5f9;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+html.dark .bg-navy-50 {
+  background-color: #070d1e !important;
+}
+
+html.dark .bg-white {
+  background-color: #111c38 !important;
+  border-color: #1e293b !important;
+}
+
+html.dark .m3-card {
+  background-color: #111c38 !important;
+  border-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark .m3-card:hover {
+  box-shadow: 0 10px 30px -5px rgba(0, 185, 245, 0.15) !important;
+}
+
+html.dark .vanik-glass {
+  background: rgba(17, 28, 56, 0.92) !important;
+  backdrop-filter: blur(12px);
+  border-color: #1e293b !important;
+}
+
+html.dark .m3-soft-blue {
+  background: linear-gradient(180deg, #132247 0%, #0f1b38 100%) !important;
+  border-color: #1e3a8a !important;
+}
+
+/* Dark Mode Typography & Element Overrides */
+html.dark .text-navy-900 { color: #f8fafc !important; }
+html.dark .text-navy-800 { color: #f1f5f9 !important; }
+html.dark .text-navy-700 { color: #e2e8f0 !important; }
+html.dark .text-navy-600 { color: #cbd5e1 !important; }
+html.dark .text-navy-500 { color: #94a3b8 !important; }
+html.dark .text-navy-400 { color: #64748b !important; }
+
+html.dark .border-navy-100 { border-color: #1e293b !important; }
+html.dark .border-navy-200 { border-color: #334155 !important; }
+html.dark .border-navy-200\/80 { border-color: rgba(51, 65, 85, 0.8) !important; }
+html.dark .border-navy-300 { border-color: #475569 !important; }
+
+html.dark .hover\:bg-navy-50:hover { background-color: #1a274a !important; }
+html.dark .hover\:bg-navy-100:hover { background-color: #1e2d56 !important; }
+html.dark .bg-navy-100 { background-color: #172445 !important; }
+
+html.dark .bg-\[\#e8f0fe\] { background-color: #172952 !important; color: #60a5fa !important; }
+html.dark .bg-\[\#eef6ff\] { background-color: #132247 !important; }
+
+/* Dark Mode Form Inputs & Controls */
+html.dark input[type="text"],
+html.dark input[type="email"],
+html.dark input[type="password"],
+html.dark input[type="search"],
+html.dark select,
+html.dark textarea {
+  background-color: #0c162d !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.dark input::placeholder {
+  color: #64748b !important;
+}
+
+
