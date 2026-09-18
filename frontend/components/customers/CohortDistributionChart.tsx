@@ -40,9 +40,9 @@ export const CohortDistributionChart: React.FC<CohortDistributionChartProps> = (
   }));
 
   return (
-    <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all duration-200">
-      <h3 className="text-base font-bold text-navy-900 tracking-tight">Customer Cohort Share</h3>
-      <p className="text-xs font-medium text-navy-500 mb-2">Distribution of customer base by RFM behavior</p>
+    <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all duration-200">
+      <h3 className="text-base font-bold text-navy-900 dark:text-white tracking-tight">Customer Cohort Share</h3>
+      <p className="text-xs font-medium text-navy-500 dark:text-slate-300 mb-2">Distribution of customer base by RFM behavior</p>
 
       <div className="h-64 w-full">
         <ResponsiveContainer width="100%" height="100%">

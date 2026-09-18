@@ -55,17 +55,17 @@ export default function CustomersPage() {
     <AppShell>
       <div className="space-y-6 pb-12">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white border border-navy-200/80 rounded-[28px] p-6 shadow-card">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[28px] p-6 shadow-card">
           <div>
             <div className="flex items-center gap-2.5 mb-1">
-              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 tracking-tight">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                 Customer Intelligence & Cohorts
               </h1>
-              <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200/60">
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-cyan-300 border border-brand-200/60 dark:border-cyan-500/40">
                 RFM Segmentation
               </span>
             </div>
-            <p className="text-xs md:text-sm font-medium text-navy-500">
+            <p className="text-xs md:text-sm font-medium text-navy-500 dark:text-slate-300">
               Recency, frequency, and monetary behavioral cohorts derived from merchant transaction history across {formatNumberIN(totalCustomers)} customers
             </p>
           </div>

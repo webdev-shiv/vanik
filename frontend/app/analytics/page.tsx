@@ -115,17 +115,17 @@ export default function AnalyticsPage() {
     <AppShell>
       <div className="space-y-6 pb-12">
         {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white border border-navy-200/80 rounded-[28px] p-6 shadow-card">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[28px] p-6 shadow-card">
           <div>
             <div className="flex items-center gap-2.5 mb-1">
-              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 tracking-tight">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                 Business Analytics & Forecasting
               </h1>
-              <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200/60">
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-cyan-300 border border-brand-200/60 dark:border-cyan-500/40">
                 Live Telemetry
               </span>
             </div>
-            <p className="text-xs md:text-sm font-medium text-navy-500">
+            <p className="text-xs md:text-sm font-medium text-navy-500 dark:text-slate-300">
               Deep-dive metrics across sales trends, ML predictive curves, hourly slump anomalies, and SKU velocity
             </p>
           </div>
@@ -135,58 +135,58 @@ export default function AnalyticsPage() {
 
         {/* Top KPI Metrics Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
+          <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">Gross Sales Ledger</span>
-              <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center">
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">Gross Sales Ledger</span>
+              <div className="w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-cyan-400 flex items-center justify-center">
                 <IndianRupee className="w-4 h-4" />
               </div>
             </div>
-            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight">
               {salesSummary ? formatCurrencyINR(salesSummary.totalRevenue) : "..."}
             </div>
-            <p className="text-[11px] font-medium text-navy-500 mt-1">Settled transaction volume</p>
+            <p className="text-[11px] font-medium text-navy-500 dark:text-slate-400 mt-1">Settled transaction volume</p>
           </div>
 
-          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
+          <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">Total Transactions</span>
-              <div className="w-8 h-8 rounded-full bg-sky-50 text-brand-cyan flex items-center justify-center">
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">Total Transactions</span>
+              <div className="w-8 h-8 rounded-full bg-sky-50 dark:bg-sky-950 text-brand-cyan flex items-center justify-center">
                 <BarChart3 className="w-4 h-4" />
               </div>
             </div>
-            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight">
               {salesSummary ? formatNumberIN(salesSummary.totalTransactions) : "..."}
             </div>
-            <p className="text-[11px] font-medium text-navy-500 mt-1">Successful QR & POS tickets</p>
+            <p className="text-[11px] font-medium text-navy-500 dark:text-slate-400 mt-1">Successful QR & POS tickets</p>
           </div>
 
-          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
+          <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">Average Ticket Size</span>
-              <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">Average Ticket Size</span>
+              <div className="w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 flex items-center justify-center">
                 <ShoppingBag className="w-4 h-4" />
               </div>
             </div>
-            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight">
               {salesSummary ? formatCurrencyINR(salesSummary.averageOrderValue) : "..."}
             </div>
-            <p className="text-[11px] font-semibold text-emerald-700 mt-1">Average basket per order</p>
+            <p className="text-[11px] font-semibold text-emerald-700 dark:text-emerald-300 mt-1">Average basket per order</p>
           </div>
 
-          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
+          <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">7D ML Forecast</span>
-              <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center">
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">7D ML Forecast</span>
+              <div className="w-8 h-8 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-cyan-400 flex items-center justify-center">
                 <BrainCircuit className="w-4 h-4" />
               </div>
             </div>
-            <div className="mt-3 text-xl md:text-2xl font-extrabold text-brand-700 tracking-tight">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-brand-700 dark:text-cyan-400 tracking-tight">
               {forecast && (forecast.total_projected_revenue || forecast.totalProjectedRevenue)
                 ? formatCurrencyINR(forecast.total_projected_revenue || forecast.totalProjectedRevenue || 0)
                 : "..."}
             </div>
-            <p className="text-[11px] font-semibold text-brand-600 mt-1">
+            <p className="text-[11px] font-semibold text-brand-600 dark:text-cyan-300 mt-1">
               {forecast?.confidence_interval || forecast?.confidenceInterval || "90%"} confidence band
             </p>
           </div>

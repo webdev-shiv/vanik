@@ -77,10 +77,10 @@ export default function SettingsPage() {
       <div className="space-y-6 pb-12 max-w-5xl">
         {/* Header */}
         <div>
-          <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+          <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight">
             {t("storeSettings", "Store Settings & AI Preferences")}
           </h1>
-          <p className="text-xs md:text-sm text-navy-500 mt-1">
+          <p className="text-xs md:text-sm text-navy-500 dark:text-slate-300 mt-1">
             Manage your Paytm merchant integration, display languages (Hindi & Punjabi), and autonomous AI recommendations
           </p>
         </div>
@@ -104,7 +104,7 @@ export default function SettingsPage() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all whitespace-nowrap ${
                   isActive
                     ? "bg-brand-600 text-white shadow-xs"
-                    : "bg-white text-navy-600 border border-navy-200/80 hover:bg-navy-50"
+                    : "bg-white dark:bg-[#111c38] text-navy-600 dark:text-slate-300 border border-navy-200/80 dark:border-navy-800 hover:bg-navy-50 dark:hover:bg-navy-800"
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -116,19 +116,19 @@ export default function SettingsPage() {
 
         {/* Tab 1: Merchant Profile */}
         {activeTab === "profile" && (
-          <div className="bg-white border border-navy-200/80 rounded-[24px] p-6 shadow-xs space-y-4">
-            <h3 className="text-base font-bold text-navy-900 mb-4">Business Profile</h3>
+          <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-6 shadow-xs space-y-4">
+            <h3 className="text-base font-bold text-navy-900 dark:text-white mb-4">Business Profile</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               <div>
-                <label className="block font-bold text-navy-700 uppercase tracking-wider text-[10px] mb-1">
+                <label className="block font-bold text-navy-700 dark:text-slate-300 uppercase tracking-wider text-[10px] mb-1">
                   Store Legal Name
                 </label>
                 <input
                   type="text"
                   value={profile.name}
                   onChange={(e) => setProfile({ ...profile, name: e.target.value })}
-                  className="w-full bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 font-semibold focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
+                  className="w-full bg-navy-50/50 dark:bg-[#0c162d] border border-navy-200/80 dark:border-navy-700 rounded-2xl px-3.5 py-2.5 text-navy-900 dark:text-white font-semibold focus:bg-white dark:focus:bg-[#111c38] focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
                 />
               </div>
 
@@ -180,15 +180,15 @@ export default function SettingsPage() {
 
         {/* Tab 2: Language Preferences */}
         {activeTab === "language" && (
-          <div className="bg-white border border-navy-200/80 rounded-[24px] p-6 shadow-xs space-y-5">
+          <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-6 shadow-xs space-y-5">
             <div>
               <div className="flex items-center gap-2 mb-1">
-                <Languages className="w-5 h-5 text-brand-600" />
-                <h3 className="text-base font-bold text-navy-900">
+                <Languages className="w-5 h-5 text-brand-600 dark:text-cyan-400" />
+                <h3 className="text-base font-bold text-navy-900 dark:text-white">
                   {t("displayLanguage", "Website & Display Language")}
                 </h3>
               </div>
-              <p className="text-xs text-navy-500">
+              <p className="text-xs text-navy-500 dark:text-slate-300">
                 {t("selectLanguageDesc", "Choose your preferred interface language for merchant reports, notifications, and AI insights.")}
               </p>
             </div>
@@ -203,8 +203,8 @@ export default function SettingsPage() {
                     onClick={() => changeLanguage(l.code)}
                     className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between h-32 relative group ${
                       isSelected
-                        ? "bg-brand-50/80 border-brand-500 ring-2 ring-brand-500/20 shadow-xs"
-                        : "bg-white border-navy-200/80 hover:bg-navy-50/60 hover:border-navy-300"
+                        ? "bg-brand-50/80 dark:bg-brand-950/80 border-brand-500 ring-2 ring-brand-500/20 shadow-xs"
+                        : "bg-white dark:bg-[#111c38] border-navy-200/80 dark:border-navy-800 hover:bg-navy-50/60 dark:hover:bg-navy-900/60 hover:border-navy-300"
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -218,10 +218,10 @@ export default function SettingsPage() {
                     </div>
 
                     <div>
-                      <div className="text-base font-extrabold text-navy-900 leading-tight">
+                      <div className="text-base font-extrabold text-navy-900 dark:text-white leading-tight">
                         {l.nativeName}
                       </div>
-                      <div className="text-xs font-semibold text-navy-500 mt-0.5">
+                      <div className="text-xs font-semibold text-navy-500 dark:text-slate-300 mt-0.5">
                         {l.name}
                       </div>
                     </div>
@@ -230,14 +230,14 @@ export default function SettingsPage() {
               })}
             </div>
 
-            <div className="p-4 bg-navy-50 rounded-2xl border border-navy-100 flex items-center justify-between text-xs text-navy-700">
+            <div className="p-4 bg-navy-50 dark:bg-[#0c162d] rounded-2xl border border-navy-100 dark:border-navy-800 flex items-center justify-between text-xs text-navy-700 dark:text-slate-200">
               <div className="flex items-center gap-2">
-                <Globe className="w-4 h-4 text-brand-600" />
+                <Globe className="w-4 h-4 text-brand-600 dark:text-cyan-400" />
                 <span>
-                  Active Language: <strong className="text-navy-900">{supportedLanguages.find((l) => l.code === lang)?.nativeName} ({supportedLanguages.find((l) => l.code === lang)?.name})</strong>
+                  Active Language: <strong className="text-navy-900 dark:text-white">{supportedLanguages.find((l) => l.code === lang)?.nativeName} ({supportedLanguages.find((l) => l.code === lang)?.name})</strong>
                 </span>
               </div>
-              <span className="text-[11px] text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+              <span className="text-[11px] text-emerald-600 dark:text-emerald-300 font-bold bg-emerald-50 dark:bg-emerald-950/80 px-2.5 py-1 rounded-full border border-emerald-200/60 dark:border-emerald-800/80">
                 Instant System Sync
               </span>
             </div>

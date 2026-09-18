@@ -64,17 +64,17 @@ export const ProductPerformanceTable: React.FC<ProductPerformanceTableProps> = (
   }, [productsList, searchQuery, statusFilter]);
 
   return (
-    <div className="bg-white border border-navy-200/80 rounded-[24px] shadow-card overflow-hidden transition-all duration-200 space-y-0">
+    <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-card overflow-hidden transition-all duration-200 space-y-0">
       {/* Header Bar with Action CTA to Open in Analytics */}
-      <div className="p-5 md:p-6 border-b border-navy-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="p-5 md:p-6 border-b border-navy-100 dark:border-navy-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <div className="flex items-center gap-2">
-            <h3 className="text-base font-bold text-navy-900 tracking-tight">Product Performance & Attachment</h3>
-            <span className="text-xs font-bold text-navy-700 bg-navy-100/80 px-3 py-0.5 rounded-full border border-navy-200/60">
+            <h3 className="text-base font-bold text-navy-900 dark:text-white tracking-tight">Product Performance & Attachment</h3>
+            <span className="text-xs font-bold text-navy-700 dark:text-slate-200 bg-navy-100/80 dark:bg-navy-800 px-3 py-0.5 rounded-full border border-navy-200/60 dark:border-navy-700">
               {filteredProducts.length} Menu SKUs
             </span>
           </div>
-          <p className="text-xs font-medium text-navy-500 mt-0.5">
+          <p className="text-xs font-medium text-navy-500 dark:text-slate-300 mt-0.5">
             Identify high-velocity anchors vs items suffering demand decoupling
           </p>
         </div>
@@ -90,22 +90,22 @@ export const ProductPerformanceTable: React.FC<ProductPerformanceTableProps> = (
       </div>
 
       {/* User-Friendly Filter Controls (Search + Status Filter) */}
-      <div className="px-5 py-3 bg-navy-50/50 border-b border-navy-100 flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div className="px-5 py-3 bg-navy-50/50 dark:bg-[#0c162d] border-b border-navy-100 dark:border-navy-800 flex flex-wrap items-center justify-between gap-3 text-xs">
         <div className="relative w-full sm:w-64">
-          <Search className="w-3.5 h-3.5 absolute left-3 top-2.5 text-navy-400" />
+          <Search className="w-3.5 h-3.5 absolute left-3 top-2.5 text-navy-400 dark:text-slate-400" />
           <input
             type="text"
             placeholder="Search menu item or category..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full text-xs bg-white border border-navy-200/80 rounded-full pl-9 pr-3 py-1.5 text-navy-900 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
+            className="w-full text-xs bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-700 rounded-full pl-9 pr-3 py-1.5 text-navy-900 dark:text-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
           />
         </div>
 
         <div className="flex items-center gap-2">
-          <Filter className="w-3.5 h-3.5 text-navy-400 shrink-0" />
-          <span className="font-bold text-navy-700">Status:</span>
-          <div className="flex items-center gap-1 bg-white p-0.5 rounded-full border border-navy-200/80">
+          <Filter className="w-3.5 h-3.5 text-navy-400 dark:text-slate-400 shrink-0" />
+          <span className="font-bold text-navy-700 dark:text-slate-300">Status:</span>
+          <div className="flex items-center gap-1 bg-white dark:bg-[#111c38] p-0.5 rounded-full border border-navy-200/80 dark:border-navy-700">
             {["ALL", "GROWING", "STEADY", "DECLINING"].map((st) => (
               <button
                 key={st}
@@ -113,7 +113,7 @@ export const ProductPerformanceTable: React.FC<ProductPerformanceTableProps> = (
                 className={`px-3 py-1 rounded-full text-[11px] font-bold transition-all ${
                   statusFilter === st
                     ? "bg-brand-600 text-white shadow-xs"
-                    : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
+                    : "text-navy-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-navy-50 dark:hover:bg-navy-800"
                 }`}
               >
                 {st}
@@ -125,47 +125,47 @@ export const ProductPerformanceTable: React.FC<ProductPerformanceTableProps> = (
 
       {/* Product Table with Visual Progress Bar */}
       <div className="overflow-x-auto">
-        <table className="w-full text-left text-xs text-navy-700">
-          <thead className="bg-navy-50/80 border-b border-navy-100 text-[11px] font-extrabold uppercase tracking-wider text-navy-400">
+        <table className="w-full text-left text-xs text-navy-700 dark:text-slate-200">
+          <thead className="bg-navy-50/80 dark:bg-[#0c162d] border-b border-navy-100 dark:border-navy-800 text-[11px] font-extrabold uppercase tracking-wider text-navy-500 dark:text-slate-300">
             <tr>
-              <th className="py-3.5 px-5 font-bold">Product Item</th>
-              <th className="py-3.5 px-5 font-bold">Category</th>
-              <th className="py-3.5 px-5 font-bold">Units Sold</th>
-              <th className="py-3.5 px-5 font-bold">Avg Selling Price</th>
-              <th className="py-3.5 px-5 font-bold">Revenue</th>
-              <th className="py-3.5 px-5 font-bold">Share</th>
-              <th className="py-3.5 px-5 font-bold">Growth Trend</th>
-              <th className="py-3.5 px-5 font-bold text-right">Status</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Product Item</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Category</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Units Sold</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Avg Selling Price</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Revenue</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Share</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300">Growth Trend</th>
+              <th className="py-3.5 px-5 font-bold text-navy-600 dark:text-slate-300 text-right">Status</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-navy-100/70">
+          <tbody className="divide-y divide-navy-100/70 dark:divide-navy-800/60">
             {filteredProducts.map((p) => {
               return (
-                <tr key={p.id} className="hover:bg-navy-50/60 transition-colors group">
-                  <td className="py-3.5 px-5 font-bold text-navy-900">
+                <tr key={p.id} className="hover:bg-navy-50/60 dark:hover:bg-navy-900/40 transition-colors group">
+                  <td className="py-3.5 px-5 font-bold text-navy-900 dark:text-white">
                     <div className="flex items-center gap-2.5">
-                      <div className="w-7 h-7 rounded-full bg-brand-50 text-brand-600 border border-brand-200/50 flex items-center justify-center shrink-0 group-hover:bg-brand-500 group-hover:text-white transition-all">
+                      <div className="w-7 h-7 rounded-full bg-brand-50 dark:bg-brand-950 text-brand-600 dark:text-cyan-400 border border-brand-200/50 dark:border-cyan-500/40 flex items-center justify-center shrink-0 group-hover:bg-brand-500 group-hover:text-white transition-all">
                         <ShoppingBag className="w-3.5 h-3.5" />
                       </div>
                       <span>{p.name}</span>
                     </div>
                   </td>
-                  <td className="py-3.5 px-5 font-medium text-navy-600">{p.category}</td>
-                  <td className="py-3.5 px-5 font-mono font-bold text-navy-900">
+                  <td className="py-3.5 px-5 font-medium text-navy-600 dark:text-slate-300">{p.category}</td>
+                  <td className="py-3.5 px-5 font-mono font-bold text-navy-900 dark:text-white">
                     {formatNumberIN(p.unitsSold)}
                   </td>
-                  <td className="py-3.5 px-5 font-mono text-navy-700">
+                  <td className="py-3.5 px-5 font-mono text-navy-700 dark:text-slate-200">
                     {formatCurrencyINR(p.averageSellingPrice)}
                   </td>
-                  <td className="py-3.5 px-5 font-mono font-extrabold text-navy-900">
+                  <td className="py-3.5 px-5 font-mono font-extrabold text-navy-900 dark:text-white">
                     {formatCurrencyINR(p.revenue)}
                   </td>
                   <td className="py-3.5 px-5">
                     <div className="space-y-1 min-w-[70px]">
-                      <span className="font-bold text-navy-800 text-[11px] block">{p.revenueSharePercent}%</span>
-                      <div className="w-full bg-navy-100 rounded-full h-1.5 overflow-hidden">
+                      <span className="font-bold text-navy-800 dark:text-slate-200 text-[11px] block">{p.revenueSharePercent}%</span>
+                      <div className="w-full bg-navy-100 dark:bg-navy-800 rounded-full h-1.5 overflow-hidden">
                         <div
-                          className="bg-brand-500 h-full rounded-full"
+                          className="bg-brand-500 dark:bg-cyan-400 h-full rounded-full"
                           style={{ width: `${Math.min(p.revenueSharePercent * 2.5, 100)}%` }}
                         />
                       </div>
@@ -174,7 +174,7 @@ export const ProductPerformanceTable: React.FC<ProductPerformanceTableProps> = (
                   <td className="py-3.5 px-5">
                     <span
                       className={`inline-flex items-center gap-1 font-bold text-xs ${
-                        p.growthPercent > 0 ? "text-emerald-600" : "text-rose-600"
+                        p.growthPercent > 0 ? "text-emerald-600 dark:text-emerald-400" : "text-rose-600 dark:text-rose-400"
                       }`}
                     >
                       {p.growthPercent > 0 ? (
@@ -189,10 +189,10 @@ export const ProductPerformanceTable: React.FC<ProductPerformanceTableProps> = (
                     <span
                       className={`text-[10px] font-extrabold px-3 py-1 rounded-full border ${
                         p.status === "GROWING"
-                          ? "bg-emerald-50 text-emerald-700 border-emerald-200/80"
+                          ? "bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border-emerald-200/80 dark:border-emerald-800/80"
                           : p.status === "STEADY"
-                          ? "bg-brand-50 text-brand-700 border-brand-200/80"
-                          : "bg-rose-50 text-rose-700 border-rose-200/80"
+                          ? "bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-cyan-300 border-brand-200/80 dark:border-cyan-500/40"
+                          : "bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border-rose-200/80 dark:border-rose-800/80"
                       }`}
                     >
                       {p.status}

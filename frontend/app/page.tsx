@@ -87,17 +87,17 @@ export default function DashboardPage() {
     <AppShell>
       <div className="space-y-6 pb-12">
         {/* Welcome Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white border border-navy-200/80 rounded-[28px] p-6 shadow-card">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[28px] p-6 shadow-card">
           <div>
             <div className="flex items-center gap-2.5 mb-1">
-              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 tracking-tight">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                 {greeting}, {merchantName}
               </h1>
-              <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/80">
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200/80 dark:border-emerald-800/80">
                 Active Store
               </span>
             </div>
-            <p className="text-xs md:text-sm font-medium text-navy-500">
+            <p className="text-xs md:text-sm font-medium text-navy-500 dark:text-slate-300">
               Here&apos;s what&apos;s happening with your business today.
             </p>
           </div>
@@ -105,7 +105,7 @@ export default function DashboardPage() {
           <div className="flex items-center gap-3">
             <Link href="/simulator">
               <Button variant="outline" size="sm">
-                <SlidersHorizontal className="w-3.5 h-3.5 mr-1 text-brand-600" />
+                <SlidersHorizontal className="w-3.5 h-3.5 mr-1 text-brand-600 dark:text-cyan-400" />
                 <span>Open Simulator</span>
               </Button>
             </Link>
@@ -204,17 +204,17 @@ export default function DashboardPage() {
 
             {/* 6. GROWTH COPILOT CALLOUT */}
             <section aria-label="Growth Copilot Callout">
-              <div className="p-6 md:p-8 bg-gradient-to-r from-[#eef6ff] via-white to-[#e8f0fe] border border-brand-200/80 rounded-[28px] shadow-card flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
+              <div className="p-6 md:p-8 bg-gradient-to-r from-[#eef6ff] via-white to-[#e8f0fe] dark:from-[#132247] dark:via-[#111c38] dark:to-[#0f1b38] border border-brand-200/80 dark:border-navy-800 rounded-[28px] shadow-card flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-brand-700 to-brand-cyan text-white flex items-center justify-center shrink-0 shadow-md">
                     <Bot className="w-7 h-7" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-extrabold text-navy-900 tracking-tight">
+                    <h3 className="text-lg font-extrabold text-navy-900 dark:text-white tracking-tight">
                       Let VANIK&apos;s AI help you grow
                     </h3>
-                    <p className="text-xs md:text-sm font-medium text-navy-600 mt-1 max-w-xl leading-relaxed">
+                    <p className="text-xs md:text-sm font-medium text-navy-600 dark:text-slate-300 mt-1 max-w-xl leading-relaxed">
                       Get personalized recommendations, run what-if scenarios, and take smarter business actions backed by transaction telemetry.
                     </p>
                   </div>

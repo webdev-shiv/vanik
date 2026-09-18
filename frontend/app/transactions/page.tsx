@@ -226,14 +226,14 @@ function TransactionsContent() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+              <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white tracking-tight">
                 All Transactions Ledger
               </h1>
-              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/80">
                 Live Paytm Feed
               </span>
             </div>
-            <p className="text-xs md:text-sm text-navy-500 mt-1">
+            <p className="text-xs md:text-sm text-navy-500 dark:text-slate-300 mt-1">
               Real-time payment audit trail across Paytm Soundbox, QR scans, and POS terminals.
             </p>
           </div>
@@ -244,19 +244,19 @@ function TransactionsContent() {
             onClick={() => alert("Exporting transaction CSV ledger...")}
             className="font-bold self-start sm:self-auto"
           >
-            <Download className="w-4 h-4 mr-1.5 text-brand-600" />
+            <Download className="w-4 h-4 mr-1.5 text-brand-600 dark:text-cyan-400" />
             <span>Export CSV</span>
           </Button>
         </div>
 
         {/* 1. Timeframe Filter Pills: Day | Month | Year */}
-        <div className="bg-white border border-navy-200/80 rounded-[24px] p-4 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-4 shadow-xs flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 w-full md:w-auto">
-            <span className="text-xs font-bold text-navy-500 uppercase tracking-wider flex items-center gap-1 shrink-0 mr-1">
-              <Calendar className="w-4 h-4 text-brand-600" />
+            <span className="text-xs font-bold text-navy-500 dark:text-slate-300 uppercase tracking-wider flex items-center gap-1 shrink-0 mr-1">
+              <Calendar className="w-4 h-4 text-brand-600 dark:text-cyan-400" />
               <span>Timeframe:</span>
             </span>
-            <div className="flex items-center gap-1.5 p-1 bg-navy-50 rounded-full border border-navy-200/60 w-full md:w-auto overflow-x-auto">
+            <div className="flex items-center gap-1.5 p-1 bg-navy-50 dark:bg-[#0c162d] rounded-full border border-navy-200/60 dark:border-navy-700 w-full md:w-auto overflow-x-auto">
               {[
                 { id: "day", label: "Day (Today/24h)" },
                 { id: "month", label: "Month (30 Days)" },
@@ -269,7 +269,7 @@ function TransactionsContent() {
                   className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap ${
                     timeframeFilter === tf.id
                       ? "bg-brand-600 text-white shadow-xs"
-                      : "text-navy-600 hover:text-navy-900 hover:bg-navy-100/60"
+                      : "text-navy-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-navy-100/60 dark:hover:bg-navy-800/60"
                   }`}
                 >
                   {tf.label}
@@ -280,77 +280,77 @@ function TransactionsContent() {
 
           {/* Search Field */}
           <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 absolute left-3.5 top-3 text-navy-400" />
+            <Search className="w-4 h-4 absolute left-3.5 top-3 text-navy-400 dark:text-slate-400" />
             <input
               type="text"
               placeholder="Search receipt ID or customer..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-full pl-10 pr-4 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
+              className="w-full text-xs bg-navy-50/50 dark:bg-[#0c162d] border border-navy-200/80 dark:border-navy-700 rounded-full pl-10 pr-4 py-2.5 text-navy-900 dark:text-white focus:bg-white dark:focus:bg-[#111c38] focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             />
           </div>
         </div>
 
         {/* 2. Top Summary Metric Cards */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="p-4 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
+          <div className="p-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
               Settled Volume
             </span>
-            <div className="text-xl md:text-2xl font-extrabold text-navy-900 mt-1">
+            <div className="text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white mt-1">
               {formatCurrencyINR(stats.totalVolume)}
             </div>
-            <span className="text-[11px] text-emerald-600 font-bold block mt-0.5">
+            <span className="text-[11px] text-emerald-600 dark:text-emerald-400 font-bold block mt-0.5">
               Cleared to bank A/C
             </span>
           </div>
 
-          <div className="p-4 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
+          <div className="p-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
               Transaction Count
             </span>
-            <div className="text-xl md:text-2xl font-extrabold text-brand-700 mt-1">
+            <div className="text-xl md:text-2xl font-extrabold text-brand-700 dark:text-cyan-400 mt-1">
               {formatNumberIN(stats.count)}
             </div>
-            <span className="text-[11px] text-navy-500 font-medium block mt-0.5">
+            <span className="text-[11px] text-navy-500 dark:text-slate-400 font-medium block mt-0.5">
               Total receipts logged
             </span>
           </div>
 
-          <div className="p-4 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
-              Avg Ticket (AOV)
+          <div className="p-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
+              Success Rate
             </span>
-            <div className="text-xl md:text-2xl font-extrabold text-navy-900 mt-1">
-              ₹{stats.avgTicket}
+            <div className="text-xl md:text-2xl font-extrabold text-emerald-600 dark:text-emerald-400 mt-1">
+              {stats.successRate}%
             </div>
-            <span className="text-[11px] text-navy-500 font-medium block mt-0.5">
-              Per successful order
+            <span className="text-[11px] text-navy-500 dark:text-slate-400 font-medium block mt-0.5">
+              Zero payment drops
             </span>
           </div>
 
-          <div className="p-4 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
-              Success Rate
+          <div className="p-4 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-navy-500 dark:text-slate-300">
+              Average Ticket
             </span>
-            <div className="text-xl md:text-2xl font-extrabold text-emerald-600 mt-1">
-              {stats.successRate}%
+            <div className="text-xl md:text-2xl font-extrabold text-navy-900 dark:text-white mt-1">
+              {formatCurrencyINR(stats.avgTicket)}
             </div>
-            <span className="text-[11px] text-emerald-700 font-bold block mt-0.5">
-              Zero payment drops
+            <span className="text-[11px] text-navy-500 dark:text-slate-400 font-medium block mt-0.5">
+              Per successful receipt
             </span>
           </div>
         </div>
 
         {/* 3. Secondary Filter Bar: Status & Channel */}
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-white border border-navy-200/80 rounded-[24px] p-4 shadow-xs text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] p-4 shadow-xs text-xs">
           <div className="flex items-center gap-2">
-            <Filter className="w-4 h-4 text-navy-400 shrink-0" />
-            <span className="font-bold text-navy-700">Status:</span>
+            <Filter className="w-4 h-4 text-navy-400 dark:text-slate-400 shrink-0" />
+            <span className="font-bold text-navy-700 dark:text-slate-300">Status:</span>
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="bg-navy-50 border border-navy-200/80 rounded-full px-3 py-1.5 font-bold text-navy-800 focus:outline-none focus:border-brand-500"
+              className="bg-navy-50 dark:bg-[#0c162d] border border-navy-200/80 dark:border-navy-700 rounded-full px-3 py-1.5 font-bold text-navy-800 dark:text-white focus:outline-none focus:border-brand-500"
             >
               <option value="ALL">All Statuses</option>
               <option value="SUCCESSFUL">Successful</option>
@@ -361,11 +361,11 @@ function TransactionsContent() {
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="font-bold text-navy-700">Payment Channel:</span>
+            <span className="font-bold text-navy-700 dark:text-slate-300">Payment Channel:</span>
             <select
               value={channelFilter}
               onChange={(e) => setChannelFilter(e.target.value)}
-              className="bg-navy-50 border border-navy-200/80 rounded-full px-3 py-1.5 font-bold text-navy-800 focus:outline-none focus:border-brand-500"
+              className="bg-navy-50 dark:bg-[#0c162d] border border-navy-200/80 dark:border-navy-700 rounded-full px-3 py-1.5 font-bold text-navy-800 dark:text-white focus:outline-none focus:border-brand-500"
             >
               <option value="ALL">All Channels</option>
               <option value="Paytm Soundbox">Paytm Soundbox</option>
@@ -376,7 +376,7 @@ function TransactionsContent() {
         </div>
 
         {/* 4. Transactions Table */}
-        <div className="bg-white border border-navy-200/80 rounded-[24px] shadow-xs overflow-hidden">
+        <div className="bg-white dark:bg-[#111c38] border border-navy-200/80 dark:border-navy-800 rounded-[24px] shadow-xs overflow-hidden">
           {filteredTransactions.length === 0 ? (
             <div className="p-8">
               <EmptyState
@@ -394,51 +394,51 @@ function TransactionsContent() {
             </div>
           ) : (
             <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs text-navy-700">
-                <thead className="bg-navy-50/70 border-b border-navy-100 text-[11px] font-bold uppercase tracking-wider text-navy-400">
+              <table className="w-full text-left text-xs text-navy-700 dark:text-slate-200">
+                <thead className="bg-navy-50/90 dark:bg-[#0c162d] border-b border-navy-200/80 dark:border-navy-800 text-[11px] font-bold uppercase tracking-wider text-navy-600 dark:text-slate-300">
                   <tr>
-                    <th className="py-3.5 px-4 font-bold">Receipt ID</th>
-                    <th className="py-3.5 px-4 font-bold">Date & Time</th>
-                    <th className="py-3.5 px-4 font-bold">Customer</th>
-                    <th className="py-3.5 px-4 font-bold">Channel</th>
-                    <th className="py-3.5 px-4 font-bold">Amount</th>
-                    <th className="py-3.5 px-4 font-bold">Status</th>
-                    <th className="py-3.5 px-4 font-bold text-right">Receipt</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300">Receipt ID</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300">Date & Time</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300">Customer</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300">Channel</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300">Amount</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300">Status</th>
+                    <th className="py-3.5 px-4 font-bold text-navy-600 dark:text-slate-300 text-right">Receipt</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-navy-50">
+                <tbody className="divide-y divide-navy-100/70 dark:divide-navy-800/60">
                   {filteredTransactions.map((t) => (
-                    <tr key={t.id} className="hover:bg-navy-50/50 transition-colors">
-                      <td className="py-3.5 px-4 font-mono font-bold text-navy-900">
+                    <tr key={t.id} className="hover:bg-navy-50/60 dark:hover:bg-navy-900/40 transition-colors">
+                      <td className="py-3.5 px-4 font-mono font-bold text-navy-900 dark:text-white">
                         {t.receiptNumber}
                       </td>
-                      <td className="py-3.5 px-4 text-navy-600 font-medium">
+                      <td className="py-3.5 px-4 text-navy-600 dark:text-slate-300 font-medium">
                         {t.timestamp}
                       </td>
-                      <td className="py-3.5 px-4 font-bold text-navy-900">
+                      <td className="py-3.5 px-4 font-bold text-navy-900 dark:text-white">
                         {t.customerName}
                       </td>
                       <td className="py-3.5 px-4">
-                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-navy-50 border border-navy-200/60 text-navy-700 font-semibold text-[11px]">
-                          {t.channel === "Paytm Soundbox" && <Radio className="w-3 h-3 text-brand-600" />}
-                          {t.channel === "Paytm QR" && <QrCode className="w-3 h-3 text-brand-600" />}
-                          {t.channel === "Card POS" && <CreditCard className="w-3 h-3 text-indigo-600" />}
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-navy-50 dark:bg-navy-800 border border-navy-200/60 dark:border-navy-700 text-navy-700 dark:text-slate-200 font-semibold text-[11px]">
+                          {t.channel === "Paytm Soundbox" && <Radio className="w-3 h-3 text-brand-600 dark:text-cyan-400" />}
+                          {t.channel === "Paytm QR" && <QrCode className="w-3 h-3 text-brand-600 dark:text-cyan-400" />}
+                          {t.channel === "Card POS" && <CreditCard className="w-3 h-3 text-indigo-600 dark:text-indigo-400" />}
                           <span>{t.channel}</span>
                         </span>
                       </td>
-                      <td className="py-3.5 px-4 font-mono font-extrabold text-navy-900 text-sm">
+                      <td className="py-3.5 px-4 font-mono font-extrabold text-navy-900 dark:text-white text-sm">
                         {formatCurrencyINR(t.amount)}
                       </td>
                       <td className="py-3.5 px-4">
                         <span
                           className={`inline-flex items-center gap-1 text-[11px] font-bold px-2.5 py-0.5 rounded-full border ${
                             t.status === "SUCCESSFUL"
-                              ? "bg-emerald-50 text-emerald-700 border-emerald-200"
+                              ? "bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800/80"
                               : t.status === "PENDING"
-                              ? "bg-brand-50 text-brand-700 border-brand-200"
+                              ? "bg-brand-50 dark:bg-brand-950/80 text-brand-700 dark:text-cyan-300 border-brand-200 dark:border-cyan-500/40"
                               : t.status === "REFUNDED"
-                              ? "bg-amber-50 text-amber-700 border-amber-200"
-                              : "bg-rose-50 text-rose-700 border-rose-200"
+                              ? "bg-amber-50 dark:bg-amber-950/80 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-800/80"
+                              : "bg-rose-50 dark:bg-rose-950/80 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-800/80"
                           }`}
                         >
                           <span
