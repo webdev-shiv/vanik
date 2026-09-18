@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import {
   Store,
   ChevronDown,
@@ -10,20 +11,20 @@ import {
   Menu,
   Search,
   User,
+  LogOut,
+  Settings as SettingsIcon,
+  ShieldCheck,
 } from "lucide-react";
 import { mockNotifications } from "@/lib/mock-data";
 import { vanikApi } from "@/lib/api";
 import { cn } from "@/lib/utils";
+import { LogoutModal } from "./LogoutModal";
 
 interface TopbarProps {
   onToggleMobileSidebar: () => void;
   currentMerchantId?: string;
   onMerchantChange?: (id: string) => void;
 }
-
-import Link from "next/link";
-import { LogoutModal } from "./LogoutModal";
-import { LogOut, Settings as SettingsIcon, ShieldCheck } from "lucide-react";
 
 export const Topbar: React.FC<TopbarProps> = ({
   onToggleMobileSidebar,
@@ -79,6 +80,26 @@ export const Topbar: React.FC<TopbarProps> = ({
     setNotifications(notifications.map((n) => ({ ...n, read: true })));
   };
 
+  const timeframeMap: Record<string, string> = {
+    "Today": "TODAY",
+    "Yesterday": "YESTERDAY",
+    "Last 7 Days": "7D",
+    "Last 30 Days": "30D",
+    "Last 90 Days": "90D",
+    "This Fiscal Year (FY26)": "1Y",
+  };
+
+  const handleSelectDateOption = (opt: string) => {
+    setSelectedDate(opt);
+    setIsDateMenuOpen(false);
+    const tf = timeframeMap[opt] || "30D";
+    if (typeof window !== "undefined") {
+      localStorage.setItem("vanik_selected_timeframe", tf);
+      localStorage.setItem("vanik_selected_date_label", opt);
+      window.dispatchEvent(new CustomEvent("vanik_timeframe_change", { detail: { timeframe: tf, label: opt } }));
+    }
+  };
+
   return (
     <>
       <header className="h-16 bg-white border-b border-navy-200/80 px-4 md:px-6 flex items-center justify-between sticky top-0 z-30 select-none shadow-xs">
@@ -131,10 +152,7 @@ export const Topbar: React.FC<TopbarProps> = ({
                 {dateOptions.map((opt) => (
                   <button
                     key={opt}
-                    onClick={() => {
-                      setSelectedDate(opt);
-                      setIsDateMenuOpen(false);
-                    }}
+                    onClick={() => handleSelectDateOption(opt)}
                     className={cn(
                       "w-full px-3 py-2 text-left text-xs font-medium hover:bg-navy-50 transition-colors flex items-center justify-between",
                       selectedDate === opt ? "text-brand-600 font-bold bg-brand-50/60" : "text-navy-700"

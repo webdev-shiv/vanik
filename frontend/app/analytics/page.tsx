@@ -58,13 +58,18 @@ export default function AnalyticsPage() {
     topDeclining: ProductPerformance[];
   } | null>(null);
 
+  const [timeframe, setTimeframe] = useState<string>("7D");
+
   useEffect(() => {
     let active = true;
-    async function loadAllAnalytics() {
+    const initialTf = typeof window !== "undefined" ? localStorage.getItem("vanik_selected_timeframe") || "30D" : "30D";
+    setTimeframe(initialTf);
+
+    async function loadAllAnalytics(tf: string = initialTf) {
       setLoading(true);
       try {
         const [salesRes, forecastRes, anomalyRes, productsRes] = await Promise.all([
-          vanikApi.getSalesAnalytics(merchantId),
+          vanikApi.getSalesAnalytics(merchantId, tf),
           vanikApi.getSalesForecast(merchantId, 7),
           vanikApi.getAnomalyDetection(merchantId),
           vanikApi.getProductAnalytics(merchantId),
@@ -83,9 +88,19 @@ export default function AnalyticsPage() {
       }
     }
 
-    loadAllAnalytics();
+    loadAllAnalytics(initialTf);
+
+    const handleTimeframeChange = (e: any) => {
+      const newTf = e.detail?.timeframe || "30D";
+      setTimeframe(newTf);
+      loadAllAnalytics(newTf);
+    };
+
+    window.addEventListener("vanik_timeframe_change", handleTimeframeChange);
+
     return () => {
       active = false;
+      window.removeEventListener("vanik_timeframe_change", handleTimeframeChange);
     };
   }, [merchantId]);
 

@@ -34,11 +34,14 @@ export default function DashboardPage() {
   const [error, setError] = useState<string | null>(null);
   const [data, setData] = useState<DashboardSummary | null>(null);
 
-  const fetchDashboardData = async () => {
+  const [timeframe, setTimeframe] = useState<string>("7D");
+  const [selectedLabel, setSelectedLabel] = useState<string>("Last 30 Days");
+
+  const fetchDashboardData = async (tf: string = "7D") => {
     setLoading(true);
     setError(null);
     try {
-      const summary = await vanikApi.getDashboardSummary("m-001");
+      const summary = await vanikApi.getDashboardSummary("m-001", tf);
       setData(summary);
     } catch (err) {
       setError("Business data is temporarily unavailable.");
@@ -50,7 +53,21 @@ export default function DashboardPage() {
   const [greeting, setGreeting] = useState("Good Morning");
 
   useEffect(() => {
-    fetchDashboardData();
+    const savedTf = typeof window !== "undefined" ? localStorage.getItem("vanik_selected_timeframe") || "30D" : "30D";
+    const savedLabel = typeof window !== "undefined" ? localStorage.getItem("vanik_selected_date_label") || "Last 30 Days" : "Last 30 Days";
+    setTimeframe(savedTf);
+    setSelectedLabel(savedLabel);
+    fetchDashboardData(savedTf);
+
+    const handleTimeframeChange = (e: any) => {
+      const newTf = e.detail?.timeframe || "30D";
+      const newLabel = e.detail?.label || "Last 30 Days";
+      setTimeframe(newTf);
+      setSelectedLabel(newLabel);
+      fetchDashboardData(newTf);
+    };
+
+    window.addEventListener("vanik_timeframe_change", handleTimeframeChange);
 
     // Real-time local device hour calculation
     const hour = new Date().getHours();
@@ -58,6 +75,10 @@ export default function DashboardPage() {
     else if (hour >= 12 && hour < 17) setGreeting("Good Afternoon");
     else if (hour >= 17 && hour < 22) setGreeting("Good Evening");
     else setGreeting("Good Night");
+
+    return () => {
+      window.removeEventListener("vanik_timeframe_change", handleTimeframeChange);
+    };
   }, []);
 
   const merchantName = data?.merchant?.ownerName || data?.merchant?.name || "Ramesh Sharma";
@@ -127,7 +148,7 @@ export default function DashboardPage() {
             <Button
               variant="outline"
               size="sm"
-              onClick={fetchDashboardData}
+              onClick={() => fetchDashboardData(timeframe)}
               className="border-rose-300 text-rose-800 hover:bg-rose-100"
             >
               <RefreshCw className="w-3.5 h-3.5 mr-1.5" />

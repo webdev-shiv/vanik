@@ -159,11 +159,31 @@ const mockTransactionItems: TransactionItem[] = [
 ];
 
 function TransactionsContent() {
-  const [timeframeFilter, setTimeframeFilter] = useState<"day" | "month" | "year" | "all">("day");
+  const [timeframeFilter, setTimeframeFilter] = useState<"day" | "month" | "year" | "all">("month");
   const [statusFilter, setStatusFilter] = useState<string>("ALL");
   const [channelFilter, setChannelFilter] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedReceipt, setSelectedReceipt] = useState<TransactionItem | null>(null);
+
+  React.useEffect(() => {
+    const handleTimeframeChange = (e: any) => {
+      const tf = (e.detail?.timeframe || "").toUpperCase();
+      if (tf.includes("TODAY") || tf.includes("YESTERDAY")) {
+        setTimeframeFilter("day");
+      } else if (tf.includes("30D") || tf.includes("7D")) {
+        setTimeframeFilter("month");
+      } else if (tf.includes("90D") || tf.includes("1Y") || tf.includes("FY26")) {
+        setTimeframeFilter("year");
+      } else {
+        setTimeframeFilter("all");
+      }
+    };
+
+    window.addEventListener("vanik_timeframe_change", handleTimeframeChange);
+    return () => {
+      window.removeEventListener("vanik_timeframe_change", handleTimeframeChange);
+    };
+  }, []);
 
   const filteredTransactions = useMemo(() => {
     return mockTransactionItems.filter((t) => {

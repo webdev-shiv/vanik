@@ -308,8 +308,53 @@ export const vanikApi = {
   // 1. Dashboard
   async getDashboardSummary(
     merchantId: string = "m-001",
-    timeframe: "7D" | "30D" | "90D" | "1Y" = "7D"
+    timeframe: string = "7D"
   ): Promise<DashboardSummary> {
+    let selectedTrends = mockRevenueTrends7D;
+    if (timeframe === "30D") selectedTrends = mockRevenueTrends30D;
+    else if (timeframe === "90D") selectedTrends = mockRevenueTrends90D;
+    else if (timeframe === "1Y" || timeframe === "FY26") selectedTrends = mockRevenueTrends1Y;
+
+    let selectedKpis = mockDashboardKpis;
+    const tfUpper = (timeframe || "").toUpperCase();
+
+    if (tfUpper.includes("TODAY")) {
+      selectedKpis = [
+        { id: "rev", label: "Today's Sales", value: "₹9,450", changePercent: -4.2, trend: "down", subtitle: "vs ₹9,860 yesterday" },
+        { id: "txns", label: "Today's Scans", value: "104", changePercent: -3.1, trend: "down", subtitle: "avg ₹91 order value" },
+        { id: "cust", label: "Active Patrons", value: "78", changePercent: +2.4, trend: "up", subtitle: "scanned soundbox today" },
+        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +1.2, trend: "up", subtitle: "steady tea & snack basket" },
+      ];
+    } else if (tfUpper.includes("YESTERDAY")) {
+      selectedKpis = [
+        { id: "rev", label: "Yesterday's Sales", value: "₹9,860", changePercent: +2.1, trend: "up", subtitle: "vs ₹9,650 day prior" },
+        { id: "txns", label: "Yesterday's Scans", value: "108", changePercent: +1.8, trend: "up", subtitle: "avg ₹91 order value" },
+        { id: "cust", label: "Active Patrons", value: "82", changePercent: +3.0, trend: "up", subtitle: "scanned soundbox yesterday" },
+        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: 0.0, trend: "up", subtitle: "steady tea & snack basket" },
+      ];
+    } else if (tfUpper.includes("30D")) {
+      selectedKpis = [
+        { id: "rev", label: "Monthly Sales Volume", value: "₹2,84,500", changePercent: -11.4, trend: "down", subtitle: "vs ₹3,21,000 prior 30D" },
+        { id: "txns", label: "Total Transactions", value: "3,120", changePercent: -8.2, trend: "down", subtitle: "91 AOV across 30 days" },
+        { id: "cust", label: "Active Cohort Base", value: "1,248", changePercent: +5.1, trend: "up", subtitle: "616 loyal + 320 at risk" },
+        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +3.4, trend: "up", subtitle: "+₹3 vs last month" },
+      ];
+    } else if (tfUpper.includes("90D")) {
+      selectedKpis = [
+        { id: "rev", label: "Quarterly Revenue", value: "₹8,53,500", changePercent: +14.2, trend: "up", subtitle: "vs ₹7,47,300 prior quarter" },
+        { id: "txns", label: "Quarterly Scans", value: "9,380", changePercent: +12.1, trend: "up", subtitle: "91 AOV across 90 days" },
+        { id: "cust", label: "Quarterly Patrons", value: "2,410", changePercent: +8.4, trend: "up", subtitle: "total unique QR scanners" },
+        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +1.9, trend: "up", subtitle: "quarterly basket stability" },
+      ];
+    } else if (tfUpper.includes("1Y") || tfUpper.includes("FY26")) {
+      selectedKpis = [
+        { id: "rev", label: "Annual Revenue (FY26)", value: "₹34,14,000", changePercent: +22.8, trend: "up", subtitle: "vs ₹27,80,000 FY25" },
+        { id: "txns", label: "Annual Transactions", value: "37,516", changePercent: +18.5, trend: "up", subtitle: "full fiscal year ledger" },
+        { id: "cust", label: "Unique Merchant Base", value: "4,890", changePercent: +15.3, trend: "up", subtitle: "cumulative Soundbox scans" },
+        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +3.6, trend: "up", subtitle: "annualized AOV growth" },
+      ];
+    }
+
     try {
       const res = await fetch(`${API_BASE}/api/dashboard/${merchantId}?timeframe=${timeframe}`, {
         headers: getAuthHeaders(),
@@ -320,9 +365,9 @@ export const vanikApi = {
           const d = json.data;
           return {
             merchant: d.merchant || currentMerchant,
-            kpis: d.kpis || mockDashboardKpis,
-            revenueTrends: d.revenueTrends || d.revenueTrends7D || mockRevenueTrends7D,
-            revenueTrends7D: d.revenueTrends7D || d.revenueTrends || mockRevenueTrends7D,
+            kpis: d.kpis || selectedKpis,
+            revenueTrends: d.revenueTrends || d.revenueTrends7D || selectedTrends,
+            revenueTrends7D: d.revenueTrends7D || d.revenueTrends || selectedTrends,
             primaryInsight: d.primaryInsight || (d.recentAlerts && d.recentAlerts[0]) || mockAIInsights[0],
             opportunities: d.opportunities || mockGrowthOpportunities,
             healthScore: d.healthScore,
@@ -335,16 +380,16 @@ export const vanikApi = {
     }
     return {
       merchant: currentMerchant,
-      kpis: mockDashboardKpis,
-      revenueTrends: mockRevenueTrends7D,
-      revenueTrends7D: mockRevenueTrends7D,
+      kpis: selectedKpis,
+      revenueTrends: selectedTrends,
+      revenueTrends7D: selectedTrends,
       primaryInsight: mockAIInsights[0],
       opportunities: mockGrowthOpportunities,
     };
   },
 
   // 2. Sales Analytics
-  async getSalesAnalytics(merchantId: string = "m-001", timeframe: "7D" | "30D" | "90D" | "1Y" = "7D"): Promise<{
+  async getSalesAnalytics(merchantId: string = "m-001", timeframe: string = "7D"): Promise<{
     merchantId?: string;
     totalRevenue: number;
     totalTransactions: number;
@@ -358,9 +403,44 @@ export const vanikApi = {
     categories: typeof mockCategories;
   }> {
     let trends = mockRevenueTrends7D;
-    if (timeframe === "30D") trends = mockRevenueTrends30D;
-    if (timeframe === "90D") trends = mockRevenueTrends90D;
-    if (timeframe === "1Y") trends = mockRevenueTrends1Y;
+    let totalRevenue = 66500;
+    let totalTransactions = 730;
+
+    const tfUpper = (timeframe || "").toUpperCase();
+
+    if (tfUpper.includes("TODAY")) {
+      totalRevenue = 9450;
+      totalTransactions = 104;
+      trends = [
+        { period: "8 AM", currentRevenue: 1200, previousRevenue: 1100, transactions: 14 },
+        { period: "11 AM", currentRevenue: 2400, previousRevenue: 2300, transactions: 26 },
+        { period: "2 PM", currentRevenue: 2100, previousRevenue: 2000, transactions: 23 },
+        { period: "5 PM", currentRevenue: 1850, previousRevenue: 2200, transactions: 20 },
+        { period: "8 PM", currentRevenue: 1900, previousRevenue: 2260, transactions: 21 },
+      ];
+    } else if (tfUpper.includes("YESTERDAY")) {
+      totalRevenue = 9860;
+      totalTransactions = 108;
+      trends = [
+        { period: "8 AM", currentRevenue: 1300, previousRevenue: 1200, transactions: 15 },
+        { period: "11 AM", currentRevenue: 2500, previousRevenue: 2400, transactions: 27 },
+        { period: "2 PM", currentRevenue: 2200, previousRevenue: 2100, transactions: 24 },
+        { period: "5 PM", currentRevenue: 1960, previousRevenue: 2300, transactions: 21 },
+        { period: "8 PM", currentRevenue: 1900, previousRevenue: 2100, transactions: 21 },
+      ];
+    } else if (tfUpper.includes("30D")) {
+      trends = mockRevenueTrends30D;
+      totalRevenue = 284500;
+      totalTransactions = 3120;
+    } else if (tfUpper.includes("90D")) {
+      trends = mockRevenueTrends90D;
+      totalRevenue = 853500;
+      totalTransactions = 9380;
+    } else if (tfUpper.includes("1Y") || tfUpper.includes("FY26")) {
+      trends = mockRevenueTrends1Y;
+      totalRevenue = 3414000;
+      totalTransactions = 37516;
+    }
 
     try {
       const res = await fetch(`${API_BASE}/api/analytics/sales/${merchantId}?timeframe=${timeframe}`, {

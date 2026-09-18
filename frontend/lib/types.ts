@@ -41,13 +41,14 @@ export interface KpiMetric {
   id: string;
   label: string;
   value: string;
-  numericValue: number;
+  numericValue?: number;
   prefix?: string;
   suffix?: string;
   changePercent: number;
   trend: "up" | "down" | "neutral";
-  comparisonPeriod: string;
+  comparisonPeriod?: string;
   subLabel?: string;
+  subtitle?: string;
 }
 
 export interface RevenueTrendPoint {
