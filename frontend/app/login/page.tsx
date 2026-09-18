@@ -21,6 +21,7 @@ import {
   Sun,
   Moon,
 } from "lucide-react";
+import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 import { vanikApi } from "@/lib/api";
 
 export default function LoginPage() {
@@ -119,28 +120,11 @@ export default function LoginPage() {
             <span>Supabase Authenticator Active</span>
           </div>
 
-          {/* Light / Dark Mode Toggle */}
-          <button
-            onClick={() => setTheme(isLight ? "dark" : "light")}
-            className={`p-2.5 rounded-full border transition-all duration-200 shadow-xs flex items-center gap-2 text-xs font-bold ${
-              isLight
-                ? "bg-white border-slate-200 text-slate-700 hover:bg-slate-100 hover:text-navy-900"
-                : "bg-white/10 border-white/15 text-slate-200 hover:bg-white/20 hover:text-white"
-            }`}
-            title={`Switch to ${isLight ? "Dark" : "Light"} Theme`}
-          >
-            {isLight ? (
-              <>
-                <Moon className="w-4 h-4 text-brand-600" />
-                <span className="hidden md:inline">Dark Theme</span>
-              </>
-            ) : (
-              <>
-                <Sun className="w-4 h-4 text-amber-400" />
-                <span className="hidden md:inline">Light Theme</span>
-              </>
-            )}
-          </button>
+          {/* Sliding Sun and Half-Moon Light/Dark Theme Switcher */}
+          <ThemeSwitcher
+            theme={theme}
+            onToggle={() => setTheme(isLight ? "dark" : "light")}
+          />
         </div>
       </header>
 
