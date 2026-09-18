@@ -1,0 +1,28 @@
+{
+  "scenario_1_evening_slump": {
+    "target_merchant": "m-001",
+    "merchant_name": "Sharma Tea Corner",
+    "slump_window": "5:00 PM - 8:30 PM",
+    "volume_reduction_pct": 31.0,
+    "period": "Last 45 days",
+    "impact_contribution": 62.0
+  },
+  "scenario_2_gradual_decay": {
+    "target_merchant": "m-002",
+    "merchant_name": "Gupta Electronics",
+    "annual_sales_decay_pct": 25.0,
+    "period": "12 months"
+  },
+  "scenario_3_repeat_customer_drop": {
+    "target_merchant": "m-001",
+    "dormant_regulars_count": 312,
+    "repeat_rate_drop": "48% to 34%"
+  },
+  "scenario_4_product_category_surge": {
+    "target_merchant": "m-003",
+    "category": "Organic & Superfoods",
+    "growth_pct": 140.0
+  },
+  "anomalies_count": 179,
+  "total_transactions": 116008
+}

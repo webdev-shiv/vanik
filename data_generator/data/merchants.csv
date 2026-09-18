@@ -1,0 +1,51 @@
+merchant_id,name,owner_name,category,location,city,state,business_size,paytm_merchant_id,soundbox_id,qr_code_id,connection_status,created_at,scenario_tag
+m-001,Sharma Tea Corner,Ramesh Sharma,Food & Beverage,"Connaught Place, New Delhi",New Delhi,NCR,MICRO,PAYTM-MERCH-98214-DL,SB-4G-99218,QR-CP-8841,CONNECTED_DEMO,2024-01-10 10:00:00,EVENING_SLUMP_AND_REPEAT_DROP
+m-002,Gupta Electronics & Mobile,Rajesh Gupta,Electronics,"Nehru Place, New Delhi",New Delhi,NCR,SMALL,PAYTM-MERCH-77102-DL,SB-4G-11029,QR-NP-4421,CONNECTED_LIVE,2024-02-15 11:30:00,GRADUAL_SALES_DECLINE
+m-003,Annapurna Fresh Kirana,Suresh Patel,Grocery,"Andheri West, Mumbai",Mumbai,Maharashtra,MEDIUM,PAYTM-MERCH-55190-MH,SB-4G-33104,QR-MUM-7712,CONNECTED_LIVE,2024-03-01 09:00:00,PRODUCT_CATEGORY_SURGE
+m-004,Mehra Silk & Ethnic Sarees,Sunita Mehra,Fashion,"Johari Bazaar, Jaipur",Jaipur,Rajasthan,SMALL,PAYTM-MERCH-44912-RJ,SB-4G-88201,QR-JPR-2219,CONNECTED_LIVE,2024-01-20 14:00:00,HIGH_CUSTOMER_CHURN
+m-005,Sharma Organic Farm,Vikram Sharma,Grocery,"Main Market, Chennai",Chennai,Tamil Nadu,MICRO,PAYTM-MERCH-39256-TA,SB-4G-28289,QR-CHE-2679,CONNECTED_DEMO,2025-01-12 00:00:00,NORMAL_ORGANIC
+m-006,Gupta Repair Lab,Harish Gupta,Services,"Main Market, Chandigarh",Chandigarh,Punjab,MICRO,PAYTM-MERCH-13905-PU,SB-4G-22280,QR-CHA-4582,CONNECTED_LIVE,2025-03-13 00:00:00,NORMAL_ORGANIC
+m-007,Sharma ElectroHub,Rachna Sharma,Electronics,"Main Market, Bengaluru",Bengaluru,Karnataka,MEDIUM,PAYTM-MERCH-64987-KA,SB-4G-38893,QR-BEN-8359,CONNECTED_DEMO,2025-05-10 00:00:00,NORMAL_ORGANIC
+m-008,Singh Boutique,Ramesh Singh,Fashion,"Main Market, Chandigarh",Chandigarh,Punjab,SMALL,PAYTM-MERCH-46421-PU,SB-4G-30379,QR-CHA-4527,CONNECTED_LIVE,2025-06-24 00:00:00,NORMAL_ORGANIC
+m-009,Rao Chai Shai,Ananya Rao,Food & Beverage,"Main Market, Jaipur",Jaipur,Rajasthan,SMALL,PAYTM-MERCH-89131-RA,SB-4G-44671,QR-JAI-1711,CONNECTED_DEMO,2025-03-25 00:00:00,NORMAL_ORGANIC
+m-010,Nair Bakes,Harish Nair,Food & Beverage,"Main Market, Noida",Noida,NCR,MEDIUM,PAYTM-MERCH-48427-NC,SB-4G-92397,QR-NOI-6925,CONNECTED_DEMO,2025-06-01 00:00:00,NORMAL_ORGANIC
+m-011,Verma Rasoi,Pooja Verma,Food & Beverage,"Main Market, Kolkata",Kolkata,West Bengal,MICRO,PAYTM-MERCH-40512-WE,SB-4G-23238,QR-KOL-7227,CONNECTED_LIVE,2025-03-26 00:00:00,NORMAL_ORGANIC
+m-012,Singh Glow Herbal,Swati Singh,Beauty & Personal Care,"Main Market, Jaipur",Jaipur,Rajasthan,MICRO,PAYTM-MERCH-97841-RA,SB-4G-44993,QR-JAI-2169,CONNECTED_DEMO,2025-02-08 00:00:00,NORMAL_ORGANIC
+m-013,Shah Boutique,Karan Shah,Fashion,"Main Market, Hyderabad",Hyderabad,Telangana,MICRO,PAYTM-MERCH-70589-TE,SB-4G-59735,QR-HYD-5422,CONNECTED_DEMO,2025-01-25 00:00:00,NORMAL_ORGANIC
+m-014,Kumar Tech Point,Pankaj Kumar,Electronics,"Main Market, New Delhi",New Delhi,NCR,MICRO,PAYTM-MERCH-14207-NC,SB-4G-51347,QR-NEW-7572,CONNECTED_LIVE,2025-07-04 00:00:00,NORMAL_ORGANIC
+m-015,Kapoor Sweets & Snacks,Neha Kapoor,Food & Beverage,"Main Market, Bengaluru",Bengaluru,Karnataka,SMALL,PAYTM-MERCH-61856-KA,SB-4G-94259,QR-BEN-8517,CONNECTED_LIVE,2025-05-14 00:00:00,NORMAL_ORGANIC
+m-016,Kumar Repair Lab,Deepak Kumar,Services,"Main Market, Chennai",Chennai,Tamil Nadu,MEDIUM,PAYTM-MERCH-66155-TA,SB-4G-86484,QR-CHE-7543,CONNECTED_LIVE,2025-05-25 00:00:00,NORMAL_ORGANIC
+m-017,Mishra Wellness Store,Deepak Mishra,Pharmacy,"Main Market, Noida",Noida,NCR,MICRO,PAYTM-MERCH-24371-NC,SB-4G-30033,QR-NOI-3621,CONNECTED_DEMO,2025-04-03 00:00:00,NORMAL_ORGANIC
+m-018,Gupta Bakes,Rachna Gupta,Food & Beverage,"Main Market, Lucknow",Lucknow,Uttar Pradesh,MEDIUM,PAYTM-MERCH-71348-UT,SB-4G-79352,QR-LUC-5119,CONNECTED_DEMO,2024-12-12 00:00:00,NORMAL_ORGANIC
+m-019,Deshmukh Chai Shai,Ramesh Deshmukh,Food & Beverage,"Main Market, Chennai",Chennai,Tamil Nadu,SMALL,PAYTM-MERCH-24621-TA,SB-4G-48469,QR-CHE-8123,CONNECTED_LIVE,2025-03-26 00:00:00,NORMAL_ORGANIC
+m-020,Sen Dhaba,Ramesh Sen,Food & Beverage,"Main Market, Pune",Pune,Maharashtra,MEDIUM,PAYTM-MERCH-23947-MA,SB-4G-91959,QR-PUN-5889,CONNECTED_DEMO,2025-03-13 00:00:00,NORMAL_ORGANIC
+m-021,Patel Daily Needs,Rachna Patel,Grocery,"Main Market, Jaipur",Jaipur,Rajasthan,MICRO,PAYTM-MERCH-80697-RA,SB-4G-79514,QR-JAI-1009,CONNECTED_DEMO,2025-04-29 00:00:00,NORMAL_ORGANIC
+m-022,Sharma Fashion Hub,Preeti Sharma,Fashion,"Main Market, Jaipur",Jaipur,Rajasthan,SMALL,PAYTM-MERCH-41385-RA,SB-4G-17592,QR-JAI-4946,CONNECTED_DEMO,2025-06-30 00:00:00,NORMAL_ORGANIC
+m-023,Sen Bazaar,Ananya Sen,Grocery,"Main Market, Noida",Noida,NCR,MEDIUM,PAYTM-MERCH-26483-NC,SB-4G-26828,QR-NOI-8787,CONNECTED_DEMO,2025-06-08 00:00:00,NORMAL_ORGANIC
+m-024,Mishra Provision Store,Sneha Mishra,Grocery,"Main Market, Chandigarh",Chandigarh,Punjab,MICRO,PAYTM-MERCH-80686-PU,SB-4G-36365,QR-CHA-6107,CONNECTED_LIVE,2025-01-30 00:00:00,NORMAL_ORGANIC
+m-025,Malhotra Garments,Swati Malhotra,Fashion,"Main Market, Indore",Indore,Madhya Pradesh,MICRO,PAYTM-MERCH-42493-MA,SB-4G-39451,QR-IND-2049,CONNECTED_LIVE,2025-07-15 00:00:00,NORMAL_ORGANIC
+m-026,Shah Rasoi,Kunal Shah,Food & Beverage,"Main Market, Hyderabad",Hyderabad,Telangana,MICRO,PAYTM-MERCH-19305-TE,SB-4G-92719,QR-HYD-1964,CONNECTED_LIVE,2025-07-03 00:00:00,NORMAL_ORGANIC
+m-027,Bansal Kirana Store,Ashok Bansal,Grocery,"Main Market, Hyderabad",Hyderabad,Telangana,SMALL,PAYTM-MERCH-97684-TE,SB-4G-73624,QR-HYD-4510,CONNECTED_DEMO,2025-06-17 00:00:00,NORMAL_ORGANIC
+m-028,Kapoor Bazaar,Bhavna Kapoor,Grocery,"Main Market, Hyderabad",Hyderabad,Telangana,SMALL,PAYTM-MERCH-63354-TE,SB-4G-34957,QR-HYD-2545,CONNECTED_LIVE,2025-02-02 00:00:00,NORMAL_ORGANIC
+m-029,Iyer Bazaar,Divya Iyer,Grocery,"Main Market, Chandigarh",Chandigarh,Punjab,SMALL,PAYTM-MERCH-17100-PU,SB-4G-98259,QR-CHA-2612,CONNECTED_LIVE,2025-04-08 00:00:00,NORMAL_ORGANIC
+m-030,Nair Chemist & Druggist,Alok Nair,Pharmacy,"Main Market, Bengaluru",Bengaluru,Karnataka,MICRO,PAYTM-MERCH-80292-KA,SB-4G-68800,QR-BEN-3296,CONNECTED_LIVE,2025-06-04 00:00:00,NORMAL_ORGANIC
+m-031,Malhotra Rasoi,Rahul Malhotra,Food & Beverage,"Main Market, Noida",Noida,NCR,SMALL,PAYTM-MERCH-82132-NC,SB-4G-22833,QR-NOI-1828,CONNECTED_DEMO,2025-03-04 00:00:00,NORMAL_ORGANIC
+m-032,Gupta Trends,Ramesh Gupta,Fashion,"Main Market, Pune",Pune,Maharashtra,SMALL,PAYTM-MERCH-73653-MA,SB-4G-73092,QR-PUN-4502,CONNECTED_LIVE,2024-12-01 00:00:00,NORMAL_ORGANIC
+m-033,Singh Apparels,Rajesh Singh,Fashion,"Main Market, Delhi",Delhi,NCR,SMALL,PAYTM-MERCH-44760-NC,SB-4G-69638,QR-DEL-5673,CONNECTED_LIVE,2025-01-23 00:00:00,NORMAL_ORGANIC
+m-034,Deshmukh Tiffin,Pankaj Deshmukh,Food & Beverage,"Main Market, Mumbai",Mumbai,Maharashtra,MICRO,PAYTM-MERCH-48890-MA,SB-4G-38534,QR-MUM-1958,CONNECTED_DEMO,2025-01-13 00:00:00,NORMAL_ORGANIC
+m-035,Verma Boutique,Harish Verma,Fashion,"Main Market, Ahmedabad",Ahmedabad,Gujarat,MICRO,PAYTM-MERCH-16572-GU,SB-4G-86569,QR-AHM-8811,CONNECTED_DEMO,2024-11-27 00:00:00,NORMAL_ORGANIC
+m-036,Singh Cafe,Jyoti Singh,Food & Beverage,"Main Market, Noida",Noida,NCR,MICRO,PAYTM-MERCH-18981-NC,SB-4G-87992,QR-NOI-2113,CONNECTED_DEMO,2024-12-12 00:00:00,NORMAL_ORGANIC
+m-037,Rao Chai Shai,Manish Rao,Food & Beverage,"Main Market, Hyderabad",Hyderabad,Telangana,MEDIUM,PAYTM-MERCH-87924-TE,SB-4G-15209,QR-HYD-2343,CONNECTED_LIVE,2025-02-02 00:00:00,NORMAL_ORGANIC
+m-038,Kapoor Repair Lab,Kunal Kapoor,Services,"Main Market, Ahmedabad",Ahmedabad,Gujarat,SMALL,PAYTM-MERCH-36772-GU,SB-4G-97782,QR-AHM-6147,CONNECTED_LIVE,2025-05-14 00:00:00,NORMAL_ORGANIC
+m-039,Mehra Key & Lock Hub,Meera Mehra,Services,"Main Market, Indore",Indore,Madhya Pradesh,SMALL,PAYTM-MERCH-19508-MA,SB-4G-11220,QR-IND-8508,CONNECTED_DEMO,2025-02-26 00:00:00,NORMAL_ORGANIC
+m-040,Gupta LifeCare Meds,Rohit Gupta,Pharmacy,"Main Market, Bengaluru",Bengaluru,Karnataka,MEDIUM,PAYTM-MERCH-44760-KA,SB-4G-27361,QR-BEN-6718,CONNECTED_LIVE,2024-12-07 00:00:00,NORMAL_ORGANIC
+m-041,Iyer Supermart,Manish Iyer,Grocery,"Main Market, Pune",Pune,Maharashtra,SMALL,PAYTM-MERCH-81200-MA,SB-4G-49651,QR-PUN-9666,CONNECTED_LIVE,2025-01-31 00:00:00,NORMAL_ORGANIC
+m-042,Joshi Chai Shai,Pankaj Joshi,Food & Beverage,"Main Market, Mumbai",Mumbai,Maharashtra,SMALL,PAYTM-MERCH-25129-MA,SB-4G-24029,QR-MUM-3546,CONNECTED_LIVE,2025-05-09 00:00:00,NORMAL_ORGANIC
+m-043,Patel Tech Point,Rachna Patel,Electronics,"Main Market, Bengaluru",Bengaluru,Karnataka,SMALL,PAYTM-MERCH-76244-KA,SB-4G-74032,QR-BEN-5114,CONNECTED_LIVE,2025-06-27 00:00:00,NORMAL_ORGANIC
+m-044,Agarwal Kirana Store,Divya Agarwal,Grocery,"Main Market, Delhi",Delhi,NCR,SMALL,PAYTM-MERCH-27146-NC,SB-4G-93507,QR-DEL-5291,CONNECTED_LIVE,2025-01-12 00:00:00,NORMAL_ORGANIC
+m-045,Shah Bakes,Nitin Shah,Food & Beverage,"Main Market, Delhi",Delhi,NCR,MICRO,PAYTM-MERCH-19862-NC,SB-4G-29536,QR-DEL-9938,CONNECTED_LIVE,2024-12-19 00:00:00,NORMAL_ORGANIC
+m-046,Kapoor Provision Store,Swati Kapoor,Grocery,"Main Market, Mumbai",Mumbai,Maharashtra,SMALL,PAYTM-MERCH-26704-MA,SB-4G-15482,QR-MUM-6050,CONNECTED_LIVE,2024-12-02 00:00:00,NORMAL_ORGANIC
+m-047,Iyer Rasoi,Ashok Iyer,Food & Beverage,"Main Market, Hyderabad",Hyderabad,Telangana,MICRO,PAYTM-MERCH-56357-TE,SB-4G-83385,QR-HYD-7658,CONNECTED_DEMO,2025-01-10 00:00:00,NORMAL_ORGANIC
+m-048,Kumar Beauty Lounge,Sunita Kumar,Beauty & Personal Care,"Main Market, Pune",Pune,Maharashtra,SMALL,PAYTM-MERCH-13248-MA,SB-4G-33509,QR-PUN-6442,CONNECTED_LIVE,2024-12-27 00:00:00,NORMAL_ORGANIC
+m-049,Agarwal Bite Point,Manish Agarwal,Food & Beverage,"Main Market, Gurugram",Gurugram,NCR,SMALL,PAYTM-MERCH-15075-NC,SB-4G-71694,QR-GUR-4644,CONNECTED_LIVE,2024-12-23 00:00:00,NORMAL_ORGANIC
+m-050,Iyer Tech Point,Shweta Iyer,Electronics,"Main Market, Hyderabad",Hyderabad,Telangana,MICRO,PAYTM-MERCH-13101-TE,SB-4G-96511,QR-HYD-4164,CONNECTED_LIVE,2025-04-27 00:00:00,NORMAL_ORGANIC

@@ -1,0 +1,467 @@
+{
+  "name": "05 - Supabase Secure Integration",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "supabase/execute-operation",
+        "options": {}
+      },
+      "id": "node-webhook-dispatcher",
+      "name": "Trigger: Supabase Integration Dispatcher",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [100, 500]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.body && $json.body.operation ? $json.body.operation : 'READ_TRANSACTION_SUMMARY' }}",
+                    "value2": "READ_TRANSACTION_SUMMARY"
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.body && $json.body.operation ? $json.body.operation : '' }}",
+                    "value2": "READ_AI_INPUTS"
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.body && $json.body.operation ? $json.body.operation : '' }}",
+                    "value2": "SAVE_AI_INSIGHT"
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.body && $json.body.operation ? $json.body.operation : '' }}",
+                    "value2": "SAVE_RECOMMENDATION"
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.body && $json.body.operation ? $json.body.operation : '' }}",
+                    "value2": "SAVE_SIMULATION_RESULT"
+                  }
+                ]
+              }
+            },
+            {
+              "conditions": {
+                "string": [
+                  {
+                    "value1": "={{ $json.body && $json.body.operation ? $json.body.operation : '' }}",
+                    "value2": "SAVE_CAMPAIGN_RESULT"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "id": "node-switch-operation",
+      "name": "Route by Supabase Operation",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [340, 500]
+    },
+
+    {
+      "parameters": {
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/transactions?merchant_id=eq.{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}&status=eq.COMPLETED&select=id,amount,payment_method,channel,status,created_at&order=created_at.desc&limit=500",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_ANON_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_ANON_KEY || 'simulated-supabase-anon-key' }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-read-transactions-supabase",
+      "name": "1. Supabase Read: Transaction Summaries (Anon Key / Least Privilege)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 100]
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $json;\nlet totalRevenue = 0;\nlet txCount = 0;\nconst paymentMethods = {};\n\nfor (const item of (Array.isArray(items) ? items : [items])) {\n  const amt = Number(item.amount || item.total_amount || 0);\n  totalRevenue += amt;\n  txCount++;\n  const method = item.payment_method || 'UPI';\n  paymentMethods[method] = (paymentMethods[method] || 0) + 1;\n}\n\nconst aov = txCount > 0 ? Math.round((totalRevenue / txCount) * 10) / 10 : 0;\n\n// PRIVACY RULE: Strip all individual transaction IDs, customer names, or phone numbers.\nreturn [{\n  json: {\n    merchant_id: $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001',\n    aggregated_summary: {\n      total_revenue: Math.round(totalRevenue * 100) / 100,\n      total_transactions: txCount,\n      average_order_value: aov,\n      payment_method_distribution: paymentMethods\n    },\n    pii_sanitized: true,\n    data_safe_for_ml: true\n  }\n}];"
+      },
+      "id": "node-sanitize-transaction-summary",
+      "name": "Sanitize & Aggregate Transaction Summaries (Zero PII)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [880, 100]
+    },
+
+    {
+      "parameters": {
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/merchants?id=eq.{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}&select=id,name,business_category,monthly_revenue,connection_status",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_ANON_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_ANON_KEY || 'simulated-supabase-anon-key' }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-read-merchant-meta",
+      "name": "2a. Supabase Read: Merchant Metadata",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 260]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/customer_segments?merchant_id=eq.{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}&select=segment_name,customer_count,share_percent,average_spend,churn_risk",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_ANON_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_ANON_KEY || 'simulated-supabase-anon-key' }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-read-segments-supabase",
+      "name": "2b. Supabase Read: Customer Segments",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 380]
+    },
+    {
+      "parameters": {
+        "jsCode": "const merchant = $('2a. Supabase Read: Merchant Metadata').first().json[0] || {};\nconst segments = $('2b. Supabase Read: Customer Segments').all().map(i => i.json);\n\n// PRIVACY RULE: Ensure no customer names or contacts are present in AI input\nreturn [{\n  json: {\n    merchant_id: merchant.id || 'm-001',\n    merchant_name: merchant.name || 'Sharma Tea Corner',\n    business_category: merchant.business_category || 'Food & Beverage',\n    monthly_revenue: merchant.monthly_revenue || 284500.0,\n    cohort_breakdown: segments,\n    pii_sanitized: true,\n    ready_for_ai_analysis: true\n  }\n}];"
+      },
+      "id": "node-assemble-ai-inputs",
+      "name": "Assemble Clean AI Analysis Inputs (No PII)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [880, 320]
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/ai_insights",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}\",\n  \"type\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.type || 'DIAGNOSTIC_INSIGHT' }}\",\n  \"severity\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.severity || 'HIGH' }}\",\n  \"title\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.short_insight_title || $('Trigger: Supabase Integration Dispatcher').first().json.body.title }}\",\n  \"summary\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.explanation || $('Trigger: Supabase Integration Dispatcher').first().json.body.summary }}\",\n  \"root_cause\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.reason_for_recommendation || $('Trigger: Supabase Integration Dispatcher').first().json.body.root_cause }}\",\n  \"recommended_action\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.recommended_action }}\",\n  \"expected_impact\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.expected_outcome_language || $('Trigger: Supabase Integration Dispatcher').first().json.body.expected_impact }}\",\n  \"confidence\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.confidence || 0.88 }},\n  \"is_resolved\": false,\n  \"created_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-save-insight-supabase-service-role",
+      "name": "3. Supabase Write: Save AI Insight (Service-Role Key)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 520]
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/recommendations",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"rec-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"merchant_id\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}\",\n  \"problem\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.problem || 'Footfall slump during evening rush' }}\",\n  \"recommended_action\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.recommended_action || 'Launch ₹49 Evening Chai Combo' }}\",\n  \"target_audience\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.target_audience || 'Inactive regulars & commuters' }}\",\n  \"expected_impact_percent\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.expected_impact_percent || 14.5 }},\n  \"confidence\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.confidence || 0.85 }},\n  \"status\": \"PENDING_MERCHANT_APPROVAL\",\n  \"created_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-save-recommendation-supabase-service-role",
+      "name": "4. Supabase Write: Save Recommendation (Service-Role Key)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 660]
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/simulation_results",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"sim-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"merchant_id\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}\",\n  \"action\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.action || 'evening offer' }}\",\n  \"discount_percentage\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.discount_percentage || 20.0 }},\n  \"duration_days\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.duration || 14 }},\n  \"target_segment\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.target_customer_segment || 'At Risk' }}\",\n  \"baseline_revenue\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.baseline ? $('Trigger: Supabase Integration Dispatcher').first().json.body.baseline.revenue : 127736.4 }},\n  \"scenario_revenue\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.scenario ? $('Trigger: Supabase Integration Dispatcher').first().json.body.scenario.revenue : 149244.96 }},\n  \"incremental_revenue\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.incremental ? $('Trigger: Supabase Integration Dispatcher').first().json.body.incremental.revenue : 21508.56 }},\n  \"baseline_transactions\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.baseline ? $('Trigger: Supabase Integration Dispatcher').first().json.body.baseline.transactions : 1088 }},\n  \"scenario_transactions\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.scenario ? $('Trigger: Supabase Integration Dispatcher').first().json.body.scenario.transactions : 1589 }},\n  \"incremental_transactions\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.incremental ? $('Trigger: Supabase Integration Dispatcher').first().json.body.incremental.transactions : 501 }},\n  \"confidence\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.confidence || 0.91 }},\n  \"created_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-save-simulation-supabase-service-role",
+      "name": "5. Supabase Write: Save Simulation Result (Service-Role Key)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 800]
+    },
+
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/campaign_results",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-service-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"cres-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"campaign_id\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.campaign_id || 'camp-001' }}\",\n  \"merchant_id\": \"{{ $('Trigger: Supabase Integration Dispatcher').first().json.body.merchant_id || 'm-001' }}\",\n  \"impressions\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.impressions || 1450 }},\n  \"clicks\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.clicks || 580 }},\n  \"transactions\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.transactions || 240 }},\n  \"revenue_generated\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.revenue_generated || 33500.0 }},\n  \"lift_percent\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.lift_percent || 12.6 }},\n  \"roi\": {{ $('Trigger: Supabase Integration Dispatcher').first().json.body.roi || 4.8 }},\n  \"completed_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-save-campaign-result-supabase-service-role",
+      "name": "6. Supabase Write: Save Campaign Result (Service-Role Key)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 940]
+    }
+  ],
+  "connections": {
+    "Trigger: Supabase Integration Dispatcher": {
+      "main": [
+        [
+          {
+            "node": "Route by Supabase Operation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Route by Supabase Operation": {
+      "main": [
+        [
+          {
+            "node": "1. Supabase Read: Transaction Summaries (Anon Key / Least Privilege)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "2a. Supabase Read: Merchant Metadata",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "2b. Supabase Read: Customer Segments",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "3. Supabase Write: Save AI Insight (Service-Role Key)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4. Supabase Write: Save Recommendation (Service-Role Key)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "5. Supabase Write: Save Simulation Result (Service-Role Key)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "6. Supabase Write: Save Campaign Result (Service-Role Key)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Supabase Read: Transaction Summaries (Anon Key / Least Privilege)": {
+      "main": [
+        [
+          {
+            "node": "Sanitize & Aggregate Transaction Summaries (Zero PII)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2a. Supabase Read: Merchant Metadata": {
+      "main": [
+        [
+          {
+            "node": "Assemble Clean AI Analysis Inputs (No PII)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2b. Supabase Read: Customer Segments": {
+      "main": [
+        [
+          {
+            "node": "Assemble Clean AI Analysis Inputs (No PII)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

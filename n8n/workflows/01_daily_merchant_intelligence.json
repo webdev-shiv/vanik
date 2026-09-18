@@ -1,0 +1,327 @@
+{
+  "name": "01 - Daily Merchant Intelligence",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 6 * * *"
+            }
+          ]
+        }
+      },
+      "id": "node-schedule-daily",
+      "name": "Daily Morning Schedule (06:00 AM IST)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [100, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/merchants/m-001",
+        "authentication": "none",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-fetch-merchant-profile",
+      "name": "Fetch Merchant Profile",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [320, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/analytics/sales/m-001",
+        "authentication": "none",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-fetch-sales-analytics",
+      "name": "Call Spring Boot Sales Analytics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [540, 200]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/analytics/customers/m-001",
+        "authentication": "none",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-fetch-customer-analytics",
+      "name": "Call Spring Boot Customer Analytics",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [540, 400]
+    },
+    {
+      "parameters": {
+        "jsCode": "const merchant = $('Fetch Merchant Profile').first().json.data;\nconst sales = $('Call Spring Boot Sales Analytics').first().json.data;\nconst customers = $('Call Spring Boot Customer Analytics').first().json.data;\n\nreturn [{\n  json: {\n    merchant_id: merchant.id,\n    merchant_name: merchant.name,\n    category: merchant.category,\n    current_period: {\n      revenue: sales.totalRevenue,\n      transactions: sales.totalTransactions,\n      active_customers: customers.activeCustomers,\n      repeat_rate: customers.repeatPurchaseRatePercent,\n      evening_drop_percent: sales.eveningDropPercent\n    },\n    comparison_period: {\n      revenue: Math.round(sales.totalRevenue / (1 + (sales.eveningDropPercent / 200))),\n      transactions: Math.round(sales.totalTransactions * 1.15),\n      repeat_rate: 62.0\n    }\n  }\n}];"
+      },
+      "id": "node-aggregate-metrics",
+      "name": "Aggregate Backend Analytics",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [760, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AI_SERVICE_URL || 'http://localhost:8000' }}/ai/root-cause-analysis",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"{{ $json.merchant_id }}\",\n  \"current_period\": \"Last 30 Days\",\n  \"comparison_period\": \"Prior 30 Days\"\n}",
+        "options": {
+          "timeout": 15000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 3000
+          }
+        }
+      },
+      "id": "node-call-root-cause",
+      "name": "Call Python Anomaly & Root-Cause Endpoint",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [980, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.overall_change <= -5.0 || ($json.contributors && $json.contributors.some(c => c.contribution === 'high' || c.change_percent <= -15.0)) }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-check-meaningful-issue",
+      "name": "If Meaningful Issue Exists",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1200, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AI_SERVICE_URL || 'http://localhost:8000' }}/ai/explain-analytics",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant\": \"{{ $('Aggregate Backend Analytics').first().json.merchant_name }}\",\n  \"revenue_change\": {{ $json.overall_change }},\n  \"transaction_change\": -8.2,\n  \"repeat_customer_change\": -14.0,\n  \"contributors\": [\n    {\n      \"factor\": \"{{ $json.contributors && $json.contributors.length > 0 ? $json.contributors[0].factor : 'Evening transactions' }}\",\n      \"change_percent\": {{ $json.contributors && $json.contributors.length > 0 ? $json.contributors[0].change_percent : -31.0 }}\n    }\n  ],\n  \"recommendation\": \"{{ $json.recommended_actions && $json.recommended_actions.length > 0 ? $json.recommended_actions[0].action : 'evening_combo_offer' }}\"\n}",
+        "options": {
+          "timeout": 20000,
+          "retry": {
+            "maxRetries": 2,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-call-openai-explain",
+      "name": "Call OpenAI Insight Endpoint",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1440, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/ai_insights",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"{{ $('Aggregate Backend Analytics').first().json.merchant_id }}\",\n  \"type\": \"ROOT_CAUSE_DIAGNOSIS\",\n  \"severity\": \"HIGH\",\n  \"title\": \"{{ $json.short_insight_title }}\",\n  \"summary\": \"{{ $json.explanation }}\",\n  \"root_cause\": \"{{ $json.reason_for_recommendation }}\",\n  \"recommended_action\": \"{{ $json.recommended_action }}\",\n  \"expected_impact\": \"{{ $json.expected_outcome_language }}\",\n  \"confidence\": 0.88,\n  \"is_resolved\": false,\n  \"created_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-save-insight-supabase",
+      "name": "Save Insight to Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1680, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/events/merchant-notification",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchantId\": \"{{ $('Aggregate Backend Analytics').first().json.merchant_id }}\",\n  \"eventType\": \"AI_INSIGHT_ALERT\",\n  \"title\": \"{{ $('Call OpenAI Insight Endpoint').first().json.short_insight_title }}\",\n  \"actionUrl\": \"/why\",\n  \"priority\": \"HIGH\",\n  \"dispatchedAt\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 5000
+        }
+      },
+      "id": "node-trigger-notification",
+      "name": "Trigger Merchant Notification & Dashboard Event",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1920, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { status: 'NORMAL', message: 'No significant sales or customer anomalies detected in daily intelligence scan.' } }];"
+      },
+      "id": "node-log-normal-status",
+      "name": "Log Steady-State Intelligence (No Anomaly)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1440, 420]
+    }
+  ],
+  "connections": {
+    "Daily Morning Schedule (06:00 AM IST)": {
+      "main": [
+        [
+          {
+            "node": "Fetch Merchant Profile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Merchant Profile": {
+      "main": [
+        [
+          {
+            "node": "Call Spring Boot Sales Analytics",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Call Spring Boot Customer Analytics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Spring Boot Sales Analytics": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Backend Analytics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Spring Boot Customer Analytics": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Backend Analytics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Backend Analytics": {
+      "main": [
+        [
+          {
+            "node": "Call Python Anomaly & Root-Cause Endpoint",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call Python Anomaly & Root-Cause Endpoint": {
+      "main": [
+        [
+          {
+            "node": "If Meaningful Issue Exists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Meaningful Issue Exists": {
+      "main": [
+        [
+          {
+            "node": "Call OpenAI Insight Endpoint",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Log Steady-State Intelligence (No Anomaly)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Call OpenAI Insight Endpoint": {
+      "main": [
+        [
+          {
+            "node": "Save Insight to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Insight to Supabase": {
+      "main": [
+        [
+          {
+            "node": "Trigger Merchant Notification & Dashboard Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

@@ -1,0 +1,40 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: merchant-growth-backend
+  datasource:
+    # Supports Supabase PostgreSQL URL, or falls back to in-memory H2 with PostgreSQL compatibility mode
+    url: ${SPRING_DATASOURCE_URL:${SUPABASE_DB_URL:jdbc:h2:mem:merchant_growth_db;DB_CLOSE_DELAY=-1;MODE=PostgreSQL}}
+    driver-class-name: ${SPRING_DATASOURCE_DRIVER:org.h2.Driver}
+    username: ${SPRING_DATASOURCE_USERNAME:${DB_USERNAME:sa}}
+    password: ${SPRING_DATASOURCE_PASSWORD:${DB_PASSWORD:}}
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+# Python FastAPI AI Microservice URL
+ai-service:
+  base-url: ${AI_SERVICE_URL:http://localhost:8000}
+
+# OpenAI configuration (optional, if direct proxy required)
+openai:
+  api-key: ${OPENAI_API_KEY:}
+
+# SpringDoc OpenAPI Swagger UI configuration
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method

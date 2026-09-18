@@ -1,0 +1,100 @@
+{
+  "name": "03 - Campaign Performance Telemetry & Closed-Loop Learning",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "days",
+              "daysInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "node-daily-schedule",
+      "name": "Daily Performance Evaluation",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8080/api/v1/campaigns/camp-evening-combo-01/results",
+        "options": {}
+      },
+      "id": "node-fetch-campaign-results",
+      "name": "Fetch Live Campaign Telemetry",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.data.actualImpactPercent }}",
+              "operation": "larger",
+              "value2": "={{ $json.data.expectedImpactPercent }}"
+            }
+          ]
+        }
+      },
+      "id": "node-evaluate-lift",
+      "name": "Did Actual Lift Outperform Expected?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "message": "AI Closed-Loop Learning: Campaign exceeded expectation (+27.2% actual vs +25.0% expected). Footfall between 5-7 PM rose by 54 txns/hour. Generated recommendation: Roll out Weekend Family Platter."
+      },
+      "id": "node-log-ai-learning",
+      "name": "Log AI Closed-Loop Learning & Next Move",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [940, 200]
+    }
+  ],
+  "connections": {
+    "Daily Performance Evaluation": {
+      "main": [
+        [
+          {
+            "node": "Fetch Live Campaign Telemetry",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Live Campaign Telemetry": {
+      "main": [
+        [
+          {
+            "node": "Did Actual Lift Outperform Expected?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Did Actual Lift Outperform Expected?": {
+      "main": [
+        [
+          {
+            "node": "Log AI Closed-Loop Learning & Next Move",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

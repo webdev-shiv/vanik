@@ -1,0 +1,198 @@
+{
+  "name": "04 - Alert Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "metric-alert",
+        "options": {}
+      },
+      "id": "node-webhook-alert-trigger",
+      "name": "Trigger: Telemetry or Metric Shift Event",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [100, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ ($json.body.revenue_change !== undefined && $json.body.revenue_change <= -10.0) || ($json.body.transaction_change !== undefined && $json.body.transaction_change <= -15.0) || ($json.body.repeat_customer_change !== undefined && $json.body.repeat_customer_change <= -12.0) || ($json.body.anomaly_score !== undefined && $json.body.anomaly_score >= 0.70) || ($json.body.dormant_surge !== undefined && $json.body.dormant_surge >= 50) }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-check-alert-conditions",
+      "name": "Evaluate: Significant Drop or Anomaly?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [340, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $('Trigger: Telemetry or Metric Shift Event').first().json.body || {};\nconst merchant = body.merchant || 'Sharma Tea Corner';\nconst revChange = body.revenue_change !== undefined ? body.revenue_change : -11.4;\nconst txChange = body.transaction_change !== undefined ? body.transaction_change : -8.2;\nconst repeatChange = body.repeat_customer_change !== undefined ? body.repeat_customer_change : -14.0;\nconst factor = body.factor || 'Evening transactions';\nconst factorChange = body.factor_change !== undefined ? body.factor_change : -31.0;\nconst rec = body.recommendation || 'evening_combo_offer';\n\nreturn [{\n  json: {\n    merchant: merchant,\n    revenue_change: revChange,\n    transaction_change: txChange,\n    repeat_customer_change: repeatChange,\n    contributors: [\n      {\n        factor: factor,\n        change_percent: factorChange\n      }\n    ],\n    recommendation: rec\n  }\n}];"
+      },
+      "id": "node-format-explanation-payload",
+      "name": "Prepare Verified ML Analytics Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [580, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AI_SERVICE_URL || 'http://localhost:8000' }}/ai/explain-analytics",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json) }}",
+        "options": {
+          "timeout": 20000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-generate-structured-insight",
+      "name": "Generate Structured Insight (OpenAI)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [820, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/ai_insights",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"ins-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"merchant_id\": \"m-001\",\n  \"type\": \"CRITICAL_SLUMP_ALERT\",\n  \"severity\": \"CRITICAL\",\n  \"title\": \"{{ $json.short_insight_title }}\",\n  \"summary\": \"{{ $json.explanation }}\",\n  \"root_cause\": \"{{ $json.reason_for_recommendation }}\",\n  \"recommended_action\": \"{{ $json.recommended_action }}\",\n  \"expected_impact\": \"{{ $json.expected_outcome_language }}\",\n  \"confidence\": 0.92,\n  \"is_resolved\": false,\n  \"created_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-save-alert-supabase",
+      "name": "Save Alert to Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1060, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/events/merchant-notification",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchantId\": \"m-001\",\n  \"eventType\": \"CRITICAL_PERFORMANCE_ALERT\",\n  \"severity\": \"CRITICAL\",\n  \"title\": \"{{ $('Generate Structured Insight (OpenAI)').first().json.short_insight_title }}\",\n  \"summary\": \"{{ $('Generate Structured Insight (OpenAI)').first().json.explanation }}\",\n  \"recommendedAction\": \"{{ $('Generate Structured Insight (OpenAI)').first().json.recommended_action }}\",\n  \"actionUrl\": \"/why\",\n  \"isDashboardAlertAvailable\": true,\n  \"dispatchedAt\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 5000
+        }
+      },
+      "id": "node-make-dashboard-alert-available",
+      "name": "Make Dashboard Alert Available",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1300, 200]
+    },
+    {
+      "parameters": {
+        "jsCode": "return [{ json: { status: 'IGNORED', message: 'Metric variance does not exceed critical alert thresholds.' } }];"
+      },
+      "id": "node-ignore-minor-variation",
+      "name": "Ignore Minor Non-Critical Variation",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [580, 420]
+    }
+  ],
+  "connections": {
+    "Trigger: Telemetry or Metric Shift Event": {
+      "main": [
+        [
+          {
+            "node": "Evaluate: Significant Drop or Anomaly?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Evaluate: Significant Drop or Anomaly?": {
+      "main": [
+        [
+          {
+            "node": "Prepare Verified ML Analytics Payload",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ignore Minor Non-Critical Variation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Verified ML Analytics Payload": {
+      "main": [
+        [
+          {
+            "node": "Generate Structured Insight (OpenAI)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Structured Insight (OpenAI)": {
+      "main": [
+        [
+          {
+            "node": "Save Alert to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Alert to Supabase": {
+      "main": [
+        [
+          {
+            "node": "Make Dashboard Alert Available",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

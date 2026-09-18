@@ -1,0 +1,501 @@
+product_id,merchant_id,sku,product_name,category,price,cost,active_status,created_at,scenario_flag
+p-0001,m-001,SKU-FOO-0001,Special Masala Chai,Food & Beverage,35.57,21.34,True,2024-01-10 10:00:00,NONE
+p-0002,m-001,SKU-FOO-0002,Ginger Lemon Tea,Food & Beverage,36.39,21.83,True,2024-01-10 10:00:00,NONE
+p-0003,m-001,SKU-FOO-0003,Kullad Chai,Food & Beverage,55.47,32.17,True,2024-01-10 10:00:00,NONE
+p-0004,m-001,SKU-FOO-0004,Filter Coffee,Food & Beverage,50.53,27.79,True,2024-01-10 10:00:00,NONE
+p-0005,m-001,SKU-FOO-0005,Fresh Bun Maska,Food & Beverage,37.64,23.34,True,2024-01-10 10:00:00,NONE
+p-0006,m-001,SKU-FOO-0006,Crispy Samosa (2 pcs),Food & Beverage,35.19,22.87,True,2024-01-10 10:00:00,NONE
+p-0007,m-001,SKU-FOO-0007,Paneer Pakora Platter,Food & Beverage,130.62,71.84,True,2024-01-10 10:00:00,NONE
+p-0008,m-001,SKU-FOO-0008,Chole Bhature,Food & Beverage,113.18,65.64,True,2024-01-10 10:00:00,NONE
+p-0009,m-001,SKU-FOO-0009,Veg Grilled Sandwich,Food & Beverage,61.38,36.83,True,2024-01-10 10:00:00,NONE
+p-0010,m-001,SKU-FOO-0010,Cold Coffee with Ice Cream,Food & Beverage,122.62,67.44,True,2024-01-10 10:00:00,NONE
+p-0011,m-001,SKU-FOO-0011,Poha with Sev,Food & Beverage,47.84,31.1,True,2024-01-10 10:00:00,NONE
+p-0012,m-001,SKU-FOO-0012,Aloo Paratha with Butter,Food & Beverage,83.22,51.6,True,2024-01-10 10:00:00,NONE
+p-0013,m-001,SKU-FOO-0013,Evening Chai Combo Platter,Food & Beverage,89.51,51.92,True,2024-01-10 10:00:00,NONE
+p-0014,m-001,SKU-FOO-0014,Weekend Family Chai Pot,Food & Beverage,142.3,79.69,True,2024-01-10 10:00:00,NONE
+p-0015,m-002,SKU-ELE-0015,Fast USB-C Charging Cable,Electronics,377.97,170.09,True,2024-02-15 11:30:00,NONE
+p-0016,m-002,SKU-ELE-0016,10000mAh Power Bank,Electronics,1040.98,676.64,True,2024-02-15 11:30:00,NONE
+p-0017,m-002,SKU-ELE-0017,Wireless Bluetooth Neckband,Electronics,1485.43,816.99,True,2024-02-15 11:30:00,NONE
+p-0018,m-002,SKU-ELE-0018,Tempered Glass & Phone Case,Electronics,237.28,83.05,True,2024-02-15 11:30:00,NONE
+p-0019,m-002,SKU-ELE-0019,Smartwatch with Health Monitor,Electronics,2972.2,1783.32,True,2024-02-15 11:30:00,NONE
+p-0020,m-002,SKU-ELE-0020,20W Fast Wall Adapter,Electronics,401.92,221.06,True,2024-02-15 11:30:00,NONE
+p-0021,m-002,SKU-ELE-0021,Wireless Earbuds with Mic,Electronics,2348.26,1361.99,True,2024-02-15 11:30:00,NONE
+p-0022,m-002,SKU-ELE-0022,OTG Adapter & Memory Card 64GB,Electronics,426.03,276.92,True,2024-02-15 11:30:00,NONE
+p-0023,m-003,SKU-GRO-0023,Basmati Rice (1kg),Grocery,93.99,79.89,True,2024-03-01 09:00:00,NONE
+p-0024,m-003,SKU-GRO-0024,Chana Dal (1kg),Grocery,97.44,83.8,True,2024-03-01 09:00:00,NONE
+p-0025,m-003,SKU-GRO-0025,Mustard Oil (1L),Grocery,166.0,146.08,True,2024-03-01 09:00:00,NONE
+p-0026,m-003,SKU-GRO-0026,Aashirvaad Atta (5kg),Grocery,250.33,225.3,True,2024-03-01 09:00:00,NONE
+p-0027,m-003,SKU-GRO-0027,Organic Desi Ghee (500ml),Grocery,409.29,319.25,True,2024-03-01 09:00:00,HIGH_GROWTH_PRODUCT
+p-0028,m-003,SKU-GRO-0028,Tata Salt (1kg),Grocery,27.64,24.88,True,2024-03-01 09:00:00,NONE
+p-0029,m-003,SKU-GRO-0029,Maggi 2-Min Noodles (Pack of 4),Grocery,57.37,50.49,True,2024-03-01 09:00:00,NONE
+p-0030,m-003,SKU-GRO-0030,Britannia Good Day Biscuits,Grocery,32.96,28.02,True,2024-03-01 09:00:00,NONE
+p-0031,m-003,SKU-GRO-0031,Amul Taaza Milk (1L),Grocery,64.31,59.17,True,2024-03-01 09:00:00,NONE
+p-0032,m-003,SKU-GRO-0032,Organic Quinoa & Millets (500g),Grocery,312.84,203.35,True,2024-03-01 09:00:00,HIGH_GROWTH_PRODUCT
+p-0033,m-003,SKU-GRO-0033,Cold-Pressed Mustard Oil (1L),Grocery,330.49,231.34,True,2024-03-01 09:00:00,NONE
+p-0034,m-003,SKU-GRO-0034,Dry Fruits Gift Pack (500g),Grocery,636.95,477.71,True,2024-03-01 09:00:00,NONE
+p-0035,m-004,SKU-FAS-0035,Cotton Printed Kurti,Fashion,781.69,390.85,True,2024-01-20 14:00:00,NONE
+p-0036,m-004,SKU-FAS-0036,Men Casual Slim Shirt,Fashion,687.11,329.81,True,2024-01-20 14:00:00,NONE
+p-0037,m-004,SKU-FAS-0037,Denim Jeans,Fashion,1789.15,894.58,True,2024-01-20 14:00:00,NONE
+p-0038,m-004,SKU-FAS-0038,Embroidered Silk Saree,Fashion,3021.37,1359.62,True,2024-01-20 14:00:00,NONE
+p-0039,m-004,SKU-FAS-0039,Leather Formal Belt,Fashion,482.75,265.51,True,2024-01-20 14:00:00,NONE
+p-0040,m-004,SKU-FAS-0040,Cotton Anarkali Suit Set,Fashion,1721.89,860.95,True,2024-01-20 14:00:00,NONE
+p-0041,m-004,SKU-FAS-0041,Comfort Chino Trousers,Fashion,1272.21,661.55,True,2024-01-20 14:00:00,NONE
+p-0042,m-004,SKU-FAS-0042,Traditional Mojari / Footwear,Fashion,732.09,402.65,True,2024-01-20 14:00:00,NONE
+p-0043,m-005,SKU-GRO-0043,Basmati Rice (1kg),Grocery,107.27,91.18,True,2025-01-12 00:00:00,NONE
+p-0044,m-005,SKU-GRO-0044,Chana Dal (1kg),Grocery,106.6,91.68,True,2025-01-12 00:00:00,NONE
+p-0045,m-005,SKU-GRO-0045,Mustard Oil (1L),Grocery,158.96,139.88,True,2025-01-12 00:00:00,NONE
+p-0046,m-005,SKU-GRO-0046,Aashirvaad Atta (5kg),Grocery,247.41,222.67,True,2025-01-12 00:00:00,NONE
+p-0047,m-005,SKU-GRO-0047,Organic Desi Ghee (500ml),Grocery,342.62,267.24,True,2025-01-12 00:00:00,NONE
+p-0048,m-005,SKU-GRO-0048,Tata Salt (1kg),Grocery,25.41,22.87,True,2025-01-12 00:00:00,NONE
+p-0049,m-005,SKU-GRO-0049,Maggi 2-Min Noodles (Pack of 4),Grocery,54.06,47.57,True,2025-01-12 00:00:00,NONE
+p-0050,m-005,SKU-GRO-0050,Britannia Good Day Biscuits,Grocery,42.51,36.13,True,2025-01-12 00:00:00,NONE
+p-0051,m-005,SKU-GRO-0051,Amul Taaza Milk (1L),Grocery,63.04,58.0,True,2025-01-12 00:00:00,NONE
+p-0052,m-005,SKU-GRO-0052,Organic Quinoa & Millets (500g),Grocery,209.43,136.13,True,2025-01-12 00:00:00,NONE
+p-0053,m-005,SKU-GRO-0053,Cold-Pressed Mustard Oil (1L),Grocery,314.29,220.0,True,2025-01-12 00:00:00,NONE
+p-0054,m-005,SKU-GRO-0054,Dry Fruits Gift Pack (500g),Grocery,632.0,474.0,True,2025-01-12 00:00:00,NONE
+p-0055,m-006,SKU-SER-0055,Shirt / Trouser Alteration & Stitching,Services,112.22,39.28,True,2025-03-13 00:00:00,NONE
+p-0056,m-006,SKU-SER-0056,Dry Cleaning - Men Suit 2-Piece,Services,310.45,124.18,True,2025-03-13 00:00:00,NONE
+p-0057,m-006,SKU-SER-0057,Express Shoe Laundry & Polish,Services,207.83,93.52,True,2025-03-13 00:00:00,NONE
+p-0058,m-006,SKU-SER-0058,Mobile Screen Guard Application Service,Services,85.78,25.73,True,2025-03-13 00:00:00,NONE
+p-0059,m-006,SKU-SER-0059,Document Scanning & Digital Lamination,Services,87.62,21.91,True,2025-03-13 00:00:00,NONE
+p-0060,m-007,SKU-ELE-0060,Fast USB-C Charging Cable,Electronics,486.95,219.13,True,2025-05-10 00:00:00,NONE
+p-0061,m-007,SKU-ELE-0061,10000mAh Power Bank,Electronics,1314.17,854.21,True,2025-05-10 00:00:00,NONE
+p-0062,m-007,SKU-ELE-0062,Wireless Bluetooth Neckband,Electronics,1357.85,746.82,True,2025-05-10 00:00:00,NONE
+p-0063,m-007,SKU-ELE-0063,Tempered Glass & Phone Case,Electronics,206.76,72.37,True,2025-05-10 00:00:00,NONE
+p-0064,m-007,SKU-ELE-0064,Smartwatch with Health Monitor,Electronics,2427.55,1456.53,True,2025-05-10 00:00:00,NONE
+p-0065,m-007,SKU-ELE-0065,20W Fast Wall Adapter,Electronics,628.05,345.43,True,2025-05-10 00:00:00,NONE
+p-0066,m-007,SKU-ELE-0066,Wireless Earbuds with Mic,Electronics,1139.08,660.67,True,2025-05-10 00:00:00,NONE
+p-0067,m-007,SKU-ELE-0067,OTG Adapter & Memory Card 64GB,Electronics,730.8,475.02,True,2025-05-10 00:00:00,NONE
+p-0068,m-008,SKU-FAS-0068,Cotton Printed Kurti,Fashion,567.43,283.71,True,2025-06-24 00:00:00,NONE
+p-0069,m-008,SKU-FAS-0069,Men Casual Slim Shirt,Fashion,816.98,392.15,True,2025-06-24 00:00:00,NONE
+p-0070,m-008,SKU-FAS-0070,Denim Jeans,Fashion,1686.41,843.21,True,2025-06-24 00:00:00,NONE
+p-0071,m-008,SKU-FAS-0071,Embroidered Silk Saree,Fashion,1942.06,873.93,True,2025-06-24 00:00:00,NONE
+p-0072,m-008,SKU-FAS-0072,Leather Formal Belt,Fashion,266.13,146.37,True,2025-06-24 00:00:00,NONE
+p-0073,m-008,SKU-FAS-0073,Cotton Anarkali Suit Set,Fashion,2774.3,1387.15,True,2025-06-24 00:00:00,NONE
+p-0074,m-008,SKU-FAS-0074,Comfort Chino Trousers,Fashion,1207.84,628.08,True,2025-06-24 00:00:00,NONE
+p-0075,m-008,SKU-FAS-0075,Traditional Mojari / Footwear,Fashion,860.33,473.18,True,2025-06-24 00:00:00,NONE
+p-0076,m-009,SKU-FOO-0076,Special Masala Chai,Food & Beverage,39.11,23.47,True,2025-03-25 00:00:00,NONE
+p-0077,m-009,SKU-FOO-0077,Ginger Lemon Tea,Food & Beverage,52.72,31.63,True,2025-03-25 00:00:00,NONE
+p-0078,m-009,SKU-FOO-0078,Kullad Chai,Food & Beverage,51.51,29.88,True,2025-03-25 00:00:00,NONE
+p-0079,m-009,SKU-FOO-0079,Filter Coffee,Food & Beverage,61.55,33.85,True,2025-03-25 00:00:00,NONE
+p-0080,m-009,SKU-FOO-0080,Fresh Bun Maska,Food & Beverage,35.76,22.17,True,2025-03-25 00:00:00,NONE
+p-0081,m-009,SKU-FOO-0081,Crispy Samosa (2 pcs),Food & Beverage,30.99,20.14,True,2025-03-25 00:00:00,NONE
+p-0082,m-009,SKU-FOO-0082,Paneer Pakora Platter,Food & Beverage,88.85,48.87,True,2025-03-25 00:00:00,NONE
+p-0083,m-009,SKU-FOO-0083,Chole Bhature,Food & Beverage,138.13,80.12,True,2025-03-25 00:00:00,NONE
+p-0084,m-009,SKU-FOO-0084,Veg Grilled Sandwich,Food & Beverage,104.63,62.78,True,2025-03-25 00:00:00,NONE
+p-0085,m-009,SKU-FOO-0085,Cold Coffee with Ice Cream,Food & Beverage,121.63,66.9,True,2025-03-25 00:00:00,NONE
+p-0086,m-009,SKU-FOO-0086,Poha with Sev,Food & Beverage,66.56,43.26,True,2025-03-25 00:00:00,NONE
+p-0087,m-009,SKU-FOO-0087,Aloo Paratha with Butter,Food & Beverage,91.14,56.51,True,2025-03-25 00:00:00,NONE
+p-0088,m-009,SKU-FOO-0088,Evening Chai Combo Platter,Food & Beverage,66.57,38.61,True,2025-03-25 00:00:00,NONE
+p-0089,m-009,SKU-FOO-0089,Weekend Family Chai Pot,Food & Beverage,188.25,105.42,True,2025-03-25 00:00:00,NONE
+p-0090,m-010,SKU-FOO-0090,Special Masala Chai,Food & Beverage,43.92,26.35,True,2025-06-01 00:00:00,NONE
+p-0091,m-010,SKU-FOO-0091,Ginger Lemon Tea,Food & Beverage,44.29,26.57,True,2025-06-01 00:00:00,NONE
+p-0092,m-010,SKU-FOO-0092,Kullad Chai,Food & Beverage,51.15,29.67,True,2025-06-01 00:00:00,NONE
+p-0093,m-010,SKU-FOO-0093,Filter Coffee,Food & Beverage,67.52,37.14,True,2025-06-01 00:00:00,NONE
+p-0094,m-010,SKU-FOO-0094,Fresh Bun Maska,Food & Beverage,31.82,19.73,True,2025-06-01 00:00:00,NONE
+p-0095,m-010,SKU-FOO-0095,Crispy Samosa (2 pcs),Food & Beverage,27.0,17.55,True,2025-06-01 00:00:00,NONE
+p-0096,m-010,SKU-FOO-0096,Paneer Pakora Platter,Food & Beverage,107.88,59.33,True,2025-06-01 00:00:00,NONE
+p-0097,m-010,SKU-FOO-0097,Chole Bhature,Food & Beverage,127.18,73.76,True,2025-06-01 00:00:00,NONE
+p-0098,m-010,SKU-FOO-0098,Veg Grilled Sandwich,Food & Beverage,87.95,52.77,True,2025-06-01 00:00:00,NONE
+p-0099,m-010,SKU-FOO-0099,Cold Coffee with Ice Cream,Food & Beverage,89.04,48.97,True,2025-06-01 00:00:00,NONE
+p-0100,m-010,SKU-FOO-0100,Poha with Sev,Food & Beverage,62.66,40.73,True,2025-06-01 00:00:00,NONE
+p-0101,m-010,SKU-FOO-0101,Aloo Paratha with Butter,Food & Beverage,77.7,48.17,True,2025-06-01 00:00:00,NONE
+p-0102,m-010,SKU-FOO-0102,Evening Chai Combo Platter,Food & Beverage,84.45,48.98,True,2025-06-01 00:00:00,NONE
+p-0103,m-010,SKU-FOO-0103,Weekend Family Chai Pot,Food & Beverage,193.52,108.37,True,2025-06-01 00:00:00,NONE
+p-0104,m-011,SKU-FOO-0104,Special Masala Chai,Food & Beverage,38.53,23.12,True,2025-03-26 00:00:00,NONE
+p-0105,m-011,SKU-FOO-0105,Ginger Lemon Tea,Food & Beverage,53.14,31.88,True,2025-03-26 00:00:00,NONE
+p-0106,m-011,SKU-FOO-0106,Kullad Chai,Food & Beverage,48.92,28.37,True,2025-03-26 00:00:00,NONE
+p-0107,m-011,SKU-FOO-0107,Filter Coffee,Food & Beverage,44.77,24.62,True,2025-03-26 00:00:00,NONE
+p-0108,m-011,SKU-FOO-0108,Fresh Bun Maska,Food & Beverage,42.92,26.61,True,2025-03-26 00:00:00,NONE
+p-0109,m-011,SKU-FOO-0109,Crispy Samosa (2 pcs),Food & Beverage,31.75,20.64,True,2025-03-26 00:00:00,NONE
+p-0110,m-011,SKU-FOO-0110,Paneer Pakora Platter,Food & Beverage,125.11,68.81,True,2025-03-26 00:00:00,NONE
+p-0111,m-011,SKU-FOO-0111,Chole Bhature,Food & Beverage,148.79,86.3,True,2025-03-26 00:00:00,NONE
+p-0112,m-011,SKU-FOO-0112,Veg Grilled Sandwich,Food & Beverage,73.87,44.32,True,2025-03-26 00:00:00,NONE
+p-0113,m-011,SKU-FOO-0113,Cold Coffee with Ice Cream,Food & Beverage,116.66,64.16,True,2025-03-26 00:00:00,NONE
+p-0114,m-011,SKU-FOO-0114,Poha with Sev,Food & Beverage,54.54,35.45,True,2025-03-26 00:00:00,NONE
+p-0115,m-011,SKU-FOO-0115,Aloo Paratha with Butter,Food & Beverage,69.57,43.13,True,2025-03-26 00:00:00,NONE
+p-0116,m-011,SKU-FOO-0116,Evening Chai Combo Platter,Food & Beverage,73.2,42.46,True,2025-03-26 00:00:00,NONE
+p-0117,m-011,SKU-FOO-0117,Weekend Family Chai Pot,Food & Beverage,182.81,102.37,True,2025-03-26 00:00:00,NONE
+p-0118,m-012,SKU-BEA-0118,Herbal Face Wash (150ml),Beauty & Personal Care,113.76,70.53,True,2025-02-08 00:00:00,NONE
+p-0119,m-012,SKU-BEA-0119,Daily Moisturising Cream,Beauty & Personal Care,160.3,96.18,True,2025-02-08 00:00:00,NONE
+p-0120,m-012,SKU-BEA-0120,Sunscreen Lotion SPF 50,Beauty & Personal Care,398.61,231.19,True,2025-02-08 00:00:00,NONE
+p-0121,m-012,SKU-BEA-0121,Ayurvedic Hair Oil (200ml),Beauty & Personal Care,118.06,76.74,True,2025-02-08 00:00:00,NONE
+p-0122,m-012,SKU-BEA-0122,Shampoo & Conditioner Combo,Beauty & Personal Care,201.12,130.73,True,2025-02-08 00:00:00,NONE
+p-0123,m-012,SKU-BEA-0123,Men Charcoal Beard Wash,Beauty & Personal Care,175.96,96.78,True,2025-02-08 00:00:00,NONE
+p-0124,m-012,SKU-BEA-0124,Organic Lip Balm & Scrub,Beauty & Personal Care,82.22,45.22,True,2025-02-08 00:00:00,NONE
+p-0125,m-013,SKU-FAS-0125,Cotton Printed Kurti,Fashion,556.98,278.49,True,2025-01-25 00:00:00,NONE
+p-0126,m-013,SKU-FAS-0126,Men Casual Slim Shirt,Fashion,889.99,427.2,True,2025-01-25 00:00:00,NONE
+p-0127,m-013,SKU-FAS-0127,Denim Jeans,Fashion,1163.64,581.82,True,2025-01-25 00:00:00,NONE
+p-0128,m-013,SKU-FAS-0128,Embroidered Silk Saree,Fashion,2897.77,1304.0,True,2025-01-25 00:00:00,NONE
+p-0129,m-013,SKU-FAS-0129,Leather Formal Belt,Fashion,271.73,149.45,True,2025-01-25 00:00:00,NONE
+p-0130,m-013,SKU-FAS-0130,Cotton Anarkali Suit Set,Fashion,2532.63,1266.32,True,2025-01-25 00:00:00,NONE
+p-0131,m-013,SKU-FAS-0131,Comfort Chino Trousers,Fashion,1041.72,541.69,True,2025-01-25 00:00:00,NONE
+p-0132,m-013,SKU-FAS-0132,Traditional Mojari / Footwear,Fashion,861.11,473.61,True,2025-01-25 00:00:00,NONE
+p-0133,m-014,SKU-ELE-0133,Fast USB-C Charging Cable,Electronics,482.82,217.27,True,2025-07-04 00:00:00,NONE
+p-0134,m-014,SKU-ELE-0134,10000mAh Power Bank,Electronics,812.67,528.24,True,2025-07-04 00:00:00,NONE
+p-0135,m-014,SKU-ELE-0135,Wireless Bluetooth Neckband,Electronics,1579.66,868.81,True,2025-07-04 00:00:00,NONE
+p-0136,m-014,SKU-ELE-0136,Tempered Glass & Phone Case,Electronics,265.14,92.8,True,2025-07-04 00:00:00,NONE
+p-0137,m-014,SKU-ELE-0137,Smartwatch with Health Monitor,Electronics,2109.87,1265.92,True,2025-07-04 00:00:00,NONE
+p-0138,m-014,SKU-ELE-0138,20W Fast Wall Adapter,Electronics,773.29,425.31,True,2025-07-04 00:00:00,NONE
+p-0139,m-014,SKU-ELE-0139,Wireless Earbuds with Mic,Electronics,1446.92,839.21,True,2025-07-04 00:00:00,NONE
+p-0140,m-014,SKU-ELE-0140,OTG Adapter & Memory Card 64GB,Electronics,505.99,328.89,True,2025-07-04 00:00:00,NONE
+p-0141,m-015,SKU-FOO-0141,Special Masala Chai,Food & Beverage,47.83,28.7,True,2025-05-14 00:00:00,NONE
+p-0142,m-015,SKU-FOO-0142,Ginger Lemon Tea,Food & Beverage,51.71,31.03,True,2025-05-14 00:00:00,NONE
+p-0143,m-015,SKU-FOO-0143,Kullad Chai,Food & Beverage,50.76,29.44,True,2025-05-14 00:00:00,NONE
+p-0144,m-015,SKU-FOO-0144,Filter Coffee,Food & Beverage,62.04,34.12,True,2025-05-14 00:00:00,NONE
+p-0145,m-015,SKU-FOO-0145,Fresh Bun Maska,Food & Beverage,42.0,26.04,True,2025-05-14 00:00:00,NONE
+p-0146,m-015,SKU-FOO-0146,Crispy Samosa (2 pcs),Food & Beverage,38.47,25.01,True,2025-05-14 00:00:00,NONE
+p-0147,m-015,SKU-FOO-0147,Paneer Pakora Platter,Food & Beverage,109.29,60.11,True,2025-05-14 00:00:00,NONE
+p-0148,m-015,SKU-FOO-0148,Chole Bhature,Food & Beverage,109.11,63.28,True,2025-05-14 00:00:00,NONE
+p-0149,m-015,SKU-FOO-0149,Veg Grilled Sandwich,Food & Beverage,84.28,50.57,True,2025-05-14 00:00:00,NONE
+p-0150,m-015,SKU-FOO-0150,Cold Coffee with Ice Cream,Food & Beverage,93.33,51.33,True,2025-05-14 00:00:00,NONE
+p-0151,m-015,SKU-FOO-0151,Poha with Sev,Food & Beverage,60.07,39.05,True,2025-05-14 00:00:00,NONE
+p-0152,m-015,SKU-FOO-0152,Aloo Paratha with Butter,Food & Beverage,91.93,57.0,True,2025-05-14 00:00:00,NONE
+p-0153,m-015,SKU-FOO-0153,Evening Chai Combo Platter,Food & Beverage,81.73,47.4,True,2025-05-14 00:00:00,NONE
+p-0154,m-015,SKU-FOO-0154,Weekend Family Chai Pot,Food & Beverage,190.43,106.64,True,2025-05-14 00:00:00,NONE
+p-0155,m-016,SKU-SER-0155,Shirt / Trouser Alteration & Stitching,Services,171.95,60.18,True,2025-05-25 00:00:00,NONE
+p-0156,m-016,SKU-SER-0156,Dry Cleaning - Men Suit 2-Piece,Services,445.18,178.07,True,2025-05-25 00:00:00,NONE
+p-0157,m-016,SKU-SER-0157,Express Shoe Laundry & Polish,Services,189.44,85.25,True,2025-05-25 00:00:00,NONE
+p-0158,m-016,SKU-SER-0158,Mobile Screen Guard Application Service,Services,113.49,34.05,True,2025-05-25 00:00:00,NONE
+p-0159,m-016,SKU-SER-0159,Document Scanning & Digital Lamination,Services,75.51,18.88,True,2025-05-25 00:00:00,NONE
+p-0160,m-017,SKU-PHA-0160,Paracetamol 650mg (Strip),Pharmacy,29.94,22.46,True,2025-04-03 00:00:00,NONE
+p-0161,m-017,SKU-PHA-0161,Cough Syrup Honey & Ginger,Pharmacy,78.78,55.15,True,2025-04-03 00:00:00,NONE
+p-0162,m-017,SKU-PHA-0162,Ayurvedic Immunity Chyawanprash (1kg),Pharmacy,340.01,244.81,True,2025-04-03 00:00:00,NONE
+p-0163,m-017,SKU-PHA-0163,Antacid Chewable Tablets,Pharmacy,61.67,46.25,True,2025-04-03 00:00:00,NONE
+p-0164,m-017,SKU-PHA-0164,Vitamin C + Zinc Supplements,Pharmacy,125.45,85.31,True,2025-04-03 00:00:00,NONE
+p-0165,m-017,SKU-PHA-0165,Digital Thermometer,Pharmacy,188.76,113.26,True,2025-04-03 00:00:00,NONE
+p-0166,m-017,SKU-PHA-0166,First Aid Bandage & Antiseptic Ointment,Pharmacy,59.73,41.81,True,2025-04-03 00:00:00,NONE
+p-0167,m-017,SKU-PHA-0167,Glucometer Test Strips (Pack of 25),Pharmacy,563.22,422.42,True,2025-04-03 00:00:00,NONE
+p-0168,m-018,SKU-FOO-0168,Special Masala Chai,Food & Beverage,36.75,22.05,True,2024-12-12 00:00:00,NONE
+p-0169,m-018,SKU-FOO-0169,Ginger Lemon Tea,Food & Beverage,52.59,31.55,True,2024-12-12 00:00:00,NONE
+p-0170,m-018,SKU-FOO-0170,Kullad Chai,Food & Beverage,45.57,26.43,True,2024-12-12 00:00:00,NONE
+p-0171,m-018,SKU-FOO-0171,Filter Coffee,Food & Beverage,68.54,37.7,True,2024-12-12 00:00:00,NONE
+p-0172,m-018,SKU-FOO-0172,Fresh Bun Maska,Food & Beverage,36.32,22.52,True,2024-12-12 00:00:00,NONE
+p-0173,m-018,SKU-FOO-0173,Crispy Samosa (2 pcs),Food & Beverage,37.52,24.39,True,2024-12-12 00:00:00,NONE
+p-0174,m-018,SKU-FOO-0174,Paneer Pakora Platter,Food & Beverage,108.22,59.52,True,2024-12-12 00:00:00,NONE
+p-0175,m-018,SKU-FOO-0175,Chole Bhature,Food & Beverage,142.43,82.61,True,2024-12-12 00:00:00,NONE
+p-0176,m-018,SKU-FOO-0176,Veg Grilled Sandwich,Food & Beverage,62.6,37.56,True,2024-12-12 00:00:00,NONE
+p-0177,m-018,SKU-FOO-0177,Cold Coffee with Ice Cream,Food & Beverage,127.12,69.92,True,2024-12-12 00:00:00,NONE
+p-0178,m-018,SKU-FOO-0178,Poha with Sev,Food & Beverage,46.73,30.37,True,2024-12-12 00:00:00,NONE
+p-0179,m-018,SKU-FOO-0179,Aloo Paratha with Butter,Food & Beverage,62.74,38.9,True,2024-12-12 00:00:00,NONE
+p-0180,m-018,SKU-FOO-0180,Evening Chai Combo Platter,Food & Beverage,88.72,51.46,True,2024-12-12 00:00:00,NONE
+p-0181,m-018,SKU-FOO-0181,Weekend Family Chai Pot,Food & Beverage,142.42,79.76,True,2024-12-12 00:00:00,NONE
+p-0182,m-019,SKU-FOO-0182,Special Masala Chai,Food & Beverage,30.62,18.37,True,2025-03-26 00:00:00,NONE
+p-0183,m-019,SKU-FOO-0183,Ginger Lemon Tea,Food & Beverage,39.95,23.97,True,2025-03-26 00:00:00,NONE
+p-0184,m-019,SKU-FOO-0184,Kullad Chai,Food & Beverage,56.78,32.93,True,2025-03-26 00:00:00,NONE
+p-0185,m-019,SKU-FOO-0185,Filter Coffee,Food & Beverage,58.64,32.25,True,2025-03-26 00:00:00,NONE
+p-0186,m-019,SKU-FOO-0186,Fresh Bun Maska,Food & Beverage,33.58,20.82,True,2025-03-26 00:00:00,NONE
+p-0187,m-019,SKU-FOO-0187,Crispy Samosa (2 pcs),Food & Beverage,32.1,20.87,True,2025-03-26 00:00:00,NONE
+p-0188,m-019,SKU-FOO-0188,Paneer Pakora Platter,Food & Beverage,86.86,47.77,True,2025-03-26 00:00:00,NONE
+p-0189,m-019,SKU-FOO-0189,Chole Bhature,Food & Beverage,156.34,90.68,True,2025-03-26 00:00:00,NONE
+p-0190,m-019,SKU-FOO-0190,Veg Grilled Sandwich,Food & Beverage,83.25,49.95,True,2025-03-26 00:00:00,NONE
+p-0191,m-019,SKU-FOO-0191,Cold Coffee with Ice Cream,Food & Beverage,85.37,46.95,True,2025-03-26 00:00:00,NONE
+p-0192,m-019,SKU-FOO-0192,Poha with Sev,Food & Beverage,51.07,33.2,True,2025-03-26 00:00:00,NONE
+p-0193,m-019,SKU-FOO-0193,Aloo Paratha with Butter,Food & Beverage,84.24,52.23,True,2025-03-26 00:00:00,NONE
+p-0194,m-019,SKU-FOO-0194,Evening Chai Combo Platter,Food & Beverage,88.91,51.57,True,2025-03-26 00:00:00,NONE
+p-0195,m-019,SKU-FOO-0195,Weekend Family Chai Pot,Food & Beverage,183.1,102.54,True,2025-03-26 00:00:00,NONE
+p-0196,m-020,SKU-FOO-0196,Special Masala Chai,Food & Beverage,45.56,27.34,True,2025-03-13 00:00:00,NONE
+p-0197,m-020,SKU-FOO-0197,Ginger Lemon Tea,Food & Beverage,38.28,22.97,True,2025-03-13 00:00:00,NONE
+p-0198,m-020,SKU-FOO-0198,Kullad Chai,Food & Beverage,46.22,26.81,True,2025-03-13 00:00:00,NONE
+p-0199,m-020,SKU-FOO-0199,Filter Coffee,Food & Beverage,57.36,31.55,True,2025-03-13 00:00:00,NONE
+p-0200,m-020,SKU-FOO-0200,Fresh Bun Maska,Food & Beverage,43.93,27.24,True,2025-03-13 00:00:00,NONE
+p-0201,m-020,SKU-FOO-0201,Crispy Samosa (2 pcs),Food & Beverage,33.64,21.87,True,2025-03-13 00:00:00,NONE
+p-0202,m-020,SKU-FOO-0202,Paneer Pakora Platter,Food & Beverage,134.48,73.96,True,2025-03-13 00:00:00,NONE
+p-0203,m-020,SKU-FOO-0203,Chole Bhature,Food & Beverage,116.27,67.44,True,2025-03-13 00:00:00,NONE
+p-0204,m-020,SKU-FOO-0204,Veg Grilled Sandwich,Food & Beverage,107.07,64.24,True,2025-03-13 00:00:00,NONE
+p-0205,m-020,SKU-FOO-0205,Cold Coffee with Ice Cream,Food & Beverage,81.9,45.05,True,2025-03-13 00:00:00,NONE
+p-0206,m-020,SKU-FOO-0206,Poha with Sev,Food & Beverage,57.76,37.54,True,2025-03-13 00:00:00,NONE
+p-0207,m-020,SKU-FOO-0207,Aloo Paratha with Butter,Food & Beverage,93.22,57.8,True,2025-03-13 00:00:00,NONE
+p-0208,m-020,SKU-FOO-0208,Evening Chai Combo Platter,Food & Beverage,67.29,39.03,True,2025-03-13 00:00:00,NONE
+p-0209,m-020,SKU-FOO-0209,Weekend Family Chai Pot,Food & Beverage,181.83,101.82,True,2025-03-13 00:00:00,NONE
+p-0210,m-021,SKU-GRO-0210,Basmati Rice (1kg),Grocery,117.14,99.57,True,2025-04-29 00:00:00,NONE
+p-0211,m-021,SKU-GRO-0211,Chana Dal (1kg),Grocery,107.37,92.34,True,2025-04-29 00:00:00,NONE
+p-0212,m-021,SKU-GRO-0212,Mustard Oil (1L),Grocery,180.28,158.65,True,2025-04-29 00:00:00,NONE
+p-0213,m-021,SKU-GRO-0213,Aashirvaad Atta (5kg),Grocery,249.81,224.83,True,2025-04-29 00:00:00,NONE
+p-0214,m-021,SKU-GRO-0214,Organic Desi Ghee (500ml),Grocery,393.57,306.98,True,2025-04-29 00:00:00,NONE
+p-0215,m-021,SKU-GRO-0215,Tata Salt (1kg),Grocery,22.25,20.03,True,2025-04-29 00:00:00,NONE
+p-0216,m-021,SKU-GRO-0216,Maggi 2-Min Noodles (Pack of 4),Grocery,55.33,48.69,True,2025-04-29 00:00:00,NONE
+p-0217,m-021,SKU-GRO-0217,Britannia Good Day Biscuits,Grocery,39.92,33.93,True,2025-04-29 00:00:00,NONE
+p-0218,m-021,SKU-GRO-0218,Amul Taaza Milk (1L),Grocery,60.69,55.83,True,2025-04-29 00:00:00,NONE
+p-0219,m-021,SKU-GRO-0219,Organic Quinoa & Millets (500g),Grocery,270.66,175.93,True,2025-04-29 00:00:00,NONE
+p-0220,m-021,SKU-GRO-0220,Cold-Pressed Mustard Oil (1L),Grocery,221.52,155.06,True,2025-04-29 00:00:00,NONE
+p-0221,m-021,SKU-GRO-0221,Dry Fruits Gift Pack (500g),Grocery,576.02,432.01,True,2025-04-29 00:00:00,NONE
+p-0222,m-022,SKU-FAS-0222,Cotton Printed Kurti,Fashion,695.1,347.55,True,2025-06-30 00:00:00,NONE
+p-0223,m-022,SKU-FAS-0223,Men Casual Slim Shirt,Fashion,903.03,433.45,True,2025-06-30 00:00:00,NONE
+p-0224,m-022,SKU-FAS-0224,Denim Jeans,Fashion,1198.04,599.02,True,2025-06-30 00:00:00,NONE
+p-0225,m-022,SKU-FAS-0225,Embroidered Silk Saree,Fashion,4174.73,1878.63,True,2025-06-30 00:00:00,NONE
+p-0226,m-022,SKU-FAS-0226,Leather Formal Belt,Fashion,410.45,225.75,True,2025-06-30 00:00:00,NONE
+p-0227,m-022,SKU-FAS-0227,Cotton Anarkali Suit Set,Fashion,1444.79,722.39,True,2025-06-30 00:00:00,NONE
+p-0228,m-022,SKU-FAS-0228,Comfort Chino Trousers,Fashion,881.93,458.6,True,2025-06-30 00:00:00,NONE
+p-0229,m-022,SKU-FAS-0229,Traditional Mojari / Footwear,Fashion,712.53,391.89,True,2025-06-30 00:00:00,NONE
+p-0230,m-023,SKU-GRO-0230,Basmati Rice (1kg),Grocery,148.54,126.26,True,2025-06-08 00:00:00,NONE
+p-0231,m-023,SKU-GRO-0231,Chana Dal (1kg),Grocery,104.64,89.99,True,2025-06-08 00:00:00,NONE
+p-0232,m-023,SKU-GRO-0232,Mustard Oil (1L),Grocery,185.98,163.66,True,2025-06-08 00:00:00,NONE
+p-0233,m-023,SKU-GRO-0233,Aashirvaad Atta (5kg),Grocery,248.73,223.86,True,2025-06-08 00:00:00,NONE
+p-0234,m-023,SKU-GRO-0234,Organic Desi Ghee (500ml),Grocery,380.43,296.74,True,2025-06-08 00:00:00,NONE
+p-0235,m-023,SKU-GRO-0235,Tata Salt (1kg),Grocery,26.95,24.25,True,2025-06-08 00:00:00,NONE
+p-0236,m-023,SKU-GRO-0236,Maggi 2-Min Noodles (Pack of 4),Grocery,55.92,49.21,True,2025-06-08 00:00:00,NONE
+p-0237,m-023,SKU-GRO-0237,Britannia Good Day Biscuits,Grocery,34.83,29.61,True,2025-06-08 00:00:00,NONE
+p-0238,m-023,SKU-GRO-0238,Amul Taaza Milk (1L),Grocery,62.45,57.45,True,2025-06-08 00:00:00,NONE
+p-0239,m-023,SKU-GRO-0239,Organic Quinoa & Millets (500g),Grocery,310.85,202.05,True,2025-06-08 00:00:00,NONE
+p-0240,m-023,SKU-GRO-0240,Cold-Pressed Mustard Oil (1L),Grocery,253.47,177.43,True,2025-06-08 00:00:00,NONE
+p-0241,m-023,SKU-GRO-0241,Dry Fruits Gift Pack (500g),Grocery,585.24,438.93,True,2025-06-08 00:00:00,NONE
+p-0242,m-024,SKU-GRO-0242,Basmati Rice (1kg),Grocery,157.54,133.91,True,2025-01-30 00:00:00,NONE
+p-0243,m-024,SKU-GRO-0243,Chana Dal (1kg),Grocery,102.79,88.4,True,2025-01-30 00:00:00,NONE
+p-0244,m-024,SKU-GRO-0244,Mustard Oil (1L),Grocery,173.41,152.6,True,2025-01-30 00:00:00,NONE
+p-0245,m-024,SKU-GRO-0245,Aashirvaad Atta (5kg),Grocery,226.82,204.14,True,2025-01-30 00:00:00,NONE
+p-0246,m-024,SKU-GRO-0246,Organic Desi Ghee (500ml),Grocery,384.26,299.72,True,2025-01-30 00:00:00,NONE
+p-0247,m-024,SKU-GRO-0247,Tata Salt (1kg),Grocery,23.95,21.55,True,2025-01-30 00:00:00,NONE
+p-0248,m-024,SKU-GRO-0248,Maggi 2-Min Noodles (Pack of 4),Grocery,54.88,48.29,True,2025-01-30 00:00:00,NONE
+p-0249,m-024,SKU-GRO-0249,Britannia Good Day Biscuits,Grocery,35.32,30.02,True,2025-01-30 00:00:00,NONE
+p-0250,m-024,SKU-GRO-0250,Amul Taaza Milk (1L),Grocery,62.58,57.57,True,2025-01-30 00:00:00,NONE
+p-0251,m-024,SKU-GRO-0251,Organic Quinoa & Millets (500g),Grocery,219.15,142.45,True,2025-01-30 00:00:00,NONE
+p-0252,m-024,SKU-GRO-0252,Cold-Pressed Mustard Oil (1L),Grocery,291.54,204.08,True,2025-01-30 00:00:00,NONE
+p-0253,m-024,SKU-GRO-0253,Dry Fruits Gift Pack (500g),Grocery,714.03,535.52,True,2025-01-30 00:00:00,NONE
+p-0254,m-025,SKU-FAS-0254,Cotton Printed Kurti,Fashion,727.9,363.95,True,2025-07-15 00:00:00,NONE
+p-0255,m-025,SKU-FAS-0255,Men Casual Slim Shirt,Fashion,961.12,461.34,True,2025-07-15 00:00:00,NONE
+p-0256,m-025,SKU-FAS-0256,Denim Jeans,Fashion,1009.97,504.99,True,2025-07-15 00:00:00,NONE
+p-0257,m-025,SKU-FAS-0257,Embroidered Silk Saree,Fashion,2224.07,1000.83,True,2025-07-15 00:00:00,NONE
+p-0258,m-025,SKU-FAS-0258,Leather Formal Belt,Fashion,391.84,215.51,True,2025-07-15 00:00:00,NONE
+p-0259,m-025,SKU-FAS-0259,Cotton Anarkali Suit Set,Fashion,2088.28,1044.14,True,2025-07-15 00:00:00,NONE
+p-0260,m-025,SKU-FAS-0260,Comfort Chino Trousers,Fashion,930.0,483.6,True,2025-07-15 00:00:00,NONE
+p-0261,m-025,SKU-FAS-0261,Traditional Mojari / Footwear,Fashion,685.18,376.85,True,2025-07-15 00:00:00,NONE
+p-0262,m-026,SKU-FOO-0262,Special Masala Chai,Food & Beverage,44.24,26.54,True,2025-07-03 00:00:00,NONE
+p-0263,m-026,SKU-FOO-0263,Ginger Lemon Tea,Food & Beverage,43.96,26.38,True,2025-07-03 00:00:00,NONE
+p-0264,m-026,SKU-FOO-0264,Kullad Chai,Food & Beverage,40.34,23.4,True,2025-07-03 00:00:00,NONE
+p-0265,m-026,SKU-FOO-0265,Filter Coffee,Food & Beverage,48.83,26.86,True,2025-07-03 00:00:00,NONE
+p-0266,m-026,SKU-FOO-0266,Fresh Bun Maska,Food & Beverage,36.07,22.36,True,2025-07-03 00:00:00,NONE
+p-0267,m-026,SKU-FOO-0267,Crispy Samosa (2 pcs),Food & Beverage,28.65,18.62,True,2025-07-03 00:00:00,NONE
+p-0268,m-026,SKU-FOO-0268,Paneer Pakora Platter,Food & Beverage,119.84,65.91,True,2025-07-03 00:00:00,NONE
+p-0269,m-026,SKU-FOO-0269,Chole Bhature,Food & Beverage,115.83,67.18,True,2025-07-03 00:00:00,NONE
+p-0270,m-026,SKU-FOO-0270,Veg Grilled Sandwich,Food & Beverage,87.67,52.6,True,2025-07-03 00:00:00,NONE
+p-0271,m-026,SKU-FOO-0271,Cold Coffee with Ice Cream,Food & Beverage,90.63,49.85,True,2025-07-03 00:00:00,NONE
+p-0272,m-026,SKU-FOO-0272,Poha with Sev,Food & Beverage,69.9,45.44,True,2025-07-03 00:00:00,NONE
+p-0273,m-026,SKU-FOO-0273,Aloo Paratha with Butter,Food & Beverage,82.02,50.85,True,2025-07-03 00:00:00,NONE
+p-0274,m-026,SKU-FOO-0274,Evening Chai Combo Platter,Food & Beverage,70.55,40.92,True,2025-07-03 00:00:00,NONE
+p-0275,m-026,SKU-FOO-0275,Weekend Family Chai Pot,Food & Beverage,167.22,93.64,True,2025-07-03 00:00:00,NONE
+p-0276,m-027,SKU-GRO-0276,Basmati Rice (1kg),Grocery,117.6,99.96,True,2025-06-17 00:00:00,NONE
+p-0277,m-027,SKU-GRO-0277,Chana Dal (1kg),Grocery,89.22,76.73,True,2025-06-17 00:00:00,NONE
+p-0278,m-027,SKU-GRO-0278,Mustard Oil (1L),Grocery,176.06,154.93,True,2025-06-17 00:00:00,NONE
+p-0279,m-027,SKU-GRO-0279,Aashirvaad Atta (5kg),Grocery,225.78,203.2,True,2025-06-17 00:00:00,NONE
+p-0280,m-027,SKU-GRO-0280,Organic Desi Ghee (500ml),Grocery,416.57,324.92,True,2025-06-17 00:00:00,NONE
+p-0281,m-027,SKU-GRO-0281,Tata Salt (1kg),Grocery,27.71,24.94,True,2025-06-17 00:00:00,NONE
+p-0282,m-027,SKU-GRO-0282,Maggi 2-Min Noodles (Pack of 4),Grocery,56.9,50.07,True,2025-06-17 00:00:00,NONE
+p-0283,m-027,SKU-GRO-0283,Britannia Good Day Biscuits,Grocery,32.87,27.94,True,2025-06-17 00:00:00,NONE
+p-0284,m-027,SKU-GRO-0284,Amul Taaza Milk (1L),Grocery,67.39,62.0,True,2025-06-17 00:00:00,NONE
+p-0285,m-027,SKU-GRO-0285,Organic Quinoa & Millets (500g),Grocery,218.71,142.16,True,2025-06-17 00:00:00,NONE
+p-0286,m-027,SKU-GRO-0286,Cold-Pressed Mustard Oil (1L),Grocery,290.75,203.52,True,2025-06-17 00:00:00,NONE
+p-0287,m-027,SKU-GRO-0287,Dry Fruits Gift Pack (500g),Grocery,678.06,508.54,True,2025-06-17 00:00:00,NONE
+p-0288,m-028,SKU-GRO-0288,Basmati Rice (1kg),Grocery,143.71,122.15,True,2025-02-02 00:00:00,NONE
+p-0289,m-028,SKU-GRO-0289,Chana Dal (1kg),Grocery,119.22,102.53,True,2025-02-02 00:00:00,NONE
+p-0290,m-028,SKU-GRO-0290,Mustard Oil (1L),Grocery,181.63,159.83,True,2025-02-02 00:00:00,NONE
+p-0291,m-028,SKU-GRO-0291,Aashirvaad Atta (5kg),Grocery,224.81,202.33,True,2025-02-02 00:00:00,NONE
+p-0292,m-028,SKU-GRO-0292,Organic Desi Ghee (500ml),Grocery,366.91,286.19,True,2025-02-02 00:00:00,NONE
+p-0293,m-028,SKU-GRO-0293,Tata Salt (1kg),Grocery,23.81,21.43,True,2025-02-02 00:00:00,NONE
+p-0294,m-028,SKU-GRO-0294,Maggi 2-Min Noodles (Pack of 4),Grocery,57.08,50.23,True,2025-02-02 00:00:00,NONE
+p-0295,m-028,SKU-GRO-0295,Britannia Good Day Biscuits,Grocery,31.9,27.11,True,2025-02-02 00:00:00,NONE
+p-0296,m-028,SKU-GRO-0296,Amul Taaza Milk (1L),Grocery,60.46,55.62,True,2025-02-02 00:00:00,NONE
+p-0297,m-028,SKU-GRO-0297,Organic Quinoa & Millets (500g),Grocery,187.63,121.96,True,2025-02-02 00:00:00,NONE
+p-0298,m-028,SKU-GRO-0298,Cold-Pressed Mustard Oil (1L),Grocery,255.06,178.54,True,2025-02-02 00:00:00,NONE
+p-0299,m-028,SKU-GRO-0299,Dry Fruits Gift Pack (500g),Grocery,733.23,549.92,True,2025-02-02 00:00:00,NONE
+p-0300,m-029,SKU-GRO-0300,Basmati Rice (1kg),Grocery,147.41,125.3,True,2025-04-08 00:00:00,NONE
+p-0301,m-029,SKU-GRO-0301,Chana Dal (1kg),Grocery,110.11,94.69,True,2025-04-08 00:00:00,NONE
+p-0302,m-029,SKU-GRO-0302,Mustard Oil (1L),Grocery,145.13,127.71,True,2025-04-08 00:00:00,NONE
+p-0303,m-029,SKU-GRO-0303,Aashirvaad Atta (5kg),Grocery,210.61,189.55,True,2025-04-08 00:00:00,NONE
+p-0304,m-029,SKU-GRO-0304,Organic Desi Ghee (500ml),Grocery,356.96,278.43,True,2025-04-08 00:00:00,NONE
+p-0305,m-029,SKU-GRO-0305,Tata Salt (1kg),Grocery,24.87,22.38,True,2025-04-08 00:00:00,NONE
+p-0306,m-029,SKU-GRO-0306,Maggi 2-Min Noodles (Pack of 4),Grocery,53.41,47.0,True,2025-04-08 00:00:00,NONE
+p-0307,m-029,SKU-GRO-0307,Britannia Good Day Biscuits,Grocery,44.48,37.81,True,2025-04-08 00:00:00,NONE
+p-0308,m-029,SKU-GRO-0308,Amul Taaza Milk (1L),Grocery,62.52,57.52,True,2025-04-08 00:00:00,NONE
+p-0309,m-029,SKU-GRO-0309,Organic Quinoa & Millets (500g),Grocery,300.64,195.42,True,2025-04-08 00:00:00,NONE
+p-0310,m-029,SKU-GRO-0310,Cold-Pressed Mustard Oil (1L),Grocery,233.69,163.58,True,2025-04-08 00:00:00,NONE
+p-0311,m-029,SKU-GRO-0311,Dry Fruits Gift Pack (500g),Grocery,469.6,352.2,True,2025-04-08 00:00:00,NONE
+p-0312,m-030,SKU-PHA-0312,Paracetamol 650mg (Strip),Pharmacy,27.38,20.54,True,2025-06-04 00:00:00,NONE
+p-0313,m-030,SKU-PHA-0313,Cough Syrup Honey & Ginger,Pharmacy,100.97,70.68,True,2025-06-04 00:00:00,NONE
+p-0314,m-030,SKU-PHA-0314,Ayurvedic Immunity Chyawanprash (1kg),Pharmacy,376.1,270.79,True,2025-06-04 00:00:00,NONE
+p-0315,m-030,SKU-PHA-0315,Antacid Chewable Tablets,Pharmacy,43.79,32.84,True,2025-06-04 00:00:00,NONE
+p-0316,m-030,SKU-PHA-0316,Vitamin C + Zinc Supplements,Pharmacy,178.95,121.69,True,2025-06-04 00:00:00,NONE
+p-0317,m-030,SKU-PHA-0317,Digital Thermometer,Pharmacy,291.42,174.85,True,2025-06-04 00:00:00,NONE
+p-0318,m-030,SKU-PHA-0318,First Aid Bandage & Antiseptic Ointment,Pharmacy,48.83,34.18,True,2025-06-04 00:00:00,NONE
+p-0319,m-030,SKU-PHA-0319,Glucometer Test Strips (Pack of 25),Pharmacy,511.8,383.85,True,2025-06-04 00:00:00,NONE
+p-0320,m-031,SKU-FOO-0320,Special Masala Chai,Food & Beverage,41.16,24.7,True,2025-03-04 00:00:00,NONE
+p-0321,m-031,SKU-FOO-0321,Ginger Lemon Tea,Food & Beverage,43.32,25.99,True,2025-03-04 00:00:00,NONE
+p-0322,m-031,SKU-FOO-0322,Kullad Chai,Food & Beverage,51.92,30.11,True,2025-03-04 00:00:00,NONE
+p-0323,m-031,SKU-FOO-0323,Filter Coffee,Food & Beverage,58.55,32.2,True,2025-03-04 00:00:00,NONE
+p-0324,m-031,SKU-FOO-0324,Fresh Bun Maska,Food & Beverage,41.64,25.82,True,2025-03-04 00:00:00,NONE
+p-0325,m-031,SKU-FOO-0325,Crispy Samosa (2 pcs),Food & Beverage,30.71,19.96,True,2025-03-04 00:00:00,NONE
+p-0326,m-031,SKU-FOO-0326,Paneer Pakora Platter,Food & Beverage,134.51,73.98,True,2025-03-04 00:00:00,NONE
+p-0327,m-031,SKU-FOO-0327,Chole Bhature,Food & Beverage,110.81,64.27,True,2025-03-04 00:00:00,NONE
+p-0328,m-031,SKU-FOO-0328,Veg Grilled Sandwich,Food & Beverage,89.43,53.66,True,2025-03-04 00:00:00,NONE
+p-0329,m-031,SKU-FOO-0329,Cold Coffee with Ice Cream,Food & Beverage,95.73,52.65,True,2025-03-04 00:00:00,NONE
+p-0330,m-031,SKU-FOO-0330,Poha with Sev,Food & Beverage,57.06,37.09,True,2025-03-04 00:00:00,NONE
+p-0331,m-031,SKU-FOO-0331,Aloo Paratha with Butter,Food & Beverage,62.41,38.69,True,2025-03-04 00:00:00,NONE
+p-0332,m-031,SKU-FOO-0332,Evening Chai Combo Platter,Food & Beverage,88.8,51.5,True,2025-03-04 00:00:00,NONE
+p-0333,m-031,SKU-FOO-0333,Weekend Family Chai Pot,Food & Beverage,145.95,81.73,True,2025-03-04 00:00:00,NONE
+p-0334,m-032,SKU-FAS-0334,Cotton Printed Kurti,Fashion,831.37,415.69,True,2024-12-01 00:00:00,NONE
+p-0335,m-032,SKU-FAS-0335,Men Casual Slim Shirt,Fashion,1037.24,497.88,True,2024-12-01 00:00:00,NONE
+p-0336,m-032,SKU-FAS-0336,Denim Jeans,Fashion,1090.85,545.42,True,2024-12-01 00:00:00,NONE
+p-0337,m-032,SKU-FAS-0337,Embroidered Silk Saree,Fashion,1743.56,784.6,True,2024-12-01 00:00:00,NONE
+p-0338,m-032,SKU-FAS-0338,Leather Formal Belt,Fashion,333.71,183.54,True,2024-12-01 00:00:00,NONE
+p-0339,m-032,SKU-FAS-0339,Cotton Anarkali Suit Set,Fashion,2083.19,1041.6,True,2024-12-01 00:00:00,NONE
+p-0340,m-032,SKU-FAS-0340,Comfort Chino Trousers,Fashion,867.24,450.96,True,2024-12-01 00:00:00,NONE
+p-0341,m-032,SKU-FAS-0341,Traditional Mojari / Footwear,Fashion,644.7,354.59,True,2024-12-01 00:00:00,NONE
+p-0342,m-033,SKU-FAS-0342,Cotton Printed Kurti,Fashion,794.69,397.35,True,2025-01-23 00:00:00,NONE
+p-0343,m-033,SKU-FAS-0343,Men Casual Slim Shirt,Fashion,928.47,445.67,True,2025-01-23 00:00:00,NONE
+p-0344,m-033,SKU-FAS-0344,Denim Jeans,Fashion,835.87,417.94,True,2025-01-23 00:00:00,NONE
+p-0345,m-033,SKU-FAS-0345,Embroidered Silk Saree,Fashion,2364.31,1063.94,True,2025-01-23 00:00:00,NONE
+p-0346,m-033,SKU-FAS-0346,Leather Formal Belt,Fashion,348.67,191.77,True,2025-01-23 00:00:00,NONE
+p-0347,m-033,SKU-FAS-0347,Cotton Anarkali Suit Set,Fashion,2575.37,1287.68,True,2025-01-23 00:00:00,NONE
+p-0348,m-033,SKU-FAS-0348,Comfort Chino Trousers,Fashion,803.31,417.72,True,2025-01-23 00:00:00,NONE
+p-0349,m-033,SKU-FAS-0349,Traditional Mojari / Footwear,Fashion,539.82,296.9,True,2025-01-23 00:00:00,NONE
+p-0350,m-034,SKU-FOO-0350,Special Masala Chai,Food & Beverage,35.29,21.17,True,2025-01-13 00:00:00,NONE
+p-0351,m-034,SKU-FOO-0351,Ginger Lemon Tea,Food & Beverage,50.82,30.49,True,2025-01-13 00:00:00,NONE
+p-0352,m-034,SKU-FOO-0352,Kullad Chai,Food & Beverage,51.8,30.04,True,2025-01-13 00:00:00,NONE
+p-0353,m-034,SKU-FOO-0353,Filter Coffee,Food & Beverage,64.12,35.27,True,2025-01-13 00:00:00,NONE
+p-0354,m-034,SKU-FOO-0354,Fresh Bun Maska,Food & Beverage,32.97,20.44,True,2025-01-13 00:00:00,NONE
+p-0355,m-034,SKU-FOO-0355,Crispy Samosa (2 pcs),Food & Beverage,26.72,17.37,True,2025-01-13 00:00:00,NONE
+p-0356,m-034,SKU-FOO-0356,Paneer Pakora Platter,Food & Beverage,93.49,51.42,True,2025-01-13 00:00:00,NONE
+p-0357,m-034,SKU-FOO-0357,Chole Bhature,Food & Beverage,100.43,58.25,True,2025-01-13 00:00:00,NONE
+p-0358,m-034,SKU-FOO-0358,Veg Grilled Sandwich,Food & Beverage,73.28,43.97,True,2025-01-13 00:00:00,NONE
+p-0359,m-034,SKU-FOO-0359,Cold Coffee with Ice Cream,Food & Beverage,78.53,43.19,True,2025-01-13 00:00:00,NONE
+p-0360,m-034,SKU-FOO-0360,Poha with Sev,Food & Beverage,41.79,27.16,True,2025-01-13 00:00:00,NONE
+p-0361,m-034,SKU-FOO-0361,Aloo Paratha with Butter,Food & Beverage,91.71,56.86,True,2025-01-13 00:00:00,NONE
+p-0362,m-034,SKU-FOO-0362,Evening Chai Combo Platter,Food & Beverage,77.85,45.15,True,2025-01-13 00:00:00,NONE
+p-0363,m-034,SKU-FOO-0363,Weekend Family Chai Pot,Food & Beverage,189.45,106.09,True,2025-01-13 00:00:00,NONE
+p-0364,m-035,SKU-FAS-0364,Cotton Printed Kurti,Fashion,910.6,455.3,True,2024-11-27 00:00:00,NONE
+p-0365,m-035,SKU-FAS-0365,Men Casual Slim Shirt,Fashion,906.97,435.35,True,2024-11-27 00:00:00,NONE
+p-0366,m-035,SKU-FAS-0366,Denim Jeans,Fashion,1315.1,657.55,True,2024-11-27 00:00:00,NONE
+p-0367,m-035,SKU-FAS-0367,Embroidered Silk Saree,Fashion,2412.27,1085.52,True,2024-11-27 00:00:00,NONE
+p-0368,m-035,SKU-FAS-0368,Leather Formal Belt,Fashion,390.48,214.76,True,2024-11-27 00:00:00,NONE
+p-0369,m-035,SKU-FAS-0369,Cotton Anarkali Suit Set,Fashion,1635.59,817.79,True,2024-11-27 00:00:00,NONE
+p-0370,m-035,SKU-FAS-0370,Comfort Chino Trousers,Fashion,1154.45,600.31,True,2024-11-27 00:00:00,NONE
+p-0371,m-035,SKU-FAS-0371,Traditional Mojari / Footwear,Fashion,662.22,364.22,True,2024-11-27 00:00:00,NONE
+p-0372,m-036,SKU-FOO-0372,Special Masala Chai,Food & Beverage,41.96,25.18,True,2024-12-12 00:00:00,NONE
+p-0373,m-036,SKU-FOO-0373,Ginger Lemon Tea,Food & Beverage,52.79,31.67,True,2024-12-12 00:00:00,NONE
+p-0374,m-036,SKU-FOO-0374,Kullad Chai,Food & Beverage,54.69,31.72,True,2024-12-12 00:00:00,NONE
+p-0375,m-036,SKU-FOO-0375,Filter Coffee,Food & Beverage,58.11,31.96,True,2024-12-12 00:00:00,NONE
+p-0376,m-036,SKU-FOO-0376,Fresh Bun Maska,Food & Beverage,30.39,18.84,True,2024-12-12 00:00:00,NONE
+p-0377,m-036,SKU-FOO-0377,Crispy Samosa (2 pcs),Food & Beverage,28.43,18.48,True,2024-12-12 00:00:00,NONE
+p-0378,m-036,SKU-FOO-0378,Paneer Pakora Platter,Food & Beverage,120.46,66.25,True,2024-12-12 00:00:00,NONE
+p-0379,m-036,SKU-FOO-0379,Chole Bhature,Food & Beverage,150.24,87.14,True,2024-12-12 00:00:00,NONE
+p-0380,m-036,SKU-FOO-0380,Veg Grilled Sandwich,Food & Beverage,89.36,53.62,True,2024-12-12 00:00:00,NONE
+p-0381,m-036,SKU-FOO-0381,Cold Coffee with Ice Cream,Food & Beverage,71.24,39.18,True,2024-12-12 00:00:00,NONE
+p-0382,m-036,SKU-FOO-0382,Poha with Sev,Food & Beverage,62.94,40.91,True,2024-12-12 00:00:00,NONE
+p-0383,m-036,SKU-FOO-0383,Aloo Paratha with Butter,Food & Beverage,92.86,57.57,True,2024-12-12 00:00:00,NONE
+p-0384,m-036,SKU-FOO-0384,Evening Chai Combo Platter,Food & Beverage,77.29,44.83,True,2024-12-12 00:00:00,NONE
+p-0385,m-036,SKU-FOO-0385,Weekend Family Chai Pot,Food & Beverage,185.79,104.04,True,2024-12-12 00:00:00,NONE
+p-0386,m-037,SKU-FOO-0386,Special Masala Chai,Food & Beverage,33.5,20.1,True,2025-02-02 00:00:00,NONE
+p-0387,m-037,SKU-FOO-0387,Ginger Lemon Tea,Food & Beverage,45.38,27.23,True,2025-02-02 00:00:00,NONE
+p-0388,m-037,SKU-FOO-0388,Kullad Chai,Food & Beverage,48.84,28.33,True,2025-02-02 00:00:00,NONE
+p-0389,m-037,SKU-FOO-0389,Filter Coffee,Food & Beverage,48.34,26.59,True,2025-02-02 00:00:00,NONE
+p-0390,m-037,SKU-FOO-0390,Fresh Bun Maska,Food & Beverage,44.95,27.87,True,2025-02-02 00:00:00,NONE
+p-0391,m-037,SKU-FOO-0391,Crispy Samosa (2 pcs),Food & Beverage,31.54,20.5,True,2025-02-02 00:00:00,NONE
+p-0392,m-037,SKU-FOO-0392,Paneer Pakora Platter,Food & Beverage,128.85,70.87,True,2025-02-02 00:00:00,NONE
+p-0393,m-037,SKU-FOO-0393,Chole Bhature,Food & Beverage,157.83,91.54,True,2025-02-02 00:00:00,NONE
+p-0394,m-037,SKU-FOO-0394,Veg Grilled Sandwich,Food & Beverage,83.5,50.1,True,2025-02-02 00:00:00,NONE
+p-0395,m-037,SKU-FOO-0395,Cold Coffee with Ice Cream,Food & Beverage,94.5,51.98,True,2025-02-02 00:00:00,NONE
+p-0396,m-037,SKU-FOO-0396,Poha with Sev,Food & Beverage,49.63,32.26,True,2025-02-02 00:00:00,NONE
+p-0397,m-037,SKU-FOO-0397,Aloo Paratha with Butter,Food & Beverage,64.18,39.79,True,2025-02-02 00:00:00,NONE
+p-0398,m-037,SKU-FOO-0398,Evening Chai Combo Platter,Food & Beverage,64.82,37.6,True,2025-02-02 00:00:00,NONE
+p-0399,m-037,SKU-FOO-0399,Weekend Family Chai Pot,Food & Beverage,164.7,92.23,True,2025-02-02 00:00:00,NONE
+p-0400,m-038,SKU-SER-0400,Shirt / Trouser Alteration & Stitching,Services,129.55,45.34,True,2025-05-14 00:00:00,NONE
+p-0401,m-038,SKU-SER-0401,Dry Cleaning - Men Suit 2-Piece,Services,365.65,146.26,True,2025-05-14 00:00:00,NONE
+p-0402,m-038,SKU-SER-0402,Express Shoe Laundry & Polish,Services,172.06,77.43,True,2025-05-14 00:00:00,NONE
+p-0403,m-038,SKU-SER-0403,Mobile Screen Guard Application Service,Services,103.23,30.97,True,2025-05-14 00:00:00,NONE
+p-0404,m-038,SKU-SER-0404,Document Scanning & Digital Lamination,Services,42.2,10.55,True,2025-05-14 00:00:00,NONE
+p-0405,m-039,SKU-SER-0405,Shirt / Trouser Alteration & Stitching,Services,88.81,31.08,True,2025-02-26 00:00:00,NONE
+p-0406,m-039,SKU-SER-0406,Dry Cleaning - Men Suit 2-Piece,Services,263.1,105.24,True,2025-02-26 00:00:00,NONE
+p-0407,m-039,SKU-SER-0407,Express Shoe Laundry & Polish,Services,135.07,60.78,True,2025-02-26 00:00:00,NONE
+p-0408,m-039,SKU-SER-0408,Mobile Screen Guard Application Service,Services,104.08,31.22,True,2025-02-26 00:00:00,NONE
+p-0409,m-039,SKU-SER-0409,Document Scanning & Digital Lamination,Services,91.89,22.97,True,2025-02-26 00:00:00,NONE
+p-0410,m-040,SKU-PHA-0410,Paracetamol 650mg (Strip),Pharmacy,32.37,24.28,True,2024-12-07 00:00:00,NONE
+p-0411,m-040,SKU-PHA-0411,Cough Syrup Honey & Ginger,Pharmacy,75.05,52.53,True,2024-12-07 00:00:00,NONE
+p-0412,m-040,SKU-PHA-0412,Ayurvedic Immunity Chyawanprash (1kg),Pharmacy,401.71,289.23,True,2024-12-07 00:00:00,NONE
+p-0413,m-040,SKU-PHA-0413,Antacid Chewable Tablets,Pharmacy,51.55,38.66,True,2024-12-07 00:00:00,NONE
+p-0414,m-040,SKU-PHA-0414,Vitamin C + Zinc Supplements,Pharmacy,114.61,77.93,True,2024-12-07 00:00:00,NONE
+p-0415,m-040,SKU-PHA-0415,Digital Thermometer,Pharmacy,227.25,136.35,True,2024-12-07 00:00:00,NONE
+p-0416,m-040,SKU-PHA-0416,First Aid Bandage & Antiseptic Ointment,Pharmacy,73.02,51.11,True,2024-12-07 00:00:00,NONE
+p-0417,m-040,SKU-PHA-0417,Glucometer Test Strips (Pack of 25),Pharmacy,574.12,430.59,True,2024-12-07 00:00:00,NONE
+p-0418,m-041,SKU-GRO-0418,Basmati Rice (1kg),Grocery,129.78,110.31,True,2025-01-31 00:00:00,NONE
+p-0419,m-041,SKU-GRO-0419,Chana Dal (1kg),Grocery,82.06,70.57,True,2025-01-31 00:00:00,NONE
+p-0420,m-041,SKU-GRO-0420,Mustard Oil (1L),Grocery,153.35,134.95,True,2025-01-31 00:00:00,NONE
+p-0421,m-041,SKU-GRO-0421,Aashirvaad Atta (5kg),Grocery,216.55,194.9,True,2025-01-31 00:00:00,NONE
+p-0422,m-041,SKU-GRO-0422,Organic Desi Ghee (500ml),Grocery,357.44,278.8,True,2025-01-31 00:00:00,NONE
+p-0423,m-041,SKU-GRO-0423,Tata Salt (1kg),Grocery,27.29,24.56,True,2025-01-31 00:00:00,NONE
+p-0424,m-041,SKU-GRO-0424,Maggi 2-Min Noodles (Pack of 4),Grocery,54.85,48.27,True,2025-01-31 00:00:00,NONE
+p-0425,m-041,SKU-GRO-0425,Britannia Good Day Biscuits,Grocery,30.43,25.87,True,2025-01-31 00:00:00,NONE
+p-0426,m-041,SKU-GRO-0426,Amul Taaza Milk (1L),Grocery,66.3,61.0,True,2025-01-31 00:00:00,NONE
+p-0427,m-041,SKU-GRO-0427,Organic Quinoa & Millets (500g),Grocery,291.9,189.73,True,2025-01-31 00:00:00,NONE
+p-0428,m-041,SKU-GRO-0428,Cold-Pressed Mustard Oil (1L),Grocery,305.17,213.62,True,2025-01-31 00:00:00,NONE
+p-0429,m-041,SKU-GRO-0429,Dry Fruits Gift Pack (500g),Grocery,543.23,407.42,True,2025-01-31 00:00:00,NONE
+p-0430,m-042,SKU-FOO-0430,Special Masala Chai,Food & Beverage,30.27,18.16,True,2025-05-09 00:00:00,NONE
+p-0431,m-042,SKU-FOO-0431,Ginger Lemon Tea,Food & Beverage,43.16,25.9,True,2025-05-09 00:00:00,NONE
+p-0432,m-042,SKU-FOO-0432,Kullad Chai,Food & Beverage,44.49,25.8,True,2025-05-09 00:00:00,NONE
+p-0433,m-042,SKU-FOO-0433,Filter Coffee,Food & Beverage,65.24,35.88,True,2025-05-09 00:00:00,NONE
+p-0434,m-042,SKU-FOO-0434,Fresh Bun Maska,Food & Beverage,31.7,19.65,True,2025-05-09 00:00:00,NONE
+p-0435,m-042,SKU-FOO-0435,Crispy Samosa (2 pcs),Food & Beverage,39.21,25.49,True,2025-05-09 00:00:00,NONE
+p-0436,m-042,SKU-FOO-0436,Paneer Pakora Platter,Food & Beverage,118.86,65.37,True,2025-05-09 00:00:00,NONE
+p-0437,m-042,SKU-FOO-0437,Chole Bhature,Food & Beverage,100.78,58.45,True,2025-05-09 00:00:00,NONE
+p-0438,m-042,SKU-FOO-0438,Veg Grilled Sandwich,Food & Beverage,106.63,63.98,True,2025-05-09 00:00:00,NONE
+p-0439,m-042,SKU-FOO-0439,Cold Coffee with Ice Cream,Food & Beverage,87.51,48.13,True,2025-05-09 00:00:00,NONE
+p-0440,m-042,SKU-FOO-0440,Poha with Sev,Food & Beverage,61.16,39.75,True,2025-05-09 00:00:00,NONE
+p-0441,m-042,SKU-FOO-0441,Aloo Paratha with Butter,Food & Beverage,76.62,47.5,True,2025-05-09 00:00:00,NONE
+p-0442,m-042,SKU-FOO-0442,Evening Chai Combo Platter,Food & Beverage,74.47,43.19,True,2025-05-09 00:00:00,NONE
+p-0443,m-042,SKU-FOO-0443,Weekend Family Chai Pot,Food & Beverage,168.33,94.26,True,2025-05-09 00:00:00,NONE
+p-0444,m-043,SKU-ELE-0444,Fast USB-C Charging Cable,Electronics,336.04,151.22,True,2025-06-27 00:00:00,NONE
+p-0445,m-043,SKU-ELE-0445,10000mAh Power Bank,Electronics,900.25,585.16,True,2025-06-27 00:00:00,NONE
+p-0446,m-043,SKU-ELE-0446,Wireless Bluetooth Neckband,Electronics,889.61,489.29,True,2025-06-27 00:00:00,NONE
+p-0447,m-043,SKU-ELE-0447,Tempered Glass & Phone Case,Electronics,269.88,94.46,True,2025-06-27 00:00:00,NONE
+p-0448,m-043,SKU-ELE-0448,Smartwatch with Health Monitor,Electronics,2567.7,1540.62,True,2025-06-27 00:00:00,NONE
+p-0449,m-043,SKU-ELE-0449,20W Fast Wall Adapter,Electronics,411.29,226.21,True,2025-06-27 00:00:00,NONE
+p-0450,m-043,SKU-ELE-0450,Wireless Earbuds with Mic,Electronics,1103.72,640.16,True,2025-06-27 00:00:00,NONE
+p-0451,m-043,SKU-ELE-0451,OTG Adapter & Memory Card 64GB,Electronics,659.07,428.4,True,2025-06-27 00:00:00,NONE
+p-0452,m-044,SKU-GRO-0452,Basmati Rice (1kg),Grocery,166.9,141.87,True,2025-01-12 00:00:00,NONE
+p-0453,m-044,SKU-GRO-0453,Chana Dal (1kg),Grocery,93.6,80.5,True,2025-01-12 00:00:00,NONE
+p-0454,m-044,SKU-GRO-0454,Mustard Oil (1L),Grocery,179.39,157.86,True,2025-01-12 00:00:00,NONE
+p-0455,m-044,SKU-GRO-0455,Aashirvaad Atta (5kg),Grocery,223.36,201.02,True,2025-01-12 00:00:00,NONE
+p-0456,m-044,SKU-GRO-0456,Organic Desi Ghee (500ml),Grocery,320.33,249.86,True,2025-01-12 00:00:00,NONE
+p-0457,m-044,SKU-GRO-0457,Tata Salt (1kg),Grocery,26.36,23.72,True,2025-01-12 00:00:00,NONE
+p-0458,m-044,SKU-GRO-0458,Maggi 2-Min Noodles (Pack of 4),Grocery,58.37,51.37,True,2025-01-12 00:00:00,NONE
+p-0459,m-044,SKU-GRO-0459,Britannia Good Day Biscuits,Grocery,38.7,32.9,True,2025-01-12 00:00:00,NONE
+p-0460,m-044,SKU-GRO-0460,Amul Taaza Milk (1L),Grocery,66.6,61.27,True,2025-01-12 00:00:00,NONE
+p-0461,m-044,SKU-GRO-0461,Organic Quinoa & Millets (500g),Grocery,301.14,195.74,True,2025-01-12 00:00:00,NONE
+p-0462,m-044,SKU-GRO-0462,Cold-Pressed Mustard Oil (1L),Grocery,273.59,191.51,True,2025-01-12 00:00:00,NONE
+p-0463,m-044,SKU-GRO-0463,Dry Fruits Gift Pack (500g),Grocery,595.3,446.47,True,2025-01-12 00:00:00,NONE
+p-0464,m-045,SKU-FOO-0464,Special Masala Chai,Food & Beverage,36.65,21.99,True,2024-12-19 00:00:00,NONE
+p-0465,m-045,SKU-FOO-0465,Ginger Lemon Tea,Food & Beverage,50.26,30.16,True,2024-12-19 00:00:00,NONE
+p-0466,m-045,SKU-FOO-0466,Kullad Chai,Food & Beverage,47.54,27.57,True,2024-12-19 00:00:00,NONE
+p-0467,m-045,SKU-FOO-0467,Filter Coffee,Food & Beverage,67.99,37.39,True,2024-12-19 00:00:00,NONE
+p-0468,m-045,SKU-FOO-0468,Fresh Bun Maska,Food & Beverage,43.04,26.68,True,2024-12-19 00:00:00,NONE
+p-0469,m-045,SKU-FOO-0469,Crispy Samosa (2 pcs),Food & Beverage,39.71,25.81,True,2024-12-19 00:00:00,NONE
+p-0470,m-045,SKU-FOO-0470,Paneer Pakora Platter,Food & Beverage,94.33,51.88,True,2024-12-19 00:00:00,NONE
+p-0471,m-045,SKU-FOO-0471,Chole Bhature,Food & Beverage,116.81,67.75,True,2024-12-19 00:00:00,NONE
+p-0472,m-045,SKU-FOO-0472,Veg Grilled Sandwich,Food & Beverage,102.8,61.68,True,2024-12-19 00:00:00,NONE
+p-0473,m-045,SKU-FOO-0473,Cold Coffee with Ice Cream,Food & Beverage,94.65,52.06,True,2024-12-19 00:00:00,NONE
+p-0474,m-045,SKU-FOO-0474,Poha with Sev,Food & Beverage,49.55,32.21,True,2024-12-19 00:00:00,NONE
+p-0475,m-045,SKU-FOO-0475,Aloo Paratha with Butter,Food & Beverage,78.92,48.93,True,2024-12-19 00:00:00,NONE
+p-0476,m-045,SKU-FOO-0476,Evening Chai Combo Platter,Food & Beverage,87.4,50.69,True,2024-12-19 00:00:00,NONE
+p-0477,m-045,SKU-FOO-0477,Weekend Family Chai Pot,Food & Beverage,162.87,91.21,True,2024-12-19 00:00:00,NONE
+p-0478,m-046,SKU-GRO-0478,Basmati Rice (1kg),Grocery,178.96,152.12,True,2024-12-02 00:00:00,NONE
+p-0479,m-046,SKU-GRO-0479,Chana Dal (1kg),Grocery,111.7,96.06,True,2024-12-02 00:00:00,NONE
+p-0480,m-046,SKU-GRO-0480,Mustard Oil (1L),Grocery,172.6,151.89,True,2024-12-02 00:00:00,NONE
+p-0481,m-046,SKU-GRO-0481,Aashirvaad Atta (5kg),Grocery,217.61,195.85,True,2024-12-02 00:00:00,NONE
+p-0482,m-046,SKU-GRO-0482,Organic Desi Ghee (500ml),Grocery,445.43,347.44,True,2024-12-02 00:00:00,NONE
+p-0483,m-046,SKU-GRO-0483,Tata Salt (1kg),Grocery,22.76,20.48,True,2024-12-02 00:00:00,NONE
+p-0484,m-046,SKU-GRO-0484,Maggi 2-Min Noodles (Pack of 4),Grocery,59.65,52.49,True,2024-12-02 00:00:00,NONE
+p-0485,m-046,SKU-GRO-0485,Britannia Good Day Biscuits,Grocery,34.98,29.73,True,2024-12-02 00:00:00,NONE
+p-0486,m-046,SKU-GRO-0486,Amul Taaza Milk (1L),Grocery,61.0,56.12,True,2024-12-02 00:00:00,NONE
+p-0487,m-046,SKU-GRO-0487,Organic Quinoa & Millets (500g),Grocery,298.31,193.9,True,2024-12-02 00:00:00,NONE
+p-0488,m-046,SKU-GRO-0488,Cold-Pressed Mustard Oil (1L),Grocery,231.97,162.38,True,2024-12-02 00:00:00,NONE
+p-0489,m-046,SKU-GRO-0489,Dry Fruits Gift Pack (500g),Grocery,723.13,542.35,True,2024-12-02 00:00:00,NONE
+p-0490,m-047,SKU-FOO-0490,Special Masala Chai,Food & Beverage,30.31,18.19,True,2025-01-10 00:00:00,NONE
+p-0491,m-047,SKU-FOO-0491,Ginger Lemon Tea,Food & Beverage,37.88,22.73,True,2025-01-10 00:00:00,NONE
+p-0492,m-047,SKU-FOO-0492,Kullad Chai,Food & Beverage,57.42,33.3,True,2025-01-10 00:00:00,NONE
+p-0493,m-047,SKU-FOO-0493,Filter Coffee,Food & Beverage,69.1,38.01,True,2025-01-10 00:00:00,NONE
+p-0494,m-047,SKU-FOO-0494,Fresh Bun Maska,Food & Beverage,31.12,19.29,True,2025-01-10 00:00:00,NONE
+p-0495,m-047,SKU-FOO-0495,Crispy Samosa (2 pcs),Food & Beverage,36.72,23.87,True,2025-01-10 00:00:00,NONE
+p-0496,m-047,SKU-FOO-0496,Paneer Pakora Platter,Food & Beverage,95.9,52.75,True,2025-01-10 00:00:00,NONE
+p-0497,m-047,SKU-FOO-0497,Chole Bhature,Food & Beverage,133.63,77.51,True,2025-01-10 00:00:00,NONE
+p-0498,m-047,SKU-FOO-0498,Veg Grilled Sandwich,Food & Beverage,79.87,47.92,True,2025-01-10 00:00:00,NONE
+p-0499,m-047,SKU-FOO-0499,Cold Coffee with Ice Cream,Food & Beverage,74.82,41.15,True,2025-01-10 00:00:00,NONE
+p-0500,m-047,SKU-FOO-0500,Poha with Sev,Food & Beverage,49.86,32.41,True,2025-01-10 00:00:00,NONE

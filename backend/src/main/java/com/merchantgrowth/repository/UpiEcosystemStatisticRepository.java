@@ -1,0 +1,18 @@
+package com.merchantgrowth.repository;
+
+import com.merchantgrowth.entity.UpiEcosystemStatisticEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Optional;
+
+@Repository
+public interface UpiEcosystemStatisticRepository extends JpaRepository<UpiEcosystemStatisticEntity, String> {
+
+    List<UpiEcosystemStatisticEntity> findAllByOrderByYearMonthAsc();
+
+    Optional<UpiEcosystemStatisticEntity> findTopByOrderByYearMonthDesc();
+
+    Optional<UpiEcosystemStatisticEntity> findByYearMonth(String yearMonth);
+}

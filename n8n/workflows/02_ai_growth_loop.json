@@ -1,0 +1,290 @@
+{
+  "name": "02 - AI Growth Loop",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "merchant-data-updated",
+        "options": {}
+      },
+      "id": "node-webhook-data-updated",
+      "name": "Webhook: New/Updated Merchant Data",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [100, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AI_SERVICE_URL || 'http://localhost:8000' }}/ai/recommendations",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"{{ $json.body && $json.body.merchant_id ? $json.body.merchant_id : 'm-001' }}\"\n}",
+        "options": {
+          "timeout": 15000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-analyze-recommendations",
+      "name": "Analyze & Generate Recommendations",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [320, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.estimated_impact.revenue_change_percent }}",
+              "operation": "largerEqual",
+              "value2": 5.0
+            }
+          ]
+        }
+      },
+      "id": "node-detect-opportunity",
+      "name": "Detect Viable Growth Opportunity",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [540, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/recommendations",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"rec-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"merchant_id\": \"{{ $json.merchant_id }}\",\n  \"problem\": \"{{ $json.problem }}\",\n  \"recommended_action\": \"{{ $json.recommended_action }}\",\n  \"target_audience\": \"At-Risk & Inactive Regulars\",\n  \"expected_impact_percent\": {{ $json.estimated_impact.revenue_change_percent }},\n  \"confidence\": {{ $json.confidence }},\n  \"status\": \"PENDING_MERCHANT_APPROVAL\",\n  \"created_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-save-recommendation",
+      "name": "Save Recommendation to Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [780, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $('Webhook: New/Updated Merchant Data').first().json.body && $('Webhook: New/Updated Merchant Data').first().json.body.merchant_approved === true }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-check-approval",
+      "name": "Has Merchant Approved Financial Action?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/events/approval-requested",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchantId\": \"{{ $('Analyze & Generate Recommendations').first().json.merchant_id }}\",\n  \"recommendationId\": \"{{ $json[0].id }}\",\n  \"actionRequired\": \"Approve Campaign Launch\",\n  \"message\": \"New growth opportunity ready: {{ $('Analyze & Generate Recommendations').first().json.recommended_action }}. Awaiting your confirmation.\",\n  \"status\": \"AWAITING_APPROVAL\"\n}",
+        "options": {
+          "timeout": 5000
+        }
+      },
+      "id": "node-notify-approval-needed",
+      "name": "Halt: Await Merchant Approval (No Auto Financial Action)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1240, 440]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/campaigns",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchantId\": \"{{ $('Analyze & Generate Recommendations').first().json.merchant_id }}\",\n  \"name\": \"{{ $('Analyze & Generate Recommendations').first().json.recommended_action }}\",\n  \"actionType\": \"evening offer\",\n  \"discountPercentage\": 20.0,\n  \"durationDays\": 14,\n  \"targetSegment\": \"At Risk\",\n  \"budget\": 1000.0\n}",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 2,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-create-campaign",
+      "name": "Create Campaign in Backend",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1240, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.AI_SERVICE_URL || 'http://localhost:8000' }}/ai/simulate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"{{ $json.data.merchantId }}\",\n  \"action\": \"evening offer\",\n  \"discount_percentage\": 20.0,\n  \"duration\": 14,\n  \"target_customer_segment\": \"At Risk\",\n  \"expected_campaign_reach\": 300,\n  \"budget\": 1000.0\n}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "node-track-measure-baseline",
+      "name": "Track Campaign & Measure Baseline",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1480, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/campaign_results",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"cres-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"campaign_id\": \"{{ $('Create Campaign in Backend').first().json.data.id }}\",\n  \"merchant_id\": \"{{ $json.merchant_id }}\",\n  \"impressions\": 300,\n  \"clicks\": 120,\n  \"transactions\": {{ $json.scenario.transactions }},\n  \"revenue_generated\": {{ $json.scenario.revenue }},\n  \"lift_percent\": {{ Math.round(($json.incremental.revenue / $json.baseline.revenue) * 1000) / 10 }},\n  \"roi\": 3.5,\n  \"completed_at\": \"Tracking Initialized\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-save-campaign-result",
+      "name": "Save Initial Tracking Result to Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1720, 200]
+    }
+  ],
+  "connections": {
+    "Webhook: New/Updated Merchant Data": {
+      "main": [
+        [
+          {
+            "node": "Analyze & Generate Recommendations",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze & Generate Recommendations": {
+      "main": [
+        [
+          {
+            "node": "Detect Opportunity",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Detect Viable Growth Opportunity": {
+      "main": [
+        [
+          {
+            "node": "Save Recommendation to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Recommendation to Supabase": {
+      "main": [
+        [
+          {
+            "node": "Has Merchant Approved Financial Action?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Has Merchant Approved Financial Action?": {
+      "main": [
+        [
+          {
+            "node": "Create Campaign in Backend",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Halt: Await Merchant Approval (No Auto Financial Action)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Campaign in Backend": {
+      "main": [
+        [
+          {
+            "node": "Track Campaign & Measure Baseline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Track Campaign & Measure Baseline": {
+      "main": [
+        [
+          {
+            "node": "Save Initial Tracking Result to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

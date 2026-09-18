@@ -1,0 +1,67 @@
+# ==============================================================================
+# Merchant Growth AI — Global .gitignore
+# Prevents accidental commit of secrets, local configs, and build artifacts
+# ==============================================================================
+
+# Environment variable files and secrets (CRITICAL)
+.env
+.env.local
+.env.*.local
+*.env
+*.key
+*.pem
+*.cert
+*.pfx
+
+# Java / Maven build artifacts
+backend/target/
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+
+# Python artifacts
+ai-service/__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+*.joblib
+!ai-service/training/artifacts/*.joblib
+
+# Node.js & Next.js frontend artifacts
+frontend/node_modules/
+node_modules/
+frontend/.next/
+.next/
+frontend/out/
+out/
+build/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Database & local data caches
+*.sqlite3
+*.db
+*.log
+*.tmp
+database/local_data/
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+ehthumbs.db

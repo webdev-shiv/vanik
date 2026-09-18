@@ -1,0 +1,106 @@
+{
+  "name": "02 - Campaign Approval & Soundbox Execution Trigger",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "merchant-campaign-approved",
+        "options": {}
+      },
+      "id": "node-webhook-campaign-approved",
+      "name": "Merchant Approves Campaign Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8080/api/v1/customers",
+        "options": {}
+      },
+      "id": "node-fetch-dormant-customers",
+      "name": "Fetch Target Inactive Customers",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [440, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8080/api/v1/campaigns",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"name\": \"Evening Combo Campaign (₹49 Special)\",\n  \"type\": \"Evening Revival\",\n  \"status\": \"RUNNING\",\n  \"targetAudience\": \"Inactive Regulars (312 customers)\",\n  \"audienceCount\": 312,\n  \"budget\": 4200,\n  \"channel\": \"WhatsApp + SMS + Paytm Soundbox Banner\"\n}",
+        "options": {}
+      },
+      "id": "node-activate-campaign",
+      "name": "Transition Campaign Status to RUNNING",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "message": "Dispatched 312 personalized WhatsApp & SMS vouchers: 'We miss you at Sharma Tea Corner! Enjoy a ₹49 Chai+Snack combo today between 5-8:30 PM'."
+      },
+      "id": "node-dispatch-sms",
+      "name": "Simulate WhatsApp & SMS Broadcast",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [920, 240]
+    },
+    {
+      "parameters": {
+        "message": "Paytm Soundbox SB-4G-99218 configured: Voice announcement confirmation armed for ₹49 combo."
+      },
+      "id": "node-soundbox-sync",
+      "name": "Sync Paytm Soundbox Voice Announcement",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [920, 380]
+    }
+  ],
+  "connections": {
+    "Merchant Approves Campaign Webhook": {
+      "main": [
+        [
+          {
+            "node": "Fetch Target Inactive Customers",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Target Inactive Customers": {
+      "main": [
+        [
+          {
+            "node": "Transition Campaign Status to RUNNING",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transition Campaign Status to RUNNING": {
+      "main": [
+        [
+          {
+            "node": "Simulate WhatsApp & SMS Broadcast",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sync Paytm Soundbox Voice Announcement",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

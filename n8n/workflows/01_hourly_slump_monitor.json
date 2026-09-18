@@ -1,0 +1,121 @@
+{
+  "name": "01 - Hourly Transaction Slump & Anomaly Detector",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "node-cron-hourly",
+      "name": "Every Hour Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [200, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8080/api/v1/analytics/hourly-activity",
+        "options": {}
+      },
+      "id": "node-fetch-hourly-activity",
+      "name": "Fetch Hourly Activity From Backend",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [420, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json.data.some(point => point.dropAlert === true) }}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "id": "node-filter-slump",
+      "name": "Is Slump Detected?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [640, 300]
+    },
+    {
+      "parameters": {
+        "url": "http://localhost:8080/api/v1/ai/why-tree",
+        "options": {}
+      },
+      "id": "node-trigger-why-tree",
+      "name": "Refresh AI Why-Engine Tree",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [880, 200]
+    },
+    {
+      "parameters": {
+        "message": "🚨 Merchant Growth AI Alert: Evening transaction density dropped 31%. 312 regular customers inactive. Recommend ₹49 Evening Combo campaign."
+      },
+      "id": "node-soundbox-notification",
+      "name": "Send Merchant Push & Soundbox Banner",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [1100, 200]
+    }
+  ],
+  "connections": {
+    "Every Hour Trigger": {
+      "main": [
+        [
+          {
+            "node": "Fetch Hourly Activity From Backend",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Hourly Activity From Backend": {
+      "main": [
+        [
+          {
+            "node": "Is Slump Detected?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Slump Detected?": {
+      "main": [
+        [
+          {
+            "node": "Refresh AI Why-Engine Tree",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Refresh AI Why-Engine Tree": {
+      "main": [
+        [
+          {
+            "node": "Send Merchant Push & Soundbox Banner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

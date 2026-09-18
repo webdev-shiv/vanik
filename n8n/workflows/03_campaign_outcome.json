@@ -1,0 +1,189 @@
+{
+  "name": "03 - Campaign Outcome",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "campaign-ended",
+        "options": {}
+      },
+      "id": "node-webhook-campaign-ended",
+      "name": "Trigger: Campaign Ends Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [100, 300]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/campaigns/{{ $json.body && $json.body.campaign_id ? $json.body.campaign_id : 'camp-001' }}/results",
+        "authentication": "none",
+        "options": {
+          "timeout": 10000,
+          "retry": {
+            "maxRetries": 3,
+            "retryInterval": 2000
+          }
+        }
+      },
+      "id": "node-fetch-campaign-results",
+      "name": "Fetch Campaign Performance",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [340, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const camp = $json.data;\nconst revBefore = camp.revenueBefore || 265000.0;\nconst revAfter = camp.revenueAfter || 298500.0;\nconst txBefore = camp.transactionsBefore || 2340;\nconst txAfter = camp.transactionsAfter || 2940;\nconst repeatBefore = camp.repeatCustomersBefore || 312;\nconst repeatAfter = camp.repeatCustomersAfter || 428;\nconst budget = camp.budget || 2400.0;\n\nconst incrementalRev = Math.round((revAfter - revBefore) * 100) / 100;\nconst incrementalTx = txAfter - txBefore;\nconst liftPercent = Math.round(((revAfter - revBefore) / revBefore) * 1000) / 10;\nconst roi = budget > 0 ? Math.round((incrementalRev / budget) * 10) / 10 : 0;\n\nreturn [{\n  json: {\n    campaign_id: camp.id,\n    merchant_id: camp.merchantId,\n    campaign_name: camp.name,\n    baseline: {\n      revenue: revBefore,\n      transactions: txBefore,\n      repeat_customers: repeatBefore\n    },\n    observed_outcome: {\n      revenue: revAfter,\n      transactions: txAfter,\n      repeat_customers: repeatAfter,\n      incremental_revenue: incrementalRev,\n      incremental_transactions: incrementalTx,\n      lift_percent: liftPercent,\n      roi: roi\n    },\n    completed_at: new Date().toISOString()\n  }\n}];"
+      },
+      "id": "node-compare-calculate-outcome",
+      "name": "Compare with Baseline & Calculate Observed Outcome",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [580, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/campaign_results",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Prefer",
+              "value": "return=representation"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"id\": \"cres-{{ Math.random().toString(36).substring(2, 9) }}\",\n  \"campaign_id\": \"{{ $json.campaign_id }}\",\n  \"merchant_id\": \"{{ $json.merchant_id }}\",\n  \"impressions\": 1450,\n  \"clicks\": 580,\n  \"transactions\": {{ $json.observed_outcome.incremental_transactions }},\n  \"revenue_generated\": {{ $json.observed_outcome.incremental_revenue }},\n  \"lift_percent\": {{ $json.observed_outcome.lift_percent }},\n  \"roi\": {{ $json.observed_outcome.roi }},\n  \"completed_at\": \"{{ $json.completed_at }}\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-save-campaign-result-supabase",
+      "name": "Save Campaign Result to Supabase",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [820, 300]
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/campaigns/{{ $('Compare with Baseline & Calculate Observed Outcome').first().json.campaign_id }}/status",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"status\": \"COMPLETED\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-update-campaign-status",
+      "name": "Update Campaign Status to Completed",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1060, 200]
+    },
+    {
+      "parameters": {
+        "method": "PATCH",
+        "url": "={{ $env.SUPABASE_URL || 'https://xyzcompany.supabase.co' }}/rest/v1/recommendations?merchant_id=eq.{{ $('Compare with Baseline & Calculate Observed Outcome').first().json.merchant_id }}&status=eq.ACTIVE",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "apikey",
+              "value": "={{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $env.SUPABASE_SERVICE_ROLE_KEY || 'simulated-supabase-anon-key' }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"status\": \"COMPLETED_SUCCESSFULLY\",\n  \"updated_at\": \"{{ new Date().toISOString() }}\"\n}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "id": "node-update-recommendation-history",
+      "name": "Update Recommendation History",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1060, 400]
+    }
+  ],
+  "connections": {
+    "Trigger: Campaign Ends Webhook": {
+      "main": [
+        [
+          {
+            "node": "Fetch Campaign Performance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fetch Campaign Performance": {
+      "main": [
+        [
+          {
+            "node": "Compare with Baseline & Calculate Observed Outcome",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compare with Baseline & Calculate Observed Outcome": {
+      "main": [
+        [
+          {
+            "node": "Save Campaign Result to Supabase",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Campaign Result to Supabase": {
+      "main": [
+        [
+          {
+            "node": "Update Campaign Status to Completed",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Update Recommendation History",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
