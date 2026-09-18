@@ -22,7 +22,7 @@ export default function CustomersPage() {
     setLoading(true);
     setError(null);
     try {
-      const analytics = await vanikApi.getCustomerAnalytics("m-001");
+      const analytics = await vanikApi.getCustomerAnalytics(vanikApi.getMerchantId());
       setData(analytics);
     } catch (err) {
       console.error("Error fetching customer analytics:", err);
