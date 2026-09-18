@@ -44,7 +44,7 @@ export default function LoginPage() {
         <div className="relative z-10">
           <Logo inverted size="lg" showTagline />
           <div className="mt-12 max-w-md">
-            <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-white/10 text-brand-cyan border border-white/15">
+            <span className="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-white/10 text-brand-cyan border border-white/15">
               AI-Powered Merchant Intelligence
             </span>
             <h1 className="text-3xl lg:text-4xl font-extrabold tracking-tight mt-4 leading-tight">
@@ -57,10 +57,10 @@ export default function LoginPage() {
         </div>
 
         {/* Abstract Growth Visualization Card */}
-        <div className="relative z-10 my-8 p-5 bg-white/10 backdrop-blur-md rounded-2xl border border-white/15 max-w-sm">
+        <div className="relative z-10 my-8 p-5 bg-white/10 backdrop-blur-md rounded-[24px] border border-white/15 max-w-sm">
           <div className="flex items-center justify-between mb-3">
             <span className="text-xs font-bold text-brand-cyan">Live Simulation Engine</span>
-            <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-300 px-2 py-0.5 rounded">
+            <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-300 px-2.5 py-0.5 rounded-full font-bold">
               +17.5% volume lift
             </span>
           </div>
@@ -95,8 +95,8 @@ export default function LoginPage() {
         </div>
 
         {errorMessage && (
-          <div className="mb-4 p-3 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-semibold flex items-center gap-2">
-            <AlertCircle className="w-4 h-4 shrink-0 text-red-500" />
+          <div className="mb-4 p-3.5 rounded-2xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center gap-2">
+            <AlertCircle className="w-4 h-4 shrink-0 text-rose-500" />
             <span>{errorMessage}</span>
           </div>
         )}
@@ -111,7 +111,7 @@ export default function LoginPage() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full text-sm bg-navy-50 border border-navy-200 rounded-xl px-4 py-2.5 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="w-full text-sm bg-navy-50/50 border border-navy-200/80 rounded-2xl px-4 py-3 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
               placeholder="name@store.com"
             />
           </div>
@@ -130,7 +130,7 @@ export default function LoginPage() {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full text-sm bg-navy-50 border border-navy-200 rounded-xl px-4 py-2.5 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="w-full text-sm bg-navy-50/50 border border-navy-200/80 rounded-2xl px-4 py-3 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             />
           </div>
 
@@ -140,7 +140,7 @@ export default function LoginPage() {
               variant="primary"
               size="lg"
               isLoading={isLoading}
-              className="w-full font-bold shadow-md h-12"
+              className="w-full font-bold shadow-xs h-12 rounded-full"
             >
               <span>Sign In to VANIK</span>
               <ArrowRight className="w-4 h-4 ml-1.5" />
@@ -148,7 +148,7 @@ export default function LoginPage() {
           </div>
         </form>
 
-        <div className="mt-8 p-3.5 bg-navy-50 rounded-xl border border-navy-100 text-[11px] text-navy-600">
+        <div className="mt-8 p-4 bg-navy-50/70 rounded-2xl border border-navy-100 text-[11px] text-navy-600">
           <span className="font-bold text-navy-800">Demo Merchant Credentials Pre-filled:</span>
           <br />
           Sharma Tea Corner (Connaught Place) • Full platform preview

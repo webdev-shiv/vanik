@@ -6,9 +6,11 @@ import { InsightCard } from "@/components/insights/InsightCard";
 import { WhyTreeModal } from "@/components/insights/WhyTreeModal";
 import { Tabs } from "@/components/ui/Tabs";
 import { Button } from "@/components/ui/Button";
+import { Skeleton } from "@/components/ui/Skeleton";
+import { EmptyState } from "@/components/ui/EmptyState";
 import { vanikApi } from "@/lib/api";
 import { AIInsight } from "@/lib/types";
-import { RefreshCw, AlertCircle, CheckCircle2 } from "lucide-react";
+import { RefreshCw, AlertCircle, CheckCircle2, Sparkles } from "lucide-react";
 
 export default function InsightsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -51,17 +53,17 @@ export default function InsightsPage() {
     <AppShell>
       <div className="space-y-6 pb-12">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white border border-navy-200/80 rounded-[28px] p-6 shadow-card">
           <div>
-            <div className="flex items-center gap-2">
-              <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
+            <div className="flex items-center gap-2.5 mb-1">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 tracking-tight">
                 AI Diagnostic Insights
               </h1>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-gradient-to-r from-brand-700 to-brand-cyan text-white shadow-xs">
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-gradient-to-r from-brand-700 to-brand-cyan text-white shadow-xs">
                 Real-Time ML Scans
               </span>
             </div>
-            <p className="text-xs md:text-sm text-navy-500 mt-1">
+            <p className="text-xs md:text-sm font-medium text-navy-500">
               Automated anomaly detection, temporal shifts, and root-cause evidence from recent transaction logs
             </p>
           </div>
@@ -73,26 +75,21 @@ export default function InsightsPage() {
           />
         </div>
 
-        {/* Loading State */}
+        {/* Skeleton Loading State */}
         {loading && insights.length === 0 && (
-          <div className="py-16 flex flex-col items-center justify-center text-center space-y-3 bg-white rounded-2xl border border-navy-100 p-8 shadow-card">
-            <div className="w-10 h-10 border-4 border-brand-500 border-t-transparent rounded-full animate-spin" />
-            <div className="text-sm font-bold text-navy-900">
-              Scanning recent merchant telemetry...
-            </div>
-            <p className="text-xs text-navy-500">
-              Correlating Paytm Soundbox transactions with temporal anomalies and RFM customer clusters.
-            </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Skeleton className="h-96 rounded-[24px]" />
+            <Skeleton className="h-96 rounded-[24px]" />
           </div>
         )}
 
         {/* Error State */}
         {error && insights.length === 0 && (
-          <div className="p-5 rounded-2xl bg-rose-50 border border-rose-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="p-6 rounded-[28px] bg-rose-50 border border-rose-200 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-3">
-              <AlertCircle className="w-5 h-5 text-rose-600 shrink-0" />
+              <AlertCircle className="w-6 h-6 text-rose-600 shrink-0" />
               <div>
-                <p className="text-xs sm:text-sm font-semibold text-rose-900">
+                <p className="text-sm font-bold text-rose-900">
                   Diagnostic insights are temporarily unavailable.
                 </p>
                 <p className="text-xs text-rose-700 mt-0.5">
@@ -104,25 +101,21 @@ export default function InsightsPage() {
               variant="outline"
               size="sm"
               onClick={fetchInsights}
-              className="text-xs border-rose-300 text-rose-800 hover:bg-rose-100"
+              className="border-rose-300 text-rose-800 hover:bg-rose-100"
             >
               <RefreshCw className="w-3.5 h-3.5 mr-1.5" />
-              <span>Retry</span>
+              <span>Retry Synchronization</span>
             </Button>
           </div>
         )}
 
         {/* Empty State */}
         {!loading && !error && filteredInsights.length === 0 && (
-          <div className="py-16 flex flex-col items-center justify-center text-center space-y-3 bg-white rounded-2xl border border-navy-100 p-8 shadow-card">
-            <CheckCircle2 className="w-10 h-10 text-emerald-500" />
-            <div className="text-sm font-bold text-navy-900">
-              No active alerts in this category
-            </div>
-            <p className="text-xs text-navy-500 max-w-md">
-              Transaction volume and customer retention patterns are operating within normal baseline boundaries.
-            </p>
-          </div>
+          <EmptyState
+            icon={CheckCircle2}
+            title="No active alerts in this category"
+            description="Transaction volume and customer retention patterns are operating cleanly within normal baseline boundaries."
+          />
         )}
 
         {/* Insight Cards Grid */}
@@ -148,3 +141,4 @@ export default function InsightsPage() {
     </AppShell>
   );
 }
+

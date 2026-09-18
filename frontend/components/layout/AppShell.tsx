@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { Sidebar } from "./Sidebar";
 import { Topbar } from "./Topbar";
+import { CopilotFloatingWidget } from "@/components/copilot/CopilotFloatingWidget";
 import { X } from "lucide-react";
 
 interface AppShellProps {
@@ -13,7 +14,7 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
   return (
-    <div className="flex h-screen bg-navy-50 overflow-hidden">
+    <div className="flex h-screen bg-navy-50 overflow-hidden relative">
       {/* Desktop Persistent Sidebar */}
       <div className="hidden md:flex flex-shrink-0">
         <Sidebar />
@@ -51,6 +52,9 @@ export const AppShell: React.FC<AppShellProps> = ({ children }) => {
           {children}
         </main>
       </div>
+
+      {/* Persistent Floating AI Chatbot Bubble (Every Page) */}
+      <CopilotFloatingWidget />
     </div>
   );
 };

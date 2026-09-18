@@ -80,7 +80,7 @@ export const HourlyHeatmapCard: React.FC<HourlyHeatmapCardProps> = ({
 
   if (!mounted) {
     return (
-      <div className="h-64 bg-white border border-navy-100 rounded-2xl p-5 shadow-card flex items-center justify-center text-xs text-navy-400">
+      <div className="h-64 bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card flex items-center justify-center text-xs text-navy-400">
         Loading hourly activity...
       </div>
     );
@@ -91,24 +91,24 @@ export const HourlyHeatmapCard: React.FC<HourlyHeatmapCardProps> = ({
   const affectedWindow = anomaly?.affected_window || anomaly?.affectedWindow || "5:00 PM – 8:30 PM";
 
   return (
-    <div className="bg-white border border-navy-100 rounded-2xl p-5 md:p-6 shadow-card">
+    <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all duration-200">
       <div className="flex items-center justify-between mb-4">
         <div>
           <div className="flex items-center gap-2">
             <h3 className="text-base font-bold text-navy-900 tracking-tight">Sales by Hour & Peak Windows</h3>
             {anomaly?.model_version && (
-              <span className="text-[10px] font-semibold px-2 py-0.5 rounded bg-navy-50 text-navy-600 border border-navy-200">
+              <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-navy-100 text-navy-700 border border-navy-200">
                 ML {anomaly.model_version}
               </span>
             )}
           </div>
-          <p className="text-xs text-navy-500 mt-0.5">
+          <p className="text-xs font-medium text-navy-500 mt-0.5">
             {isAnomalyDetected
               ? `Detected slump during peak evening commute (${affectedWindow})`
               : "Settled transaction distribution across daytime trading hours"}
           </p>
         </div>
-        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-rose-50 text-rose-700 border border-rose-100">
+        <span className="text-[10px] font-extrabold px-2.5 py-1 rounded-full bg-rose-50 text-rose-700 border border-rose-200/80">
           Evening Drop -{dropDisplay}%
         </span>
       </div>
@@ -130,12 +130,12 @@ export const HourlyHeatmapCard: React.FC<HourlyHeatmapCardProps> = ({
                 const d = payload[0].payload;
                 const isSlumpHour = d.hour >= 17 && d.hour <= 20;
                 return (
-                  <div className="bg-navy-900 text-white rounded-xl p-2.5 text-xs shadow-xl border border-navy-800">
-                    <div className="font-bold">{d.timeLabel} ({d.periodCategory || "Active"})</div>
-                    <div className="text-brand-cyan mt-1">Revenue: {formatCurrencyINR(d.revenue)}</div>
+                  <div className="bg-navy-900 text-white rounded-2xl p-3 text-xs shadow-2xl border border-navy-800">
+                    <div className="font-bold text-navy-200">{d.timeLabel} ({d.periodCategory || "Active"})</div>
+                    <div className="text-brand-cyan font-mono font-bold mt-1">Revenue: {formatCurrencyINR(d.revenue)}</div>
                     <div className="text-navy-300">Orders: {d.transactions} txns</div>
                     {isSlumpHour && (
-                      <div className="text-rose-400 text-[10px] mt-1 font-semibold">
+                      <div className="text-rose-400 text-[10px] mt-1 font-bold">
                         Slumped -{dropDisplay}% vs expected baseline
                       </div>
                     )}
@@ -143,7 +143,7 @@ export const HourlyHeatmapCard: React.FC<HourlyHeatmapCardProps> = ({
                 );
               }}
             />
-            <Bar dataKey="revenue" radius={[4, 4, 0, 0]}>
+            <Bar dataKey="revenue" radius={[6, 6, 0, 0]}>
               {hourlyData.map((entry, idx) => {
                 const isSlump = entry.hour >= 17 && entry.hour <= 20;
                 const isPeak = entry.isPeak;
@@ -159,17 +159,18 @@ export const HourlyHeatmapCard: React.FC<HourlyHeatmapCardProps> = ({
         </ResponsiveContainer>
       </div>
 
-      <div className="flex items-center justify-center gap-4 mt-2 text-[11px] text-navy-500">
+      <div className="flex items-center justify-center gap-5 mt-2 text-[11px] font-medium text-navy-500">
         <span className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-sm bg-brand-500" /> Morning / Lunch Peak
+          <span className="w-2.5 h-2.5 rounded-full bg-brand-500" /> Morning / Lunch Peak
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-sm bg-rose-400" /> Slump Window (5–8 PM)
+          <span className="w-2.5 h-2.5 rounded-full bg-rose-400" /> Slump Window (5–8 PM)
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-sm bg-brand-300" /> Regular Hours
+          <span className="w-2.5 h-2.5 rounded-full bg-brand-300" /> Regular Hours
         </span>
       </div>
     </div>
   );
 };
+

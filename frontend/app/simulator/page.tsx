@@ -86,7 +86,7 @@ function SimulatorContent() {
             />
 
             {/* Strategy Preset Chips */}
-            <div className="bg-white border border-navy-100 rounded-2xl p-4 shadow-card">
+            <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-xs">
               <span className="text-[11px] font-bold uppercase tracking-wider text-navy-400 block mb-2">
                 Popular Presets
               </span>

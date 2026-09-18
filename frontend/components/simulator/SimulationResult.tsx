@@ -18,7 +18,7 @@ export const SimulationResult: React.FC<SimulationResultProps> = ({ outcome }) =
   );
 
   return (
-    <div className="bg-white border border-navy-100 rounded-2xl p-5 md:p-6 shadow-card space-y-6">
+    <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-xs space-y-6">
       {/* Header with Confidence Badge */}
       <div className="flex items-center justify-between">
         <div>

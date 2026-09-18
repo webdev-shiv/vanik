@@ -18,37 +18,33 @@ export const MetricCard: React.FC<MetricCardProps> = ({ metric, icon: Icon }) =>
     (metric.changePercent > 0 && metric.id !== "kpi-churn");
 
   return (
-    <div
-      title="Source: Demo/Synthetic Data"
-      data-source="Demo/Synthetic Data"
-      className="bg-white border border-navy-100 rounded-2xl p-5 shadow-card hover:shadow-card-hover transition-all duration-200 flex flex-col justify-between group"
-    >
+    <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover hover:-translate-y-0.5 transition-all duration-200 flex flex-col justify-between group">
       <div>
         <div className="flex items-center justify-between mb-3">
-          <span className="text-xs font-semibold uppercase tracking-wider text-navy-500">
+          <span className="text-xs font-bold uppercase tracking-wider text-navy-500">
             {metric.label}
           </span>
           {Icon && (
-            <div className="w-8 h-8 rounded-xl bg-navy-50 text-navy-600 flex items-center justify-center group-hover:bg-brand-50 group-hover:text-brand-600 transition-colors">
-              <Icon className="w-4 h-4" />
+            <div className="w-10 h-10 rounded-full bg-brand-50 text-brand-600 border border-brand-100/60 flex items-center justify-center group-hover:bg-brand-500 group-hover:text-white transition-all shadow-xs">
+              <Icon className="w-5 h-5" />
             </div>
           )}
         </div>
 
-        {/* Large Primary Number */}
-        <div className="text-2xl lg:text-3xl font-extrabold text-navy-900 tracking-tight">
+        {/* Large Primary Metric (28-36px) */}
+        <div className="text-2xl lg:text-3xl font-extrabold text-navy-900 tracking-tight my-1">
           {metric.value}
         </div>
       </div>
 
-      <div className="pt-4 mt-2 border-t border-navy-50 flex items-center justify-between">
-        {/* Trend Indicator & Percentage Change */}
+      <div className="pt-3.5 mt-2 border-t border-navy-100/80 flex items-center justify-between">
+        {/* Trend Indicator Pill */}
         <div
           className={cn(
-            "inline-flex items-center gap-1 text-xs font-bold px-2 py-0.5 rounded-md select-none",
+            "inline-flex items-center gap-1 text-xs font-extrabold px-2.5 py-0.5 rounded-full select-none border",
             isPositive
-              ? "bg-emerald-50 text-emerald-700 border border-emerald-200/50"
-              : "bg-rose-50 text-rose-700 border border-rose-200/50"
+              ? "bg-emerald-50 text-emerald-700 border-emerald-200/80"
+              : "bg-rose-50 text-rose-700 border-rose-200/80"
           )}
         >
           {isUp && <TrendingUp className="w-3.5 h-3.5" />}
@@ -58,16 +54,17 @@ export const MetricCard: React.FC<MetricCardProps> = ({ metric, icon: Icon }) =>
         </div>
 
         {/* Small Comparison Label */}
-        <div className="text-[11px] font-medium text-navy-400 text-right truncate pl-2">
+        <div className="text-[11px] font-semibold text-navy-500 text-right truncate pl-2">
           {metric.comparisonPeriod}
         </div>
       </div>
 
       {metric.subLabel && (
-        <div className="text-[11px] text-navy-500 font-medium mt-1">
+        <div className="text-[11px] text-navy-500 font-medium mt-1.5">
           {metric.subLabel}
         </div>
       )}
     </div>
   );
 };
+

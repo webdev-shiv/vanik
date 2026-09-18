@@ -78,36 +78,36 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
 
   if (!mounted) {
     return (
-      <div className="h-80 bg-navy-50/50 rounded-2xl animate-pulse flex items-center justify-center text-navy-400 text-xs">
+      <div className="h-80 bg-navy-50/50 rounded-[24px] animate-pulse flex items-center justify-center text-navy-400 text-xs">
         Loading Revenue Overview...
       </div>
     );
   }
 
   return (
-    <div className="bg-white border border-navy-100 rounded-2xl p-5 md:p-6 shadow-card">
+    <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all duration-200">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
         <div>
           <div className="flex items-center gap-2">
             <h2 className="text-base font-bold text-navy-900 tracking-tight">Revenue Overview</h2>
-            <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-50 text-brand-700">
+            <span className="text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200/60">
               Dual-Axis
             </span>
           </div>
-          <p className="text-xs text-navy-500 mt-0.5">
-            Settled volume across Paytm QR, Soundbox, and POS
+          <p className="text-xs font-medium text-navy-500 mt-0.5">
+            Settled volume across Paytm QR, Soundbox, and Card POS
           </p>
         </div>
 
         {/* Timeframe Filter Buttons */}
-        <div className="flex items-center gap-1 p-1 bg-navy-100/80 rounded-xl self-start sm:self-auto">
+        <div className="flex items-center gap-1 p-1 bg-navy-100/90 rounded-full border border-navy-200/50 self-start sm:self-auto select-none">
           {(["7D", "30D", "90D", "1Y"] as const).map((tf) => (
             <button
               key={tf}
               onClick={() => setTimeframe(tf)}
-              className={`px-3 py-1 text-xs font-semibold rounded-lg transition-all ${
+              className={`px-3.5 py-1 text-xs font-bold rounded-full transition-all ${
                 timeframe === tf
-                  ? "bg-white text-navy-900 shadow-sm"
+                  ? "bg-white text-brand-700 shadow-xs"
                   : "text-navy-600 hover:text-navy-900"
               }`}
             >
@@ -118,16 +118,16 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
       </div>
 
       {/* Mini metric counters */}
-      <div className="flex items-center gap-6 mb-4 text-xs">
+      <div className="flex items-center gap-6 mb-4 text-xs font-medium">
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-sm bg-brand-500" />
+          <span className="w-2.5 h-2.5 rounded-full bg-brand-500" />
           <span className="text-navy-500">Revenue:</span>
-          <span className="font-bold text-navy-900">{formatCurrencyINR(totalRev)}</span>
+          <span className="font-extrabold text-navy-900">{formatCurrencyINR(totalRev)}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-2.5 h-2.5 rounded-sm bg-brand-cyan" />
+          <span className="w-2.5 h-2.5 rounded-full bg-brand-cyan" />
           <span className="text-navy-500">Transactions:</span>
-          <span className="font-bold text-navy-900">{formatNumberIN(totalTxns)}</span>
+          <span className="font-extrabold text-navy-900">{formatNumberIN(totalTxns)}</span>
         </div>
       </div>
 
@@ -173,7 +173,7 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
                 if (!active || !payload || !payload.length) return null;
                 const d = payload[0].payload;
                 return (
-                  <div className="bg-navy-900 text-white rounded-xl p-3 shadow-xl border border-navy-800 text-xs">
+                  <div className="bg-navy-900 text-white rounded-2xl p-3.5 shadow-2xl border border-navy-800 text-xs">
                     <div className="font-bold text-navy-200 mb-1.5">{d.period}</div>
                     <div className="flex items-center justify-between gap-4 py-0.5">
                       <span className="text-brand-300">Revenue:</span>
@@ -205,8 +205,8 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
               type="monotone"
               dataKey="transactions"
               stroke="#00b9f5"
-              strokeWidth={2}
-              dot={{ r: 3, fill: "#00b9f5" }}
+              strokeWidth={2.5}
+              dot={{ r: 3.5, fill: "#00b9f5" }}
             />
           </ComposedChart>
         </ResponsiveContainer>
@@ -214,3 +214,4 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
     </div>
   );
 };
+

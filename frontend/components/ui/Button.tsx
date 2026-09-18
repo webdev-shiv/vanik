@@ -2,7 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger" | "vanik-ai";
+  variant?: "primary" | "secondary" | "outline" | "ghost" | "danger" | "vanik-ai" | "soft";
   size?: "sm" | "md" | "lg";
   isLoading?: boolean;
 }
@@ -10,27 +10,29 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = "primary", size = "md", isLoading, children, disabled, ...props }, ref) => {
     const baseStyles =
-      "inline-flex items-center justify-center font-medium transition-all duration-150 rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none select-none";
+      "inline-flex items-center justify-center font-semibold transition-all duration-150 rounded-full focus:outline-none focus:ring-4 disabled:opacity-50 disabled:pointer-events-none select-none active:scale-[0.98]";
 
     const variantStyles = {
       primary:
-        "bg-brand-500 hover:bg-brand-600 text-white shadow-sm hover:shadow focus:ring-brand-500",
+        "bg-brand-500 hover:bg-brand-600 text-white shadow-xs hover:shadow-md focus:ring-brand-500/20 active:bg-brand-700",
       secondary:
-        "bg-navy-100 hover:bg-navy-200 text-navy-800 focus:ring-navy-400",
+        "bg-navy-100 hover:bg-navy-200 text-navy-800 focus:ring-navy-400/20",
       outline:
-        "border border-navy-200 hover:border-navy-300 bg-white hover:bg-navy-50 text-navy-700 focus:ring-brand-500",
+        "border border-navy-200 hover:border-navy-300 bg-white hover:bg-navy-50 text-navy-800 focus:ring-brand-500/20 shadow-xs",
+      soft:
+        "bg-brand-50 hover:bg-brand-100 text-brand-700 border border-brand-100 focus:ring-brand-500/20",
       ghost:
-        "hover:bg-navy-100 text-navy-700 focus:ring-navy-400",
+        "hover:bg-navy-100 text-navy-700 focus:ring-navy-400/20",
       danger:
-        "bg-rose-600 hover:bg-rose-700 text-white shadow-sm focus:ring-rose-500",
+        "bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 focus:ring-rose-500/20 font-semibold",
       "vanik-ai":
-        "bg-gradient-to-r from-brand-700 via-brand-500 to-brand-cyan hover:opacity-95 text-white shadow-sm hover:shadow-brand-glow focus:ring-brand-cyan",
+        "bg-gradient-to-r from-brand-700 via-brand-500 to-brand-cyan hover:opacity-95 text-white shadow-xs hover:shadow-brand-glow focus:ring-brand-cyan/30",
     };
 
     const sizeStyles = {
-      sm: "text-xs px-3 py-1.5 gap-1.5 h-8",
-      md: "text-sm px-4 py-2 gap-2 h-10",
-      lg: "text-base px-6 py-2.5 gap-2.5 h-12",
+      sm: "text-xs px-4 py-1.5 gap-1.5 h-8",
+      md: "text-xs font-bold px-5 py-2.5 gap-2 h-10",
+      lg: "text-sm font-bold px-7 py-3 gap-2.5 h-12",
     };
 
     return (
@@ -68,3 +70,4 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 
 Button.displayName = "Button";
+

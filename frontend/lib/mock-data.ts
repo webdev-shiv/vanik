@@ -468,7 +468,7 @@ export const initialCopilotMessages: CopilotMessage[] = [
     id: "copilot-welcome",
     sender: "ai",
     timestamp: "12:00 PM",
-    content: "Good afternoon, Ramesh Ji! I am **VANIK Growth Copilot**, your real-time AI business advisor.\n\nI have analyzed your last 30 days of transaction receipts and detected actionable opportunities in your evening footfall and customer retention.",
+    content: "Good afternoon, Ramesh Ji! I am **VANIK Saathi**, your real-time AI business advisor.\n\nI have analyzed your last 30 days of transaction receipts and detected actionable opportunities in your evening footfall and customer retention.",
     dataSection: {
       metric: "Monthly Revenue",
       value: "₹2,84,500 (↓ 11.4%)",

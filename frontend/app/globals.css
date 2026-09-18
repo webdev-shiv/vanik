@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,18 +25,18 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
-    --radius: 0.85rem;
+    --radius: 1.5rem;
   }
 }
 
 body {
   background-color: #f8fafc;
   color: #0f172a;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Custom fintech scrollbars */
+/* Custom scrollbars */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -50,16 +52,29 @@ body {
   background: #94a3b8;
 }
 
-/* Financial glow & card utilities */
+/* Material 3 & Paytm Surface Utilities */
+.m3-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.m3-card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 41, 112, 0.06), 0 8px 10px -6px rgba(0, 41, 112, 0.04);
+}
+
 .vanik-glass {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
 }
 
 .vanik-gradient-card {
   background: linear-gradient(135deg, #002970 0%, #0052cc 60%, #00b9f5 100%);
 }
 
-.vanik-subtle-gradient {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+.m3-soft-blue {
+  background: linear-gradient(180deg, #eef6ff 0%, #f0f7ff 100%);
+  border: 1px solid #dbeafe;
 }
+

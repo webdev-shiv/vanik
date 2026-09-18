@@ -12,25 +12,25 @@ interface LogoProps {
 export const Logo: React.FC<LogoProps> = ({
   className,
   size = "md",
-  showTagline = false,
+  showTagline = true,
   inverted = false,
 }) => {
   const iconSize = size === "sm" ? 22 : size === "lg" ? 36 : 28;
   const textSize = size === "sm" ? "text-lg" : size === "lg" ? "text-2xl" : "text-xl";
 
   return (
-    <Link href="/" className={cn("inline-flex items-center gap-2.5 group select-none", className)}>
-      {/* Brand Icon: Growth Apex Node & Transaction Wave */}
+    <Link href="/" className={cn("inline-flex items-center gap-3 group select-none", className)}>
+      {/* Brand Icon: Paytm Blue & Cyan Growth Node */}
       <div
         className={cn(
-          "relative flex items-center justify-center rounded-xl transition-transform duration-200 group-hover:scale-105",
-          size === "sm" ? "w-7 h-7" : size === "lg" ? "w-11 h-11" : "w-9 h-9",
-          inverted ? "bg-white text-brand-700 shadow-md" : "bg-gradient-to-tr from-brand-700 via-brand-500 to-brand-cyan text-white shadow-sm"
+          "relative flex items-center justify-center rounded-2xl transition-transform duration-200 group-hover:scale-105 shadow-xs",
+          size === "sm" ? "w-8 h-8" : size === "lg" ? "w-11 h-11" : "w-10 h-10",
+          inverted ? "bg-white text-brand-700 shadow-md" : "bg-gradient-to-tr from-brand-700 via-brand-500 to-brand-cyan text-white"
         )}
       >
         <svg
-          width={iconSize - 6}
-          height={iconSize - 6}
+          width={iconSize - 4}
+          height={iconSize - 4}
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +39,6 @@ export const Logo: React.FC<LogoProps> = ({
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          {/* Stylized 'V' upward transaction vector & growth chevron */}
           <path d="M4 6L11.5 18.5C11.8 19 12.2 19 12.5 18.5L20 6" />
           <path d="M12 12.5L16.5 8" strokeWidth="2.5" />
           <circle cx="16.5" cy="8" r="1.5" fill="currentColor" />
@@ -50,7 +49,7 @@ export const Logo: React.FC<LogoProps> = ({
         <div className="flex items-center gap-1.5">
           <span
             className={cn(
-              "font-bold tracking-tight",
+              "font-extrabold tracking-tight",
               textSize,
               inverted ? "text-white" : "text-brand-700"
             )}
@@ -59,26 +58,27 @@ export const Logo: React.FC<LogoProps> = ({
           </span>
           <span
             className={cn(
-              "text-[9px] font-semibold uppercase tracking-wider px-1.5 py-0.5 rounded-md",
+              "text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide",
               inverted
                 ? "bg-white/20 text-white"
-                : "bg-brand-50 text-brand-500 border border-brand-100"
+                : "bg-brand-50 text-brand-700 border border-brand-200/60"
             )}
           >
-            AI Growth
+            AI
           </span>
         </div>
         {showTagline && (
           <span
             className={cn(
-              "text-[10px] tracking-tight -mt-0.5",
-              inverted ? "text-brand-100" : "text-navy-500"
+              "text-[10px] font-semibold tracking-tight -mt-0.5",
+              inverted ? "text-brand-100" : "text-brand-500"
             )}
           >
-            Turn transactions into growth.
+            Powered by Paytm
           </span>
         )}
       </div>
     </Link>
   );
 };
+

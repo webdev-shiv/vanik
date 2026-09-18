@@ -31,10 +31,27 @@ public class MerchantController {
         return ApiResponse.ok(merchantService.getAllMerchants());
     }
 
-    @GetMapping({"/api/merchants/current/profile", "/api/v1/merchant/profile"})
+    @GetMapping({"/api/merchants/profile", "/api/merchants/current/profile", "/api/v1/merchant/profile"})
     @Operation(summary = "Get active merchant profile", description = "Retrieves active merchant profile session")
-    public ApiResponse<MerchantEntity> getProfile() {
+    public ApiResponse<MerchantEntity> getProfile(jakarta.servlet.http.HttpServletRequest request) {
+        String merchantId = (String) request.getAttribute("authenticatedMerchantId");
+        if (merchantId != null && !merchantId.isBlank()) {
+            return ApiResponse.ok(merchantService.getMerchantById(merchantId));
+        }
         return ApiResponse.ok(merchantService.getCurrentMerchant());
+    }
+
+    @PutMapping({"/api/merchants/profile", "/api/v1/merchant/profile"})
+    @Operation(summary = "Update authenticated merchant profile", description = "Updates profile attributes for authenticated merchant")
+    public ApiResponse<MerchantEntity> updateProfile(
+            jakarta.servlet.http.HttpServletRequest request,
+            @RequestBody Map<String, Object> body) {
+        String merchantId = (String) request.getAttribute("authenticatedMerchantId");
+        if (merchantId == null || merchantId.isBlank()) {
+            merchantId = merchantService.getCurrentMerchant().getId();
+        }
+        MerchantEntity updated = merchantService.updateMerchantProfile(merchantId, body);
+        return ApiResponse.ok(updated, "Merchant profile updated successfully");
     }
 
     @PostMapping({"/api/merchants/switch/{id}", "/api/v1/merchant/switch/{id}"})

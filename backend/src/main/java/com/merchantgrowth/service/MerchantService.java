@@ -50,6 +50,27 @@ public class MerchantService {
         return null;
     }
 
+    public MerchantEntity updateMerchantProfile(String merchantId, Map<String, Object> body) {
+        MerchantEntity entity = getMerchantById(merchantId);
+        if (body.containsKey("name") && body.get("name") != null) {
+            entity.setName(body.get("name").toString().trim());
+        }
+        if (body.containsKey("ownerName") && body.get("ownerName") != null) {
+            entity.setOwnerName(body.get("ownerName").toString().trim());
+        }
+        if (body.containsKey("category") && body.get("category") != null) {
+            entity.setCategory(body.get("category").toString().trim());
+        }
+        if (body.containsKey("location") && body.get("location") != null) {
+            entity.setLocation(body.get("location").toString().trim());
+        }
+        if (body.containsKey("size") && body.get("size") != null) {
+            entity.setSize(body.get("size").toString().trim());
+        }
+        entity.setLastSyncedAt("Updated just now");
+        return merchantRepository.save(entity);
+    }
+
     public GrowthHealthScoreDto getGrowthHealth() {
         return GrowthHealthScoreDto.builder()
                 .overallScore(72)

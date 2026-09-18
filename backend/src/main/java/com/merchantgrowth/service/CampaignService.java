@@ -36,9 +36,6 @@ public class CampaignService {
         if (list.isEmpty()) {
             list = campaignRepository.findByMerchantId(merchantId);
         }
-        if (list.isEmpty()) {
-            list = campaignRepository.findAll();
-        }
 
         // Enrich with outcome results from campaignResultRepository if available
         for (CampaignEntity entity : list) {

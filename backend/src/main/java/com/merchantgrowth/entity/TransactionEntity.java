@@ -29,6 +29,9 @@ public class TransactionEntity {
     @Column(name = "customer_id", length = 64)
     private String customerId;
 
+    @Column(name = "product_id", length = 64)
+    private String productId;
+
     @Column(name = "amount", nullable = false)
     private double amount;
 

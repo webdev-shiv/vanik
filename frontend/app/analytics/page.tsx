@@ -7,6 +7,7 @@ import { HourlyHeatmapCard } from "@/components/dashboard/HourlyHeatmapCard";
 import { ProductPerformanceTable } from "@/components/analytics/ProductPerformanceTable";
 import { CategorySplit } from "@/components/analytics/CategorySplit";
 import { Tabs } from "@/components/ui/Tabs";
+import { Skeleton } from "@/components/ui/Skeleton";
 import {
   TrendingUp,
   TrendingDown,
@@ -99,18 +100,18 @@ export default function AnalyticsPage() {
     <AppShell>
       <div className="space-y-6 pb-12">
         {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white border border-navy-200/80 rounded-[28px] p-6 shadow-card">
           <div>
-            <div className="flex items-center gap-2">
-              <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
-                Merchant Business Analytics
+            <div className="flex items-center gap-2.5 mb-1">
+              <h1 className="text-2xl md:text-3xl font-extrabold text-navy-900 tracking-tight">
+                Business Analytics & Forecasting
               </h1>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-brand-50 text-brand-700 border border-brand-200">
-                Live Telemetry & ML
+              <span className="text-xs font-bold px-3 py-1 rounded-full bg-brand-50 text-brand-700 border border-brand-200/60">
+                Live Telemetry
               </span>
             </div>
-            <p className="text-xs md:text-sm text-navy-500 mt-1">
-              Multi-dimensional analysis of revenue, basket sizes, peak hours, and machine learning diagnostics
+            <p className="text-xs md:text-sm font-medium text-navy-500">
+              Deep-dive metrics across sales trends, ML predictive curves, hourly slump anomalies, and SKU velocity
             </p>
           </div>
 
@@ -119,50 +120,58 @@ export default function AnalyticsPage() {
 
         {/* Top KPI Metrics Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="bg-white border border-navy-100 rounded-xl p-4 shadow-sm">
+          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-navy-500">Gross Sales Ledger</span>
-              <IndianRupee className="w-4 h-4 text-brand-500" />
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">Gross Sales Ledger</span>
+              <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center">
+                <IndianRupee className="w-4 h-4" />
+              </div>
             </div>
-            <div className="mt-2 text-lg md:text-xl font-extrabold text-navy-900">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
               {salesSummary ? formatCurrencyINR(salesSummary.totalRevenue) : "..."}
             </div>
-            <p className="text-[11px] text-navy-400 mt-1">Settled transaction volume</p>
+            <p className="text-[11px] font-medium text-navy-500 mt-1">Settled transaction volume</p>
           </div>
 
-          <div className="bg-white border border-navy-100 rounded-xl p-4 shadow-sm">
+          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-navy-500">Total Transactions</span>
-              <BarChart3 className="w-4 h-4 text-brand-cyan" />
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">Total Transactions</span>
+              <div className="w-8 h-8 rounded-full bg-sky-50 text-brand-cyan flex items-center justify-center">
+                <BarChart3 className="w-4 h-4" />
+              </div>
             </div>
-            <div className="mt-2 text-lg md:text-xl font-extrabold text-navy-900">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
               {salesSummary ? formatNumberIN(salesSummary.totalTransactions) : "..."}
             </div>
-            <p className="text-[11px] text-navy-400 mt-1">Successful QR & POS tickets</p>
+            <p className="text-[11px] font-medium text-navy-500 mt-1">Successful QR & POS tickets</p>
           </div>
 
-          <div className="bg-white border border-navy-100 rounded-xl p-4 shadow-sm">
+          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-navy-500">Average Ticket Size</span>
-              <ShoppingBag className="w-4 h-4 text-emerald-500" />
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">Average Ticket Size</span>
+              <div className="w-8 h-8 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                <ShoppingBag className="w-4 h-4" />
+              </div>
             </div>
-            <div className="mt-2 text-lg md:text-xl font-extrabold text-navy-900">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
               {salesSummary ? formatCurrencyINR(salesSummary.averageOrderValue) : "..."}
             </div>
-            <p className="text-[11px] text-emerald-600 mt-1">Average basket per order</p>
+            <p className="text-[11px] font-semibold text-emerald-700 mt-1">Average basket per order</p>
           </div>
 
-          <div className="bg-white border border-navy-100 rounded-xl p-4 shadow-sm">
+          <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card hover:shadow-card-hover transition-all duration-200">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-medium text-navy-500">7D ML Projected Revenue</span>
-              <BrainCircuit className="w-4 h-4 text-brand-600" />
+              <span className="text-xs font-bold uppercase tracking-wider text-navy-500">7D ML Forecast</span>
+              <div className="w-8 h-8 rounded-full bg-brand-50 text-brand-600 flex items-center justify-center">
+                <BrainCircuit className="w-4 h-4" />
+              </div>
             </div>
-            <div className="mt-2 text-lg md:text-xl font-extrabold text-brand-700">
+            <div className="mt-3 text-xl md:text-2xl font-extrabold text-brand-700 tracking-tight">
               {forecast && (forecast.total_projected_revenue || forecast.totalProjectedRevenue)
                 ? formatCurrencyINR(forecast.total_projected_revenue || forecast.totalProjectedRevenue || 0)
                 : "..."}
             </div>
-            <p className="text-[11px] text-brand-500 mt-1">
+            <p className="text-[11px] font-semibold text-brand-600 mt-1">
               {forecast?.confidence_interval || forecast?.confidenceInterval || "90%"} confidence band
             </p>
           </div>
@@ -172,87 +181,6 @@ export default function AnalyticsPage() {
         {(activeTab === "all" || activeTab === "revenue") && (
           <div className="space-y-6">
             <RevenueChart initialTrends={salesSummary?.trends} merchantId={merchantId} />
-
-            {/* ML 7-Day Forecast Card */}
-            <div className="bg-white border border-navy-100 rounded-2xl p-5 md:p-6 shadow-card">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-navy-100">
-                <div>
-                  <div className="flex items-center gap-2">
-                    <BrainCircuit className="w-4 h-4 text-brand-600" />
-                    <h3 className="text-base font-bold text-navy-900 tracking-tight">
-                      ML Sales Forecast Engine
-                    </h3>
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200">
-                      Ridge Regression Autoregressive Model ({forecast?.model_version || forecast?.modelVersion || "v1.0.0"})
-                    </span>
-                  </div>
-                  <p className="text-xs text-navy-500 mt-1">
-                    7-day projected forward trajectory with 90% confidence interval lower & upper error bounds
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-2">
-                  <span className="text-xs text-navy-500 font-medium">Avg Projected / Day:</span>
-                  <span className="text-xs font-bold text-navy-900 bg-navy-50 px-2.5 py-1 rounded-md border border-navy-200 font-mono">
-                    {forecast && (forecast.avg_daily_revenue || forecast.avgDailyRevenue)
-                      ? formatCurrencyINR(forecast.avg_daily_revenue || forecast.avgDailyRevenue || 0)
-                      : "..."}
-                  </span>
-                </div>
-              </div>
-
-              {/* Daily Forecast Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-3">
-                {(forecast?.daily_forecasts || forecast?.dailyForecasts || []).map((day, idx) => {
-                  const projected = day.predicted_revenue ?? day.predictedRevenue ?? 0;
-                  const lower = day.lower_bound_90 ?? day.lowerBound90 ?? 0;
-                  const upper = day.upper_bound_90 ?? day.upperBound90 ?? 0;
-                  const dayName = day.day_of_week || day.dayOfWeek || "Day";
-
-                  return (
-                    <div
-                      key={day.date || idx}
-                      className="bg-navy-50/50 hover:bg-navy-50 rounded-xl p-3 border border-navy-100 transition-all text-center flex flex-col justify-between"
-                    >
-                      <div>
-                        <div className="text-[11px] font-semibold text-navy-500 uppercase">
-                          {dayName.slice(0, 3)}
-                        </div>
-                        <div className="text-xs text-navy-400 font-mono mt-0.5">{day.date}</div>
-                      </div>
-
-                      <div className="my-2.5">
-                        <div className="text-xs text-navy-500 font-medium">Projected</div>
-                        <div className="text-sm font-extrabold text-navy-900 font-mono mt-0.5">
-                          {formatCurrencyINR(projected)}
-                        </div>
-                      </div>
-
-                      <div className="pt-2 border-t border-navy-100/80 text-[10px] text-navy-500 space-y-0.5">
-                        <div>
-                          <span className="text-navy-400">90% Low:</span>{" "}
-                          <span className="font-mono font-medium">{formatCurrencyINR(lower)}</span>
-                        </div>
-                        <div>
-                          <span className="text-navy-400">90% High:</span>{" "}
-                          <span className="font-mono font-medium">{formatCurrencyINR(upper)}</span>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-
-              <div className="mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between text-[11px] text-navy-400 pt-3 border-t border-navy-50 gap-2">
-                <div className="flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-brand-500" />
-                  <span>Model trained on rolling 365-day transaction seasonality and day-of-week lag indicators</span>
-                </div>
-                <span className="text-emerald-700 font-medium bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">
-                  Status: Model Active & Calibrated
-                </span>
-              </div>
-            </div>
           </div>
         )}
 

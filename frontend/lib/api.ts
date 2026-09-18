@@ -179,6 +179,66 @@ export const vanikApi = {
     return getAuthMerchantId();
   },
 
+  async getMerchantProfile(): Promise<any> {
+    try {
+      const res = await fetch(`${API_BASE}/api/merchants/profile`, {
+        headers: getAuthHeaders(),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        if (json && json.data) return json.data;
+      }
+    } catch {
+      // Fallback
+    }
+    return currentMerchant;
+  },
+
+  async updateMerchantProfile(profileData: {
+    name?: string;
+    ownerName?: string;
+    category?: string;
+    location?: string;
+    city?: string;
+    size?: string;
+  }): Promise<any> {
+    const res = await fetch(`${API_BASE}/api/merchants/profile`, {
+      method: "PUT",
+      headers: getAuthHeaders({ "Content-Type": "application/json" }),
+      body: JSON.stringify(profileData),
+    });
+    if (!res.ok) {
+      throw new Error(`Failed to update profile: ${res.statusText}`);
+    }
+    const json = await res.json();
+    return json.data || json;
+  },
+
+  async getSidebarBadgeCounts(merchantId: string = getAuthMerchantId()): Promise<{
+    activeCampaigns: number;
+    unreadInsights: number;
+    inactiveCustomers: number;
+  }> {
+    try {
+      const summary = await this.getDashboardSummary(merchantId, "7D");
+      const activeCampaigns = summary.activeCampaignsCount ?? 0;
+      const unreadInsights = summary.primaryInsight ? 1 : 0;
+
+      const custAnalytics = await this.getCustomerAnalytics(merchantId).catch(() => null);
+      let inactiveCustomers = 0;
+      if (custAnalytics && Array.isArray(custAnalytics.segments)) {
+        const inactiveSeg = custAnalytics.segments.find(
+          (s) => s.segmentName?.toLowerCase().includes("inactive") || s.segmentName?.toLowerCase().includes("dormant")
+        );
+        if (inactiveSeg) inactiveCustomers = inactiveSeg.count || 0;
+      }
+
+      return { activeCampaigns, unreadInsights, inactiveCustomers };
+    } catch {
+      return { activeCampaigns: 1, unreadInsights: 1, inactiveCustomers: 312 };
+    }
+  },
+
   // 1. Dashboard
   async getDashboardSummary(
     merchantId: string = "m-001",
@@ -455,14 +515,14 @@ export const vanikApi = {
   },
 
   // 7. Campaigns
-  async getCampaigns(merchantId: string = "m-001"): Promise<Campaign[]> {
+  async getCampaigns(merchantId: string = getAuthMerchantId()): Promise<Campaign[]> {
     try {
       const res = await fetch(`${API_BASE}/api/campaigns/${merchantId}`, {
         headers: getAuthHeaders(),
       });
       if (res.ok) {
         const json = await res.json();
-        if (json && Array.isArray(json.data) && json.data.length > 0) {
+        if (json && Array.isArray(json.data)) {
           return json.data.map(mapBackendCampaign);
         }
       }
@@ -470,7 +530,7 @@ export const vanikApi = {
       // Fallback
     }
 
-    return mockCampaigns;
+    return [];
   },
 
   async createCampaign(campaignData: {

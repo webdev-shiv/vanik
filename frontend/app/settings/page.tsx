@@ -16,15 +16,56 @@ import {
   Radio,
 } from "lucide-react";
 
+import { vanikApi } from "@/lib/api";
+
 export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState<
     "profile" | "business" | "notifications" | "ai" | "security"
   >("profile");
   const [isSaved, setIsSaved] = useState(false);
+  const [saving, setSaving] = useState(false);
+  const [profile, setProfile] = useState({
+    name: currentMerchant.name,
+    ownerName: currentMerchant.ownerName,
+    category: currentMerchant.category,
+    location: `${currentMerchant.city}, ${currentMerchant.location}`,
+  });
 
-  const handleSave = () => {
-    setIsSaved(true);
-    setTimeout(() => setIsSaved(false), 2000);
+  React.useEffect(() => {
+    let isMounted = true;
+    vanikApi.getMerchantProfile()
+      .then((data) => {
+        if (isMounted && data) {
+          setProfile({
+            name: data.name || currentMerchant.name,
+            ownerName: data.ownerName || currentMerchant.ownerName,
+            category: data.category || currentMerchant.category,
+            location: data.location || `${currentMerchant.city}, ${currentMerchant.location}`,
+          });
+        }
+      })
+      .catch(() => {});
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const handleSave = async () => {
+    setSaving(true);
+    try {
+      await vanikApi.updateMerchantProfile({
+        name: profile.name,
+        ownerName: profile.ownerName,
+        category: profile.category,
+        location: profile.location,
+      });
+      setIsSaved(true);
+      setTimeout(() => setIsSaved(false), 2500);
+    } catch (err: any) {
+      alert(err.message || "Failed to save profile changes");
+    } finally {
+      setSaving(false);
+    }
   };
 
   return (
@@ -43,10 +84,10 @@ export default function SettingsPage() {
         {/* Horizontal Navigation Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-1">
           {[
-            { id: "profile", label: "Merchant Profile", icon: Store },
-            { id: "business", label: "Business Information", icon: Building },
-            { id: "notifications", label: "Alerts & Notifications", icon: Bell },
-            { id: "ai", label: "AI Preferences", icon: Sparkles },
+            { id: "profile", label: "Business Profile", icon: Store },
+            { id: "business", label: "Fintech & Settlement", icon: Building },
+            { id: "notifications", label: "Notifications", icon: Bell },
+            { id: "ai", label: "Preferences & Risk", icon: Sparkles },
             { id: "security", label: "Security & Devices", icon: Shield },
           ].map((tab) => {
             const Icon = tab.icon;
@@ -55,10 +96,10 @@ export default function SettingsPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
+                className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold transition-all whitespace-nowrap ${
                   isActive
-                    ? "bg-brand-500 text-white shadow-sm"
-                    : "bg-white text-navy-600 border border-navy-200 hover:bg-navy-50"
+                    ? "bg-brand-600 text-white shadow-xs"
+                    : "bg-white text-navy-600 border border-navy-200/80 hover:bg-navy-50"
                 }`}
               >
                 <Icon className="w-3.5 h-3.5" />
@@ -70,8 +111,8 @@ export default function SettingsPage() {
 
         {/* Tab 1: Merchant Profile */}
         {activeTab === "profile" && (
-          <div className="bg-white border border-navy-100 rounded-2xl p-6 shadow-card space-y-4">
-            <h3 className="text-base font-bold text-navy-900 mb-4">Merchant Profile</h3>
+          <div className="bg-white border border-navy-200/80 rounded-[24px] p-6 shadow-xs space-y-4">
+            <h3 className="text-base font-bold text-navy-900 mb-4">Business Profile</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
               <div>
@@ -80,8 +121,9 @@ export default function SettingsPage() {
                 </label>
                 <input
                   type="text"
-                  defaultValue={currentMerchant.name}
-                  className="w-full bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 font-semibold"
+                  value={profile.name}
+                  onChange={(e) => setProfile({ ...profile, name: e.target.value })}
+                  className="w-full bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 font-semibold focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
                 />
               </div>
 
@@ -91,8 +133,9 @@ export default function SettingsPage() {
                 </label>
                 <input
                   type="text"
-                  defaultValue={currentMerchant.ownerName}
-                  className="w-full bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 font-semibold"
+                  value={profile.ownerName}
+                  onChange={(e) => setProfile({ ...profile, ownerName: e.target.value })}
+                  className="w-full bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 font-semibold focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
                 />
               </div>
 
@@ -102,8 +145,9 @@ export default function SettingsPage() {
                 </label>
                 <input
                   type="text"
-                  defaultValue={currentMerchant.category}
-                  className="w-full bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 font-semibold"
+                  value={profile.category}
+                  onChange={(e) => setProfile({ ...profile, category: e.target.value })}
+                  className="w-full bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 font-semibold focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
                 />
               </div>
 
@@ -113,16 +157,17 @@ export default function SettingsPage() {
                 </label>
                 <input
                   type="text"
-                  defaultValue={`${currentMerchant.city}, ${currentMerchant.location}`}
-                  className="w-full bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 font-semibold"
+                  value={profile.location}
+                  onChange={(e) => setProfile({ ...profile, location: e.target.value })}
+                  className="w-full bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 font-semibold focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
                 />
               </div>
             </div>
 
             <div className="pt-4 border-t border-navy-100 flex items-center justify-end">
-              <Button variant="primary" size="sm" onClick={handleSave} className="font-bold">
+              <Button variant="primary" size="sm" onClick={handleSave} disabled={saving} className="font-bold">
                 {isSaved ? <CheckCircle2 className="w-4 h-4 mr-1" /> : <Save className="w-4 h-4 mr-1" />}
-                <span>{isSaved ? "Saved Changes" : "Save Changes"}</span>
+                <span>{saving ? "Saving..." : (isSaved ? "Saved Changes" : "Save Changes")}</span>
               </Button>
             </div>
           </div>

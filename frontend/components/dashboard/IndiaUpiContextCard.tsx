@@ -54,7 +54,7 @@ export const IndiaUpiContextCard: React.FC<IndiaUpiContextCardProps> = ({ classN
 
   if (!mounted) {
     return (
-      <div className="h-96 bg-navy-50/50 rounded-2xl animate-pulse flex items-center justify-center text-navy-400 text-xs">
+      <div className="h-96 bg-navy-50/50 rounded-[24px] animate-pulse flex items-center justify-center text-navy-400 text-xs">
         Loading India UPI Context...
       </div>
     );
@@ -86,18 +86,19 @@ export const IndiaUpiContextCard: React.FC<IndiaUpiContextCardProps> = ({ classN
   return (
     <div
       className={cn(
-        "bg-white border border-navy-100/80 rounded-2xl p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all duration-200",
+        "bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all duration-200",
         className
       )}
     >
       {/* 1. Header Bar with Strict Source Tagging */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-navy-50">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-navy-100">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shadow-sm">
+          <div className="w-10 h-10 rounded-full bg-indigo-50 border border-indigo-100 flex items-center justify-center text-indigo-600 shadow-xs">
             <Globe className="w-5 h-5" />
           </div>
           <div>
             <div className="flex items-center gap-2">
+
               <h2 className="text-base font-bold text-navy-900 tracking-tight">
                 India UPI Context
               </h2>

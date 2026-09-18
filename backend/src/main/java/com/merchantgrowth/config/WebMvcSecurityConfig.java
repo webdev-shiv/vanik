@@ -18,6 +18,7 @@ public class WebMvcSecurityConfig implements WebMvcConfigurer {
         registry.addInterceptor(authInterceptor)
                 .addPathPatterns("/api/**")
                 .excludePathPatterns(
+                        "/health",
                         "/api/auth/**",
                         "/api/upi/**",
                         "/api/market/**",
@@ -31,8 +32,13 @@ public class WebMvcSecurityConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
+        String allowedCors = System.getenv("CORS_ALLOWED_ORIGINS");
+        String[] origins = (allowedCors != null && !allowedCors.isBlank())
+                ? allowedCors.split(",")
+                : new String[]{"http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:*"};
+
         registry.addMapping("/**")
-                .allowedOriginPatterns("http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:*")
+                .allowedOriginPatterns(origins)
                 .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true)

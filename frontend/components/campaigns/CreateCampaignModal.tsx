@@ -85,7 +85,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({
             required
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full text-xs bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+            className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             placeholder="e.g. ₹49 Evening Combo Offer"
           />
         </div>
@@ -99,7 +99,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({
             <select
               value={type}
               onChange={(e) => setType(e.target.value as Campaign["type"])}
-              className="w-full text-xs bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             >
               <option value="Combo Deal">Combo Deal</option>
               <option value="Flash Offer">Flash Offer</option>
@@ -116,7 +116,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({
             <select
               value={targetSegment}
               onChange={(e) => setTargetSegment(e.target.value)}
-              className="w-full text-xs bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             >
               <option value="312 Inactive Regulars">312 Inactive Regulars</option>
               <option value="147 At-Risk Customers">147 At-Risk Customers</option>
@@ -139,7 +139,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({
                 max="50"
                 value={discount}
                 onChange={(e) => setDiscount(Number(e.target.value))}
-                className="w-full text-xs bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+                className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
               />
               <span className="text-navy-500 font-bold">%</span>
             </div>
@@ -152,7 +152,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({
             <select
               value={duration}
               onChange={(e) => setDuration(e.target.value)}
-              className="w-full text-xs bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+              className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             >
               <option value="7 Days">7 Days</option>
               <option value="14 Days">14 Days</option>
@@ -173,7 +173,7 @@ export const CreateCampaignModal: React.FC<CreateCampaignModalProps> = ({
             step="50"
             value={budget}
             onChange={(e) => setBudget(Number(e.target.value))}
-            className="w-full text-xs bg-navy-50 border border-navy-200 rounded-xl px-3 py-2 text-navy-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+            className="w-full text-xs bg-navy-50/50 border border-navy-200/80 rounded-2xl px-3.5 py-2.5 text-navy-900 focus:bg-white focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
           />
           <p className="text-[10px] text-navy-400 mt-1">
             Cap on WhatsApp messages and merchant-subsidized cashback deductions

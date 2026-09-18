@@ -7,7 +7,6 @@ import { AppShell } from "@/components/layout/AppShell";
 import { CampaignTable } from "@/components/campaigns/CampaignTable";
 import { CreateCampaignModal } from "@/components/campaigns/CreateCampaignModal";
 import { Modal } from "@/components/ui/Modal";
-import { mockCampaigns } from "@/lib/mock-data";
 import { Campaign } from "@/lib/types";
 import { vanikApi } from "@/lib/api";
 import { formatCurrencyINR, formatNumberIN } from "@/lib/utils";
@@ -17,7 +16,7 @@ import { Button } from "@/components/ui/Button";
 function CampaignsContent() {
   const searchParams = useSearchParams();
   const shouldOpenCreate = searchParams.get("create") === "true";
-  const merchantId = "m-001";
+  const merchantId = vanikApi.getMerchantId();
 
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,13 +26,13 @@ function CampaignsContent() {
   const fetchCampaigns = async () => {
     try {
       const data = await vanikApi.getCampaigns(merchantId);
-      if (data && data.length > 0) {
+      if (data && Array.isArray(data)) {
         setCampaigns(data);
       } else {
-        setCampaigns(mockCampaigns);
+        setCampaigns([]);
       }
     } catch {
-      setCampaigns(mockCampaigns);
+      setCampaigns([]);
     } finally {
       setLoading(false);
     }
@@ -48,13 +47,13 @@ function CampaignsContent() {
     await fetchCampaigns();
   };
 
-  const totalIncrementalRevenue = campaigns.reduce((acc, c) => acc + c.revenueImpact, 0);
+  const totalIncrementalRevenue = campaigns.reduce((acc, c) => acc + (c.revenueImpact || 0), 0);
   const measuredCampaigns = campaigns.filter((c) => c.roi > 0);
   const avgRoi = measuredCampaigns.length > 0
     ? (measuredCampaigns.reduce((acc, c) => acc + c.roi, 0) / measuredCampaigns.length).toFixed(2) + "x"
-    : "3.45x";
+    : "0.0x";
   const totalConversions = campaigns.reduce((acc, c) => acc + (c.conversions || 0), 0);
-  const conversionsDisplay = totalConversions > 0 ? totalConversions : 425;
+  const conversionsDisplay = totalConversions;
 
   return (
 
@@ -67,7 +66,7 @@ function CampaignsContent() {
               <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
                 Promotional Campaigns
               </h1>
-              <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-brand-50 text-brand-700 border border-brand-200">
+              <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200">
                 Growth Execution
               </span>
             </div>
@@ -89,7 +88,7 @@ function CampaignsContent() {
 
         {/* Top Metric Summary Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="p-4 bg-white border border-navy-100 rounded-2xl shadow-card">
+          <div className="p-5 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
             <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
               Total Incremental Lift
             </span>
@@ -101,7 +100,7 @@ function CampaignsContent() {
             </span>
           </div>
 
-          <div className="p-4 bg-white border border-navy-100 rounded-2xl shadow-card">
+          <div className="p-5 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
             <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
               Average Campaign ROI
             </span>
@@ -113,7 +112,7 @@ function CampaignsContent() {
             </span>
           </div>
 
-          <div className="p-4 bg-white border border-navy-100 rounded-2xl shadow-card">
+          <div className="p-5 bg-white border border-navy-200/80 rounded-[24px] shadow-xs">
             <span className="text-[10px] font-bold uppercase tracking-wider text-navy-400">
               Converted Customers
             </span>

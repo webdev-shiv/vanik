@@ -49,7 +49,7 @@ export const ComparisonChart: React.FC<ComparisonChartProps> = ({ outcome }) => 
   ];
 
   return (
-    <div className="bg-white border border-navy-100 rounded-2xl p-5 md:p-6 shadow-card">
+    <div className="bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-xs">
       <div className="flex items-center justify-between mb-4">
         <div>
           <h3 className="text-base font-bold text-navy-900 tracking-tight">

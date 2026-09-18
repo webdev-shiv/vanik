@@ -91,6 +91,7 @@ export interface CustomerSegment {
   id: string;
   segmentName: "New" | "Regular" | "Loyal" | "At Risk" | "Inactive";
   customerCount: number;
+  count?: number;
   percentageOfTotal: number;
   revenueContribution: number;
   averageOrderValue: number;
@@ -346,6 +347,21 @@ export interface AnomalyDetectionResponse {
   anomalies?: AnomalyEvent[];
   available?: boolean;
   message?: string;
+}
+
+export interface TransactionItem {
+  id: string;
+  receiptNumber: string;
+  customerName: string;
+  customerPhone?: string;
+  channel: "Paytm Soundbox" | "Paytm QR" | "Card POS" | "UPI App";
+  amount: number;
+  itemsCount: number;
+  status: "SUCCESSFUL" | "PENDING" | "FAILED" | "REFUNDED";
+  timestamp: string;
+  date: string;
+  time: string;
+  timeframeCategory: "day" | "month" | "year";
 }
 
 

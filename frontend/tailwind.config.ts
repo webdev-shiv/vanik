@@ -16,12 +16,12 @@ const config: Config = {
           200: "#bfdbfe",
           300: "#93c5fd",
           400: "#60a5fa",
-          500: "#0052cc", // Paytm-inspired core blue
+          500: "#0052cc", // Paytm Core Blue
           600: "#0041a8",
-          700: "#002970", // Paytm deep navy
+          700: "#002970", // Paytm Deep Navy
           800: "#001e54",
           900: "#00153d",
-          cyan: "#00b9f5", // Paytm signature cyan highlight
+          cyan: "#00b9f5", // Paytm Cyan Highlight
         },
         navy: {
           DEFAULT: "#0f172a",
@@ -36,21 +36,31 @@ const config: Config = {
           800: "#1e293b",
           900: "#0f172a",
           950: "#020617",
-        }
+        },
+        m3: {
+          surface: "#ffffff",
+          background: "#f8fafc",
+          container: "#f1f5f9",
+          "primary-container": "#eef6ff",
+        },
       },
       boxShadow: {
-        card: "0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px -1px rgba(0, 0, 0, 0.05)",
-        "card-hover": "0 10px 15px -3px rgba(0, 41, 112, 0.07), 0 4px 6px -4px rgba(0, 41, 112, 0.05)",
-        "brand-glow": "0 0 20px -5px rgba(0, 185, 245, 0.3)",
+        card: "0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04)",
+        "card-hover": "0 12px 24px -6px rgba(0, 41, 112, 0.08), 0 4px 8px -4px rgba(0, 41, 112, 0.04)",
+        "m3-elevated": "0 4px 20px -2px rgba(0, 41, 112, 0.08)",
+        "brand-glow": "0 0 24px -4px rgba(0, 185, 245, 0.35)",
       },
       borderRadius: {
-        xl: "0.75rem",
-        "2xl": "1rem",
-        "3xl": "1.5rem",
-      }
+        xl: "0.75rem",    // 12px
+        "2xl": "1rem",     // 16px
+        "3xl": "1.5rem",   // 24px
+        "4xl": "1.75rem",  // 28px
+        full: "9999px",
+      },
     },
   },
   plugins: [],
 };
 
 export default config;
+

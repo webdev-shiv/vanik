@@ -115,7 +115,7 @@ export default function RecommendationsPage() {
             {recommendations.map((rec) => (
               <div
                 key={rec.id}
-                className="bg-white border border-navy-100 rounded-2xl p-5 md:p-6 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between"
+                className="bg-white border border-navy-200/80 rounded-[24px] p-5 md:p-6 shadow-xs hover:border-brand-300 transition-all flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between flex-wrap gap-2 mb-3">

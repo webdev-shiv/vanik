@@ -3,16 +3,19 @@ import { cn } from "@/lib/utils";
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   hoverEffect?: boolean;
+  variant?: "flat" | "elevated" | "soft";
 }
 
 export const Card = React.forwardRef<HTMLDivElement, CardProps>(
-  ({ className, hoverEffect = false, children, ...props }, ref) => {
+  ({ className, hoverEffect = false, variant = "flat", children, ...props }, ref) => {
     return (
       <div
         ref={ref}
         className={cn(
-          "bg-white border border-navy-100 rounded-2xl p-5 shadow-card transition-all duration-200",
-          hoverEffect && "hover:shadow-card-hover hover:border-navy-200",
+          "bg-white border border-navy-200/80 rounded-[24px] p-5 shadow-card transition-all duration-200",
+          variant === "elevated" && "shadow-m3-elevated border-navy-100",
+          variant === "soft" && "bg-brand-50/50 border-brand-100/60 shadow-none",
+          hoverEffect && "hover:shadow-card-hover hover:border-brand-200/80 hover:-translate-y-0.5",
           className
         )}
         {...props}
@@ -40,7 +43,7 @@ export const CardTitle: React.FC<React.HTMLAttributes<HTMLHeadingElement>> = ({
   children,
   ...props
 }) => (
-  <h3 className={cn("text-base font-semibold text-navy-900 tracking-tight", className)} {...props}>
+  <h3 className={cn("text-base font-bold text-navy-900 tracking-tight", className)} {...props}>
     {children}
   </h3>
 );
@@ -50,7 +53,8 @@ export const CardDescription: React.FC<React.HTMLAttributes<HTMLParagraphElement
   children,
   ...props
 }) => (
-  <p className={cn("text-xs text-navy-500 mt-0.5", className)} {...props}>
+  <p className={cn("text-xs font-medium text-navy-500 mt-0.5 leading-relaxed", className)} {...props}>
     {children}
   </p>
 );
+
