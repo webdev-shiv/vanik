@@ -119,7 +119,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
   return (
     <aside
       className={cn(
-        "w-64 bg-white border-r border-navy-200/80 flex flex-col h-screen select-none",
+        "w-64 bg-white dark:bg-[#0c162d] border-r border-navy-200/80 dark:border-navy-800 flex flex-col h-screen select-none",
         className
       )}
     >
@@ -132,7 +132,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
       <div className="flex-1 overflow-y-auto px-3 py-4 space-y-6">
         {sections.map((section, idx) => (
           <div key={idx} className="space-y-1">
-            <p className="px-3 text-[10px] font-extrabold uppercase tracking-wider text-navy-400 mb-2">
+            <p className="px-3 text-[10px] font-extrabold uppercase tracking-wider text-navy-400 dark:text-cyan-400/90 mb-2">
               {section.title}
             </p>
             {section.items.map((item) => {
@@ -150,15 +150,15 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
                   className={cn(
                     "flex items-center justify-between px-3.5 py-2.5 rounded-full text-xs font-semibold transition-all duration-150 group",
                     isActive
-                      ? "bg-[#e8f0fe] text-brand-700 font-bold border border-brand-200/60 shadow-xs"
-                      : "text-navy-600 hover:text-navy-900 hover:bg-navy-50"
+                      ? "bg-[#e8f0fe] dark:bg-brand-600 text-brand-700 dark:text-white font-extrabold border border-brand-200/60 dark:border-brand-500 shadow-xs dark:shadow-md dark:shadow-brand-600/30"
+                      : "text-navy-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-navy-50 dark:hover:bg-navy-800/60 font-bold"
                   )}
                 >
                   <div className="flex items-center gap-3">
                     <Icon
                       className={cn(
                         "w-4 h-4 transition-colors",
-                        isActive ? "text-brand-600" : "text-navy-400 group-hover:text-navy-700"
+                        isActive ? "text-brand-600 dark:text-white" : "text-navy-400 dark:text-slate-400 group-hover:text-navy-700 dark:group-hover:text-cyan-400"
                       )}
                     />
                     <span>{item.label}</span>
@@ -169,10 +169,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
                       className={cn(
                         "text-[10px] font-bold px-2 py-0.5 rounded-full",
                         item.badgeVariant === "rose"
-                          ? "bg-rose-50 text-rose-600 border border-rose-100"
+                          ? "bg-rose-50 dark:bg-rose-950/90 text-rose-600 dark:text-rose-300 border border-rose-100 dark:border-rose-800/80"
                           : item.badgeVariant === "emerald"
-                          ? "bg-emerald-50 text-emerald-700 border border-emerald-200/60"
-                          : "bg-brand-50 text-brand-700 border border-brand-200/60"
+                          ? "bg-emerald-50 dark:bg-emerald-950/90 text-emerald-700 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800/80"
+                          : "bg-brand-50 dark:bg-brand-950/90 text-brand-700 dark:text-cyan-300 border border-brand-200/60 dark:border-cyan-500/40"
                       )}
                     >
                       {item.badge}
@@ -186,35 +186,35 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
       </div>
 
       {/* Soundbox Connectivity Indicator */}
-      <div className="mx-3 mb-2 p-2.5 bg-navy-50 rounded-2xl border border-navy-100">
-        <div className="flex items-center justify-between text-[11px] font-medium text-navy-700">
+      <div className="mx-3 mb-2 p-2.5 bg-navy-50 dark:bg-[#111c38] rounded-2xl border border-navy-100 dark:border-navy-800">
+        <div className="flex items-center justify-between text-[11px] font-medium text-navy-700 dark:text-slate-200">
           <span className="flex items-center gap-1.5 font-bold">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             Soundbox Online
           </span>
-          <span className="text-[10px] font-mono text-navy-500">SB-4G-99218</span>
+          <span className="text-[10px] font-mono text-navy-500 dark:text-slate-400">SB-4G-99218</span>
         </div>
       </div>
 
       {/* Bottom Support & Logout Links */}
-      <div className="p-3 border-t border-navy-100 space-y-1">
+      <div className="p-3 border-t border-navy-100 dark:border-navy-800 space-y-1">
         <button
           onClick={() => alert("VANIK Merchant Support: +91 1800-120-VANIK | support@vanik.ai")}
-          className="w-full flex items-center justify-between px-3 py-2 rounded-full text-xs font-semibold text-navy-600 hover:text-navy-900 hover:bg-navy-50 transition-colors"
+          className="w-full flex items-center justify-between px-3 py-2 rounded-full text-xs font-semibold text-navy-600 dark:text-slate-300 hover:text-navy-900 dark:hover:text-white hover:bg-navy-50 dark:hover:bg-navy-800 transition-colors"
         >
           <div className="flex items-center gap-2.5">
-            <HelpCircle className="w-4 h-4 text-navy-400" />
+            <HelpCircle className="w-4 h-4 text-navy-400 dark:text-slate-400" />
             <span>Help & Support</span>
           </div>
-          <ExternalLink className="w-3 h-3 text-navy-400" />
+          <ExternalLink className="w-3 h-3 text-navy-400 dark:text-slate-400" />
         </button>
 
         <button
           onClick={() => setIsLogoutModalOpen(true)}
-          className="w-full flex items-center justify-between px-3 py-2 rounded-full text-xs font-bold text-rose-600 hover:bg-rose-50 transition-colors"
+          className="w-full flex items-center justify-between px-3 py-2 rounded-full text-xs font-bold text-rose-600 dark:text-rose-400 hover:bg-rose-50 dark:hover:bg-rose-950/60 transition-colors"
         >
           <div className="flex items-center gap-2.5">
-            <LogOut className="w-4 h-4 text-rose-500" />
+            <LogOut className="w-4 h-4 text-rose-500 dark:text-rose-400" />
             <span>Sign Out</span>
           </div>
         </button>
