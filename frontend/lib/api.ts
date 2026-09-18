@@ -227,6 +227,9 @@ export const vanikApi = {
   },
 
   logout(): void {
+    if (supabase) {
+      supabase.auth.signOut().catch(() => {});
+    }
     clearAuthSession();
   },
 
