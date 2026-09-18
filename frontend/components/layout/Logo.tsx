@@ -51,8 +51,9 @@ export const Logo: React.FC<LogoProps> = ({
             className={cn(
               "font-extrabold tracking-tight",
               textSize,
-              inverted ? "text-white" : "text-brand-700"
+              inverted ? "text-white" : "text-[#002970]"
             )}
+            style={!inverted ? { color: "#002970" } : undefined}
           >
             VANIK
           </span>
@@ -61,8 +62,9 @@ export const Logo: React.FC<LogoProps> = ({
               "text-[9px] font-bold px-1.5 py-0.5 rounded-full uppercase tracking-wide",
               inverted
                 ? "bg-white/20 text-white"
-                : "bg-brand-50 text-brand-700 border border-brand-200/60"
+                : "bg-[#eef6ff] text-[#002970] border border-brand-200/60"
             )}
+            style={!inverted ? { color: "#002970", backgroundColor: "#eef6ff" } : undefined}
           >
             AI
           </span>
@@ -71,8 +73,9 @@ export const Logo: React.FC<LogoProps> = ({
           <span
             className={cn(
               "text-[10px] font-semibold tracking-tight -mt-0.5",
-              inverted ? "text-brand-100" : "text-brand-500"
+              inverted ? "text-brand-100" : "text-[#0052cc]"
             )}
+            style={!inverted ? { color: "#0052cc" } : undefined}
           >
             Powered by Paytm
           </span>

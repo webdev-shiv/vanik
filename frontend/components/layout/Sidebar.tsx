@@ -124,7 +124,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
       )}
     >
       {/* Brand Header */}
-      <div className="h-16 px-5 flex items-center border-b border-navy-100 bg-white">
+      <div className="h-16 px-5 flex items-center border-b border-navy-100" style={{ backgroundColor: "#ffffff" }}>
         <Logo showTagline size="md" />
       </div>
 
