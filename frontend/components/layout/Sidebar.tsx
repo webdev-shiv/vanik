@@ -44,9 +44,11 @@ interface NavSection {
 }
 
 import { vanikApi } from "@/lib/api";
+import { useTranslation } from "@/lib/i18n";
 
 export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
   const pathname = usePathname();
+  const { t } = useTranslation();
   const [isLogoutModalOpen, setIsLogoutModalOpen] = React.useState(false);
   const [badgeCounts, setBadgeCounts] = React.useState({
     activeCampaigns: 1,
@@ -72,44 +74,44 @@ export const Sidebar: React.FC<SidebarProps> = ({ className, onNavigate }) => {
     {
       title: "MAIN",
       items: [
-        { label: "Dashboard", href: "/", icon: LayoutDashboard },
+        { label: t("dashboard", "Dashboard"), href: "/", icon: LayoutDashboard },
         {
-          label: "Insights",
+          label: t("insights", "Insights"),
           href: "/insights",
           icon: Sparkles,
           badge: badgeCounts.unreadInsights > 0 ? `${badgeCounts.unreadInsights} Alert` : undefined,
           badgeVariant: "brand",
         },
         {
-          label: "Customers",
+          label: t("customers", "Customers"),
           href: "/customers",
           icon: Users,
           badge: badgeCounts.inactiveCustomers > 0 ? `${badgeCounts.inactiveCustomers} Inactive` : undefined,
           badgeVariant: "rose",
         },
-        { label: "Analytics", href: "/analytics", icon: BarChart3 },
+        { label: t("analytics", "Analytics"), href: "/analytics", icon: BarChart3 },
         {
-          label: "Campaigns",
+          label: t("campaigns", "Campaigns"),
           href: "/campaigns",
           icon: Megaphone,
           badge: `${badgeCounts.activeCampaigns} Live`,
           badgeVariant: "emerald",
         },
-        { label: "Recommendations", href: "/recommendations", icon: Target },
-        { label: "What-If Simulator", href: "/simulator", icon: SlidersHorizontal },
+        { label: t("recommendations", "Recommendations"), href: "/recommendations", icon: Target },
+        { label: t("simulator", "What-If Simulator"), href: "/simulator", icon: SlidersHorizontal },
       ],
     },
     {
       title: "BUSINESS",
       items: [
-        { label: "All Transactions", href: "/transactions", icon: Receipt, badge: "Live Ledger", badgeVariant: "emerald" },
-        { label: "Products", href: "/analytics?tab=products", icon: ShoppingBag },
+        { label: t("transactions", "All Transactions"), href: "/transactions", icon: Receipt, badge: "Live Ledger", badgeVariant: "emerald" },
+        { label: t("products", "Products"), href: "/analytics?tab=products", icon: ShoppingBag },
       ],
     },
     {
       title: "SYSTEM",
       items: [
-        { label: "Settings", href: "/settings", icon: Settings },
+        { label: t("settings", "Settings"), href: "/settings", icon: Settings },
       ],
     },
   ];

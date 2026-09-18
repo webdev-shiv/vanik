@@ -14,13 +14,17 @@ import {
   CheckCircle2,
   QrCode,
   Radio,
+  Globe,
+  Languages,
 } from "lucide-react";
 
 import { vanikApi } from "@/lib/api";
+import { useTranslation, LanguageCode } from "@/lib/i18n";
 
 export default function SettingsPage() {
+  const { lang, changeLanguage, supportedLanguages, t } = useTranslation();
   const [activeTab, setActiveTab] = useState<
-    "profile" | "business" | "notifications" | "ai" | "security"
+    "profile" | "language" | "business" | "notifications" | "ai" | "security"
   >("profile");
   const [isSaved, setIsSaved] = useState(false);
   const [saving, setSaving] = useState(false);
@@ -74,10 +78,10 @@ export default function SettingsPage() {
         {/* Header */}
         <div>
           <h1 className="text-xl md:text-2xl font-extrabold text-navy-900 tracking-tight">
-            Store Settings & AI Preferences
+            {t("storeSettings", "Store Settings & AI Preferences")}
           </h1>
           <p className="text-xs md:text-sm text-navy-500 mt-1">
-            Manage your Paytm merchant integration, hardware bindings, and autonomous AI recommendations
+            Manage your Paytm merchant integration, display languages (Hindi & Punjabi), and autonomous AI recommendations
           </p>
         </div>
 
@@ -85,6 +89,7 @@ export default function SettingsPage() {
         <div className="flex items-center gap-2 overflow-x-auto pb-1">
           {[
             { id: "profile", label: "Business Profile", icon: Store },
+            { id: "language", label: "Language (भाषा / ਭਾਸ਼ਾ)", icon: Globe },
             { id: "business", label: "Fintech & Settlement", icon: Building },
             { id: "notifications", label: "Notifications", icon: Bell },
             { id: "ai", label: "Preferences & Risk", icon: Sparkles },
@@ -169,6 +174,72 @@ export default function SettingsPage() {
                 {isSaved ? <CheckCircle2 className="w-4 h-4 mr-1" /> : <Save className="w-4 h-4 mr-1" />}
                 <span>{saving ? "Saving..." : (isSaved ? "Saved Changes" : "Save Changes")}</span>
               </Button>
+            </div>
+          </div>
+        )}
+
+        {/* Tab 2: Language Preferences */}
+        {activeTab === "language" && (
+          <div className="bg-white border border-navy-200/80 rounded-[24px] p-6 shadow-xs space-y-5">
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <Languages className="w-5 h-5 text-brand-600" />
+                <h3 className="text-base font-bold text-navy-900">
+                  {t("displayLanguage", "Website & Display Language")}
+                </h3>
+              </div>
+              <p className="text-xs text-navy-500">
+                {t("selectLanguageDesc", "Choose your preferred interface language for merchant reports, notifications, and AI insights.")}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+              {supportedLanguages.map((l) => {
+                const isSelected = lang === l.code;
+                return (
+                  <button
+                    key={l.code}
+                    type="button"
+                    onClick={() => changeLanguage(l.code)}
+                    className={`p-4 rounded-2xl border text-left transition-all duration-200 flex flex-col justify-between h-32 relative group ${
+                      isSelected
+                        ? "bg-brand-50/80 border-brand-500 ring-2 ring-brand-500/20 shadow-xs"
+                        : "bg-white border-navy-200/80 hover:bg-navy-50/60 hover:border-navy-300"
+                    }`}
+                  >
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl">{l.flag}</span>
+                      {isSelected && (
+                        <span className="flex items-center gap-1 text-[10px] font-extrabold px-2.5 py-0.5 rounded-full bg-brand-600 text-white">
+                          <CheckCircle2 className="w-3 h-3" />
+                          <span>Active</span>
+                        </span>
+                      )}
+                    </div>
+
+                    <div>
+                      <div className="text-base font-extrabold text-navy-900 leading-tight">
+                        {l.nativeName}
+                      </div>
+                      <div className="text-xs font-semibold text-navy-500 mt-0.5">
+                        {l.name}
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
+            </div>
+
+            <div className="p-4 bg-navy-50 rounded-2xl border border-navy-100 flex items-center justify-between text-xs text-navy-700">
+              <div className="flex items-center gap-2">
+                <Globe className="w-4 h-4 text-brand-600" />
+                <span>
+                  Active Language: <strong className="text-navy-900">{supportedLanguages.find((l) => l.code === lang)?.nativeName} ({supportedLanguages.find((l) => l.code === lang)?.name})</strong>
+                </span>
+              </div>
+              <span className="text-[11px] text-emerald-600 font-bold bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200/60">
+                Instant System Sync
+              </span>
             </div>
           </div>
         )}
