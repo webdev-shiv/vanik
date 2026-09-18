@@ -1,0 +1,306 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { Logo } from "@/components/layout/Logo";
+import { Button } from "@/components/ui/Button";
+import {
+  ShieldCheck,
+  ArrowRight,
+  Sparkles,
+  AlertCircle,
+  Eye,
+  EyeOff,
+  QrCode,
+  Volume2,
+  Lock,
+  Mail,
+  CheckCircle2,
+  Building2,
+  UserCheck,
+} from "lucide-react";
+import { vanikApi } from "@/lib/api";
+
+export default function SignUpPage() {
+  const router = useRouter();
+  const [activeTab, setActiveTab] = useState<"login" | "signup">("signup");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [merchantName, setMerchantName] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [agreedTerms, setAgreedTerms] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setErrorMessage(null);
+    setSuccessMessage(null);
+
+    if (!email.trim() || !password) {
+      setErrorMessage("Please fill in all required fields.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (password.length < 6) {
+      setErrorMessage("Password must be at least 6 characters long.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match. Please re-enter your password.");
+      setIsLoading(false);
+      return;
+    }
+
+    if (!agreedTerms) {
+      setErrorMessage("Please accept the merchant terms of service to proceed.");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const result = await vanikApi.signUp(email.trim(), password, merchantName.trim());
+      if (result.success) {
+        if (result.token) {
+          router.push("/");
+        } else {
+          setSuccessMessage(
+            result.error || "Supabase merchant account created! Please check your email to confirm registration or sign in."
+          );
+          setPassword("");
+          setConfirmPassword("");
+        }
+      } else {
+        setErrorMessage(result.error || "Failed to create Supabase account. Please try again.");
+      }
+    } catch (err: any) {
+      setErrorMessage(err.message || "Unable to reach Supabase authentication server.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-[#020B1A] font-sans text-slate-100 flex flex-col justify-between relative overflow-hidden selection:bg-[#00BAF2] selection:text-white">
+      {/* Background Paytm-inspired Glowing Vectors */}
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-radial from-[#002E6E]/80 via-[#00BAF2]/10 to-transparent rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/2 -right-40 w-[550px] h-[550px] bg-radial from-[#00BAF2]/20 via-[#002E6E]/30 to-transparent rounded-full blur-3xl pointer-events-none" />
+
+      {/* Top Header Bar */}
+      <header className="relative z-10 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+        <Logo inverted size="md" showTagline />
+
+        <div className="hidden sm:flex items-center gap-3">
+          <div className="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-semibold text-sky-200 backdrop-blur-md">
+            <ShieldCheck className="w-4 h-4 text-[#00BAF2]" />
+            <span>Supabase Merchant Registration</span>
+          </div>
+        </div>
+      </header>
+
+      {/* Main Content Area */}
+      <main className="relative z-10 w-full max-w-6xl mx-auto px-4 py-6 md:py-12 flex flex-col lg:flex-row items-center justify-between gap-12">
+        {/* Left Side: Paytm Merchant Brand Experience */}
+        <div className="lg:w-1/2 text-left space-y-6 max-w-xl">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#002E6E]/90 border border-[#00BAF2]/30 text-[#00BAF2] text-xs font-bold uppercase tracking-wider shadow-lg">
+            <UserCheck className="w-3.5 h-3.5 text-[#00BAF2]" />
+            <span>Instant Merchant Onboarding</span>
+          </div>
+
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.15] text-white">
+            Register your store on <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#00BAF2] via-sky-300 to-indigo-200">VANIK Platform</span>
+          </h1>
+
+          <p className="text-sm sm:text-base text-slate-300 font-medium leading-relaxed">
+            Create your merchant account to unlock real-time Soundbox analytics, customer cohort segmentation, what-if promotion simulation, and AI growth recommendations.
+          </p>
+
+          {/* Feature Highlights Grid */}
+          <div className="grid grid-cols-2 gap-4 pt-2">
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md">
+              <div className="w-8 h-8 rounded-xl bg-[#00BAF2]/15 text-[#00BAF2] flex items-center justify-center mb-2.5">
+                <QrCode className="w-4 h-4" />
+              </div>
+              <h4 className="text-xs font-bold text-white">Paytm Soundbox Compatible</h4>
+              <p className="text-[11px] text-slate-400 mt-0.5">Seamless QR scan telemetry integration</p>
+            </div>
+
+            <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 backdrop-blur-md">
+              <div className="w-8 h-8 rounded-xl bg-emerald-400/15 text-emerald-300 flex items-center justify-center mb-2.5">
+                <ShieldCheck className="w-4 h-4" />
+              </div>
+              <h4 className="text-xs font-bold text-white">Supabase Auth Protected</h4>
+              <p className="text-[11px] text-slate-400 mt-0.5">Encrypted Row-Level Security (RLS)</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Side: Paytm Style Sign Up Card */}
+        <div className="lg:w-[440px] w-full bg-[#001738]/80 backdrop-blur-xl border border-[#00BAF2]/25 rounded-[32px] p-8 shadow-2xl relative">
+          {/* Card Accent Glow */}
+          <div className="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-r from-[#002E6E] via-[#00BAF2] to-sky-400 rounded-t-[32px]" />
+
+          {/* Form Header Tabs */}
+          <div className="flex items-center justify-between bg-black/30 p-1.5 rounded-2xl mb-6 border border-white/10">
+            <Link
+              href="/login"
+              className="flex-1 py-2.5 text-xs font-bold rounded-xl transition-all text-center text-slate-400 hover:text-white"
+            >
+              Sign In
+            </Link>
+            <div className="flex-1 py-2.5 text-xs font-bold rounded-xl transition-all text-center bg-gradient-to-r from-[#002E6E] to-[#007AFF] text-white shadow-md">
+              Create Account
+            </div>
+          </div>
+
+          <div className="mb-6">
+            <h2 className="text-xl font-bold text-white tracking-tight">Create Merchant Account</h2>
+            <p className="text-xs text-slate-400 mt-1">
+              Sign up using your business email to manage your store intelligence.
+            </p>
+          </div>
+
+          {/* Success Banner */}
+          {successMessage && (
+            <div className="mb-5 p-3.5 rounded-2xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs font-semibold flex items-start gap-2.5">
+              <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-400 mt-0.5" />
+              <span>{successMessage}</span>
+            </div>
+          )}
+
+          {/* Error Banner */}
+          {errorMessage && (
+            <div className="mb-5 p-3.5 rounded-2xl bg-rose-950/60 border border-rose-500/40 text-rose-300 text-xs font-semibold flex items-start gap-2.5">
+              <AlertCircle className="w-4 h-4 shrink-0 text-rose-400 mt-0.5" />
+              <span>{errorMessage}</span>
+            </div>
+          )}
+
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div>
+              <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                Business / Store Name
+              </label>
+              <div className="relative">
+                <Building2 className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="text"
+                  required
+                  value={merchantName}
+                  onChange={(e) => setMerchantName(e.target.value)}
+                  className="w-full text-xs bg-slate-900/80 border border-slate-700/80 rounded-2xl pl-10 pr-4 py-3 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:outline-none focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30 transition-all"
+                  placeholder="e.g. Sharma Tea Corner"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                Email Address
+              </label>
+              <div className="relative">
+                <Mail className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type="email"
+                  required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full text-xs bg-slate-900/80 border border-slate-700/80 rounded-2xl pl-10 pr-4 py-3 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:outline-none focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30 transition-all"
+                  placeholder="name@store.com"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                Password
+              </label>
+              <div className="relative">
+                <Lock className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type={showPassword ? "text" : "password"}
+                  required
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  className="w-full text-xs bg-slate-900/80 border border-slate-700/80 rounded-2xl pl-10 pr-10 py-3 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:outline-none focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30 transition-all"
+                  placeholder="Minimum 6 characters"
+                />
+                <button
+                  type="button"
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white"
+                >
+                  {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-[11px] font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                Confirm Password
+              </label>
+              <div className="relative">
+                <Lock className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
+                <input
+                  type={showPassword ? "text" : "password"}
+                  required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="w-full text-xs bg-slate-900/80 border border-slate-700/80 rounded-2xl pl-10 pr-4 py-3 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:outline-none focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30 transition-all"
+                  placeholder="Re-enter password"
+                />
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 pt-1">
+              <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={agreedTerms}
+                  onChange={(e) => setAgreedTerms(e.target.checked)}
+                  className="w-4 h-4 rounded bg-slate-900 border-slate-700 text-[#00BAF2] focus:ring-[#00BAF2]"
+                />
+                <span className="text-xs text-slate-400">I accept the merchant terms of service</span>
+              </label>
+            </div>
+
+            <div className="pt-3">
+              <Button
+                type="submit"
+                variant="primary"
+                size="lg"
+                isLoading={isLoading}
+                className="w-full font-bold shadow-lg h-12 rounded-2xl bg-gradient-to-r from-[#002E6E] via-[#0055B8] to-[#00BAF2] hover:opacity-95 text-white border border-white/10"
+              >
+                <span>Register with Supabase</span>
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          </form>
+
+          <div className="mt-6 pt-5 border-t border-white/10 text-center">
+            <p className="text-[11px] text-slate-400">
+              Already have a merchant account?{" "}
+              <Link href="/login" className="text-[#00BAF2] font-bold hover:underline">
+                Sign In Here
+              </Link>
+            </p>
+          </div>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="relative z-10 w-full max-w-7xl mx-auto px-6 py-4 text-center text-xs text-slate-500 border-t border-white/5">
+        <p>© 2026 VANIK Platform. Powered by Supabase Authenticator & Merchant Intelligence Engine.</p>
+      </footer>
+    </div>
+  );
+}
