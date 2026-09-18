@@ -343,7 +343,6 @@ export default function LoginPage() {
                         ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                         : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                     }`}
-                    placeholder="e.g. Sharma Tea Corner"
                   />
                 </div>
               </div>
@@ -369,7 +368,6 @@ export default function LoginPage() {
                       ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                       : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                   }`}
-                  placeholder="merchant@example.com"
                 />
               </div>
             </div>
@@ -401,7 +399,6 @@ export default function LoginPage() {
                       ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                       : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                   }`}
-                  placeholder="••••••••"
                 />
                 <button
                   type="button"

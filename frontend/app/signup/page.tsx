@@ -311,7 +311,6 @@ export default function SignUpPage() {
                       ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                       : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                   }`}
-                  placeholder="e.g. Sharma Tea Corner"
                 />
               </div>
             </div>
@@ -336,7 +335,6 @@ export default function SignUpPage() {
                       ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                       : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                   }`}
-                  placeholder="name@store.com"
                 />
               </div>
             </div>
@@ -361,7 +359,6 @@ export default function SignUpPage() {
                       ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                       : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                   }`}
-                  placeholder="Minimum 6 characters"
                 />
                 <button
                   type="button"
@@ -393,7 +390,6 @@ export default function SignUpPage() {
                       ? "bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 focus:bg-white focus:border-[#00BAF2] focus:ring-4 focus:ring-[#00BAF2]/10"
                       : "bg-slate-900/80 border border-slate-700/80 text-white placeholder:text-slate-500 focus:bg-slate-900 focus:border-[#00BAF2] focus:ring-2 focus:ring-[#00BAF2]/30"
                   }`}
-                  placeholder="Re-enter password"
                 />
               </div>
             </div>
