@@ -32,21 +32,13 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
   initialTrends,
   merchantId = "m-001",
 }) => {
-  const [timeframe, setTimeframe] = useState<"7D" | "30D" | "90D" | "1Y">("7D");
-  const [chartData, setChartData] = useState<RevenueTrendPoint[]>(
-    initialTrends && initialTrends.length > 0 ? initialTrends : mockRevenueTrends7D
-  );
+  const [timeframe, setTimeframe] = useState<"7D" | "30D" | "90D" | "1Y">("30D");
+  const [chartData, setChartData] = useState<RevenueTrendPoint[]>([]);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
-
-  useEffect(() => {
-    if (initialTrends && initialTrends.length > 0 && timeframe === "7D") {
-      setChartData(initialTrends);
-    }
-  }, [initialTrends, timeframe]);
 
   useEffect(() => {
     let active = true;
@@ -57,7 +49,6 @@ export const RevenueChart: React.FC<RevenueChartProps> = ({
           setChartData(res.revenueTrends);
         }
       } catch {
-        // Fallback to local timeframe data
         if (active) {
           if (timeframe === "30D") setChartData(mockRevenueTrends30D);
           else if (timeframe === "90D") setChartData(mockRevenueTrends90D);

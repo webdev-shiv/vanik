@@ -23,7 +23,13 @@ import {
   Download,
 } from "lucide-react";
 
-const mockTransactionItems: TransactionItem[] = [
+import { getUserTransactionItems } from "@/lib/user-dataset";
+
+const userCsvItems: any[] = getUserTransactionItems();
+
+const mockTransactionItems: any[] = [
+  ...userCsvItems,
+
   {
     id: "txn-101",
     receiptNumber: "PAYTM-98214-001",
@@ -211,9 +217,14 @@ function TransactionsContent() {
   }, [timeframeFilter, statusFilter, channelFilter, searchQuery]);
 
   const stats = useMemo(() => {
-    const totalVolume = filteredTransactions.reduce((acc, t) => acc + (t.status === "SUCCESSFUL" ? t.amount : 0), 0);
+    const totalVolume = filteredTransactions.reduce(
+      (acc, t) => acc + (t.status === "SUCCESSFUL" || t.status === "SETTLED" ? t.amount : 0),
+      0
+    );
     const count = filteredTransactions.length;
-    const successfulCount = filteredTransactions.filter((t) => t.status === "SUCCESSFUL").length;
+    const successfulCount = filteredTransactions.filter(
+      (t) => t.status === "SUCCESSFUL" || t.status === "SETTLED"
+    ).length;
     const successRate = count > 0 ? Math.round((successfulCount / count) * 100) : 0;
     const avgTicket = successfulCount > 0 ? Math.round(totalVolume / successfulCount) : 0;
     return { totalVolume, count, successRate, avgTicket };

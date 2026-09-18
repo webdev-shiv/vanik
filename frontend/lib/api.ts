@@ -29,6 +29,11 @@ import {
   AnomalyEvent,
 } from "./types";
 import {
+  getUserDashboardKpis,
+  getUserCategoryBreakdown,
+  getUserMonthlyTrendPoints,
+} from "./user-dataset";
+import {
   currentMerchant,
   mockDashboardKpis,
   mockRevenueTrends7D,
@@ -308,52 +313,10 @@ export const vanikApi = {
   // 1. Dashboard
   async getDashboardSummary(
     merchantId: string = "m-001",
-    timeframe: string = "7D"
+    timeframe: string = "30D"
   ): Promise<DashboardSummary> {
-    let selectedTrends = mockRevenueTrends7D;
-    if (timeframe === "30D") selectedTrends = mockRevenueTrends30D;
-    else if (timeframe === "90D") selectedTrends = mockRevenueTrends90D;
-    else if (timeframe === "1Y" || timeframe === "FY26") selectedTrends = mockRevenueTrends1Y;
-
-    let selectedKpis = mockDashboardKpis;
-    const tfUpper = (timeframe || "").toUpperCase();
-
-    if (tfUpper.includes("TODAY")) {
-      selectedKpis = [
-        { id: "rev", label: "Today's Sales", value: "₹9,450", changePercent: -4.2, trend: "down", subtitle: "vs ₹9,860 yesterday" },
-        { id: "txns", label: "Today's Scans", value: "104", changePercent: -3.1, trend: "down", subtitle: "avg ₹91 order value" },
-        { id: "cust", label: "Active Patrons", value: "78", changePercent: +2.4, trend: "up", subtitle: "scanned soundbox today" },
-        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +1.2, trend: "up", subtitle: "steady tea & snack basket" },
-      ];
-    } else if (tfUpper.includes("YESTERDAY")) {
-      selectedKpis = [
-        { id: "rev", label: "Yesterday's Sales", value: "₹9,860", changePercent: +2.1, trend: "up", subtitle: "vs ₹9,650 day prior" },
-        { id: "txns", label: "Yesterday's Scans", value: "108", changePercent: +1.8, trend: "up", subtitle: "avg ₹91 order value" },
-        { id: "cust", label: "Active Patrons", value: "82", changePercent: +3.0, trend: "up", subtitle: "scanned soundbox yesterday" },
-        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: 0.0, trend: "up", subtitle: "steady tea & snack basket" },
-      ];
-    } else if (tfUpper.includes("30D")) {
-      selectedKpis = [
-        { id: "rev", label: "Monthly Sales Volume", value: "₹2,84,500", changePercent: -11.4, trend: "down", subtitle: "vs ₹3,21,000 prior 30D" },
-        { id: "txns", label: "Total Transactions", value: "3,120", changePercent: -8.2, trend: "down", subtitle: "91 AOV across 30 days" },
-        { id: "cust", label: "Active Cohort Base", value: "1,248", changePercent: +5.1, trend: "up", subtitle: "616 loyal + 320 at risk" },
-        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +3.4, trend: "up", subtitle: "+₹3 vs last month" },
-      ];
-    } else if (tfUpper.includes("90D")) {
-      selectedKpis = [
-        { id: "rev", label: "Quarterly Revenue", value: "₹8,53,500", changePercent: +14.2, trend: "up", subtitle: "vs ₹7,47,300 prior quarter" },
-        { id: "txns", label: "Quarterly Scans", value: "9,380", changePercent: +12.1, trend: "up", subtitle: "91 AOV across 90 days" },
-        { id: "cust", label: "Quarterly Patrons", value: "2,410", changePercent: +8.4, trend: "up", subtitle: "total unique QR scanners" },
-        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +1.9, trend: "up", subtitle: "quarterly basket stability" },
-      ];
-    } else if (tfUpper.includes("1Y") || tfUpper.includes("FY26")) {
-      selectedKpis = [
-        { id: "rev", label: "Annual Revenue (FY26)", value: "₹34,14,000", changePercent: +22.8, trend: "up", subtitle: "vs ₹27,80,000 FY25" },
-        { id: "txns", label: "Annual Transactions", value: "37,516", changePercent: +18.5, trend: "up", subtitle: "full fiscal year ledger" },
-        { id: "cust", label: "Unique Merchant Base", value: "4,890", changePercent: +15.3, trend: "up", subtitle: "cumulative Soundbox scans" },
-        { id: "aov", label: "Avg Ticket Size", value: "₹91", changePercent: +3.6, trend: "up", subtitle: "annualized AOV growth" },
-      ];
-    }
+    const selectedTrends = getUserMonthlyTrendPoints(timeframe);
+    const selectedKpis = getUserDashboardKpis(timeframe);
 
     try {
       const res = await fetch(`${API_BASE}/api/dashboard/${merchantId}?timeframe=${timeframe}`, {

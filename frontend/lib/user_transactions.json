@@ -1,0 +1,3593 @@
+[
+  {
+    "date": "2023-07-27",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-27",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 8913.62
+  },
+  {
+    "date": "2023-07-27",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-27",
+    "debit": 5.0,
+    "credit": 0.0,
+    "balance": 8908.62
+  },
+  {
+    "date": "2023-07-27",
+    "category": "Shopping",
+    "transactionId": "3.57E+11",
+    "settlementDate": "2023-07-27",
+    "debit": 199.0,
+    "credit": 0.0,
+    "balance": 8709.62
+  },
+  {
+    "date": "2023-07-27",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-27",
+    "debit": 75.0,
+    "credit": 0.0,
+    "balance": 8634.62
+  },
+  {
+    "date": "2023-07-27",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-27",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 8614.62
+  },
+  {
+    "date": "2023-07-28",
+    "category": "Food",
+    "transactionId": "3.58E+11",
+    "settlementDate": "2023-07-28",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 8584.62
+  },
+  {
+    "date": "2023-07-28",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-28",
+    "debit": 23.0,
+    "credit": 0.0,
+    "balance": 8561.62
+  },
+  {
+    "date": "2023-07-28",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-28",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 8551.62
+  },
+  {
+    "date": "2023-07-28",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-28",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 8491.62
+  },
+  {
+    "date": "2023-07-29",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-29",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 8441.62
+  },
+  {
+    "date": "2023-07-29",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-29",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 8401.62
+  },
+  {
+    "date": "2023-07-29",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-29",
+    "debit": 160.0,
+    "credit": 0.0,
+    "balance": 8241.62
+  },
+  {
+    "date": "2023-07-29",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-29",
+    "debit": 320.0,
+    "credit": 0.0,
+    "balance": 7921.62
+  },
+  {
+    "date": "2023-07-30",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-30",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 7871.62
+  },
+  {
+    "date": "2023-07-30",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-30",
+    "debit": 170.0,
+    "credit": 0.0,
+    "balance": 7701.62
+  },
+  {
+    "date": "2023-07-30",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-30",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 7681.62
+  },
+  {
+    "date": "2023-07-30",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-30",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 7651.62
+  },
+  {
+    "date": "2023-07-30",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-30",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 7631.62
+  },
+  {
+    "date": "2023-07-31",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-07-31",
+    "debit": 110.0,
+    "credit": 0.0,
+    "balance": 7521.62
+  },
+  {
+    "date": "2023-08-01",
+    "category": "Misc",
+    "transactionId": "MIR2421393691857",
+    "settlementDate": "2023-08-01",
+    "debit": 236.0,
+    "credit": 0.0,
+    "balance": 7285.62
+  },
+  {
+    "date": "2023-08-01",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-01",
+    "debit": 15.0,
+    "credit": 0.0,
+    "balance": 7270.62
+  },
+  {
+    "date": "2023-08-01",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-01",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 7240.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 9240.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Rent",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 1781.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 243.0,
+    "credit": 0.0,
+    "balance": 1538.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 999.0,
+    "credit": 0.0,
+    "balance": 539.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 529.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 90.0,
+    "credit": 0.0,
+    "balance": 439.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 24.0,
+    "credit": 0.0,
+    "balance": 415.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 6.0,
+    "credit": 0.0,
+    "balance": 409.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Misc",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 140.0,
+    "credit": 0.0,
+    "balance": 269.62
+  },
+  {
+    "date": "2023-08-02",
+    "category": "Food",
+    "transactionId": "3.21E+11",
+    "settlementDate": "2023-08-02",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 239.62
+  },
+  {
+    "date": "2023-08-03",
+    "category": "Food",
+    "transactionId": "3.58E+11",
+    "settlementDate": "2023-08-03",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 184.62
+  },
+  {
+    "date": "2023-08-03",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-03",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 144.62
+  },
+  {
+    "date": "2023-08-03",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-03",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 104.62
+  },
+  {
+    "date": "2023-08-03",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-03",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 64.62
+  },
+  {
+    "date": "2023-08-04",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-04",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 44.62
+  },
+  {
+    "date": "2023-08-05",
+    "category": "Misc",
+    "transactionId": "3.58E+11",
+    "settlementDate": "2023-08-05",
+    "debit": 0.0,
+    "credit": 13000.0,
+    "balance": 13044.62
+  },
+  {
+    "date": "2023-08-05",
+    "category": "Misc",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-05",
+    "debit": 13000.0,
+    "credit": 0.0,
+    "balance": 44.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Misc",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1044.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 85.0,
+    "credit": 0.0,
+    "balance": 959.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 929.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 879.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Misc",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 179.0,
+    "credit": 0.0,
+    "balance": 700.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Food",
+    "transactionId": "3.59E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 690.62
+  },
+  {
+    "date": "2023-08-11",
+    "category": "Food",
+    "transactionId": "3.59E+11",
+    "settlementDate": "2023-08-11",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 630.62
+  },
+  {
+    "date": "2023-08-12",
+    "category": "Misc",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-12",
+    "debit": 393.0,
+    "credit": 0.0,
+    "balance": 237.62
+  },
+  {
+    "date": "2023-08-12",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-12",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 207.62
+  },
+  {
+    "date": "2023-08-12",
+    "category": "Food",
+    "transactionId": "3.22E+11",
+    "settlementDate": "2023-08-12",
+    "debit": 66.0,
+    "credit": 0.0,
+    "balance": 141.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2141.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 2061.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 2011.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 130.0,
+    "credit": 0.0,
+    "balance": 1881.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 189.0,
+    "credit": 0.0,
+    "balance": 1692.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1662.62
+  },
+  {
+    "date": "2023-08-13",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-13",
+    "debit": 500.0,
+    "credit": 0.0,
+    "balance": 1162.62
+  },
+  {
+    "date": "2023-08-14",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-14",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 1152.62
+  },
+  {
+    "date": "2023-08-14",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-14",
+    "debit": 99.0,
+    "credit": 0.0,
+    "balance": 1053.62
+  },
+  {
+    "date": "2023-08-14",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-14",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 1003.62
+  },
+  {
+    "date": "2023-08-14",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-14",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 953.62
+  },
+  {
+    "date": "2023-08-14",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-14",
+    "debit": 358.0,
+    "credit": 0.0,
+    "balance": 595.62
+  },
+  {
+    "date": "2023-08-14",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-14",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 565.62
+  },
+  {
+    "date": "2023-08-15",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-15",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 545.62
+  },
+  {
+    "date": "2023-08-15",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-15",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 505.62
+  },
+  {
+    "date": "2023-08-15",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-15",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 475.62
+  },
+  {
+    "date": "2023-08-15",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-15",
+    "debit": 0.0,
+    "credit": 25.0,
+    "balance": 500.62
+  },
+  {
+    "date": "2023-08-16",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-16",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 440.62
+  },
+  {
+    "date": "2023-08-16",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-16",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 430.62
+  },
+  {
+    "date": "2023-08-16",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-16",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 390.62
+  },
+  {
+    "date": "2023-08-16",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-16",
+    "debit": 42.0,
+    "credit": 0.0,
+    "balance": 348.62
+  },
+  {
+    "date": "2023-08-16",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-16",
+    "debit": 230.0,
+    "credit": 0.0,
+    "balance": 118.62
+  },
+  {
+    "date": "2023-08-16",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-16",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 78.62
+  },
+  {
+    "date": "2023-08-17",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-17",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 28.62
+  },
+  {
+    "date": "2023-08-17",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-17",
+    "debit": 0.0,
+    "credit": 1500.0,
+    "balance": 1528.62
+  },
+  {
+    "date": "2023-08-17",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-17",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 528.62
+  },
+  {
+    "date": "2023-08-17",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-17",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 478.62
+  },
+  {
+    "date": "2023-08-17",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-17",
+    "debit": 161.55,
+    "credit": 0.0,
+    "balance": 317.07
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 257.07
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 217.07
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 67.2,
+    "credit": 0.0,
+    "balance": 149.87
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 129.87
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1129.87
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 86.0,
+    "credit": 0.0,
+    "balance": 1043.87
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 276.0,
+    "credit": 0.0,
+    "balance": 767.87
+  },
+  {
+    "date": "2023-08-18",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-18",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 717.87
+  },
+  {
+    "date": "2023-08-19",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-19",
+    "debit": 390.0,
+    "credit": 0.0,
+    "balance": 327.87
+  },
+  {
+    "date": "2023-08-19",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-19",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 287.87
+  },
+  {
+    "date": "2023-08-19",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-19",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1287.87
+  },
+  {
+    "date": "2023-08-19",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-19",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 1237.87
+  },
+  {
+    "date": "2023-08-19",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-19",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 1197.87
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 1177.87
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1147.87
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 1087.87
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 1027.87
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 5.0,
+    "credit": 0.0,
+    "balance": 1022.87
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 174.95,
+    "credit": 0.0,
+    "balance": 847.92
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 807.92
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-20",
+    "debit": 400.0,
+    "credit": 0.0,
+    "balance": 407.92
+  },
+  {
+    "date": "2023-08-20",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-21",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 387.92
+  },
+  {
+    "date": "2023-08-21",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-21",
+    "debit": 160.0,
+    "credit": 0.0,
+    "balance": 227.92
+  },
+  {
+    "date": "2023-08-21",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-21",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 177.92
+  },
+  {
+    "date": "2023-08-21",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-21",
+    "debit": 22.0,
+    "credit": 0.0,
+    "balance": 155.92
+  },
+  {
+    "date": "2023-08-21",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-21",
+    "debit": 75.0,
+    "credit": 0.0,
+    "balance": 80.92
+  },
+  {
+    "date": "2023-08-21",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-21",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 40.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1040.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 70.0,
+    "credit": 0.0,
+    "balance": 970.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Misc",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 0.0,
+    "credit": 70.0,
+    "balance": 1040.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 985.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 935.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 925.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 38.0,
+    "credit": 0.0,
+    "balance": 887.92
+  },
+  {
+    "date": "2023-08-22",
+    "category": "Food",
+    "transactionId": "3.23E+11",
+    "settlementDate": "2023-08-22",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 867.92
+  },
+  {
+    "date": "2023-08-23",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-23",
+    "debit": 28.0,
+    "credit": 0.0,
+    "balance": 839.92
+  },
+  {
+    "date": "2023-08-23",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-23",
+    "debit": 23.0,
+    "credit": 0.0,
+    "balance": 816.92
+  },
+  {
+    "date": "2023-08-23",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-23",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 786.92
+  },
+  {
+    "date": "2023-08-23",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-23",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 736.92
+  },
+  {
+    "date": "2023-08-23",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-23",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 706.92
+  },
+  {
+    "date": "2023-08-23",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-23",
+    "debit": 200.0,
+    "credit": 0.0,
+    "balance": 506.92
+  },
+  {
+    "date": "2023-08-24",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-24",
+    "debit": 201.0,
+    "credit": 0.0,
+    "balance": 305.92
+  },
+  {
+    "date": "2023-08-24",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-24",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 205.92
+  },
+  {
+    "date": "2023-08-24",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-24",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 155.92
+  },
+  {
+    "date": "2023-08-24",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-24",
+    "debit": 59.0,
+    "credit": 0.0,
+    "balance": 96.92
+  },
+  {
+    "date": "2023-08-24",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-24",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 46.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Salary",
+    "transactionId": "CHASV23235906561",
+    "settlementDate": "2023-08-25",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 34846.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 5000.0,
+    "credit": 0.0,
+    "balance": 29846.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 21846.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 20846.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 19846.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 34.0,
+    "credit": 0.0,
+    "balance": 19812.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 18812.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 380.0,
+    "credit": 0.0,
+    "balance": 18432.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 0.0,
+    "credit": 140.0,
+    "balance": 18572.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 18472.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 1720.0,
+    "credit": 0.0,
+    "balance": 16752.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 200.0,
+    "credit": 0.0,
+    "balance": 16552.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 188.0,
+    "credit": 0.0,
+    "balance": 16364.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 16324.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 70.0,
+    "credit": 0.0,
+    "balance": 16254.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 0.0,
+    "credit": 15.0,
+    "balance": 16269.92
+  },
+  {
+    "date": "2023-08-25",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-25",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 16219.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 120.0,
+    "credit": 0.0,
+    "balance": 16099.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 16069.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 430.0,
+    "credit": 0.0,
+    "balance": 15639.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 0.0,
+    "credit": 70.0,
+    "balance": 15709.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 112.0,
+    "credit": 0.0,
+    "balance": 15597.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 0.0,
+    "credit": 10.0,
+    "balance": 15607.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 118.0,
+    "credit": 0.0,
+    "balance": 15489.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 15479.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 14479.92
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 188.2,
+    "credit": 0.0,
+    "balance": 14291.72
+  },
+  {
+    "date": "2023-08-26",
+    "category": "Food",
+    "transactionId": "3.60E+11",
+    "settlementDate": "2023-08-26",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 14251.72
+  },
+  {
+    "date": "2023-08-27",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-27",
+    "debit": 199.0,
+    "credit": 0.0,
+    "balance": 14052.72
+  },
+  {
+    "date": "2023-08-27",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-27",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 14022.72
+  },
+  {
+    "date": "2023-08-27",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-27",
+    "debit": 58.0,
+    "credit": 0.0,
+    "balance": 13964.72
+  },
+  {
+    "date": "2023-08-27",
+    "category": "Misc",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-27",
+    "debit": 0.0,
+    "credit": 12.0,
+    "balance": 13976.72
+  },
+  {
+    "date": "2023-08-27",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-27",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 13876.72
+  },
+  {
+    "date": "2023-08-27",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-27",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 13826.72
+  },
+  {
+    "date": "2023-08-28",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-28",
+    "debit": 203.66,
+    "credit": 0.0,
+    "balance": 13623.06
+  },
+  {
+    "date": "2023-08-28",
+    "category": "Misc",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-28",
+    "debit": 105.0,
+    "credit": 0.0,
+    "balance": 13518.06
+  },
+  {
+    "date": "2023-08-28",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 13478.06
+  },
+  {
+    "date": "2023-08-29",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 5.0,
+    "credit": 0.0,
+    "balance": 13473.06
+  },
+  {
+    "date": "2023-08-29",
+    "category": "Food",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 23.0,
+    "credit": 0.0,
+    "balance": 13450.06
+  },
+  {
+    "date": "2023-08-29",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 13420.06
+  },
+  {
+    "date": "2023-08-29",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 43.0,
+    "credit": 0.0,
+    "balance": 13377.06
+  },
+  {
+    "date": "2023-08-29",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 13367.06
+  },
+  {
+    "date": "2023-08-29",
+    "category": "Food",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-29",
+    "debit": 185.2,
+    "credit": 0.0,
+    "balance": 13181.86
+  },
+  {
+    "date": "2023-08-30",
+    "category": "Misc",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-30",
+    "debit": 110.0,
+    "credit": 0.0,
+    "balance": 13071.86
+  },
+  {
+    "date": "2023-08-30",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-30",
+    "debit": 0.0,
+    "credit": 55.0,
+    "balance": 13126.86
+  },
+  {
+    "date": "2023-08-30",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-30",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 13086.86
+  },
+  {
+    "date": "2023-08-30",
+    "category": "Food",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-30",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 12986.86
+  },
+  {
+    "date": "2023-08-30",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-30",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 12946.86
+  },
+  {
+    "date": "2023-08-31",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-31",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 12916.86
+  },
+  {
+    "date": "2023-08-31",
+    "category": "Food",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-08-31",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 12816.86
+  },
+  {
+    "date": "2023-08-31",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-31",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 12786.86
+  },
+  {
+    "date": "2023-08-31",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-31",
+    "debit": 0.0,
+    "credit": 20000.0,
+    "balance": 32786.86
+  },
+  {
+    "date": "2023-08-31",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-31",
+    "debit": 20000.0,
+    "credit": 0.0,
+    "balance": 12786.86
+  },
+  {
+    "date": "2023-08-31",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-08-31",
+    "debit": 440.0,
+    "credit": 0.0,
+    "balance": 12346.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Rent",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 5036.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 110.0,
+    "credit": 0.0,
+    "balance": 4926.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 4906.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 4876.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Misc",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 447.0,
+    "credit": 0.0,
+    "balance": 4429.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 52.0,
+    "credit": 0.0,
+    "balance": 4377.86
+  },
+  {
+    "date": "2023-09-01",
+    "category": "Food",
+    "transactionId": "3.24E+11",
+    "settlementDate": "2023-09-01",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 4357.86
+  },
+  {
+    "date": "2023-09-02",
+    "category": "Food",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-09-02",
+    "debit": 188.2,
+    "credit": 0.0,
+    "balance": 4169.66
+  },
+  {
+    "date": "2023-09-02",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-02",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 4119.66
+  },
+  {
+    "date": "2023-09-02",
+    "category": "Food",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-09-02",
+    "debit": 136.76,
+    "credit": 0.0,
+    "balance": 3982.9
+  },
+  {
+    "date": "2023-09-02",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-02",
+    "debit": 0.0,
+    "credit": 136.76,
+    "balance": 4119.66
+  },
+  {
+    "date": "2023-09-03",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-03",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 4089.66
+  },
+  {
+    "date": "2023-09-03",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-03",
+    "debit": 36.0,
+    "credit": 0.0,
+    "balance": 4053.66
+  },
+  {
+    "date": "2023-09-03",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-03",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 3993.66
+  },
+  {
+    "date": "2023-09-03",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-03",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 3973.66
+  },
+  {
+    "date": "2023-09-04",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-04",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 3943.66
+  },
+  {
+    "date": "2023-09-04",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-04",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 3888.66
+  },
+  {
+    "date": "2023-09-04",
+    "category": "Misc",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-04",
+    "debit": 250.0,
+    "credit": 0.0,
+    "balance": 3638.66
+  },
+  {
+    "date": "2023-09-04",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-04",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 3608.66
+  },
+  {
+    "date": "2023-09-05",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-05",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 3528.66
+  },
+  {
+    "date": "2023-09-05",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-05",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 3478.66
+  },
+  {
+    "date": "2023-09-05",
+    "category": "Misc",
+    "transactionId": "3.61E+11",
+    "settlementDate": "2023-09-06",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 2478.66
+  },
+  {
+    "date": "2023-09-06",
+    "category": "Food",
+    "transactionId": "3.62E+11",
+    "settlementDate": "2023-09-06",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 2423.66
+  },
+  {
+    "date": "2023-09-06",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-06",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 2383.66
+  },
+  {
+    "date": "2023-09-06",
+    "category": "Food",
+    "transactionId": "3.62E+11",
+    "settlementDate": "2023-09-06",
+    "debit": 217.95,
+    "credit": 0.0,
+    "balance": 2165.71
+  },
+  {
+    "date": "2023-09-06",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-06",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 2105.71
+  },
+  {
+    "date": "2023-09-07",
+    "category": "Misc",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-07",
+    "debit": 170.0,
+    "credit": 0.0,
+    "balance": 1935.71
+  },
+  {
+    "date": "2023-09-07",
+    "category": "Misc",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-07",
+    "debit": 200.0,
+    "credit": 0.0,
+    "balance": 1735.71
+  },
+  {
+    "date": "2023-09-07",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-07",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 1695.71
+  },
+  {
+    "date": "2023-09-07",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-07",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 1615.71
+  },
+  {
+    "date": "2023-09-07",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-07",
+    "debit": 85.0,
+    "credit": 0.0,
+    "balance": 1530.71
+  },
+  {
+    "date": "2023-09-08",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-08",
+    "debit": 25.0,
+    "credit": 0.0,
+    "balance": 1505.71
+  },
+  {
+    "date": "2023-09-08",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-08",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 1465.71
+  },
+  {
+    "date": "2023-09-08",
+    "category": "Misc",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-08",
+    "debit": 0.0,
+    "credit": 80.0,
+    "balance": 1545.71
+  },
+  {
+    "date": "2023-09-08",
+    "category": "Misc",
+    "transactionId": "3.62E+11",
+    "settlementDate": "2023-09-08",
+    "debit": 190.0,
+    "credit": 0.0,
+    "balance": 1355.71
+  },
+  {
+    "date": "2023-09-09",
+    "category": "Misc",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-09",
+    "debit": 279.5,
+    "credit": 0.0,
+    "balance": 1076.21
+  },
+  {
+    "date": "2023-09-09",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-09",
+    "debit": 52.0,
+    "credit": 0.0,
+    "balance": 1024.21
+  },
+  {
+    "date": "2023-09-09",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-09",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 994.21
+  },
+  {
+    "date": "2023-09-09",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-09",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 984.21
+  },
+  {
+    "date": "2023-09-09",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-09",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 944.21
+  },
+  {
+    "date": "2023-09-10",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-10",
+    "debit": 230.7,
+    "credit": 0.0,
+    "balance": 713.51
+  },
+  {
+    "date": "2023-09-10",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-10",
+    "debit": 54.0,
+    "credit": 0.0,
+    "balance": 659.51
+  },
+  {
+    "date": "2023-09-10",
+    "category": "Misc",
+    "transactionId": "3.62E+11",
+    "settlementDate": "2023-09-10",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1159.51
+  },
+  {
+    "date": "2023-09-10",
+    "category": "Food",
+    "transactionId": "3.62E+11",
+    "settlementDate": "2023-09-10",
+    "debit": 426.94,
+    "credit": 0.0,
+    "balance": 732.57
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 192.24,
+    "credit": 0.0,
+    "balance": 540.33
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 485.33
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 405.33
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 385.33
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 375.33
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Food",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 365.33
+  },
+  {
+    "date": "2023-09-11",
+    "category": "Misc",
+    "transactionId": "3.25E+11",
+    "settlementDate": "2023-09-11",
+    "debit": 125.0,
+    "credit": 0.0,
+    "balance": 240.33
+  },
+  {
+    "date": "2023-09-12",
+    "category": "Food",
+    "transactionId": "3.26E+11",
+    "settlementDate": "2023-09-12",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 210.33
+  },
+  {
+    "date": "2023-09-12",
+    "category": "Food",
+    "transactionId": "3.26E+11",
+    "settlementDate": "2023-09-12",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 155.33
+  },
+  {
+    "date": "2023-09-12",
+    "category": "Food",
+    "transactionId": "3.26E+11",
+    "settlementDate": "2023-09-12",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 115.33
+  },
+  {
+    "date": "2023-09-12",
+    "category": "Food",
+    "transactionId": "3.26E+11",
+    "settlementDate": "2023-09-12",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 55.33
+  },
+  {
+    "date": "2023-09-12",
+    "category": "Food",
+    "transactionId": "3.26E+11",
+    "settlementDate": "2023-09-12",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 45.33
+  },
+  {
+    "date": "2023-09-13",
+    "category": "Food",
+    "transactionId": "3.62E+11",
+    "settlementDate": "2023-09-13",
+    "debit": 26.0,
+    "credit": 0.0,
+    "balance": 22.33
+  },
+  {
+    "date": "2023-09-16",
+    "category": "Food",
+    "transactionId": "3.26E+11",
+    "settlementDate": "2023-09-16",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 12.33
+  },
+  {
+    "date": "2023-09-23",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-23",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1012.33
+  },
+  {
+    "date": "2023-09-23",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-23",
+    "debit": 300.1,
+    "credit": 0.0,
+    "balance": 712.23
+  },
+  {
+    "date": "2023-09-23",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-23",
+    "debit": 700.0,
+    "credit": 0.0,
+    "balance": 12.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Salary",
+    "transactionId": "CHASH26441571950",
+    "settlementDate": "2023-09-25",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 34812.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 7451.0,
+    "credit": 0.0,
+    "balance": 27361.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.63E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 0.0,
+    "credit": 7152.0,
+    "balance": 34513.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 8624.0,
+    "credit": 0.0,
+    "balance": 25889.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.63E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 10000.0,
+    "credit": 0.0,
+    "balance": 15889.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.63E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 2313.0,
+    "credit": 0.0,
+    "balance": 13576.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.63E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 7500.0,
+    "credit": 0.0,
+    "balance": 6076.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 120.0,
+    "credit": 0.0,
+    "balance": 5956.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 36.0,
+    "credit": 0.0,
+    "balance": 5920.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 5880.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.63E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 275.0,
+    "credit": 0.0,
+    "balance": 5605.23
+  },
+  {
+    "date": "2023-09-25",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-25",
+    "debit": 329.0,
+    "credit": 0.0,
+    "balance": 5276.23
+  },
+  {
+    "date": "2023-09-26",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-26",
+    "debit": 36.0,
+    "credit": 0.0,
+    "balance": 5240.23
+  },
+  {
+    "date": "2023-09-26",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-26",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 5230.23
+  },
+  {
+    "date": "2023-09-26",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-26",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 5180.23
+  },
+  {
+    "date": "2023-09-26",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-09-26",
+    "debit": 159.56,
+    "credit": 0.0,
+    "balance": 5020.67
+  },
+  {
+    "date": "2023-09-26",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-26",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 4020.67
+  },
+  {
+    "date": "2023-09-27",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-09-27",
+    "debit": 55.0,
+    "credit": 0.0,
+    "balance": 3965.67
+  },
+  {
+    "date": "2023-09-27",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-27",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 3915.67
+  },
+  {
+    "date": "2023-09-28",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-09-28",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 3815.67
+  },
+  {
+    "date": "2023-09-28",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-28",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 3775.67
+  },
+  {
+    "date": "2023-09-28",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-09-28",
+    "debit": 155.5,
+    "credit": 0.0,
+    "balance": 3620.17
+  },
+  {
+    "date": "2023-09-28",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-28",
+    "debit": 240.0,
+    "credit": 0.0,
+    "balance": 3380.17
+  },
+  {
+    "date": "2023-09-28",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-28",
+    "debit": 247.0,
+    "credit": 0.0,
+    "balance": 3133.17
+  },
+  {
+    "date": "2023-09-29",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-29",
+    "debit": 48.0,
+    "credit": 0.0,
+    "balance": 3085.17
+  },
+  {
+    "date": "2023-09-29",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-29",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 3065.17
+  },
+  {
+    "date": "2023-09-29",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-29",
+    "debit": 880.0,
+    "credit": 0.0,
+    "balance": 2185.17
+  },
+  {
+    "date": "2023-09-30",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-30",
+    "debit": 110.0,
+    "credit": 0.0,
+    "balance": 2075.17
+  },
+  {
+    "date": "2023-09-30",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-30",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 2065.17
+  },
+  {
+    "date": "2023-09-30",
+    "category": "Misc",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-30",
+    "debit": 183.85,
+    "credit": 0.0,
+    "balance": 1881.32
+  },
+  {
+    "date": "2023-09-30",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-09-30",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 1831.32
+  },
+  {
+    "date": "2023-10-01",
+    "category": "Misc",
+    "transactionId": "0",
+    "settlementDate": "2023-09-30",
+    "debit": 0.0,
+    "credit": 20.0,
+    "balance": 1851.32
+  },
+  {
+    "date": "2023-10-01",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-10-01",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 1831.32
+  },
+  {
+    "date": "2023-10-01",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-10-01",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 1811.32
+  },
+  {
+    "date": "2023-10-01",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-10-01",
+    "debit": 25.0,
+    "credit": 0.0,
+    "balance": 1786.32
+  },
+  {
+    "date": "2023-10-01",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-10-01",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 1736.32
+  },
+  {
+    "date": "2023-10-01",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-10-01",
+    "debit": 85.0,
+    "credit": 0.0,
+    "balance": 1651.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Food",
+    "transactionId": "3.27E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 1641.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 49.0,
+    "credit": 0.0,
+    "balance": 1592.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1562.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 49.0,
+    "credit": 0.0,
+    "balance": 1513.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 1433.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1403.32
+  },
+  {
+    "date": "2023-10-02",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-02",
+    "debit": 470.0,
+    "credit": 0.0,
+    "balance": 933.32
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 19.0,
+    "credit": 0.0,
+    "balance": 914.32
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 130.0,
+    "credit": 0.0,
+    "balance": 784.32
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 188.74,
+    "credit": 0.0,
+    "balance": 595.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 48.0,
+    "credit": 0.0,
+    "balance": 547.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 537.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 0.0,
+    "credit": 385.0,
+    "balance": 922.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 680.0,
+    "credit": 0.0,
+    "balance": 242.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 0.0,
+    "credit": 43.0,
+    "balance": 285.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Misc",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1285.58
+  },
+  {
+    "date": "2023-10-03",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-03",
+    "debit": 370.0,
+    "credit": 0.0,
+    "balance": 915.58
+  },
+  {
+    "date": "2023-10-04",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-04",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 835.58
+  },
+  {
+    "date": "2023-10-04",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-04",
+    "debit": 45.0,
+    "credit": 0.0,
+    "balance": 790.58
+  },
+  {
+    "date": "2023-10-04",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-04",
+    "debit": 120.0,
+    "credit": 0.0,
+    "balance": 670.58
+  },
+  {
+    "date": "2023-10-04",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-04",
+    "debit": 12.0,
+    "credit": 0.0,
+    "balance": 658.58
+  },
+  {
+    "date": "2023-10-05",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-05",
+    "debit": 35.0,
+    "credit": 0.0,
+    "balance": 623.58
+  },
+  {
+    "date": "2023-10-05",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-05",
+    "debit": 70.0,
+    "credit": 0.0,
+    "balance": 553.58
+  },
+  {
+    "date": "2023-10-05",
+    "category": "Food",
+    "transactionId": "3.64E+11",
+    "settlementDate": "2023-10-05",
+    "debit": 75.0,
+    "credit": 0.0,
+    "balance": 478.58
+  },
+  {
+    "date": "2023-10-06",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-06",
+    "debit": 33.0,
+    "credit": 0.0,
+    "balance": 445.58
+  },
+  {
+    "date": "2023-10-06",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-06",
+    "debit": 95.0,
+    "credit": 0.0,
+    "balance": 350.58
+  },
+  {
+    "date": "2023-10-07",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-07",
+    "debit": 87.69,
+    "credit": 0.0,
+    "balance": 262.89
+  },
+  {
+    "date": "2023-10-07",
+    "category": "Misc",
+    "transactionId": "3.65E+11",
+    "settlementDate": "2023-10-07",
+    "debit": 184.0,
+    "credit": 0.0,
+    "balance": 78.89
+  },
+  {
+    "date": "2023-10-09",
+    "category": "Misc",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-09",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1078.89
+  },
+  {
+    "date": "2023-10-09",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-09",
+    "debit": 79.0,
+    "credit": 0.0,
+    "balance": 999.89
+  },
+  {
+    "date": "2023-10-10",
+    "category": "Food",
+    "transactionId": "3.28E+11",
+    "settlementDate": "2023-10-10",
+    "debit": 50.0,
+    "credit": 0.0,
+    "balance": 949.89
+  },
+  {
+    "date": "2023-10-10",
+    "category": "Food",
+    "transactionId": "3.65E+11",
+    "settlementDate": "2023-10-10",
+    "debit": 42.0,
+    "credit": 0.0,
+    "balance": 907.89
+  },
+  {
+    "date": "2023-10-11",
+    "category": "Food",
+    "transactionId": "3.65E+11",
+    "settlementDate": "2023-10-11",
+    "debit": 80.0,
+    "credit": 0.0,
+    "balance": 827.89
+  },
+  {
+    "date": "2023-10-12",
+    "category": "Food",
+    "transactionId": "3.65E+11",
+    "settlementDate": "2023-10-12",
+    "debit": 70.0,
+    "credit": 0.0,
+    "balance": 757.89
+  },
+  {
+    "date": "2023-10-13",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-13",
+    "debit": 36.0,
+    "credit": 0.0,
+    "balance": 721.89
+  },
+  {
+    "date": "2023-10-13",
+    "category": "Misc",
+    "transactionId": "3.65E+11",
+    "settlementDate": "2023-10-13",
+    "debit": 270.0,
+    "credit": 0.0,
+    "balance": 451.89
+  },
+  {
+    "date": "2023-10-14",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-14",
+    "debit": 24.0,
+    "credit": 0.0,
+    "balance": 427.89
+  },
+  {
+    "date": "2023-10-14",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-14",
+    "debit": 0.0,
+    "credit": 270.0,
+    "balance": 697.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 291.0,
+    "credit": 0.0,
+    "balance": 406.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.66E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 0.0,
+    "credit": 3500.0,
+    "balance": 3906.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 1500.0,
+    "credit": 0.0,
+    "balance": 2406.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 0.0,
+    "credit": 286.0,
+    "balance": 2692.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 300.0,
+    "credit": 0.0,
+    "balance": 2392.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 150.0,
+    "credit": 0.0,
+    "balance": 2242.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 2202.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Misc",
+    "transactionId": "3.66E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 248.0,
+    "credit": 0.0,
+    "balance": 1954.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Food",
+    "transactionId": "3.66E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1924.89
+  },
+  {
+    "date": "2023-10-16",
+    "category": "Food",
+    "transactionId": "3.66E+11",
+    "settlementDate": "2023-10-16",
+    "debit": 214.74,
+    "credit": 0.0,
+    "balance": 1710.15
+  },
+  {
+    "date": "2023-10-17",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-17",
+    "debit": 65.0,
+    "credit": 0.0,
+    "balance": 1645.15
+  },
+  {
+    "date": "2023-10-17",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-17",
+    "debit": 706.0,
+    "credit": 0.0,
+    "balance": 939.15
+  },
+  {
+    "date": "2023-10-17",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-17",
+    "debit": 150.0,
+    "credit": 0.0,
+    "balance": 789.15
+  },
+  {
+    "date": "2023-10-17",
+    "category": "Misc",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-17",
+    "debit": 234.0,
+    "credit": 0.0,
+    "balance": 555.15
+  },
+  {
+    "date": "2023-10-17",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-17",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 495.15
+  },
+  {
+    "date": "2023-10-18",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-18",
+    "debit": 65.0,
+    "credit": 0.0,
+    "balance": 430.15
+  },
+  {
+    "date": "2023-10-18",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-18",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 420.15
+  },
+  {
+    "date": "2023-10-19",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-19",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 400.15
+  },
+  {
+    "date": "2023-10-20",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-20",
+    "debit": 18.0,
+    "credit": 0.0,
+    "balance": 382.15
+  },
+  {
+    "date": "2023-10-20",
+    "category": "Food",
+    "transactionId": "3.29E+11",
+    "settlementDate": "2023-10-20",
+    "debit": 25.0,
+    "credit": 0.0,
+    "balance": 357.15
+  },
+  {
+    "date": "2023-10-26",
+    "category": "Food",
+    "transactionId": "3.30E+11",
+    "settlementDate": "2023-10-26",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 257.15
+  },
+  {
+    "date": "2023-10-26",
+    "category": "Misc",
+    "transactionId": "3.30E+11",
+    "settlementDate": "2023-10-26",
+    "debit": 0.0,
+    "credit": 3150.0,
+    "balance": 3407.15
+  },
+  {
+    "date": "2023-10-27",
+    "category": "Misc",
+    "transactionId": "3.67E+11",
+    "settlementDate": "2023-10-27",
+    "debit": 3407.0,
+    "credit": 0.0,
+    "balance": 0.15
+  },
+  {
+    "date": "2023-11-01",
+    "category": "Misc",
+    "transactionId": "3.31E+11",
+    "settlementDate": "2023-11-01",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 500.15
+  },
+  {
+    "date": "2023-11-01",
+    "category": "Misc",
+    "transactionId": "3.31E+11",
+    "settlementDate": "2023-11-01",
+    "debit": 500.0,
+    "credit": 0.0,
+    "balance": 0.15
+  },
+  {
+    "date": "2023-11-02",
+    "category": "Misc",
+    "transactionId": "3.31E+11",
+    "settlementDate": "2023-11-02",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1000.15
+  },
+  {
+    "date": "2023-11-02",
+    "category": "Misc",
+    "transactionId": "3.67E+11",
+    "settlementDate": "2023-11-02",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 0.15
+  },
+  {
+    "date": "2023-11-02",
+    "category": "Misc",
+    "transactionId": "3.31E+11",
+    "settlementDate": "2023-11-02",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1000.15
+  },
+  {
+    "date": "2023-11-02",
+    "category": "Misc",
+    "transactionId": "3.67E+11",
+    "settlementDate": "2023-11-02",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 0.15
+  },
+  {
+    "date": "2023-11-15",
+    "category": "Misc",
+    "transactionId": "CHASH31948851670",
+    "settlementDate": "2023-11-15",
+    "debit": 0.0,
+    "credit": 33209.0,
+    "balance": 33209.15
+  },
+  {
+    "date": "2023-11-15",
+    "category": "Misc",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-15",
+    "debit": 5000.0,
+    "credit": 0.0,
+    "balance": 28209.15
+  },
+  {
+    "date": "2023-11-15",
+    "category": "Misc",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-15",
+    "debit": 3500.0,
+    "credit": 0.0,
+    "balance": 24709.15
+  },
+  {
+    "date": "2023-11-15",
+    "category": "Misc",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-15",
+    "debit": 20000.0,
+    "credit": 0.0,
+    "balance": 4709.15
+  },
+  {
+    "date": "2023-11-15",
+    "category": "Misc",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-15",
+    "debit": 1500.0,
+    "credit": 0.0,
+    "balance": 3209.15
+  },
+  {
+    "date": "2023-11-17",
+    "category": "Food",
+    "transactionId": "3.32E+11",
+    "settlementDate": "2023-11-17",
+    "debit": 69.0,
+    "credit": 0.0,
+    "balance": 3140.15
+  },
+  {
+    "date": "2023-11-18",
+    "category": "Food",
+    "transactionId": "3.32E+11",
+    "settlementDate": "2023-11-18",
+    "debit": 100.0,
+    "credit": 0.0,
+    "balance": 3040.15
+  },
+  {
+    "date": "2023-11-18",
+    "category": "Misc",
+    "transactionId": "3.32E+11",
+    "settlementDate": "2023-11-18",
+    "debit": 116.0,
+    "credit": 0.0,
+    "balance": 2924.15
+  },
+  {
+    "date": "2023-11-20",
+    "category": "Shopping",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-20",
+    "debit": 1999.0,
+    "credit": 0.0,
+    "balance": 925.15
+  },
+  {
+    "date": "2023-11-20",
+    "category": "Shopping",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-20",
+    "debit": 0.0,
+    "credit": 1999.0,
+    "balance": 2924.15
+  },
+  {
+    "date": "2023-11-22",
+    "category": "Misc",
+    "transactionId": "3.33E+11",
+    "settlementDate": "2023-11-22",
+    "debit": 150.0,
+    "credit": 0.0,
+    "balance": 2774.15
+  },
+  {
+    "date": "2023-11-22",
+    "category": "Misc",
+    "transactionId": "3.33E+11",
+    "settlementDate": "2023-11-22",
+    "debit": 150.0,
+    "credit": 0.0,
+    "balance": 2624.15
+  },
+  {
+    "date": "2023-11-24",
+    "category": "Salary",
+    "transactionId": "CHASH32649207986",
+    "settlementDate": "2023-11-24",
+    "debit": 0.0,
+    "credit": 24769.0,
+    "balance": 27393.15
+  },
+  {
+    "date": "2023-11-24",
+    "category": "Shopping",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-24",
+    "debit": 499.0,
+    "credit": 0.0,
+    "balance": 26894.15
+  },
+  {
+    "date": "2023-11-24",
+    "category": "Misc",
+    "transactionId": "3.33E+11",
+    "settlementDate": "2023-11-24",
+    "debit": 1499.0,
+    "credit": 0.0,
+    "balance": 25395.15
+  },
+  {
+    "date": "2023-11-24",
+    "category": "Misc",
+    "transactionId": "3.69E+11",
+    "settlementDate": "2023-11-24",
+    "debit": 2000.0,
+    "credit": 0.0,
+    "balance": 23395.15
+  },
+  {
+    "date": "2023-11-25",
+    "category": "Misc",
+    "transactionId": "3.70E+11",
+    "settlementDate": "2023-11-25",
+    "debit": 21000.0,
+    "credit": 0.0,
+    "balance": 2395.15
+  },
+  {
+    "date": "2023-11-26",
+    "category": "Food",
+    "transactionId": "3.33E+11",
+    "settlementDate": "2023-11-26",
+    "debit": 223.18,
+    "credit": 0.0,
+    "balance": 2171.97
+  },
+  {
+    "date": "2023-11-27",
+    "category": "Misc",
+    "transactionId": "3.33E+11",
+    "settlementDate": "2023-11-27",
+    "debit": 0.0,
+    "credit": 272.0,
+    "balance": 2443.97
+  },
+  {
+    "date": "2023-11-27",
+    "category": "Misc",
+    "transactionId": "3.70E+11",
+    "settlementDate": "2023-11-27",
+    "debit": 720.0,
+    "credit": 0.0,
+    "balance": 1723.97
+  },
+  {
+    "date": "2023-11-28",
+    "category": "Misc",
+    "transactionId": "3.70E+11",
+    "settlementDate": "2023-11-28",
+    "debit": 480.0,
+    "credit": 0.0,
+    "balance": 1243.97
+  },
+  {
+    "date": "2023-11-28",
+    "category": "Misc",
+    "transactionId": "3.70E+11",
+    "settlementDate": "2023-11-28",
+    "debit": 250.0,
+    "credit": 0.0,
+    "balance": 993.97
+  },
+  {
+    "date": "2023-11-30",
+    "category": "Misc",
+    "transactionId": "3.70E+11",
+    "settlementDate": "2023-11-30",
+    "debit": 130.0,
+    "credit": 0.0,
+    "balance": 863.97
+  },
+  {
+    "date": "2023-11-30",
+    "category": "Misc",
+    "transactionId": "3.33E+11",
+    "settlementDate": "2023-11-30",
+    "debit": 0.0,
+    "credit": 50.0,
+    "balance": 913.97
+  },
+  {
+    "date": "2023-12-01",
+    "category": "Food",
+    "transactionId": "3.70E+11",
+    "settlementDate": "2023-12-02",
+    "debit": 19.0,
+    "credit": 0.0,
+    "balance": 894.97
+  },
+  {
+    "date": "2023-12-02",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-02",
+    "debit": 200.0,
+    "credit": 0.0,
+    "balance": 694.97
+  },
+  {
+    "date": "2023-12-03",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-03",
+    "debit": 120.0,
+    "credit": 0.0,
+    "balance": 574.97
+  },
+  {
+    "date": "2023-12-03",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-03",
+    "debit": 0.0,
+    "credit": 7.0,
+    "balance": 581.97
+  },
+  {
+    "date": "2023-12-03",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-03",
+    "debit": 0.0,
+    "credit": 70.0,
+    "balance": 651.97
+  },
+  {
+    "date": "2023-12-04",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-04",
+    "debit": 500.0,
+    "credit": 0.0,
+    "balance": 151.97
+  },
+  {
+    "date": "2023-12-04",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-04",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 651.97
+  },
+  {
+    "date": "2023-12-04",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-04",
+    "debit": 450.0,
+    "credit": 0.0,
+    "balance": 201.97
+  },
+  {
+    "date": "2023-12-06",
+    "category": "Misc",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-06",
+    "debit": 0.0,
+    "credit": 150.0,
+    "balance": 351.97
+  },
+  {
+    "date": "2023-12-06",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-06",
+    "debit": 60.0,
+    "credit": 0.0,
+    "balance": 291.97
+  },
+  {
+    "date": "2023-12-07",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-08",
+    "debit": 0.0,
+    "credit": 15000.0,
+    "balance": 15291.97
+  },
+  {
+    "date": "2023-12-09",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-09",
+    "debit": 15048.0,
+    "credit": 0.0,
+    "balance": 243.97
+  },
+  {
+    "date": "2023-12-10",
+    "category": "Misc",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-10",
+    "debit": 0.0,
+    "credit": 4000.0,
+    "balance": 4243.97
+  },
+  {
+    "date": "2023-12-10",
+    "category": "Transport",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-10",
+    "debit": 3062.0,
+    "credit": 0.0,
+    "balance": 1181.97
+  },
+  {
+    "date": "2023-12-10",
+    "category": "Misc",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-10",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 181.97
+  },
+  {
+    "date": "2023-12-10",
+    "category": "Misc",
+    "transactionId": "3.34E+11",
+    "settlementDate": "2023-12-10",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1181.97
+  },
+  {
+    "date": "2023-12-11",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-11",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1151.97
+  },
+  {
+    "date": "2023-12-11",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-11",
+    "debit": 10.0,
+    "credit": 0.0,
+    "balance": 1141.97
+  },
+  {
+    "date": "2023-12-11",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-11",
+    "debit": 30.0,
+    "credit": 0.0,
+    "balance": 1111.97
+  },
+  {
+    "date": "2023-12-11",
+    "category": "Misc",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-11",
+    "debit": 220.0,
+    "credit": 0.0,
+    "balance": 891.97
+  },
+  {
+    "date": "2023-12-11",
+    "category": "Food",
+    "transactionId": "3.35E+11",
+    "settlementDate": "2023-12-11",
+    "debit": 169.29,
+    "credit": 0.0,
+    "balance": 722.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 25.0,
+    "credit": 0.0,
+    "balance": 697.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 657.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 20.0,
+    "credit": 0.0,
+    "balance": 637.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Misc",
+    "transactionId": "3.35E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 530.0,
+    "credit": 0.0,
+    "balance": 107.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 35.0,
+    "credit": 0.0,
+    "balance": 72.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Misc",
+    "transactionId": "3.35E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 0.0,
+    "credit": 1718.0,
+    "balance": 1790.68
+  },
+  {
+    "date": "2023-12-12",
+    "category": "Transport",
+    "transactionId": "3.35E+11",
+    "settlementDate": "2023-12-12",
+    "debit": 1718.0,
+    "credit": 0.0,
+    "balance": 72.68
+  },
+  {
+    "date": "2023-12-13",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-13",
+    "debit": 26.0,
+    "credit": 0.0,
+    "balance": 46.68
+  },
+  {
+    "date": "2023-12-13",
+    "category": "Food",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-13",
+    "debit": 15.0,
+    "credit": 0.0,
+    "balance": 31.68
+  },
+  {
+    "date": "2023-12-13",
+    "category": "Transport",
+    "transactionId": "3.35E+11",
+    "settlementDate": "2023-12-13",
+    "debit": 0.0,
+    "credit": 1718.0,
+    "balance": 1749.68
+  },
+  {
+    "date": "2023-12-13",
+    "category": "Misc",
+    "transactionId": "3.71E+11",
+    "settlementDate": "2023-12-13",
+    "debit": 1718.0,
+    "credit": 0.0,
+    "balance": 31.68
+  },
+  {
+    "date": "2024-01-01",
+    "category": "Misc",
+    "transactionId": "0",
+    "settlementDate": "2023-12-31",
+    "debit": 0.0,
+    "credit": 8.0,
+    "balance": 39.68
+  }
+]
