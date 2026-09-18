@@ -23,7 +23,7 @@ export default function InsightsPage() {
     setLoading(true);
     setError(null);
     try {
-      const data = await vanikApi.getInsights("m-001");
+      const data = await vanikApi.getInsights(vanikApi.getMerchantId());
       setInsights(data);
     } catch (err) {
       setError("Diagnostic insights are temporarily unavailable.");

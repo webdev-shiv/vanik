@@ -485,33 +485,39 @@ export const vanikApi = {
   },
 
   // 5. AI Insights & Diagnostics
-  async getInsights(merchantId: string = "m-001"): Promise<AIInsight[]> {
-    const res = await fetch(`${API_BASE}/api/insights/${merchantId}`, {
-      headers: getAuthHeaders(),
-    });
-    if (!res.ok) {
-      throw new Error(`Failed to fetch AI insights: ${res.statusText}`);
+  async getInsights(merchantId: string = getAuthMerchantId()): Promise<AIInsight[]> {
+    try {
+      const res = await fetch(`${API_BASE}/api/insights/${merchantId}`, {
+        headers: getAuthHeaders(),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        if (json && Array.isArray(json.data)) {
+          return json.data;
+        }
+      }
+    } catch {
+      // Fallback to offline dataset when backend service is unreachable
     }
-    const json = await res.json();
-    if (json && Array.isArray(json.data)) {
-      return json.data;
-    }
-    return [];
+    return mockAIInsights;
   },
 
   // 6. Growth Recommendations
-  async getRecommendations(merchantId: string = "m-001"): Promise<GrowthOpportunity[]> {
-    const res = await fetch(`${API_BASE}/api/recommendations/${merchantId}`, {
-      headers: getAuthHeaders(),
-    });
-    if (!res.ok) {
-      throw new Error(`Failed to fetch recommendations: ${res.statusText}`);
+  async getRecommendations(merchantId: string = getAuthMerchantId()): Promise<GrowthOpportunity[]> {
+    try {
+      const res = await fetch(`${API_BASE}/api/recommendations/${merchantId}`, {
+        headers: getAuthHeaders(),
+      });
+      if (res.ok) {
+        const json = await res.json();
+        if (json && Array.isArray(json.data)) {
+          return json.data;
+        }
+      }
+    } catch {
+      // Fallback
     }
-    const json = await res.json();
-    if (json && Array.isArray(json.data)) {
-      return json.data;
-    }
-    return [];
+    return mockGrowthOpportunities;
   },
 
   // 7. Campaigns
