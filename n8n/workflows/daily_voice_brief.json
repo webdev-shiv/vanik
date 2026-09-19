@@ -1,0 +1,105 @@
+{
+  "name": "VANIK - Daily Business Voice Brief Automation",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "30 22 * * *"
+            }
+          ]
+        }
+      },
+      "id": "node-schedule-1030pm",
+      "name": "Store Closing Schedule (10:30 PM IST)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "daily-voice-brief",
+        "options": {}
+      },
+      "id": "node-webhook-brief",
+      "name": "Manual / Closing Trigger Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [240, 480]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://backend:8080/api/daily-report/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"m-001\",\n  \"language\": \"hinglish\",\n  \"report_length\": \"standard\"\n}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "node-call-generate-brief",
+      "name": "Generate Daily Business Report",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [520, 390]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://backend:8080/api/memory/event",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"m-001\",\n  \"event_type\": \"INSIGHT_GENERATED\",\n  \"payload\": {\n    \"report_id\": \"{{ $json.id }}\",\n    \"revenue\": {{ $json.revenue }},\n    \"transactions\": {{ $json.transactions }},\n    \"profit\": {{ $json.profit }},\n    \"voice_script\": \"{{ $json.voice_script }}\"\n  }\n}",
+        "options": {}
+      },
+      "id": "node-sync-memory",
+      "name": "Record in Cognee Knowledge Graph",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [780, 390]
+    }
+  ],
+  "connections": {
+    "Store Closing Schedule (10:30 PM IST)": {
+      "main": [
+        [
+          {
+            "node": "Generate Daily Business Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Manual / Closing Trigger Webhook": {
+      "main": [
+        [
+          {
+            "node": "Generate Daily Business Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Daily Business Report": {
+      "main": [
+        [
+          {
+            "node": "Record in Cognee Knowledge Graph",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

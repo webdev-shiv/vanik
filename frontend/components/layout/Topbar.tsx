@@ -33,6 +33,7 @@ import { cn } from "@/lib/utils";
 import { LogoutModal } from "./LogoutModal";
 import { ThemeSwitcher } from "@/components/ui/ThemeSwitcher";
 import { useTheme } from "@/lib/theme";
+import { VoiceInputButton } from "@/components/ui/VoiceInputButton";
 
 interface SearchCatalogItem {
   id: string;
@@ -104,7 +105,7 @@ export const Topbar: React.FC<TopbarProps> = ({
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const [isLogoutModalOpen, setIsLogoutModalOpen] = useState(false);
-  const [selectedDate, setSelectedDate] = useState("Last 30 Days");
+  const [selectedDate, setSelectedDate] = useState("Today");
   const [notifications, setNotifications] = useState(mockNotifications);
 
   // Google-style Search Autocomplete State
@@ -122,6 +123,17 @@ export const Topbar: React.FC<TopbarProps> = ({
 
   useEffect(() => {
     let isMounted = true;
+    if (typeof window !== "undefined") {
+      const savedDate = localStorage.getItem("vanik_selected_date_label");
+      if (savedDate) setSelectedDate(savedDate);
+    }
+
+    const handleTfChange = (e: any) => {
+      if (e.detail?.label) {
+        setSelectedDate(e.detail.label);
+      }
+    };
+    window.addEventListener("vanik_timeframe_change", handleTfChange);
     vanikApi.getMerchantProfile()
       .then((profile) => {
         if (isMounted && profile) {
@@ -136,6 +148,7 @@ export const Topbar: React.FC<TopbarProps> = ({
       .catch(() => {});
     return () => {
       isMounted = false;
+      window.removeEventListener("vanik_timeframe_change", handleTfChange);
     };
   }, []);
 
@@ -271,19 +284,31 @@ export const Topbar: React.FC<TopbarProps> = ({
                 }}
                 onKeyDown={handleSearchKeyDown}
                 placeholder="Search customers, products, campaigns, insights..."
-                className="w-full bg-navy-50 dark:bg-[#0c162d] text-navy-900 dark:text-white placeholder:text-navy-400 dark:placeholder:text-slate-500 text-xs font-medium rounded-full border border-navy-200/80 dark:border-navy-700 pl-9 pr-9 py-2 outline-none transition-all duration-150 focus:bg-white dark:focus:bg-[#111c38] focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 shadow-xs"
+                className="w-full bg-navy-50 dark:bg-[#0c162d] text-navy-900 dark:text-white placeholder:text-navy-400 dark:placeholder:text-slate-500 text-xs font-medium rounded-full border border-navy-200/80 dark:border-navy-700 pl-9 pr-16 py-2 outline-none transition-all duration-150 focus:bg-white dark:focus:bg-[#111c38] focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 shadow-xs"
               />
-              {searchQuery && (
-                <button
-                  onClick={() => {
-                    setSearchQuery("");
-                    setSelectedIndex(0);
+              <div className="absolute right-2 top-1/2 -translate-y-1/2 flex items-center gap-1.5">
+                {searchQuery && (
+                  <button
+                    onClick={() => {
+                      setSearchQuery("");
+                      setSelectedIndex(0);
+                    }}
+                    className="p-0.5 text-navy-400 hover:text-navy-700 dark:hover:text-white rounded-full transition-colors"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
+                <VoiceInputButton
+                  onTranscript={(transcript) => {
+                    setSearchQuery(transcript);
+                    setIsSearchFocused(true);
                   }}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 p-0.5 text-navy-400 hover:text-navy-700 dark:hover:text-white rounded-full"
-                >
-                  <X className="w-3.5 h-3.5" />
-                </button>
-              )}
+                  tooltipLabel="Search by voice"
+                  size="sm"
+                  variant="ghost"
+                  badgePosition="bottom"
+                />
+              </div>
             </div>
 
             {/* Google-Style Real-time Suggestions Floating Popover Card */}

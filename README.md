@@ -1,7 +1,7 @@
-# Merchant Growth AI 🚀
+# Merchant Growth AI (VANIK) 🚀
 
-> **AI-Powered Merchant Intelligence Platform**  
-> Turning transaction & Soundbox telemetry into actionable, explainable growth decisions for Indian merchants.
+> **AI-Powered Merchant Intelligence, Telemetry & POS Platform**  
+> Turning transaction & Soundbox telemetry into actionable, explainable growth decisions and real-time billing for Indian merchants.
 
 ---
 
@@ -9,14 +9,72 @@
 
 Millions of small and medium merchants across India rely on daily digital payments via **Paytm QR codes, Soundboxes, and Card POS terminals**. However, raw transaction volume numbers do not tell a merchant **why** sales surged or dipped, **which** customers are slipping away, or **what exact business move** they should execute to grow profits.
 
-**Merchant Growth AI** closes this gap. It continuously digests transaction telemetry, uncovers root causes behind revenue leaks (e.g. *"Evening footfall collapsed 31% due to 312 dormant regulars"*), simulates microeconomic business interventions (e.g. *₹49 Evening Combo*), recommends high-ROI moves with 1-click launch, and monitors closed-loop campaign results.
+**Merchant Growth AI (VANIK)** bridges this gap. It continuously digests transaction telemetry, uncovers root causes behind revenue leaks (e.g. *"Evening footfall collapsed 31% due to 312 dormant regulars"*), simulates microeconomic business interventions (e.g. *₹49 Evening Combo*), recommends high-ROI moves with 1-click launch, monitors closed-loop campaign results, and provides a **full Point-of-Sale (POS) terminal with Soundbox audio and Voice AI assistance**.
 
 ---
 
-## 2. Core Product Flow
+## 2. What's New: Recent Platform Features & Upgrades ✨
+
+### 🧠 1. VANIK Memory: Cognee Knowledge Graph & Episodic Engine (`/memory`)
+- **Explainable Merchant Memory**: Integrates **Cognee** (open-source AI memory framework) to build an explainable, multi-tenant knowledge graph per merchant connecting `Merchant → Product → Time Slot → Customer Segment → Campaign → Outcome`.
+- **Source Provenance Guarantee**: Every memory-backed answer returns its source nodes and provenance ("Why am I saying this?"), strictly citing figures computed by the ML layer without AI hallucinations.
+- **Interactive Knowledge Graph Canvas**: Recharts-independent pure SVG radial & topological graph visualizer with zoom, pan, entity filtering (`Product`, `Time Slot`, `Segment`, `Campaign`, `Insight`), and an interactive Node Inspector panel.
+- **Sidebar Memory Glimpse**: Animated mini-graph SVG thumbnail with live counters (1,284 memories, 412 connections) and rotating historical insights with hover provenance.
+- **Ask Memory with Voice**: Voice-enabled query box with speech-to-text input (`VoiceInputButton`) and spoken answer readout (`VoiceReadoutButton`).
+- **Episodic Event Streaming**: Non-blocking asynchronous event capture on bill creation (`BILL_COMPLETED`) and campaign launches/outcomes (`CAMPAIGN_LAUNCHED`, `CAMPAIGN_RESULT`).
+- **Graceful Offline Fallback**: Degrades seamlessly to cached graph topology when backend or AI service is offline with banner *"Memory offline – showing cached insights"*.
+
+### 🧾 2. Real-Time POS Billing & Thermal Invoice Generator (`/billing`)
+- **Quick-Add POS Terminal**: Rapid item catalog with Indian merchant presets (Special Masala Chai, Bun Maska Toast, Samosa, Deluxe Thali, Paneer Butter Masala) plus custom menu item creation.
+- **Cart & Order Customization**: Live quantity controls, Dine-in / Takeaway / Delivery / Express POS order types, table numbers, customer phone & name tagging.
+- **Omni-Channel Payments**: 
+  - Dynamic **UPI QR Code** generation for real-time mobile scanning.
+  - **Paytm Card POS Terminal** integration simulation.
+  - **Cash** mode with an instant balance & change calculator.
+- **Soundbox Voice Announcement Simulator**: Speaks the iconic soundbox confirmation (*"Paytm par ₹[amount] prapt hue"*) via live Web Speech audio synthesis.
+- **Printable Thermal Receipt**: Generates formatted 80mm receipts with QR verification codes, tax/GST breakdown, and 1-click print modal.
+- **Instant Bi-Directional Ledger Sync**: Every billed order is instantly recorded in the local dataset and posted to the Spring Boot `/api/transactions` endpoint, updating dashboard KPIs and transaction history in real time.
+
+### 🎙️ 2. Full Voice Interaction Suite (STT & TTS)
+- **Speech-to-Text (`VoiceInputButton`)**:
+  - Voice-enabled **Global Search** in the Topbar.
+  - Voice-enabled **Transaction Ledger Search** to look up customers or receipt IDs hands-free.
+  - Voice-dictated queries in **VANIK Saathi AI Copilot**.
+  - Animated acoustic ring pulses with browser Web Speech Recognition fallback.
+- **Text-to-Speech (`VoiceReadoutButton`)**:
+  - Integrated into **AI Copilot chat messages**.
+  - Merchants can tap the speaker icon to listen to AI root-cause diagnoses and growth recommendations read aloud in natural spoken audio.
+
+### ⚡ 3. Java Spring Boot Transaction REST API
+- **New Transaction Controller**: `POST /api/transactions` and `POST /api/v1/transactions` for idempotent bill recording.
+- **Idempotency & Safety**: Prevents duplicate entries using bill/receipt IDs and ensures deterministic database writes.
+- **Automated Channel Mapping**: Maps payment methods to channels (`SOUNDBOX`, `OFFLINE_STORE`, `POS_TERMINAL`) with Soundbox announcement status flags.
+
+### 📊 4. 399-Row Benchmark Dataset & SQL Migration Engine
+- **Authentic Telemetry**: Embedded 399-row merchant transaction dataset (`user_transactions.json` and `user_transactions_schema_data.sql`).
+- **Dynamic Timeframe Engine**: Instant financial KPI calculation across **Day, Month, and Year** timeframes with automatic month/day trend clustering and category attribution (Food, Rent, Misc, Bills, Transport, Salary).
+
+### 🌐 5. Multilingual Localization (English, Hindi, Punjabi)
+- First-class regional language support for Indian merchants:
+  - **English**
+  - **Hindi (हिंदी)**
+  - **Punjabi (ਪੰਜਾਬੀ)**
+- Instant language switcher in Settings and Topbar with persistent preferences.
+
+### 🌓 6. High-Contrast Dark & Light Mode
+- Complete theme support tailored for high sunlight visibility in physical shops as well as low-light evening environments.
+- **Sliding Sun & Half-Moon animated theme switcher** in the Topbar with persistent `localStorage` preference.
+
+### 🔐 7. Dedicated Authentication Flow
+- Paytm-styled **Sign In (`/login`)** and **Sign Up (`/signup`)** pages integrated with **Supabase Authenticator**.
+- Session state management, secure routing, and a clean **Sign-Out confirmation modal window**.
+
+---
+
+## 3. Core Product Flow
 
 ```
-Merchant Data (Soundbox & QR stream)
+Merchant Data (Soundbox, QR & POS Stream)
        ↓
     Analyze (Revenue, ticket size, hourly heatmaps, RFM cohorts)
        ↓
@@ -35,46 +93,50 @@ Continuous Improvement (AI Learning: Evening response strong; test weekend platt
 
 ---
 
-## 3. Platform Architecture
+## 4. Platform Architecture
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│              Frontend (React 19 + TypeScript)              │
-│       Vite, Tailwind CSS, Recharts, 12-Step Demo Tour      │
+│          Frontend (Next.js 14 App Router + React 18)       │
+│  Tailwind CSS, Recharts, Web Speech STT/TTS, POS Terminal  │
+│  Routes: /billing, /transactions, /memory, /copilot...     │
+│  Sidebar: "NEW" Memory Nav + Live Graph Glimpse Card       │
 └─────────────────────────────┬──────────────────────────────┘
                               │ HTTP / JSON REST
                               ▼
 ┌────────────────────────────────────────────────────────────┐
 │             Backend (Java 21 + Spring Boot 3)              │
-│      Spring Data JPA, WebClient, Resilient Circuit Logic   │
+│  Spring Data JPA, WebClient, MemoryController, Auth        │
+│  Endpoints: /api/transactions, /api/memory, /api/ai...     │
 └──────────────┬──────────────────────────────┬──────────────┘
                │                              │
        Reactive WebClient                     │ JPA / SQL
                │                              ▼
                ▼               ┌─────────────────────────────┐
 ┌────────────────────────────┐ │   Database (PostgreSQL /    │
-│  AI Service (Python 3.14   │ │          Supabase)          │
+│  AI Service (Python 3.10+  │ │          Supabase)          │
 │        + FastAPI)          │ │  Merchants, Customers,      │
-├────────────────────────────┤ │  Transactions, Campaigns    │
+├────────────────────────────┤ │  Transactions, 399-Row Seed │
 │ ML Layer (Pandas / Sklearn)│ └─────────────────────────────┘
 │ - RFM Segmentation         │                ▲
 │ - Slump / Anomaly Detector │                │
 │ - Microeconomic Simulator  │                │ Webhooks &
 ├────────────────────────────┤                │ Orchestration
-│ LLM Layer (OpenAI JSON)    │                ▼
-│ - Root-Cause Narratives    │ ┌─────────────────────────────┐
-│ - AI Growth Copilot Chat   │ │     n8n Workflow Layer      │
-└────────────────────────────┘ │  - Hourly Slump Monitor     │
-                               │  - Campaign Execution Hook  │
-                               │  - Closed-Loop Evaluator    │
-                               └─────────────────────────────┘
+│ 🧠 Cognee Memory Engine    │                ▼
+│ - Knowledge Graph (Nodes)  │ ┌─────────────────────────────┐
+│ - Episodic Recall & Sources│ │     n8n Workflow Layer      │
+├────────────────────────────┤ │  - Hourly Slump Monitor     │
+│ LLM Layer (OpenAI JSON)    │ │  - Campaign Execution Hook  │
+│ - Grounded Copilot Chat    │ │  - Closed-Loop Evaluator    │
+│ - Root-Cause Narratives    │ │  - Nightly Memory Sync      │
+└────────────────────────────┘ └─────────────────────────────┘
 ```
 
 ---
 
-## 4. Key Engineering Principles & Data Rules
+## 5. Key Engineering Principles & Data Rules
 
-### 4.1 Strict Separation of ML & LLM
+### 5.1 Strict Separation of ML & LLM
 - **Machine Learning (Python / Pandas / Scikit-learn)** computes all **ground truth numerical metrics**:
   - Exact drop percentages (e.g. -31.0% between 5:00 PM and 8:30 PM).
   - RFM customer cohort counts (245 Loyal, 380 Regular, 147 At-Risk, 312 Inactive, 164 New).
@@ -82,140 +144,204 @@ Continuous Improvement (AI Learning: Evening response strong; test weekend platt
 - **Large Language Model (OpenAI API via structured JSON)** is strictly restricted to **narrative translation and merchant conversational assistance**.
 - The LLM **never invents, alters, or hallucinates financial or analytical numbers**.
 
-### 4.2 Important Data Compliance Rule
-- We do **not** have or claim access to private Paytm merchant transaction records for this prototype.
-- The platform operates on **realistic synthetic Indian merchant telemetry** matching authentic Indian merchant profiles (tea stalls, sweet shops, cafes), realistic Indian Rupee price levels (₹20 to ₹500), masked phone numbers (`+91 98110 •••••`), and operational temporal patterns.
-- The data models and REST endpoints are decoupled to allow direct drop-in integration with authorized Paytm Open APIs and Soundbox webhook streams in the future.
+### 5.2 Realistic Telemetry & Data Compliance
+- Operates on **realistic Indian merchant telemetry** matching authentic merchant profiles (tea stalls, sweet shops, cafes), realistic Indian Rupee price levels (₹20 to ₹500), masked phone numbers (`+91 98110 •••••`), and operational temporal patterns.
+- The data models and REST endpoints are decoupled to allow direct drop-in integration with authorized Paytm Open APIs and Soundbox webhook streams.
 
 ---
 
-## 5. Directory Structure
+## 6. Directory Structure
 
 ```
-paytm_hack/complete/
-├── frontend/                     # React + TypeScript + Vite + Tailwind + Recharts
-│   ├── src/
-│   │   ├── components/           # Navbar, Sidebar, TourBanner, Charts, Cards
-│   │   ├── context/              # AppContext & DemoTour state machine
-│   │   ├── pages/                # 11 Platform Pages (Dashboard, Why, Simulator, etc.)
-│   │   ├── services/             # API client with dual Spring Boot / fallback mode
-│   │   └── types/                # Canonical TypeScript domain interfaces
+vanik/
+├── frontend/                     # Next.js 14 App Router + React 18 + Tailwind
+│   ├── app/                      # Next.js App Router Pages
+│   │   ├── page.tsx              # Executive Merchant Dashboard
+│   │   ├── billing/              # Real-Time POS Billing & Invoice Generator
+│   │   ├── transactions/         # Live Ledger with Voice Search & Dynamic Filters
+│   │   ├── analytics/            # Deep-dive charts & product telemetry
+│   │   ├── insights/             # Root-Cause "WHY?" Engine
+│   │   ├── simulator/            # Interactive What-If Elasticity Simulator
+│   │   ├── recommendations/      # AI-Ranked Growth Recommendations
+│   │   ├── campaigns/            # Live Campaign Monitoring & Telemetry
+│   │   ├── customers/            # RFM Cohort Segmentation
+│   │   ├── memory/               # 🧠 Flagship VANIK Memory Graph Canvas & Timeline
+│   │   ├── copilot/              # VANIK Saathi AI Copilot with Voice STT/TTS & Memory Citations
+│   │   ├── npci/                 # Macro NPCI & UPI Ecosystem Trends
+│   │   ├── settings/             # Language & Merchant Profile Settings
+│   │   ├── login/                # Paytm-styled Login with Supabase
+│   │   └── signup/               # Merchant Account Registration
+│   ├── components/               # Modular UI Components
+│   │   ├── copilot/              # ChatWindow, ChatMessage (with TTS Readout & Memory chips)
+│   │   ├── memory/               # MemoryGraphCanvas (interactive SVG graph)
+│   │   ├── layout/               # Sidebar (NEW badge & Memory Glimpse card), Topbar
+│   │   └── ui/                   # VoiceInputButton, VoiceReadoutButton, Modals, Badges
+│   ├── lib/                      # Core business logic & dataset helpers
+│   │   ├── api.ts                # REST API client with offline fallback & memory client
+│   │   ├── memory-mock.ts        # Offline fallback graph nodes, edges & timeline
+│   │   ├── user-dataset.ts       # Dynamic 399-row dataset aggregation engine
+│   │   ├── user_transactions.json# Real transaction dataset
+│   │   └── theme.tsx             # Global light/dark theme context
 │   ├── package.json
-│   ├── Dockerfile
-│   └── vite.config.ts
+│   └── tailwind.config.ts
 │
 ├── backend/                      # Java 21 + Spring Boot 3 REST API Service
 │   ├── src/main/java/com/merchantgrowth/
 │   │   ├── MerchantGrowthApplication.java
-│   │   ├── config/               # CorsConfig, WebClientConfig
-│   │   ├── controller/           # Merchant, Analytics, Ai, Campaign, Customer
-│   │   ├── dto/                  # ApiResponse<T>, DTOs
-│   │   ├── entity/               # Merchant, Customer, Transaction, Campaign JPA Entities
-│   │   ├── repository/           # Spring Data JPA Repositories
-│   │   └── service/              # Business services & DataInitializerService
+│   │   ├── controller/           # TransactionController, MemoryController, Analytics, Ai
+│   │   ├── dto/                  # CreateTransactionDto, MemoryDto, ChatMessageDto
+│   │   ├── entity/               # TransactionEntity, Merchant, Customer
+│   │   ├── repository/           # TransactionRepository (Spring Data JPA)
+│   │   ├── service/              # TransactionService, MemoryService, DataInitializerService
+│   │   └── config/               # CorsConfig, WebClientConfig
 │   ├── src/main/resources/
-│   │   └── application.yml       # H2 in-memory & PostgreSQL/Supabase profile
+│   │   └── application.yml       # In-memory H2 & Supabase/PostgreSQL profiles
 │   ├── pom.xml
 │   └── Dockerfile
 │
-├── ai-service/                   # Python 3 + FastAPI ML & LLM Microservice
+├── ai-service/                   # Python 3 + FastAPI ML & Cognee Memory Microservice
 │   ├── app/
 │   │   ├── main.py               # FastAPI entrypoint (Port 8000)
-│   │   ├── schemas.py            # Pydantic request/response schemas
+│   │   ├── api/
+│   │   │   ├── routes.py         # Root router
+│   │   │   └── memory_routes.py  # /memory/ingest, /event, /recall, /graph, /stats
+│   │   ├── schemas/              # Pydantic request/response schemas (memory.py, copilot.py)
+│   │   ├── memory/
+│   │   │   └── cognee_memory.py  # Cognee Knowledge Graph Engine & Episodic Recall
 │   │   ├── ml/
 │   │   │   ├── segmentation.py   # RFM clustering model
 │   │   │   ├── anomaly.py        # 5-8 PM slump detector
 │   │   │   └── simulator.py      # What-If elasticity math
 │   │   └── llm/
-│   │       └── copilot.py        # Structured AI Growth Copilot reasoning
-│   ├── requirements.txt
+│   │       └── copilot.py        # Memory-grounded AI Growth Copilot reasoning
+│   ├── requirements.txt          # includes cognee
 │   └── Dockerfile
 │
-├── database/                     # Supabase / PostgreSQL Migrations & Data Engine
-│   ├── schema.sql                # Complete DDL schema
-│   ├── seed_synthetic_data.py    # Realistic synthetic Indian merchant data generator
-│   └── seed_data.sql             # Benchmark seed dataset
+├── database/                     # PostgreSQL / Supabase Migrations & Seeds
+│   ├── user_transactions_schema_data.sql # 399-row dataset DDL + INSERTs
+│   ├── schema.sql                # Complete platform DDL schema
+│   ├── seed_data.sql             # Benchmark seed dataset
+│   └── seed_synthetic_data.py    # Synthetic telemetry generator
 │
 ├── n8n/                          # n8n Workflow Automation Layer
-│   ├── workflows/
-│   │   ├── 01_hourly_slump_monitor.json
-│   │   ├── 02_campaign_execution_trigger.json
-│   │   └── 03_closed_loop_learning.json
-│   └── README.md
+│   └── workflows/
+│       ├── slump_detector.json   # 5-8 PM slump alert
+│       ├── campaign_runner.json  # Auto-execution webhook
+│       └── memory_sync.json      # Nightly merchant memory ingestion & closed-loop sync
 │
-├── docker-compose.yml            # Unified multi-service orchestration
+├── docker-compose.yml            # Multi-service orchestration + cognee_data volume
 └── README.md                     # Master documentation
 ```
 
 ---
 
-## 6. How to Run Each Service
+## 7. How to Run Each Service
 
 ### Prerequisites
+- **Node.js v20+** & **npm**
 - **Java 21** + **Maven 3.9+**
-- **Python 3.10+** (tested on Python 3.14)
-- **Node.js v20+**
+- **Python 3.10+**
+- (Optional) **Docker** & **Docker Compose**
 
 ---
 
-### Step 1: Database Setup
+### ⚡ Quick Start: One Command (Recommended)
+You can launch both the **FastAPI AI & Cognee Service** and the **Next.js Frontend** simultaneously in a single terminal:
+
 ```bash
-cd database
-python seed_synthetic_data.py
+# In the repository root directory (d:\vanik\vanik):
+npm run dev
+# OR:
+.\start-all.bat
+# OR in PowerShell:
+.\start-all.ps1
 ```
-*Generates fresh `seed_data.json` and `seed_data.sql` with 1,248 transactions totaling ₹2,84,500.*
+*Starts Frontend on `http://localhost:3000` and AI Service on `http://localhost:8000` with unified, colored logs.*
 
 ---
 
-### Step 2: Start Python FastAPI AI/ML Service
-```bash
-cd ai-service
-pip install -r requirements.txt
-uvicorn app.main:app --port 8000 --reload
-```
-*Runs on `http://localhost:8000`. OpenAPI docs available at `http://localhost:8000/docs`.*
-
----
-
-### Step 3: Start Java Spring Boot Backend
-```bash
-cd backend
-mvn clean spring-boot:run
-```
-*Runs on `http://localhost:8080`. Seeds in-memory database automatically with Sharma Tea Corner benchmark data.*
-
----
-
-### Step 4: Start React Frontend
+### Step 1: Start Next.js Frontend Individually
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
-*Opens at `http://localhost:5173`. Connects to Spring Boot backend at `http://localhost:8080/api/v1`.*
+*Runs on `http://localhost:3000`. Connects to Spring Boot backend at `http://localhost:8080` (or falls back seamlessly to the local dataset engine if the backend is offline).*
 
 ---
 
-### Alternative: Run Everything with Docker Compose
+### Step 2: Start Java Spring Boot Backend
 ```bash
-docker-compose up --build
+cd backend
+mvn clean spring-boot:run
+```
+*Runs on `http://localhost:8080`. Automatically boots H2 database (or PostgreSQL if configured) with pre-seeded merchant accounts and exposes `/api/transactions`.*
+
+---
+
+### Step 3: Start Python FastAPI AI/ML & Cognee Service
+```bash
+cd ai-service
+pip install -r requirements.txt
+# Set optional Cognee / LLM environment variables (defaults to offline/local storage if unset)
+# Windows PowerShell:
+$env:LLM_API_KEY="your-key-here"
+$env:COGNEE_STORAGE_DIR="./cognee_data"
+# Or bash:
+# export LLM_API_KEY="your-key-here"
+# export COGNEE_STORAGE_DIR="./cognee_data"
+uvicorn app.main:app --port 8000 --reload
+```
+*Runs on `http://localhost:8000`. Swagger API docs available at `http://localhost:8000/docs`. Pre-seeds and serves Cognee Knowledge Graph endpoints at `/memory/*` and `/ai/memory/*`.*
+
+---
+
+### Step 4 (Optional): Database Migrations (Supabase / PostgreSQL)
+To load the benchmark 399-row dataset directly into your PostgreSQL or Supabase instance:
+```bash
+psql -h <host> -U <user> -d <dbname> -f database/user_transactions_schema_data.sql
 ```
 
 ---
 
-## 7. 12-Step Guided Hackathon Demo Tour
+### Step 5 (Alternative): Run Entire Suite with Docker
+```bash
+docker-compose up --build
+```
+*Persistent volume `cognee_data` automatically mounts to `/app/cognee_data` inside `ai-service` to preserve knowledge graph memory across restarts.*
 
-The frontend includes a built-in **12-Step Guided Demo Flow** (accessible via the top banner on any page):
+---
 
-1. **Merchant Authentication**: 1-click login into Sharma Tea Corner (QSR, Connaught Place).
-2. **Dashboard Baseline Alert**: High-level metrics surface: Gross revenue ₹2.84L, Repeat customers ↓ 14%, Sales slump alert.
-3. **AI Root-Cause Trigger**: Click **[See Why]** to trace the root cause.
-4. **Root-Cause "WHY?" Engine**: Interactive tree: Sales ↓ 11.4% $\rightarrow$ Evening txns ↓ 31% (62% contribution) $\rightarrow$ Inactive regulars (+312 dormant).
-5. **Interactive What-If Simulator**: Experiment with offer discount (₹49), duration (7 days), and customer audience (312 regulars).
-6. **AI Recommendation Selected**: AI scores and highlights the **₹49 Evening Combo** (+14.2% uplift, 9.6x ROI).
-7. **Recommendations Hub**: Merchant reviews impact, budget cost (₹4,200), and priority badges.
-8. **Merchant Approval & Launch**: Merchant clicks **[Approve & Launch]**. Confetti animation confirms deployment.
-9. **Live Campaign Monitoring**: Campaign enters `RUNNING` status with live budget burn and soundbox telemetry.
-10. **Campaign Performance Telemetry**: Post-campaign comparison: Expected impact (+25%) vs Actual impact (+27.2%). Revenue rose from ₹2.84L to ₹3.21L.
-11. **AI Closed-Loop Learning**: AI analyzes hour-by-hour lift and recommends: *"Test Weekend Family Platter next"*.
-12. **AI Growth Copilot**: Ask anything: *"Why are my sales down?"*, *"Which customers should I target?"* with 1-click navigation buttons.
+## 8. Guided Platform Walkthrough
+
+1. **Sign In / Registration**: Navigate to `/login` or `/signup` to authenticate using the Paytm-styled Supabase interface.
+2. **Dashboard Overview**: View live revenue, transaction volume, avg ticket size, repeat customer trends, and hourly heatmaps. Switch timeframes (Day / Month / Year) to observe dynamic KPI re-calculations.
+3. **Voice Search**: Click the microphone icon in the Topbar or Transactions page to search records hands-free.
+4. **Interactive POS Billing (`/billing`)**:
+   - Add items from the quick menu (e.g. Masala Chai, Samosa, Deluxe Thali).
+   - Enter customer name and phone.
+   - Click **Generate UPI QR** to preview a live payment QR code or choose **Cash / POS Card**.
+   - Click **Complete Payment** to hear the authentic **Paytm Soundbox voice announcement**.
+   - Preview and print the 80mm thermal receipt.
+   - Check `/transactions` to verify that the newly generated bill is immediately at the top of the live ledger.
+   - *Behind the scenes, the backend asynchronously registers a `BILL_COMPLETED` memory event with Cognee.*
+5. **🧠 VANIK Memory Knowledge Graph (`/memory`)**:
+   - Look at the sidebar **Memory Glimpse** card: inspect live node counters, connection statistics, and rotating merchant memory summaries.
+   - Click the card or the **Memory** nav item (highlighted with an animated **NEW** badge) to open `/memory`.
+   - Explore the interactive **Knowledge Graph Canvas**: click any node (Product, Time Slot, Segment, Campaign, Insight) to open the side panel and inspect connected business facts.
+   - Use the **Ask Memory** voice/text bar: ask *"What worked last time I ran an evening offer?"* or *"Which customer segments respond best to combos?"* and see citations with source chips.
+   - Review the chronological **Memory Timeline** tracking billings, campaign activations, and cohort migrations.
+   - Click **Sync Now** to trigger an on-demand snapshot ingestion.
+6. **AI Root-Cause "Why?" Engine (`/insights`)**: Follow the interactive decision tree to uncover why evening footfall dropped 31%.
+7. **What-If Simulator (`/simulator`)**: Adjust campaign discount levers, duration, and audience to forecast net revenue uplifts.
+8. **Launch AI Recommendations (`/recommendations`)**: Review AI-scored initiatives (e.g. ₹49 Evening Combo) and click **Approve & Launch**. *Asynchronously registers a `CAMPAIGN_LAUNCHED` event in Cognee.*
+9. **Talk to VANIK Saathi AI Copilot (`/copilot`)**:
+   - Speak your questions using the microphone button.
+   - Observe how the Copilot grounds answers using Cognee memory, rendering a **🧠 Used memory** chip that links directly to source nodes in `/memory`.
+   - Click the audio speaker button on any AI message to hear the advice read aloud.
+10. **Language & Theme Customization**: Switch between **English, Hindi, and Punjabi** in Settings, and toggle **Dark / Light Mode** using the sliding Sun & Moon button in the top bar. All Memory pages, badges, and cards dynamically adapt.
+
+---
+
+## 9. License & Attribution
+Developed for the **Paytm Merchant Intelligence Hackathon**. Built with Next.js, Spring Boot, FastAPI, and Tailwind CSS. All merchant data is realistically synthesized for Indian retail and QSR operations.

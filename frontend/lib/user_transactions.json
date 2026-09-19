@@ -3589,5 +3589,5378 @@
     "debit": 0.0,
     "credit": 8.0,
     "balance": 39.68
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Salary",
+    "transactionId": "CHAS41116573584",
+    "settlementDate": "2026-01-01",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 59800.0
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Misc",
+    "transactionId": "390193349856",
+    "settlementDate": "2026-01-01",
+    "debit": 5000.1,
+    "credit": 0.0,
+    "balance": 54799.9
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Transport",
+    "transactionId": "332334760738",
+    "settlementDate": "2026-01-01",
+    "debit": 300.03,
+    "credit": 0.0,
+    "balance": 54499.87
+  },
+  {
+    "date": "2026-01-01",
+    "category": "Misc",
+    "transactionId": "392313500298",
+    "settlementDate": "2026-01-01",
+    "debit": 1000.6,
+    "credit": 0.0,
+    "balance": 53499.27
+  },
+  {
+    "date": "2026-01-02",
+    "category": "Entertainment",
+    "transactionId": "396398704996",
+    "settlementDate": "2026-01-02",
+    "debit": 699.22,
+    "credit": 0.0,
+    "balance": 52800.05
+  },
+  {
+    "date": "2026-01-02",
+    "category": "Bills",
+    "transactionId": "341849621470",
+    "settlementDate": "2026-01-02",
+    "debit": 150.76,
+    "credit": 0.0,
+    "balance": 52649.29
+  },
+  {
+    "date": "2026-01-02",
+    "category": "Rent",
+    "transactionId": "356266944844",
+    "settlementDate": "2026-01-02",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 45339.29
+  },
+  {
+    "date": "2026-01-03",
+    "category": "Bills",
+    "transactionId": "369203848421",
+    "settlementDate": "2026-01-03",
+    "debit": 1200.1,
+    "credit": 0.0,
+    "balance": 44139.19
+  },
+  {
+    "date": "2026-01-04",
+    "category": "Shopping",
+    "transactionId": "379675770529",
+    "settlementDate": "2026-01-04",
+    "debit": 999.81,
+    "credit": 0.0,
+    "balance": 43139.38
+  },
+  {
+    "date": "2026-01-04",
+    "category": "Food",
+    "transactionId": "358990566476",
+    "settlementDate": "2026-01-04",
+    "debit": 80.08,
+    "credit": 0.0,
+    "balance": 43059.3
+  },
+  {
+    "date": "2026-01-05",
+    "category": "Shopping",
+    "transactionId": "326810026086",
+    "settlementDate": "2026-01-05",
+    "debit": 799.7,
+    "credit": 0.0,
+    "balance": 42259.6
+  },
+  {
+    "date": "2026-01-05",
+    "category": "Misc",
+    "transactionId": "350208449460",
+    "settlementDate": "2026-01-05",
+    "debit": 250.99,
+    "credit": 0.0,
+    "balance": 42008.61
+  },
+  {
+    "date": "2026-01-05",
+    "category": "Rent",
+    "transactionId": "379782560971",
+    "settlementDate": "2026-01-05",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 34698.61
+  },
+  {
+    "date": "2026-01-06",
+    "category": "Misc",
+    "transactionId": "355853573823",
+    "settlementDate": "2026-01-06",
+    "debit": 300.36,
+    "credit": 0.0,
+    "balance": 34398.25
+  },
+  {
+    "date": "2026-01-06",
+    "category": "Entertainment",
+    "transactionId": "342673528321",
+    "settlementDate": "2026-01-06",
+    "debit": 149.61,
+    "credit": 0.0,
+    "balance": 34248.64
+  },
+  {
+    "date": "2026-01-06",
+    "category": "Entertainment",
+    "transactionId": "369389854268",
+    "settlementDate": "2026-01-06",
+    "debit": 299.16,
+    "credit": 0.0,
+    "balance": 33949.48
+  },
+  {
+    "date": "2026-01-06",
+    "category": "Entertainment",
+    "transactionId": "328345938494",
+    "settlementDate": "2026-01-06",
+    "debit": 299.68,
+    "credit": 0.0,
+    "balance": 33649.8
+  },
+  {
+    "date": "2026-01-07",
+    "category": "Bills",
+    "transactionId": "329326541099",
+    "settlementDate": "2026-01-07",
+    "debit": 1200.4,
+    "credit": 0.0,
+    "balance": 32449.4
+  },
+  {
+    "date": "2026-01-07",
+    "category": "Transport",
+    "transactionId": "384524806516",
+    "settlementDate": "2026-01-07",
+    "debit": 200.21,
+    "credit": 0.0,
+    "balance": 32249.19
+  },
+  {
+    "date": "2026-01-07",
+    "category": "Entertainment",
+    "transactionId": "338364814270",
+    "settlementDate": "2026-01-07",
+    "debit": 999.14,
+    "credit": 0.0,
+    "balance": 31250.05
+  },
+  {
+    "date": "2026-01-08",
+    "category": "Transport",
+    "transactionId": "375726563708",
+    "settlementDate": "2026-01-08",
+    "debit": 150.75,
+    "credit": 0.0,
+    "balance": 31099.3
+  },
+  {
+    "date": "2026-01-08",
+    "category": "Rent",
+    "transactionId": "349248532577",
+    "settlementDate": "2026-01-08",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 23789.3
+  },
+  {
+    "date": "2026-01-08",
+    "category": "Transport",
+    "transactionId": "327217734861",
+    "settlementDate": "2026-01-08",
+    "debit": 500.09,
+    "credit": 0.0,
+    "balance": 23289.21
+  },
+  {
+    "date": "2026-01-09",
+    "category": "Misc",
+    "transactionId": "329513140753",
+    "settlementDate": "2026-01-09",
+    "debit": 2000.42,
+    "credit": 0.0,
+    "balance": 21288.79
+  },
+  {
+    "date": "2026-01-10",
+    "category": "Rent",
+    "transactionId": "353694021782",
+    "settlementDate": "2026-01-10",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 13288.79
+  },
+  {
+    "date": "2026-01-10",
+    "category": "Bills",
+    "transactionId": "335831980933",
+    "settlementDate": "2026-01-10",
+    "debit": 150.68,
+    "credit": 0.0,
+    "balance": 13138.11
+  },
+  {
+    "date": "2026-01-11",
+    "category": "Bills",
+    "transactionId": "364219778234",
+    "settlementDate": "2026-01-11",
+    "debit": 800.77,
+    "credit": 0.0,
+    "balance": 12337.34
+  },
+  {
+    "date": "2026-01-11",
+    "category": "Shopping",
+    "transactionId": "321875340444",
+    "settlementDate": "2026-01-11",
+    "debit": 1999.16,
+    "credit": 0.0,
+    "balance": 10338.18
+  },
+  {
+    "date": "2026-01-11",
+    "category": "Entertainment",
+    "transactionId": "343645119047",
+    "settlementDate": "2026-01-11",
+    "debit": 399.97,
+    "credit": 0.0,
+    "balance": 9938.21
+  },
+  {
+    "date": "2026-01-11",
+    "category": "Food",
+    "transactionId": "385753876785",
+    "settlementDate": "2026-01-11",
+    "debit": 150.3,
+    "credit": 0.0,
+    "balance": 9787.91
+  },
+  {
+    "date": "2026-01-12",
+    "category": "Shopping",
+    "transactionId": "388100614068",
+    "settlementDate": "2026-01-12",
+    "debit": 499.54,
+    "credit": 0.0,
+    "balance": 9288.37
+  },
+  {
+    "date": "2026-01-13",
+    "category": "Rent",
+    "transactionId": "335489747629",
+    "settlementDate": "2026-01-13",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 2788.37
+  },
+  {
+    "date": "2026-01-13",
+    "category": "Bills",
+    "transactionId": "351709194872",
+    "settlementDate": "2026-01-13",
+    "debit": 800.24,
+    "credit": 0.0,
+    "balance": 1988.13
+  },
+  {
+    "date": "2026-01-13",
+    "category": "Food",
+    "transactionId": "329916690353",
+    "settlementDate": "2026-01-13",
+    "debit": 30.73,
+    "credit": 0.0,
+    "balance": 1957.4
+  },
+  {
+    "date": "2026-01-14",
+    "category": "Misc",
+    "transactionId": "391277303722",
+    "settlementDate": "2026-01-14",
+    "debit": 150.66,
+    "credit": 0.0,
+    "balance": 1806.74
+  },
+  {
+    "date": "2026-01-15",
+    "category": "Transport",
+    "transactionId": "372821218382",
+    "settlementDate": "2026-01-15",
+    "debit": 100.71,
+    "credit": 0.0,
+    "balance": 1706.03
+  },
+  {
+    "date": "2026-01-16",
+    "category": "Misc",
+    "transactionId": "323731691672",
+    "settlementDate": "2026-01-16",
+    "debit": 200.06,
+    "credit": 0.0,
+    "balance": 1505.97
+  },
+  {
+    "date": "2026-01-16",
+    "category": "Transport",
+    "transactionId": "321176228245",
+    "settlementDate": "2026-01-16",
+    "debit": 100.59,
+    "credit": 0.0,
+    "balance": 1405.38
+  },
+  {
+    "date": "2026-01-17",
+    "category": "Food",
+    "transactionId": "325454794895",
+    "settlementDate": "2026-01-17",
+    "debit": 50.07,
+    "credit": 0.0,
+    "balance": 1355.31
+  },
+  {
+    "date": "2026-01-17",
+    "category": "Food",
+    "transactionId": "383330035022",
+    "settlementDate": "2026-01-17",
+    "debit": 100.24,
+    "credit": 0.0,
+    "balance": 1255.07
+  },
+  {
+    "date": "2026-01-17",
+    "category": "Transport",
+    "transactionId": "394718702544",
+    "settlementDate": "2026-01-17",
+    "debit": 80.72,
+    "credit": 0.0,
+    "balance": 1174.35
+  },
+  {
+    "date": "2026-01-18",
+    "category": "Misc",
+    "transactionId": "MIR4882563071580154",
+    "settlementDate": "2026-01-18",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1674.35
+  },
+  {
+    "date": "2026-01-20",
+    "category": "Entertainment",
+    "transactionId": "364959629660",
+    "settlementDate": "2026-01-20",
+    "debit": 149.06,
+    "credit": 0.0,
+    "balance": 1525.29
+  },
+  {
+    "date": "2026-01-20",
+    "category": "Bills",
+    "transactionId": "345675832441",
+    "settlementDate": "2026-01-20",
+    "debit": 250.25,
+    "credit": 0.0,
+    "balance": 1275.04
+  },
+  {
+    "date": "2026-01-21",
+    "category": "Misc",
+    "transactionId": "391205128697",
+    "settlementDate": "2026-01-21",
+    "debit": 100.44,
+    "credit": 0.0,
+    "balance": 1174.6
+  },
+  {
+    "date": "2026-01-23",
+    "category": "Bills",
+    "transactionId": "351278575192",
+    "settlementDate": "2026-01-23",
+    "debit": 150.97,
+    "credit": 0.0,
+    "balance": 1023.63
+  },
+  {
+    "date": "2026-01-23",
+    "category": "Misc",
+    "transactionId": "MIR4516607489717064",
+    "settlementDate": "2026-01-23",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1523.63
+  },
+  {
+    "date": "2026-01-23",
+    "category": "Entertainment",
+    "transactionId": "358333754555",
+    "settlementDate": "2026-01-23",
+    "debit": 999.15,
+    "credit": 0.0,
+    "balance": 524.48
+  },
+  {
+    "date": "2026-01-24",
+    "category": "Misc",
+    "transactionId": "MIR5294527423392186",
+    "settlementDate": "2026-01-24",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1024.48
+  },
+  {
+    "date": "2026-01-24",
+    "category": "Food",
+    "transactionId": "329825003955",
+    "settlementDate": "2026-01-24",
+    "debit": 40.07,
+    "credit": 0.0,
+    "balance": 984.41
+  },
+  {
+    "date": "2026-01-24",
+    "category": "Bills",
+    "transactionId": "393364371717",
+    "settlementDate": "2026-01-24",
+    "debit": 600.4,
+    "credit": 0.0,
+    "balance": 384.01
+  },
+  {
+    "date": "2026-01-24",
+    "category": "Misc",
+    "transactionId": "MIR3348771304859861",
+    "settlementDate": "2026-01-24",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2384.01
+  },
+  {
+    "date": "2026-01-25",
+    "category": "Salary",
+    "transactionId": "CHAS62680413201",
+    "settlementDate": "2026-01-25",
+    "debit": 0.0,
+    "credit": 30000.0,
+    "balance": 32384.01
+  },
+  {
+    "date": "2026-01-25",
+    "category": "Misc",
+    "transactionId": "379439492674",
+    "settlementDate": "2026-01-25",
+    "debit": 2000.65,
+    "credit": 0.0,
+    "balance": 30383.36
+  },
+  {
+    "date": "2026-01-26",
+    "category": "Food",
+    "transactionId": "393207354053",
+    "settlementDate": "2026-01-26",
+    "debit": 20.46,
+    "credit": 0.0,
+    "balance": 30362.9
+  },
+  {
+    "date": "2026-01-26",
+    "category": "Food",
+    "transactionId": "354242224154",
+    "settlementDate": "2026-01-26",
+    "debit": 100.21,
+    "credit": 0.0,
+    "balance": 30262.69
+  },
+  {
+    "date": "2026-01-26",
+    "category": "Shopping",
+    "transactionId": "368406002884",
+    "settlementDate": "2026-01-26",
+    "debit": 299.88,
+    "credit": 0.0,
+    "balance": 29962.81
+  },
+  {
+    "date": "2026-01-26",
+    "category": "Misc",
+    "transactionId": "359756783995",
+    "settlementDate": "2026-01-26",
+    "debit": 700.83,
+    "credit": 0.0,
+    "balance": 29261.98
+  },
+  {
+    "date": "2026-01-27",
+    "category": "Bills",
+    "transactionId": "391421455482",
+    "settlementDate": "2026-01-27",
+    "debit": 150.67,
+    "credit": 0.0,
+    "balance": 29111.31
+  },
+  {
+    "date": "2026-01-27",
+    "category": "Entertainment",
+    "transactionId": "338383968123",
+    "settlementDate": "2026-01-27",
+    "debit": 149.94,
+    "credit": 0.0,
+    "balance": 28961.37
+  },
+  {
+    "date": "2026-01-27",
+    "category": "Food",
+    "transactionId": "340392431670",
+    "settlementDate": "2026-01-27",
+    "debit": 30.74,
+    "credit": 0.0,
+    "balance": 28930.63
+  },
+  {
+    "date": "2026-01-27",
+    "category": "Shopping",
+    "transactionId": "347838194420",
+    "settlementDate": "2026-01-27",
+    "debit": 799.72,
+    "credit": 0.0,
+    "balance": 28130.91
+  },
+  {
+    "date": "2026-01-27",
+    "category": "Entertainment",
+    "transactionId": "353154544899",
+    "settlementDate": "2026-01-27",
+    "debit": 399.51,
+    "credit": 0.0,
+    "balance": 27731.4
+  },
+  {
+    "date": "2026-01-28",
+    "category": "Rent",
+    "transactionId": "326103807155",
+    "settlementDate": "2026-01-28",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 20421.4
+  },
+  {
+    "date": "2026-01-29",
+    "category": "Misc",
+    "transactionId": "341895890631",
+    "settlementDate": "2026-01-29",
+    "debit": 2000.98,
+    "credit": 0.0,
+    "balance": 18420.42
+  },
+  {
+    "date": "2026-01-29",
+    "category": "Rent",
+    "transactionId": "375702269164",
+    "settlementDate": "2026-01-29",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 10420.42
+  },
+  {
+    "date": "2026-02-01",
+    "category": "Transport",
+    "transactionId": "395693269304",
+    "settlementDate": "2026-02-01",
+    "debit": 40.83,
+    "credit": 0.0,
+    "balance": 10379.59
+  },
+  {
+    "date": "2026-02-01",
+    "category": "Misc",
+    "transactionId": "360491541578",
+    "settlementDate": "2026-02-01",
+    "debit": 500.13,
+    "credit": 0.0,
+    "balance": 9879.46
+  },
+  {
+    "date": "2026-02-01",
+    "category": "Bills",
+    "transactionId": "347832363533",
+    "settlementDate": "2026-02-01",
+    "debit": 150.9,
+    "credit": 0.0,
+    "balance": 9728.56
+  },
+  {
+    "date": "2026-02-01",
+    "category": "Misc",
+    "transactionId": "392536344399",
+    "settlementDate": "2026-02-01",
+    "debit": 2000.1,
+    "credit": 0.0,
+    "balance": 7728.46
+  },
+  {
+    "date": "2026-02-02",
+    "category": "Entertainment",
+    "transactionId": "351274484941",
+    "settlementDate": "2026-02-02",
+    "debit": 199.93,
+    "credit": 0.0,
+    "balance": 7528.53
+  },
+  {
+    "date": "2026-02-02",
+    "category": "Bills",
+    "transactionId": "324292587044",
+    "settlementDate": "2026-02-02",
+    "debit": 400.88,
+    "credit": 0.0,
+    "balance": 7127.65
+  },
+  {
+    "date": "2026-02-02",
+    "category": "Entertainment",
+    "transactionId": "373961393416",
+    "settlementDate": "2026-02-02",
+    "debit": 499.78,
+    "credit": 0.0,
+    "balance": 6627.87
+  },
+  {
+    "date": "2026-02-02",
+    "category": "Entertainment",
+    "transactionId": "334510751046",
+    "settlementDate": "2026-02-02",
+    "debit": 299.27,
+    "credit": 0.0,
+    "balance": 6328.6
+  },
+  {
+    "date": "2026-02-02",
+    "category": "Bills",
+    "transactionId": "349314289692",
+    "settlementDate": "2026-02-02",
+    "debit": 150.86,
+    "credit": 0.0,
+    "balance": 6177.74
+  },
+  {
+    "date": "2026-02-03",
+    "category": "Misc",
+    "transactionId": "MIR1213147299447959",
+    "settlementDate": "2026-02-03",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 7177.74
+  },
+  {
+    "date": "2026-02-03",
+    "category": "Entertainment",
+    "transactionId": "356174539964",
+    "settlementDate": "2026-02-03",
+    "debit": 299.4,
+    "credit": 0.0,
+    "balance": 6878.34
+  },
+  {
+    "date": "2026-02-03",
+    "category": "Bills",
+    "transactionId": "386529151399",
+    "settlementDate": "2026-02-03",
+    "debit": 800.35,
+    "credit": 0.0,
+    "balance": 6077.99
+  },
+  {
+    "date": "2026-02-04",
+    "category": "Bills",
+    "transactionId": "335380477683",
+    "settlementDate": "2026-02-04",
+    "debit": 1200.94,
+    "credit": 0.0,
+    "balance": 4877.05
+  },
+  {
+    "date": "2026-02-04",
+    "category": "Misc",
+    "transactionId": "354141078352",
+    "settlementDate": "2026-02-04",
+    "debit": 1500.96,
+    "credit": 0.0,
+    "balance": 3376.09
+  },
+  {
+    "date": "2026-02-04",
+    "category": "Food",
+    "transactionId": "361568574364",
+    "settlementDate": "2026-02-04",
+    "debit": 120.43,
+    "credit": 0.0,
+    "balance": 3255.66
+  },
+  {
+    "date": "2026-02-05",
+    "category": "Salary",
+    "transactionId": "CHAS91172754729",
+    "settlementDate": "2026-02-05",
+    "debit": 0.0,
+    "credit": 40000.0,
+    "balance": 43255.66
+  },
+  {
+    "date": "2026-02-05",
+    "category": "Misc",
+    "transactionId": "376101815992",
+    "settlementDate": "2026-02-05",
+    "debit": 250.04,
+    "credit": 0.0,
+    "balance": 43005.62
+  },
+  {
+    "date": "2026-02-05",
+    "category": "Transport",
+    "transactionId": "346491079829",
+    "settlementDate": "2026-02-05",
+    "debit": 1200.69,
+    "credit": 0.0,
+    "balance": 41804.93
+  },
+  {
+    "date": "2026-02-05",
+    "category": "Rent",
+    "transactionId": "363769108025",
+    "settlementDate": "2026-02-05",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 35304.93
+  },
+  {
+    "date": "2026-02-06",
+    "category": "Bills",
+    "transactionId": "359644518647",
+    "settlementDate": "2026-02-06",
+    "debit": 250.72,
+    "credit": 0.0,
+    "balance": 35054.21
+  },
+  {
+    "date": "2026-02-06",
+    "category": "Shopping",
+    "transactionId": "358695295870",
+    "settlementDate": "2026-02-06",
+    "debit": 1999.33,
+    "credit": 0.0,
+    "balance": 33054.88
+  },
+  {
+    "date": "2026-02-07",
+    "category": "Rent",
+    "transactionId": "343760904107",
+    "settlementDate": "2026-02-07",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 25595.88
+  },
+  {
+    "date": "2026-02-08",
+    "category": "Rent",
+    "transactionId": "321426283245",
+    "settlementDate": "2026-02-08",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 17595.88
+  },
+  {
+    "date": "2026-02-08",
+    "category": "Shopping",
+    "transactionId": "395751397897",
+    "settlementDate": "2026-02-08",
+    "debit": 799.43,
+    "credit": 0.0,
+    "balance": 16796.45
+  },
+  {
+    "date": "2026-02-09",
+    "category": "Rent",
+    "transactionId": "377825449223",
+    "settlementDate": "2026-02-09",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 9337.45
+  },
+  {
+    "date": "2026-02-09",
+    "category": "Misc",
+    "transactionId": "342807435606",
+    "settlementDate": "2026-02-09",
+    "debit": 1000.47,
+    "credit": 0.0,
+    "balance": 8336.98
+  },
+  {
+    "date": "2026-02-09",
+    "category": "Food",
+    "transactionId": "363200273738",
+    "settlementDate": "2026-02-09",
+    "debit": 60.52,
+    "credit": 0.0,
+    "balance": 8276.46
+  },
+  {
+    "date": "2026-02-10",
+    "category": "Bills",
+    "transactionId": "349966040317",
+    "settlementDate": "2026-02-10",
+    "debit": 600.67,
+    "credit": 0.0,
+    "balance": 7675.79
+  },
+  {
+    "date": "2026-02-10",
+    "category": "Misc",
+    "transactionId": "352610173760",
+    "settlementDate": "2026-02-10",
+    "debit": 150.02,
+    "credit": 0.0,
+    "balance": 7525.77
+  },
+  {
+    "date": "2026-02-10",
+    "category": "Transport",
+    "transactionId": "394308773243",
+    "settlementDate": "2026-02-10",
+    "debit": 60.46,
+    "credit": 0.0,
+    "balance": 7465.31
+  },
+  {
+    "date": "2026-02-11",
+    "category": "Rent",
+    "transactionId": "339804436922",
+    "settlementDate": "2026-02-11",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 6.31
+  },
+  {
+    "date": "2026-02-11",
+    "category": "Misc",
+    "transactionId": "MIR6020662365887652",
+    "settlementDate": "2026-02-11",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 3006.31
+  },
+  {
+    "date": "2026-02-11",
+    "category": "Food",
+    "transactionId": "352230307805",
+    "settlementDate": "2026-02-11",
+    "debit": 220.43,
+    "credit": 0.0,
+    "balance": 2785.88
+  },
+  {
+    "date": "2026-02-12",
+    "category": "Bills",
+    "transactionId": "397440696084",
+    "settlementDate": "2026-02-12",
+    "debit": 2500.67,
+    "credit": 0.0,
+    "balance": 285.21
+  },
+  {
+    "date": "2026-02-13",
+    "category": "Misc",
+    "transactionId": "MIR6743543113040141",
+    "settlementDate": "2026-02-13",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1285.21
+  },
+  {
+    "date": "2026-02-14",
+    "category": "Misc",
+    "transactionId": "MIR3573611892924507",
+    "settlementDate": "2026-02-14",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1785.21
+  },
+  {
+    "date": "2026-02-15",
+    "category": "Misc",
+    "transactionId": "MIR4450075207693272",
+    "settlementDate": "2026-02-15",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 2785.21
+  },
+  {
+    "date": "2026-02-15",
+    "category": "Shopping",
+    "transactionId": "340858511779",
+    "settlementDate": "2026-02-15",
+    "debit": 1499.89,
+    "credit": 0.0,
+    "balance": 1285.32
+  },
+  {
+    "date": "2026-02-16",
+    "category": "Misc",
+    "transactionId": "MIR1560838615248431",
+    "settlementDate": "2026-02-16",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 4285.32
+  },
+  {
+    "date": "2026-02-18",
+    "category": "Entertainment",
+    "transactionId": "394508431021",
+    "settlementDate": "2026-02-18",
+    "debit": 99.86,
+    "credit": 0.0,
+    "balance": 4185.46
+  },
+  {
+    "date": "2026-02-18",
+    "category": "Shopping",
+    "transactionId": "374677909930",
+    "settlementDate": "2026-02-18",
+    "debit": 1999.85,
+    "credit": 0.0,
+    "balance": 2185.61
+  },
+  {
+    "date": "2026-02-19",
+    "category": "Shopping",
+    "transactionId": "372877583839",
+    "settlementDate": "2026-02-19",
+    "debit": 1999.49,
+    "credit": 0.0,
+    "balance": 186.12
+  },
+  {
+    "date": "2026-02-20",
+    "category": "Misc",
+    "transactionId": "MIR1452922261752609",
+    "settlementDate": "2026-02-20",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 3186.12
+  },
+  {
+    "date": "2026-02-20",
+    "category": "Food",
+    "transactionId": "354507059676",
+    "settlementDate": "2026-02-20",
+    "debit": 30.64,
+    "credit": 0.0,
+    "balance": 3155.48
+  },
+  {
+    "date": "2026-02-21",
+    "category": "Misc",
+    "transactionId": "MIR7773499628344152",
+    "settlementDate": "2026-02-21",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 6155.48
+  },
+  {
+    "date": "2026-02-21",
+    "category": "Bills",
+    "transactionId": "331604988121",
+    "settlementDate": "2026-02-21",
+    "debit": 1800.25,
+    "credit": 0.0,
+    "balance": 4355.23
+  },
+  {
+    "date": "2026-02-23",
+    "category": "Shopping",
+    "transactionId": "326909851739",
+    "settlementDate": "2026-02-23",
+    "debit": 799.65,
+    "credit": 0.0,
+    "balance": 3555.58
+  },
+  {
+    "date": "2026-02-23",
+    "category": "Food",
+    "transactionId": "323767154083",
+    "settlementDate": "2026-02-23",
+    "debit": 50.2,
+    "credit": 0.0,
+    "balance": 3505.38
+  },
+  {
+    "date": "2026-02-24",
+    "category": "Misc",
+    "transactionId": "393334037646",
+    "settlementDate": "2026-02-24",
+    "debit": 700.67,
+    "credit": 0.0,
+    "balance": 2804.71
+  },
+  {
+    "date": "2026-02-25",
+    "category": "Salary",
+    "transactionId": "CHAS92325027511",
+    "settlementDate": "2026-02-25",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 37604.71
+  },
+  {
+    "date": "2026-02-25",
+    "category": "Transport",
+    "transactionId": "341433975497",
+    "settlementDate": "2026-02-25",
+    "debit": 60.78,
+    "credit": 0.0,
+    "balance": 37543.93
+  },
+  {
+    "date": "2026-02-25",
+    "category": "Food",
+    "transactionId": "360718257024",
+    "settlementDate": "2026-02-25",
+    "debit": 120.03,
+    "credit": 0.0,
+    "balance": 37423.9
+  },
+  {
+    "date": "2026-02-26",
+    "category": "Rent",
+    "transactionId": "346181600593",
+    "settlementDate": "2026-02-26",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 29964.9
+  },
+  {
+    "date": "2026-02-26",
+    "category": "Transport",
+    "transactionId": "359834717549",
+    "settlementDate": "2026-02-26",
+    "debit": 100.1,
+    "credit": 0.0,
+    "balance": 29864.8
+  },
+  {
+    "date": "2026-02-26",
+    "category": "Transport",
+    "transactionId": "393940348305",
+    "settlementDate": "2026-02-26",
+    "debit": 60.8,
+    "credit": 0.0,
+    "balance": 29804.0
+  },
+  {
+    "date": "2026-02-28",
+    "category": "Entertainment",
+    "transactionId": "364113585139",
+    "settlementDate": "2026-02-28",
+    "debit": 499.07,
+    "credit": 0.0,
+    "balance": 29304.93
+  },
+  {
+    "date": "2026-02-28",
+    "category": "Bills",
+    "transactionId": "334565492204",
+    "settlementDate": "2026-02-28",
+    "debit": 1800.82,
+    "credit": 0.0,
+    "balance": 27504.11
+  },
+  {
+    "date": "2026-03-01",
+    "category": "Salary",
+    "transactionId": "CHAS30217736696",
+    "settlementDate": "2026-03-01",
+    "debit": 0.0,
+    "credit": 40000.0,
+    "balance": 67504.11
+  },
+  {
+    "date": "2026-03-01",
+    "category": "Rent",
+    "transactionId": "387798423334",
+    "settlementDate": "2026-03-01",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 60504.11
+  },
+  {
+    "date": "2026-03-01",
+    "category": "Shopping",
+    "transactionId": "380567694547",
+    "settlementDate": "2026-03-01",
+    "debit": 3499.77,
+    "credit": 0.0,
+    "balance": 57004.34
+  },
+  {
+    "date": "2026-03-01",
+    "category": "Bills",
+    "transactionId": "352991990632",
+    "settlementDate": "2026-03-01",
+    "debit": 800.32,
+    "credit": 0.0,
+    "balance": 56204.02
+  },
+  {
+    "date": "2026-03-01",
+    "category": "Food",
+    "transactionId": "352905817775",
+    "settlementDate": "2026-03-01",
+    "debit": 60.88,
+    "credit": 0.0,
+    "balance": 56143.14
+  },
+  {
+    "date": "2026-03-01",
+    "category": "Rent",
+    "transactionId": "399817461907",
+    "settlementDate": "2026-03-01",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 48143.14
+  },
+  {
+    "date": "2026-03-02",
+    "category": "Food",
+    "transactionId": "344623502759",
+    "settlementDate": "2026-03-02",
+    "debit": 90.85,
+    "credit": 0.0,
+    "balance": 48052.29
+  },
+  {
+    "date": "2026-03-02",
+    "category": "Misc",
+    "transactionId": "364400281010",
+    "settlementDate": "2026-03-02",
+    "debit": 300.8,
+    "credit": 0.0,
+    "balance": 47751.49
+  },
+  {
+    "date": "2026-03-03",
+    "category": "Entertainment",
+    "transactionId": "387305145276",
+    "settlementDate": "2026-03-03",
+    "debit": 399.56,
+    "credit": 0.0,
+    "balance": 47351.93
+  },
+  {
+    "date": "2026-03-03",
+    "category": "Food",
+    "transactionId": "383696115913",
+    "settlementDate": "2026-03-03",
+    "debit": 50.72,
+    "credit": 0.0,
+    "balance": 47301.21
+  },
+  {
+    "date": "2026-03-03",
+    "category": "Bills",
+    "transactionId": "383581223755",
+    "settlementDate": "2026-03-03",
+    "debit": 600.69,
+    "credit": 0.0,
+    "balance": 46700.52
+  },
+  {
+    "date": "2026-03-03",
+    "category": "Bills",
+    "transactionId": "349534222401",
+    "settlementDate": "2026-03-03",
+    "debit": 150.09,
+    "credit": 0.0,
+    "balance": 46550.43
+  },
+  {
+    "date": "2026-03-04",
+    "category": "Shopping",
+    "transactionId": "388469106688",
+    "settlementDate": "2026-03-04",
+    "debit": 1499.47,
+    "credit": 0.0,
+    "balance": 45050.96
+  },
+  {
+    "date": "2026-03-04",
+    "category": "Rent",
+    "transactionId": "363477753674",
+    "settlementDate": "2026-03-04",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 37050.96
+  },
+  {
+    "date": "2026-03-04",
+    "category": "Entertainment",
+    "transactionId": "353347538338",
+    "settlementDate": "2026-03-04",
+    "debit": 999.27,
+    "credit": 0.0,
+    "balance": 36051.69
+  },
+  {
+    "date": "2026-03-05",
+    "category": "Salary",
+    "transactionId": "CHAS86205093898",
+    "settlementDate": "2026-03-05",
+    "debit": 0.0,
+    "credit": 25000.0,
+    "balance": 61051.69
+  },
+  {
+    "date": "2026-03-05",
+    "category": "Bills",
+    "transactionId": "382396889215",
+    "settlementDate": "2026-03-05",
+    "debit": 400.19,
+    "credit": 0.0,
+    "balance": 60651.5
+  },
+  {
+    "date": "2026-03-06",
+    "category": "Bills",
+    "transactionId": "345418092217",
+    "settlementDate": "2026-03-06",
+    "debit": 800.98,
+    "credit": 0.0,
+    "balance": 59850.52
+  },
+  {
+    "date": "2026-03-06",
+    "category": "Misc",
+    "transactionId": "322860229059",
+    "settlementDate": "2026-03-06",
+    "debit": 300.18,
+    "credit": 0.0,
+    "balance": 59550.34
+  },
+  {
+    "date": "2026-03-06",
+    "category": "Transport",
+    "transactionId": "327694164665",
+    "settlementDate": "2026-03-06",
+    "debit": 80.27,
+    "credit": 0.0,
+    "balance": 59470.07
+  },
+  {
+    "date": "2026-03-07",
+    "category": "Misc",
+    "transactionId": "383210152642",
+    "settlementDate": "2026-03-07",
+    "debit": 2000.87,
+    "credit": 0.0,
+    "balance": 57469.2
+  },
+  {
+    "date": "2026-03-07",
+    "category": "Bills",
+    "transactionId": "381614015466",
+    "settlementDate": "2026-03-07",
+    "debit": 150.57,
+    "credit": 0.0,
+    "balance": 57318.63
+  },
+  {
+    "date": "2026-03-08",
+    "category": "Misc",
+    "transactionId": "382222500131",
+    "settlementDate": "2026-03-08",
+    "debit": 50.25,
+    "credit": 0.0,
+    "balance": 57268.38
+  },
+  {
+    "date": "2026-03-08",
+    "category": "Bills",
+    "transactionId": "330719571745",
+    "settlementDate": "2026-03-08",
+    "debit": 250.4,
+    "credit": 0.0,
+    "balance": 57017.98
+  },
+  {
+    "date": "2026-03-09",
+    "category": "Food",
+    "transactionId": "393426240903",
+    "settlementDate": "2026-03-09",
+    "debit": 40.15,
+    "credit": 0.0,
+    "balance": 56977.83
+  },
+  {
+    "date": "2026-03-09",
+    "category": "Food",
+    "transactionId": "374751028618",
+    "settlementDate": "2026-03-09",
+    "debit": 50.12,
+    "credit": 0.0,
+    "balance": 56927.71
+  },
+  {
+    "date": "2026-03-09",
+    "category": "Transport",
+    "transactionId": "387508427798",
+    "settlementDate": "2026-03-09",
+    "debit": 3000.23,
+    "credit": 0.0,
+    "balance": 53927.48
+  },
+  {
+    "date": "2026-03-10",
+    "category": "Rent",
+    "transactionId": "396560452529",
+    "settlementDate": "2026-03-10",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 46617.48
+  },
+  {
+    "date": "2026-03-10",
+    "category": "Shopping",
+    "transactionId": "333918982730",
+    "settlementDate": "2026-03-10",
+    "debit": 199.61,
+    "credit": 0.0,
+    "balance": 46417.87
+  },
+  {
+    "date": "2026-03-11",
+    "category": "Misc",
+    "transactionId": "341357553274",
+    "settlementDate": "2026-03-11",
+    "debit": 250.66,
+    "credit": 0.0,
+    "balance": 46167.21
+  },
+  {
+    "date": "2026-03-12",
+    "category": "Food",
+    "transactionId": "378840206617",
+    "settlementDate": "2026-03-12",
+    "debit": 40.0,
+    "credit": 0.0,
+    "balance": 46127.21
+  },
+  {
+    "date": "2026-03-13",
+    "category": "Shopping",
+    "transactionId": "357854827139",
+    "settlementDate": "2026-03-13",
+    "debit": 199.23,
+    "credit": 0.0,
+    "balance": 45927.98
+  },
+  {
+    "date": "2026-03-13",
+    "category": "Bills",
+    "transactionId": "350384063364",
+    "settlementDate": "2026-03-13",
+    "debit": 2500.07,
+    "credit": 0.0,
+    "balance": 43427.91
+  },
+  {
+    "date": "2026-03-13",
+    "category": "Bills",
+    "transactionId": "390341387305",
+    "settlementDate": "2026-03-13",
+    "debit": 600.43,
+    "credit": 0.0,
+    "balance": 42827.48
+  },
+  {
+    "date": "2026-03-14",
+    "category": "Shopping",
+    "transactionId": "342951078441",
+    "settlementDate": "2026-03-14",
+    "debit": 499.07,
+    "credit": 0.0,
+    "balance": 42328.41
+  },
+  {
+    "date": "2026-03-14",
+    "category": "Shopping",
+    "transactionId": "380839462365",
+    "settlementDate": "2026-03-14",
+    "debit": 999.44,
+    "credit": 0.0,
+    "balance": 41328.97
+  },
+  {
+    "date": "2026-03-14",
+    "category": "Shopping",
+    "transactionId": "385679800791",
+    "settlementDate": "2026-03-14",
+    "debit": 1999.94,
+    "credit": 0.0,
+    "balance": 39329.03
+  },
+  {
+    "date": "2026-03-15",
+    "category": "Food",
+    "transactionId": "376888699799",
+    "settlementDate": "2026-03-15",
+    "debit": 120.04,
+    "credit": 0.0,
+    "balance": 39208.99
+  },
+  {
+    "date": "2026-03-15",
+    "category": "Shopping",
+    "transactionId": "350824022357",
+    "settlementDate": "2026-03-15",
+    "debit": 999.03,
+    "credit": 0.0,
+    "balance": 38209.96
+  },
+  {
+    "date": "2026-03-16",
+    "category": "Transport",
+    "transactionId": "355718740490",
+    "settlementDate": "2026-03-16",
+    "debit": 3000.95,
+    "credit": 0.0,
+    "balance": 35209.01
+  },
+  {
+    "date": "2026-03-16",
+    "category": "Food",
+    "transactionId": "381657233178",
+    "settlementDate": "2026-03-16",
+    "debit": 220.76,
+    "credit": 0.0,
+    "balance": 34988.25
+  },
+  {
+    "date": "2026-03-16",
+    "category": "Entertainment",
+    "transactionId": "344728492896",
+    "settlementDate": "2026-03-16",
+    "debit": 999.92,
+    "credit": 0.0,
+    "balance": 33988.33
+  },
+  {
+    "date": "2026-03-16",
+    "category": "Rent",
+    "transactionId": "332604669821",
+    "settlementDate": "2026-03-16",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 26529.33
+  },
+  {
+    "date": "2026-03-17",
+    "category": "Shopping",
+    "transactionId": "341454123990",
+    "settlementDate": "2026-03-17",
+    "debit": 1499.67,
+    "credit": 0.0,
+    "balance": 25029.66
+  },
+  {
+    "date": "2026-03-17",
+    "category": "Rent",
+    "transactionId": "357811443654",
+    "settlementDate": "2026-03-17",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 17570.66
+  },
+  {
+    "date": "2026-03-18",
+    "category": "Bills",
+    "transactionId": "361371011200",
+    "settlementDate": "2026-03-18",
+    "debit": 150.45,
+    "credit": 0.0,
+    "balance": 17420.21
+  },
+  {
+    "date": "2026-03-18",
+    "category": "Shopping",
+    "transactionId": "372652543518",
+    "settlementDate": "2026-03-18",
+    "debit": 299.97,
+    "credit": 0.0,
+    "balance": 17120.24
+  },
+  {
+    "date": "2026-03-18",
+    "category": "Bills",
+    "transactionId": "390596043327",
+    "settlementDate": "2026-03-18",
+    "debit": 150.66,
+    "credit": 0.0,
+    "balance": 16969.58
+  },
+  {
+    "date": "2026-03-18",
+    "category": "Rent",
+    "transactionId": "345656670062",
+    "settlementDate": "2026-03-18",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 10469.58
+  },
+  {
+    "date": "2026-03-19",
+    "category": "Bills",
+    "transactionId": "327318568997",
+    "settlementDate": "2026-03-19",
+    "debit": 2500.63,
+    "credit": 0.0,
+    "balance": 7968.95
+  },
+  {
+    "date": "2026-03-19",
+    "category": "Shopping",
+    "transactionId": "357570423569",
+    "settlementDate": "2026-03-19",
+    "debit": 3499.13,
+    "credit": 0.0,
+    "balance": 4469.82
+  },
+  {
+    "date": "2026-03-20",
+    "category": "Misc",
+    "transactionId": "MIR2426546371089354",
+    "settlementDate": "2026-03-20",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 5469.82
+  },
+  {
+    "date": "2026-03-20",
+    "category": "Shopping",
+    "transactionId": "373200082623",
+    "settlementDate": "2026-03-20",
+    "debit": 3499.01,
+    "credit": 0.0,
+    "balance": 1970.81
+  },
+  {
+    "date": "2026-03-20",
+    "category": "Misc",
+    "transactionId": "336795472980",
+    "settlementDate": "2026-03-20",
+    "debit": 100.46,
+    "credit": 0.0,
+    "balance": 1870.35
+  },
+  {
+    "date": "2026-03-20",
+    "category": "Bills",
+    "transactionId": "358646397165",
+    "settlementDate": "2026-03-20",
+    "debit": 400.5,
+    "credit": 0.0,
+    "balance": 1469.85
+  },
+  {
+    "date": "2026-03-21",
+    "category": "Misc",
+    "transactionId": "370304666325",
+    "settlementDate": "2026-03-21",
+    "debit": 700.55,
+    "credit": 0.0,
+    "balance": 769.3
+  },
+  {
+    "date": "2026-03-21",
+    "category": "Misc",
+    "transactionId": "MIR7959639207355993",
+    "settlementDate": "2026-03-21",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1269.3
+  },
+  {
+    "date": "2026-03-21",
+    "category": "Transport",
+    "transactionId": "374464938258",
+    "settlementDate": "2026-03-21",
+    "debit": 1200.75,
+    "credit": 0.0,
+    "balance": 68.55
+  },
+  {
+    "date": "2026-03-22",
+    "category": "Misc",
+    "transactionId": "MIR6286665956676196",
+    "settlementDate": "2026-03-22",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2068.55
+  },
+  {
+    "date": "2026-03-22",
+    "category": "Transport",
+    "transactionId": "395808605988",
+    "settlementDate": "2026-03-22",
+    "debit": 150.82,
+    "credit": 0.0,
+    "balance": 1917.73
+  },
+  {
+    "date": "2026-03-22",
+    "category": "Misc",
+    "transactionId": "MIR9402383915808500",
+    "settlementDate": "2026-03-22",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 4917.73
+  },
+  {
+    "date": "2026-03-22",
+    "category": "Shopping",
+    "transactionId": "351713963047",
+    "settlementDate": "2026-03-22",
+    "debit": 799.98,
+    "credit": 0.0,
+    "balance": 4117.75
+  },
+  {
+    "date": "2026-03-23",
+    "category": "Bills",
+    "transactionId": "381857232668",
+    "settlementDate": "2026-03-23",
+    "debit": 1800.04,
+    "credit": 0.0,
+    "balance": 2317.71
+  },
+  {
+    "date": "2026-03-23",
+    "category": "Bills",
+    "transactionId": "340631855083",
+    "settlementDate": "2026-03-23",
+    "debit": 1800.39,
+    "credit": 0.0,
+    "balance": 517.32
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Misc",
+    "transactionId": "MIR8611441717375159",
+    "settlementDate": "2026-03-24",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1017.32
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Misc",
+    "transactionId": "377207064620",
+    "settlementDate": "2026-03-24",
+    "debit": 1000.97,
+    "credit": 0.0,
+    "balance": 16.35
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Misc",
+    "transactionId": "MIR5228795056255420",
+    "settlementDate": "2026-03-24",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1016.35
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Transport",
+    "transactionId": "354463527356",
+    "settlementDate": "2026-03-24",
+    "debit": 500.02,
+    "credit": 0.0,
+    "balance": 516.33
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Transport",
+    "transactionId": "389508031980",
+    "settlementDate": "2026-03-24",
+    "debit": 300.65,
+    "credit": 0.0,
+    "balance": 215.68
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Misc",
+    "transactionId": "MIR6684991520007965",
+    "settlementDate": "2026-03-24",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 715.68
+  },
+  {
+    "date": "2026-03-24",
+    "category": "Entertainment",
+    "transactionId": "376205702499",
+    "settlementDate": "2026-03-24",
+    "debit": 400.0,
+    "credit": 0.0,
+    "balance": 315.68
+  },
+  {
+    "date": "2026-03-25",
+    "category": "Salary",
+    "transactionId": "CHAS33380421346",
+    "settlementDate": "2026-03-25",
+    "debit": 0.0,
+    "credit": 25000.0,
+    "balance": 25315.68
+  },
+  {
+    "date": "2026-03-25",
+    "category": "Entertainment",
+    "transactionId": "326448294647",
+    "settlementDate": "2026-03-25",
+    "debit": 399.9,
+    "credit": 0.0,
+    "balance": 24915.78
+  },
+  {
+    "date": "2026-03-25",
+    "category": "Bills",
+    "transactionId": "368562446417",
+    "settlementDate": "2026-03-25",
+    "debit": 150.29,
+    "credit": 0.0,
+    "balance": 24765.49
+  },
+  {
+    "date": "2026-03-25",
+    "category": "Misc",
+    "transactionId": "393832077572",
+    "settlementDate": "2026-03-25",
+    "debit": 200.53,
+    "credit": 0.0,
+    "balance": 24564.96
+  },
+  {
+    "date": "2026-03-26",
+    "category": "Misc",
+    "transactionId": "369765408938",
+    "settlementDate": "2026-03-26",
+    "debit": 150.08,
+    "credit": 0.0,
+    "balance": 24414.88
+  },
+  {
+    "date": "2026-03-26",
+    "category": "Entertainment",
+    "transactionId": "395253671484",
+    "settlementDate": "2026-03-26",
+    "debit": 299.5,
+    "credit": 0.0,
+    "balance": 24115.38
+  },
+  {
+    "date": "2026-03-26",
+    "category": "Misc",
+    "transactionId": "379374154962",
+    "settlementDate": "2026-03-26",
+    "debit": 700.64,
+    "credit": 0.0,
+    "balance": 23414.74
+  },
+  {
+    "date": "2026-03-27",
+    "category": "Bills",
+    "transactionId": "390269625036",
+    "settlementDate": "2026-03-27",
+    "debit": 2500.9,
+    "credit": 0.0,
+    "balance": 20913.84
+  },
+  {
+    "date": "2026-03-27",
+    "category": "Food",
+    "transactionId": "396421214426",
+    "settlementDate": "2026-03-27",
+    "debit": 90.95,
+    "credit": 0.0,
+    "balance": 20822.89
+  },
+  {
+    "date": "2026-03-27",
+    "category": "Entertainment",
+    "transactionId": "379424400672",
+    "settlementDate": "2026-03-27",
+    "debit": 699.69,
+    "credit": 0.0,
+    "balance": 20123.2
+  },
+  {
+    "date": "2026-03-28",
+    "category": "Rent",
+    "transactionId": "334354697684",
+    "settlementDate": "2026-03-28",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 12664.2
+  },
+  {
+    "date": "2026-03-29",
+    "category": "Shopping",
+    "transactionId": "358123557463",
+    "settlementDate": "2026-03-29",
+    "debit": 999.99,
+    "credit": 0.0,
+    "balance": 11664.21
+  },
+  {
+    "date": "2026-03-29",
+    "category": "Bills",
+    "transactionId": "393836371599",
+    "settlementDate": "2026-03-29",
+    "debit": 1800.27,
+    "credit": 0.0,
+    "balance": 9863.94
+  },
+  {
+    "date": "2026-03-30",
+    "category": "Food",
+    "transactionId": "357932945529",
+    "settlementDate": "2026-03-30",
+    "debit": 120.75,
+    "credit": 0.0,
+    "balance": 9743.19
+  },
+  {
+    "date": "2026-03-30",
+    "category": "Bills",
+    "transactionId": "366335154329",
+    "settlementDate": "2026-03-30",
+    "debit": 600.61,
+    "credit": 0.0,
+    "balance": 9142.58
+  },
+  {
+    "date": "2026-03-30",
+    "category": "Entertainment",
+    "transactionId": "338774576271",
+    "settlementDate": "2026-03-30",
+    "debit": 299.62,
+    "credit": 0.0,
+    "balance": 8842.96
+  },
+  {
+    "date": "2026-03-31",
+    "category": "Entertainment",
+    "transactionId": "377135824891",
+    "settlementDate": "2026-03-31",
+    "debit": 99.31,
+    "credit": 0.0,
+    "balance": 8743.65
+  },
+  {
+    "date": "2026-04-01",
+    "category": "Salary",
+    "transactionId": "CHAS52561527386",
+    "settlementDate": "2026-04-01",
+    "debit": 0.0,
+    "credit": 25000.0,
+    "balance": 33743.65
+  },
+  {
+    "date": "2026-04-01",
+    "category": "Shopping",
+    "transactionId": "337944511703",
+    "settlementDate": "2026-04-01",
+    "debit": 1999.18,
+    "credit": 0.0,
+    "balance": 31744.47
+  },
+  {
+    "date": "2026-04-01",
+    "category": "Transport",
+    "transactionId": "355991713190",
+    "settlementDate": "2026-04-01",
+    "debit": 200.53,
+    "credit": 0.0,
+    "balance": 31543.94
+  },
+  {
+    "date": "2026-04-02",
+    "category": "Bills",
+    "transactionId": "358901611993",
+    "settlementDate": "2026-04-02",
+    "debit": 2500.97,
+    "credit": 0.0,
+    "balance": 29042.97
+  },
+  {
+    "date": "2026-04-03",
+    "category": "Bills",
+    "transactionId": "330251136695",
+    "settlementDate": "2026-04-03",
+    "debit": 250.47,
+    "credit": 0.0,
+    "balance": 28792.5
+  },
+  {
+    "date": "2026-04-03",
+    "category": "Bills",
+    "transactionId": "371963919401",
+    "settlementDate": "2026-04-03",
+    "debit": 600.86,
+    "credit": 0.0,
+    "balance": 28191.64
+  },
+  {
+    "date": "2026-04-03",
+    "category": "Transport",
+    "transactionId": "371114945047",
+    "settlementDate": "2026-04-03",
+    "debit": 200.09,
+    "credit": 0.0,
+    "balance": 27991.55
+  },
+  {
+    "date": "2026-04-03",
+    "category": "Shopping",
+    "transactionId": "368822443971",
+    "settlementDate": "2026-04-03",
+    "debit": 3499.12,
+    "credit": 0.0,
+    "balance": 24492.43
+  },
+  {
+    "date": "2026-04-04",
+    "category": "Shopping",
+    "transactionId": "368216335741",
+    "settlementDate": "2026-04-04",
+    "debit": 1999.82,
+    "credit": 0.0,
+    "balance": 22492.61
+  },
+  {
+    "date": "2026-04-04",
+    "category": "Entertainment",
+    "transactionId": "392452194058",
+    "settlementDate": "2026-04-04",
+    "debit": 299.47,
+    "credit": 0.0,
+    "balance": 22193.14
+  },
+  {
+    "date": "2026-04-04",
+    "category": "Transport",
+    "transactionId": "380852775879",
+    "settlementDate": "2026-04-04",
+    "debit": 100.65,
+    "credit": 0.0,
+    "balance": 22092.49
+  },
+  {
+    "date": "2026-04-05",
+    "category": "Salary",
+    "transactionId": "CHAS48814530539",
+    "settlementDate": "2026-04-05",
+    "debit": 0.0,
+    "credit": 30000.0,
+    "balance": 52092.49
+  },
+  {
+    "date": "2026-04-05",
+    "category": "Rent",
+    "transactionId": "333352114611",
+    "settlementDate": "2026-04-05",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 45592.49
+  },
+  {
+    "date": "2026-04-05",
+    "category": "Transport",
+    "transactionId": "368819929088",
+    "settlementDate": "2026-04-05",
+    "debit": 80.39,
+    "credit": 0.0,
+    "balance": 45512.1
+  },
+  {
+    "date": "2026-04-06",
+    "category": "Entertainment",
+    "transactionId": "340545478870",
+    "settlementDate": "2026-04-06",
+    "debit": 699.59,
+    "credit": 0.0,
+    "balance": 44812.51
+  },
+  {
+    "date": "2026-04-06",
+    "category": "Entertainment",
+    "transactionId": "399538211092",
+    "settlementDate": "2026-04-06",
+    "debit": 149.83,
+    "credit": 0.0,
+    "balance": 44662.68
+  },
+  {
+    "date": "2026-04-06",
+    "category": "Shopping",
+    "transactionId": "348576078963",
+    "settlementDate": "2026-04-06",
+    "debit": 199.69,
+    "credit": 0.0,
+    "balance": 44462.99
+  },
+  {
+    "date": "2026-04-06",
+    "category": "Rent",
+    "transactionId": "367206681214",
+    "settlementDate": "2026-04-06",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 37462.99
+  },
+  {
+    "date": "2026-04-07",
+    "category": "Shopping",
+    "transactionId": "366165015165",
+    "settlementDate": "2026-04-07",
+    "debit": 3499.9,
+    "credit": 0.0,
+    "balance": 33963.09
+  },
+  {
+    "date": "2026-04-07",
+    "category": "Rent",
+    "transactionId": "345231167999",
+    "settlementDate": "2026-04-07",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 26653.09
+  },
+  {
+    "date": "2026-04-07",
+    "category": "Bills",
+    "transactionId": "348789024924",
+    "settlementDate": "2026-04-07",
+    "debit": 2500.09,
+    "credit": 0.0,
+    "balance": 24153.0
+  },
+  {
+    "date": "2026-04-07",
+    "category": "Entertainment",
+    "transactionId": "363361530104",
+    "settlementDate": "2026-04-07",
+    "debit": 99.05,
+    "credit": 0.0,
+    "balance": 24053.95
+  },
+  {
+    "date": "2026-04-07",
+    "category": "Misc",
+    "transactionId": "391322433532",
+    "settlementDate": "2026-04-07",
+    "debit": 1500.21,
+    "credit": 0.0,
+    "balance": 22553.74
+  },
+  {
+    "date": "2026-04-08",
+    "category": "Bills",
+    "transactionId": "339946799779",
+    "settlementDate": "2026-04-08",
+    "debit": 600.33,
+    "credit": 0.0,
+    "balance": 21953.41
+  },
+  {
+    "date": "2026-04-08",
+    "category": "Transport",
+    "transactionId": "339239577989",
+    "settlementDate": "2026-04-08",
+    "debit": 40.28,
+    "credit": 0.0,
+    "balance": 21913.13
+  },
+  {
+    "date": "2026-04-08",
+    "category": "Transport",
+    "transactionId": "335809805235",
+    "settlementDate": "2026-04-08",
+    "debit": 150.8,
+    "credit": 0.0,
+    "balance": 21762.33
+  },
+  {
+    "date": "2026-04-09",
+    "category": "Misc",
+    "transactionId": "351732276010",
+    "settlementDate": "2026-04-09",
+    "debit": 50.36,
+    "credit": 0.0,
+    "balance": 21711.97
+  },
+  {
+    "date": "2026-04-09",
+    "category": "Shopping",
+    "transactionId": "327236105947",
+    "settlementDate": "2026-04-09",
+    "debit": 199.17,
+    "credit": 0.0,
+    "balance": 21512.8
+  },
+  {
+    "date": "2026-04-09",
+    "category": "Entertainment",
+    "transactionId": "329611365210",
+    "settlementDate": "2026-04-09",
+    "debit": 699.53,
+    "credit": 0.0,
+    "balance": 20813.27
+  },
+  {
+    "date": "2026-04-09",
+    "category": "Rent",
+    "transactionId": "386737444033",
+    "settlementDate": "2026-04-09",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 13503.27
+  },
+  {
+    "date": "2026-04-10",
+    "category": "Transport",
+    "transactionId": "326880871219",
+    "settlementDate": "2026-04-10",
+    "debit": 100.95,
+    "credit": 0.0,
+    "balance": 13402.32
+  },
+  {
+    "date": "2026-04-11",
+    "category": "Bills",
+    "transactionId": "324165310776",
+    "settlementDate": "2026-04-11",
+    "debit": 800.46,
+    "credit": 0.0,
+    "balance": 12601.86
+  },
+  {
+    "date": "2026-04-11",
+    "category": "Rent",
+    "transactionId": "375836691577",
+    "settlementDate": "2026-04-11",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 5142.86
+  },
+  {
+    "date": "2026-04-11",
+    "category": "Food",
+    "transactionId": "377178910051",
+    "settlementDate": "2026-04-11",
+    "debit": 90.71,
+    "credit": 0.0,
+    "balance": 5052.15
+  },
+  {
+    "date": "2026-04-12",
+    "category": "Shopping",
+    "transactionId": "356770355806",
+    "settlementDate": "2026-04-12",
+    "debit": 499.07,
+    "credit": 0.0,
+    "balance": 4553.08
+  },
+  {
+    "date": "2026-04-12",
+    "category": "Entertainment",
+    "transactionId": "397669681065",
+    "settlementDate": "2026-04-12",
+    "debit": 499.38,
+    "credit": 0.0,
+    "balance": 4053.7
+  },
+  {
+    "date": "2026-04-12",
+    "category": "Shopping",
+    "transactionId": "376206492059",
+    "settlementDate": "2026-04-12",
+    "debit": 2499.51,
+    "credit": 0.0,
+    "balance": 1554.19
+  },
+  {
+    "date": "2026-04-12",
+    "category": "Bills",
+    "transactionId": "391873995963",
+    "settlementDate": "2026-04-12",
+    "debit": 250.85,
+    "credit": 0.0,
+    "balance": 1303.34
+  },
+  {
+    "date": "2026-04-13",
+    "category": "Misc",
+    "transactionId": "MIR9313509151736004",
+    "settlementDate": "2026-04-13",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 2303.34
+  },
+  {
+    "date": "2026-04-13",
+    "category": "Shopping",
+    "transactionId": "381172083844",
+    "settlementDate": "2026-04-13",
+    "debit": 1999.31,
+    "credit": 0.0,
+    "balance": 304.03
+  },
+  {
+    "date": "2026-04-14",
+    "category": "Food",
+    "transactionId": "368971630639",
+    "settlementDate": "2026-04-14",
+    "debit": 30.43,
+    "credit": 0.0,
+    "balance": 273.6
+  },
+  {
+    "date": "2026-04-15",
+    "category": "Food",
+    "transactionId": "336541102414",
+    "settlementDate": "2026-04-15",
+    "debit": 120.96,
+    "credit": 0.0,
+    "balance": 152.64
+  },
+  {
+    "date": "2026-04-17",
+    "category": "Misc",
+    "transactionId": "MIR7868937394954170",
+    "settlementDate": "2026-04-17",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2152.64
+  },
+  {
+    "date": "2026-04-17",
+    "category": "Entertainment",
+    "transactionId": "356716435189",
+    "settlementDate": "2026-04-17",
+    "debit": 999.22,
+    "credit": 0.0,
+    "balance": 1153.42
+  },
+  {
+    "date": "2026-04-19",
+    "category": "Misc",
+    "transactionId": "MIR4060868236042759",
+    "settlementDate": "2026-04-19",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 3153.42
+  },
+  {
+    "date": "2026-04-19",
+    "category": "Bills",
+    "transactionId": "365106556040",
+    "settlementDate": "2026-04-19",
+    "debit": 800.03,
+    "credit": 0.0,
+    "balance": 2353.39
+  },
+  {
+    "date": "2026-04-19",
+    "category": "Misc",
+    "transactionId": "372174716780",
+    "settlementDate": "2026-04-19",
+    "debit": 150.57,
+    "credit": 0.0,
+    "balance": 2202.82
+  },
+  {
+    "date": "2026-04-20",
+    "category": "Entertainment",
+    "transactionId": "388330997172",
+    "settlementDate": "2026-04-20",
+    "debit": 99.09,
+    "credit": 0.0,
+    "balance": 2103.73
+  },
+  {
+    "date": "2026-04-21",
+    "category": "Misc",
+    "transactionId": "MIR3921783451353960",
+    "settlementDate": "2026-04-21",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 4103.73
+  },
+  {
+    "date": "2026-04-21",
+    "category": "Bills",
+    "transactionId": "340269017588",
+    "settlementDate": "2026-04-21",
+    "debit": 250.88,
+    "credit": 0.0,
+    "balance": 3852.85
+  },
+  {
+    "date": "2026-04-22",
+    "category": "Food",
+    "transactionId": "377810751262",
+    "settlementDate": "2026-04-22",
+    "debit": 150.08,
+    "credit": 0.0,
+    "balance": 3702.77
+  },
+  {
+    "date": "2026-04-22",
+    "category": "Misc",
+    "transactionId": "MIR4872318226775942",
+    "settlementDate": "2026-04-22",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 4202.77
+  },
+  {
+    "date": "2026-04-23",
+    "category": "Entertainment",
+    "transactionId": "360148766522",
+    "settlementDate": "2026-04-23",
+    "debit": 999.53,
+    "credit": 0.0,
+    "balance": 3203.24
+  },
+  {
+    "date": "2026-04-24",
+    "category": "Transport",
+    "transactionId": "359326810757",
+    "settlementDate": "2026-04-24",
+    "debit": 40.01,
+    "credit": 0.0,
+    "balance": 3163.23
+  },
+  {
+    "date": "2026-04-25",
+    "category": "Shopping",
+    "transactionId": "384902100304",
+    "settlementDate": "2026-04-25",
+    "debit": 1499.12,
+    "credit": 0.0,
+    "balance": 1664.11
+  },
+  {
+    "date": "2026-04-25",
+    "category": "Misc",
+    "transactionId": "MIR6032535588417899",
+    "settlementDate": "2026-04-25",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 2664.11
+  },
+  {
+    "date": "2026-04-25",
+    "category": "Bills",
+    "transactionId": "326568387228",
+    "settlementDate": "2026-04-25",
+    "debit": 1200.07,
+    "credit": 0.0,
+    "balance": 1464.04
+  },
+  {
+    "date": "2026-04-27",
+    "category": "Bills",
+    "transactionId": "374410864588",
+    "settlementDate": "2026-04-27",
+    "debit": 1200.58,
+    "credit": 0.0,
+    "balance": 263.46
+  },
+  {
+    "date": "2026-04-27",
+    "category": "Misc",
+    "transactionId": "MIR7211458291443302",
+    "settlementDate": "2026-04-27",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 3263.46
+  },
+  {
+    "date": "2026-04-27",
+    "category": "Food",
+    "transactionId": "367194628740",
+    "settlementDate": "2026-04-27",
+    "debit": 80.02,
+    "credit": 0.0,
+    "balance": 3183.44
+  },
+  {
+    "date": "2026-04-27",
+    "category": "Misc",
+    "transactionId": "MIR1708388386400465",
+    "settlementDate": "2026-04-27",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 6183.44
+  },
+  {
+    "date": "2026-04-28",
+    "category": "Bills",
+    "transactionId": "335669732591",
+    "settlementDate": "2026-04-28",
+    "debit": 400.08,
+    "credit": 0.0,
+    "balance": 5783.36
+  },
+  {
+    "date": "2026-04-29",
+    "category": "Bills",
+    "transactionId": "339353691745",
+    "settlementDate": "2026-04-29",
+    "debit": 1200.35,
+    "credit": 0.0,
+    "balance": 4583.01
+  },
+  {
+    "date": "2026-04-29",
+    "category": "Food",
+    "transactionId": "343746820987",
+    "settlementDate": "2026-04-29",
+    "debit": 40.26,
+    "credit": 0.0,
+    "balance": 4542.75
+  },
+  {
+    "date": "2026-04-30",
+    "category": "Bills",
+    "transactionId": "384598165815",
+    "settlementDate": "2026-04-30",
+    "debit": 250.18,
+    "credit": 0.0,
+    "balance": 4292.57
+  },
+  {
+    "date": "2026-05-01",
+    "category": "Transport",
+    "transactionId": "361262089272",
+    "settlementDate": "2026-05-01",
+    "debit": 200.86,
+    "credit": 0.0,
+    "balance": 4091.71
+  },
+  {
+    "date": "2026-05-02",
+    "category": "Bills",
+    "transactionId": "366644748834",
+    "settlementDate": "2026-05-02",
+    "debit": 800.59,
+    "credit": 0.0,
+    "balance": 3291.12
+  },
+  {
+    "date": "2026-05-02",
+    "category": "Food",
+    "transactionId": "325161085229",
+    "settlementDate": "2026-05-02",
+    "debit": 60.46,
+    "credit": 0.0,
+    "balance": 3230.66
+  },
+  {
+    "date": "2026-05-02",
+    "category": "Shopping",
+    "transactionId": "332760360225",
+    "settlementDate": "2026-05-02",
+    "debit": 999.08,
+    "credit": 0.0,
+    "balance": 2231.58
+  },
+  {
+    "date": "2026-05-03",
+    "category": "Bills",
+    "transactionId": "394799905142",
+    "settlementDate": "2026-05-03",
+    "debit": 150.45,
+    "credit": 0.0,
+    "balance": 2081.13
+  },
+  {
+    "date": "2026-05-03",
+    "category": "Misc",
+    "transactionId": "385261985842",
+    "settlementDate": "2026-05-03",
+    "debit": 300.61,
+    "credit": 0.0,
+    "balance": 1780.52
+  },
+  {
+    "date": "2026-05-04",
+    "category": "Bills",
+    "transactionId": "331641755366",
+    "settlementDate": "2026-05-04",
+    "debit": 1200.98,
+    "credit": 0.0,
+    "balance": 579.54
+  },
+  {
+    "date": "2026-05-04",
+    "category": "Entertainment",
+    "transactionId": "377662714327",
+    "settlementDate": "2026-05-04",
+    "debit": 199.04,
+    "credit": 0.0,
+    "balance": 380.5
+  },
+  {
+    "date": "2026-05-04",
+    "category": "Misc",
+    "transactionId": "MIR6682524295186092",
+    "settlementDate": "2026-05-04",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 880.5
+  },
+  {
+    "date": "2026-05-05",
+    "category": "Salary",
+    "transactionId": "CHAS50314986283",
+    "settlementDate": "2026-05-05",
+    "debit": 0.0,
+    "credit": 25000.0,
+    "balance": 25880.5
+  },
+  {
+    "date": "2026-05-05",
+    "category": "Shopping",
+    "transactionId": "395812548074",
+    "settlementDate": "2026-05-05",
+    "debit": 499.33,
+    "credit": 0.0,
+    "balance": 25381.17
+  },
+  {
+    "date": "2026-05-05",
+    "category": "Misc",
+    "transactionId": "371238460786",
+    "settlementDate": "2026-05-05",
+    "debit": 300.31,
+    "credit": 0.0,
+    "balance": 25080.86
+  },
+  {
+    "date": "2026-05-05",
+    "category": "Transport",
+    "transactionId": "369790945624",
+    "settlementDate": "2026-05-05",
+    "debit": 60.31,
+    "credit": 0.0,
+    "balance": 25020.55
+  },
+  {
+    "date": "2026-05-06",
+    "category": "Bills",
+    "transactionId": "388200344359",
+    "settlementDate": "2026-05-06",
+    "debit": 400.67,
+    "credit": 0.0,
+    "balance": 24619.88
+  },
+  {
+    "date": "2026-05-06",
+    "category": "Entertainment",
+    "transactionId": "323489336282",
+    "settlementDate": "2026-05-06",
+    "debit": 699.51,
+    "credit": 0.0,
+    "balance": 23920.37
+  },
+  {
+    "date": "2026-05-06",
+    "category": "Shopping",
+    "transactionId": "364922653967",
+    "settlementDate": "2026-05-06",
+    "debit": 499.95,
+    "credit": 0.0,
+    "balance": 23420.42
+  },
+  {
+    "date": "2026-05-07",
+    "category": "Misc",
+    "transactionId": "358946237594",
+    "settlementDate": "2026-05-07",
+    "debit": 150.15,
+    "credit": 0.0,
+    "balance": 23270.27
+  },
+  {
+    "date": "2026-05-07",
+    "category": "Food",
+    "transactionId": "388140531056",
+    "settlementDate": "2026-05-07",
+    "debit": 100.77,
+    "credit": 0.0,
+    "balance": 23169.5
+  },
+  {
+    "date": "2026-05-08",
+    "category": "Bills",
+    "transactionId": "340274211616",
+    "settlementDate": "2026-05-08",
+    "debit": 400.6,
+    "credit": 0.0,
+    "balance": 22768.9
+  },
+  {
+    "date": "2026-05-08",
+    "category": "Misc",
+    "transactionId": "342874364348",
+    "settlementDate": "2026-05-08",
+    "debit": 5000.77,
+    "credit": 0.0,
+    "balance": 17768.13
+  },
+  {
+    "date": "2026-05-08",
+    "category": "Rent",
+    "transactionId": "373491163514",
+    "settlementDate": "2026-05-08",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 11268.13
+  },
+  {
+    "date": "2026-05-09",
+    "category": "Misc",
+    "transactionId": "378351258749",
+    "settlementDate": "2026-05-09",
+    "debit": 700.61,
+    "credit": 0.0,
+    "balance": 10567.52
+  },
+  {
+    "date": "2026-05-09",
+    "category": "Transport",
+    "transactionId": "381996696177",
+    "settlementDate": "2026-05-09",
+    "debit": 100.31,
+    "credit": 0.0,
+    "balance": 10467.21
+  },
+  {
+    "date": "2026-05-09",
+    "category": "Misc",
+    "transactionId": "394573087862",
+    "settlementDate": "2026-05-09",
+    "debit": 300.68,
+    "credit": 0.0,
+    "balance": 10166.53
+  },
+  {
+    "date": "2026-05-10",
+    "category": "Shopping",
+    "transactionId": "374274008639",
+    "settlementDate": "2026-05-10",
+    "debit": 1999.5,
+    "credit": 0.0,
+    "balance": 8167.03
+  },
+  {
+    "date": "2026-05-10",
+    "category": "Bills",
+    "transactionId": "338368438908",
+    "settlementDate": "2026-05-10",
+    "debit": 600.8,
+    "credit": 0.0,
+    "balance": 7566.23
+  },
+  {
+    "date": "2026-05-12",
+    "category": "Shopping",
+    "transactionId": "387233871736",
+    "settlementDate": "2026-05-12",
+    "debit": 3499.93,
+    "credit": 0.0,
+    "balance": 4066.3
+  },
+  {
+    "date": "2026-05-12",
+    "category": "Shopping",
+    "transactionId": "355582452834",
+    "settlementDate": "2026-05-12",
+    "debit": 299.76,
+    "credit": 0.0,
+    "balance": 3766.54
+  },
+  {
+    "date": "2026-05-13",
+    "category": "Misc",
+    "transactionId": "349976928440",
+    "settlementDate": "2026-05-13",
+    "debit": 500.09,
+    "credit": 0.0,
+    "balance": 3266.45
+  },
+  {
+    "date": "2026-05-13",
+    "category": "Shopping",
+    "transactionId": "331502559419",
+    "settlementDate": "2026-05-13",
+    "debit": 799.39,
+    "credit": 0.0,
+    "balance": 2467.06
+  },
+  {
+    "date": "2026-05-14",
+    "category": "Shopping",
+    "transactionId": "363949738493",
+    "settlementDate": "2026-05-14",
+    "debit": 299.84,
+    "credit": 0.0,
+    "balance": 2167.22
+  },
+  {
+    "date": "2026-05-15",
+    "category": "Food",
+    "transactionId": "381847401602",
+    "settlementDate": "2026-05-15",
+    "debit": 60.92,
+    "credit": 0.0,
+    "balance": 2106.3
+  },
+  {
+    "date": "2026-05-16",
+    "category": "Misc",
+    "transactionId": "MIR3305156274024532",
+    "settlementDate": "2026-05-16",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 2606.3
+  },
+  {
+    "date": "2026-05-16",
+    "category": "Bills",
+    "transactionId": "348996534803",
+    "settlementDate": "2026-05-16",
+    "debit": 2500.45,
+    "credit": 0.0,
+    "balance": 105.85
+  },
+  {
+    "date": "2026-05-16",
+    "category": "Misc",
+    "transactionId": "MIR1998515741565233",
+    "settlementDate": "2026-05-16",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 3105.85
+  },
+  {
+    "date": "2026-05-16",
+    "category": "Misc",
+    "transactionId": "384740743666",
+    "settlementDate": "2026-05-16",
+    "debit": 250.12,
+    "credit": 0.0,
+    "balance": 2855.73
+  },
+  {
+    "date": "2026-05-17",
+    "category": "Entertainment",
+    "transactionId": "358560891752",
+    "settlementDate": "2026-05-17",
+    "debit": 299.72,
+    "credit": 0.0,
+    "balance": 2556.01
+  },
+  {
+    "date": "2026-05-17",
+    "category": "Food",
+    "transactionId": "394547286055",
+    "settlementDate": "2026-05-17",
+    "debit": 120.35,
+    "credit": 0.0,
+    "balance": 2435.66
+  },
+  {
+    "date": "2026-05-18",
+    "category": "Entertainment",
+    "transactionId": "367172670118",
+    "settlementDate": "2026-05-18",
+    "debit": 149.52,
+    "credit": 0.0,
+    "balance": 2286.14
+  },
+  {
+    "date": "2026-05-19",
+    "category": "Transport",
+    "transactionId": "385695016134",
+    "settlementDate": "2026-05-19",
+    "debit": 1200.79,
+    "credit": 0.0,
+    "balance": 1085.35
+  },
+  {
+    "date": "2026-05-19",
+    "category": "Food",
+    "transactionId": "326782546314",
+    "settlementDate": "2026-05-19",
+    "debit": 80.87,
+    "credit": 0.0,
+    "balance": 1004.48
+  },
+  {
+    "date": "2026-05-19",
+    "category": "Misc",
+    "transactionId": "MIR8102357022867714",
+    "settlementDate": "2026-05-19",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1504.48
+  },
+  {
+    "date": "2026-05-19",
+    "category": "Food",
+    "transactionId": "334928393291",
+    "settlementDate": "2026-05-19",
+    "debit": 75.24,
+    "credit": 0.0,
+    "balance": 1429.24
+  },
+  {
+    "date": "2026-05-19",
+    "category": "Transport",
+    "transactionId": "366686277792",
+    "settlementDate": "2026-05-19",
+    "debit": 200.13,
+    "credit": 0.0,
+    "balance": 1229.11
+  },
+  {
+    "date": "2026-05-20",
+    "category": "Entertainment",
+    "transactionId": "380846668526",
+    "settlementDate": "2026-05-20",
+    "debit": 199.83,
+    "credit": 0.0,
+    "balance": 1029.28
+  },
+  {
+    "date": "2026-05-22",
+    "category": "Misc",
+    "transactionId": "MIR2796665527116325",
+    "settlementDate": "2026-05-22",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1529.28
+  },
+  {
+    "date": "2026-05-22",
+    "category": "Food",
+    "transactionId": "386527589822",
+    "settlementDate": "2026-05-22",
+    "debit": 75.93,
+    "credit": 0.0,
+    "balance": 1453.35
+  },
+  {
+    "date": "2026-05-23",
+    "category": "Shopping",
+    "transactionId": "363393364102",
+    "settlementDate": "2026-05-23",
+    "debit": 199.87,
+    "credit": 0.0,
+    "balance": 1253.48
+  },
+  {
+    "date": "2026-05-25",
+    "category": "Salary",
+    "transactionId": "CHAS59381486947",
+    "settlementDate": "2026-05-25",
+    "debit": 0.0,
+    "credit": 30000.0,
+    "balance": 31253.48
+  },
+  {
+    "date": "2026-05-25",
+    "category": "Bills",
+    "transactionId": "375184747224",
+    "settlementDate": "2026-05-25",
+    "debit": 800.8,
+    "credit": 0.0,
+    "balance": 30452.68
+  },
+  {
+    "date": "2026-05-25",
+    "category": "Rent",
+    "transactionId": "344685698675",
+    "settlementDate": "2026-05-25",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 22452.68
+  },
+  {
+    "date": "2026-05-25",
+    "category": "Shopping",
+    "transactionId": "362809656613",
+    "settlementDate": "2026-05-25",
+    "debit": 1499.1,
+    "credit": 0.0,
+    "balance": 20953.58
+  },
+  {
+    "date": "2026-05-25",
+    "category": "Shopping",
+    "transactionId": "375278933456",
+    "settlementDate": "2026-05-25",
+    "debit": 999.45,
+    "credit": 0.0,
+    "balance": 19954.13
+  },
+  {
+    "date": "2026-05-26",
+    "category": "Shopping",
+    "transactionId": "366760191749",
+    "settlementDate": "2026-05-26",
+    "debit": 2499.04,
+    "credit": 0.0,
+    "balance": 17455.09
+  },
+  {
+    "date": "2026-05-26",
+    "category": "Rent",
+    "transactionId": "328180574838",
+    "settlementDate": "2026-05-26",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 10145.09
+  },
+  {
+    "date": "2026-05-26",
+    "category": "Entertainment",
+    "transactionId": "341133436988",
+    "settlementDate": "2026-05-26",
+    "debit": 699.36,
+    "credit": 0.0,
+    "balance": 9445.73
+  },
+  {
+    "date": "2026-05-27",
+    "category": "Transport",
+    "transactionId": "329353398109",
+    "settlementDate": "2026-05-27",
+    "debit": 500.03,
+    "credit": 0.0,
+    "balance": 8945.7
+  },
+  {
+    "date": "2026-05-28",
+    "category": "Shopping",
+    "transactionId": "393134773472",
+    "settlementDate": "2026-05-28",
+    "debit": 1499.38,
+    "credit": 0.0,
+    "balance": 7446.32
+  },
+  {
+    "date": "2026-05-28",
+    "category": "Transport",
+    "transactionId": "368499446327",
+    "settlementDate": "2026-05-28",
+    "debit": 80.68,
+    "credit": 0.0,
+    "balance": 7365.64
+  },
+  {
+    "date": "2026-05-28",
+    "category": "Rent",
+    "transactionId": "394247848992",
+    "settlementDate": "2026-05-28",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 865.64
+  },
+  {
+    "date": "2026-05-29",
+    "category": "Misc",
+    "transactionId": "344635844374",
+    "settlementDate": "2026-05-29",
+    "debit": 100.03,
+    "credit": 0.0,
+    "balance": 765.61
+  },
+  {
+    "date": "2026-05-30",
+    "category": "Transport",
+    "transactionId": "354855954847",
+    "settlementDate": "2026-05-30",
+    "debit": 60.26,
+    "credit": 0.0,
+    "balance": 705.35
+  },
+  {
+    "date": "2026-05-31",
+    "category": "Misc",
+    "transactionId": "MIR2555149469848024",
+    "settlementDate": "2026-05-31",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1205.35
+  },
+  {
+    "date": "2026-05-31",
+    "category": "Entertainment",
+    "transactionId": "361817087513",
+    "settlementDate": "2026-05-31",
+    "debit": 1000.0,
+    "credit": 0.0,
+    "balance": 205.35
+  },
+  {
+    "date": "2026-06-01",
+    "category": "Salary",
+    "transactionId": "CHAS98906764728",
+    "settlementDate": "2026-06-01",
+    "debit": 0.0,
+    "credit": 45000.0,
+    "balance": 45205.35
+  },
+  {
+    "date": "2026-06-01",
+    "category": "Misc",
+    "transactionId": "336315801027",
+    "settlementDate": "2026-06-01",
+    "debit": 300.51,
+    "credit": 0.0,
+    "balance": 44904.84
+  },
+  {
+    "date": "2026-06-01",
+    "category": "Bills",
+    "transactionId": "384128222260",
+    "settlementDate": "2026-06-01",
+    "debit": 400.24,
+    "credit": 0.0,
+    "balance": 44504.6
+  },
+  {
+    "date": "2026-06-02",
+    "category": "Transport",
+    "transactionId": "391239340792",
+    "settlementDate": "2026-06-02",
+    "debit": 200.47,
+    "credit": 0.0,
+    "balance": 44304.13
+  },
+  {
+    "date": "2026-06-02",
+    "category": "Transport",
+    "transactionId": "371869801588",
+    "settlementDate": "2026-06-02",
+    "debit": 60.07,
+    "credit": 0.0,
+    "balance": 44244.06
+  },
+  {
+    "date": "2026-06-03",
+    "category": "Transport",
+    "transactionId": "394179189225",
+    "settlementDate": "2026-06-03",
+    "debit": 300.77,
+    "credit": 0.0,
+    "balance": 43943.29
+  },
+  {
+    "date": "2026-06-03",
+    "category": "Misc",
+    "transactionId": "378600184588",
+    "settlementDate": "2026-06-03",
+    "debit": 300.64,
+    "credit": 0.0,
+    "balance": 43642.65
+  },
+  {
+    "date": "2026-06-03",
+    "category": "Entertainment",
+    "transactionId": "391786973497",
+    "settlementDate": "2026-06-03",
+    "debit": 499.13,
+    "credit": 0.0,
+    "balance": 43143.52
+  },
+  {
+    "date": "2026-06-04",
+    "category": "Bills",
+    "transactionId": "328992699085",
+    "settlementDate": "2026-06-04",
+    "debit": 400.43,
+    "credit": 0.0,
+    "balance": 42743.09
+  },
+  {
+    "date": "2026-06-04",
+    "category": "Food",
+    "transactionId": "342273910700",
+    "settlementDate": "2026-06-04",
+    "debit": 100.15,
+    "credit": 0.0,
+    "balance": 42642.94
+  },
+  {
+    "date": "2026-06-04",
+    "category": "Shopping",
+    "transactionId": "387404994549",
+    "settlementDate": "2026-06-04",
+    "debit": 799.35,
+    "credit": 0.0,
+    "balance": 41843.59
+  },
+  {
+    "date": "2026-06-05",
+    "category": "Salary",
+    "transactionId": "CHAS28358627397",
+    "settlementDate": "2026-06-05",
+    "debit": 0.0,
+    "credit": 45000.0,
+    "balance": 86843.59
+  },
+  {
+    "date": "2026-06-05",
+    "category": "Entertainment",
+    "transactionId": "332639633807",
+    "settlementDate": "2026-06-05",
+    "debit": 399.61,
+    "credit": 0.0,
+    "balance": 86443.98
+  },
+  {
+    "date": "2026-06-05",
+    "category": "Entertainment",
+    "transactionId": "395265564833",
+    "settlementDate": "2026-06-05",
+    "debit": 199.59,
+    "credit": 0.0,
+    "balance": 86244.39
+  },
+  {
+    "date": "2026-06-05",
+    "category": "Misc",
+    "transactionId": "398462516271",
+    "settlementDate": "2026-06-05",
+    "debit": 2000.62,
+    "credit": 0.0,
+    "balance": 84243.77
+  },
+  {
+    "date": "2026-06-05",
+    "category": "Bills",
+    "transactionId": "324187212377",
+    "settlementDate": "2026-06-05",
+    "debit": 150.83,
+    "credit": 0.0,
+    "balance": 84092.94
+  },
+  {
+    "date": "2026-06-07",
+    "category": "Transport",
+    "transactionId": "394547306651",
+    "settlementDate": "2026-06-07",
+    "debit": 150.65,
+    "credit": 0.0,
+    "balance": 83942.29
+  },
+  {
+    "date": "2026-06-07",
+    "category": "Transport",
+    "transactionId": "390411032572",
+    "settlementDate": "2026-06-07",
+    "debit": 40.5,
+    "credit": 0.0,
+    "balance": 83901.79
+  },
+  {
+    "date": "2026-06-07",
+    "category": "Entertainment",
+    "transactionId": "372419367188",
+    "settlementDate": "2026-06-07",
+    "debit": 399.48,
+    "credit": 0.0,
+    "balance": 83502.31
+  },
+  {
+    "date": "2026-06-08",
+    "category": "Entertainment",
+    "transactionId": "374619960692",
+    "settlementDate": "2026-06-08",
+    "debit": 99.16,
+    "credit": 0.0,
+    "balance": 83403.15
+  },
+  {
+    "date": "2026-06-08",
+    "category": "Rent",
+    "transactionId": "364751396498",
+    "settlementDate": "2026-06-08",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 76403.15
+  },
+  {
+    "date": "2026-06-09",
+    "category": "Bills",
+    "transactionId": "365528118701",
+    "settlementDate": "2026-06-09",
+    "debit": 1200.73,
+    "credit": 0.0,
+    "balance": 75202.42
+  },
+  {
+    "date": "2026-06-10",
+    "category": "Shopping",
+    "transactionId": "361359564054",
+    "settlementDate": "2026-06-10",
+    "debit": 3499.56,
+    "credit": 0.0,
+    "balance": 71702.86
+  },
+  {
+    "date": "2026-06-11",
+    "category": "Shopping",
+    "transactionId": "333154337019",
+    "settlementDate": "2026-06-11",
+    "debit": 2499.25,
+    "credit": 0.0,
+    "balance": 69203.61
+  },
+  {
+    "date": "2026-06-11",
+    "category": "Shopping",
+    "transactionId": "374366578178",
+    "settlementDate": "2026-06-11",
+    "debit": 1999.86,
+    "credit": 0.0,
+    "balance": 67203.75
+  },
+  {
+    "date": "2026-06-12",
+    "category": "Misc",
+    "transactionId": "361303832812",
+    "settlementDate": "2026-06-12",
+    "debit": 300.93,
+    "credit": 0.0,
+    "balance": 66902.82
+  },
+  {
+    "date": "2026-06-12",
+    "category": "Bills",
+    "transactionId": "386601238919",
+    "settlementDate": "2026-06-12",
+    "debit": 400.5,
+    "credit": 0.0,
+    "balance": 66502.32
+  },
+  {
+    "date": "2026-06-12",
+    "category": "Rent",
+    "transactionId": "384124885365",
+    "settlementDate": "2026-06-12",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 59192.32
+  },
+  {
+    "date": "2026-06-12",
+    "category": "Food",
+    "transactionId": "351331009561",
+    "settlementDate": "2026-06-12",
+    "debit": 80.51,
+    "credit": 0.0,
+    "balance": 59111.81
+  },
+  {
+    "date": "2026-06-12",
+    "category": "Transport",
+    "transactionId": "357631388604",
+    "settlementDate": "2026-06-12",
+    "debit": 200.05,
+    "credit": 0.0,
+    "balance": 58911.76
+  },
+  {
+    "date": "2026-06-13",
+    "category": "Bills",
+    "transactionId": "322215424112",
+    "settlementDate": "2026-06-13",
+    "debit": 2500.29,
+    "credit": 0.0,
+    "balance": 56411.47
+  },
+  {
+    "date": "2026-06-13",
+    "category": "Rent",
+    "transactionId": "354881155839",
+    "settlementDate": "2026-06-13",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 49411.47
+  },
+  {
+    "date": "2026-06-13",
+    "category": "Shopping",
+    "transactionId": "372154930149",
+    "settlementDate": "2026-06-13",
+    "debit": 1999.37,
+    "credit": 0.0,
+    "balance": 47412.1
+  },
+  {
+    "date": "2026-06-14",
+    "category": "Misc",
+    "transactionId": "330514838889",
+    "settlementDate": "2026-06-14",
+    "debit": 300.55,
+    "credit": 0.0,
+    "balance": 47111.55
+  },
+  {
+    "date": "2026-06-14",
+    "category": "Transport",
+    "transactionId": "356986171278",
+    "settlementDate": "2026-06-14",
+    "debit": 500.76,
+    "credit": 0.0,
+    "balance": 46610.79
+  },
+  {
+    "date": "2026-06-15",
+    "category": "Entertainment",
+    "transactionId": "333522950895",
+    "settlementDate": "2026-06-15",
+    "debit": 149.13,
+    "credit": 0.0,
+    "balance": 46461.66
+  },
+  {
+    "date": "2026-06-15",
+    "category": "Shopping",
+    "transactionId": "367910637681",
+    "settlementDate": "2026-06-15",
+    "debit": 1499.56,
+    "credit": 0.0,
+    "balance": 44962.1
+  },
+  {
+    "date": "2026-06-15",
+    "category": "Misc",
+    "transactionId": "372636954564",
+    "settlementDate": "2026-06-15",
+    "debit": 200.6,
+    "credit": 0.0,
+    "balance": 44761.5
+  },
+  {
+    "date": "2026-06-15",
+    "category": "Food",
+    "transactionId": "363963251765",
+    "settlementDate": "2026-06-15",
+    "debit": 20.04,
+    "credit": 0.0,
+    "balance": 44741.46
+  },
+  {
+    "date": "2026-06-15",
+    "category": "Rent",
+    "transactionId": "379259923818",
+    "settlementDate": "2026-06-15",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 36741.46
+  },
+  {
+    "date": "2026-06-16",
+    "category": "Transport",
+    "transactionId": "399442019016",
+    "settlementDate": "2026-06-16",
+    "debit": 80.33,
+    "credit": 0.0,
+    "balance": 36661.13
+  },
+  {
+    "date": "2026-06-16",
+    "category": "Misc",
+    "transactionId": "359737506993",
+    "settlementDate": "2026-06-16",
+    "debit": 500.99,
+    "credit": 0.0,
+    "balance": 36160.14
+  },
+  {
+    "date": "2026-06-16",
+    "category": "Shopping",
+    "transactionId": "389625968839",
+    "settlementDate": "2026-06-16",
+    "debit": 3499.83,
+    "credit": 0.0,
+    "balance": 32660.31
+  },
+  {
+    "date": "2026-06-17",
+    "category": "Shopping",
+    "transactionId": "368455665802",
+    "settlementDate": "2026-06-17",
+    "debit": 2499.82,
+    "credit": 0.0,
+    "balance": 30160.49
+  },
+  {
+    "date": "2026-06-17",
+    "category": "Entertainment",
+    "transactionId": "395430366556",
+    "settlementDate": "2026-06-17",
+    "debit": 149.98,
+    "credit": 0.0,
+    "balance": 30010.51
+  },
+  {
+    "date": "2026-06-17",
+    "category": "Bills",
+    "transactionId": "354803935444",
+    "settlementDate": "2026-06-17",
+    "debit": 150.6,
+    "credit": 0.0,
+    "balance": 29859.91
+  },
+  {
+    "date": "2026-06-18",
+    "category": "Bills",
+    "transactionId": "395615877957",
+    "settlementDate": "2026-06-18",
+    "debit": 600.72,
+    "credit": 0.0,
+    "balance": 29259.19
+  },
+  {
+    "date": "2026-06-18",
+    "category": "Misc",
+    "transactionId": "369258672959",
+    "settlementDate": "2026-06-18",
+    "debit": 1000.63,
+    "credit": 0.0,
+    "balance": 28258.56
+  },
+  {
+    "date": "2026-06-18",
+    "category": "Bills",
+    "transactionId": "335304853117",
+    "settlementDate": "2026-06-18",
+    "debit": 600.03,
+    "credit": 0.0,
+    "balance": 27658.53
+  },
+  {
+    "date": "2026-06-20",
+    "category": "Misc",
+    "transactionId": "373638824588",
+    "settlementDate": "2026-06-20",
+    "debit": 500.69,
+    "credit": 0.0,
+    "balance": 27157.84
+  },
+  {
+    "date": "2026-06-20",
+    "category": "Bills",
+    "transactionId": "328857820386",
+    "settlementDate": "2026-06-20",
+    "debit": 2500.87,
+    "credit": 0.0,
+    "balance": 24656.97
+  },
+  {
+    "date": "2026-06-21",
+    "category": "Misc",
+    "transactionId": "382664226794",
+    "settlementDate": "2026-06-21",
+    "debit": 1000.33,
+    "credit": 0.0,
+    "balance": 23656.64
+  },
+  {
+    "date": "2026-06-22",
+    "category": "Misc",
+    "transactionId": "364686556403",
+    "settlementDate": "2026-06-22",
+    "debit": 700.91,
+    "credit": 0.0,
+    "balance": 22955.73
+  },
+  {
+    "date": "2026-06-22",
+    "category": "Shopping",
+    "transactionId": "345364697908",
+    "settlementDate": "2026-06-22",
+    "debit": 999.61,
+    "credit": 0.0,
+    "balance": 21956.12
+  },
+  {
+    "date": "2026-06-23",
+    "category": "Shopping",
+    "transactionId": "359928042067",
+    "settlementDate": "2026-06-23",
+    "debit": 799.94,
+    "credit": 0.0,
+    "balance": 21156.18
+  },
+  {
+    "date": "2026-06-24",
+    "category": "Misc",
+    "transactionId": "361615185000",
+    "settlementDate": "2026-06-24",
+    "debit": 5000.7,
+    "credit": 0.0,
+    "balance": 16155.48
+  },
+  {
+    "date": "2026-06-24",
+    "category": "Shopping",
+    "transactionId": "356409011489",
+    "settlementDate": "2026-06-24",
+    "debit": 3499.93,
+    "credit": 0.0,
+    "balance": 12655.55
+  },
+  {
+    "date": "2026-06-25",
+    "category": "Salary",
+    "transactionId": "CHAS49283815829",
+    "settlementDate": "2026-06-25",
+    "debit": 0.0,
+    "credit": 40000.0,
+    "balance": 52655.55
+  },
+  {
+    "date": "2026-06-25",
+    "category": "Food",
+    "transactionId": "331471904990",
+    "settlementDate": "2026-06-25",
+    "debit": 60.96,
+    "credit": 0.0,
+    "balance": 52594.59
+  },
+  {
+    "date": "2026-06-26",
+    "category": "Entertainment",
+    "transactionId": "348316968866",
+    "settlementDate": "2026-06-26",
+    "debit": 399.75,
+    "credit": 0.0,
+    "balance": 52194.84
+  },
+  {
+    "date": "2026-06-26",
+    "category": "Bills",
+    "transactionId": "355247395716",
+    "settlementDate": "2026-06-26",
+    "debit": 800.93,
+    "credit": 0.0,
+    "balance": 51393.91
+  },
+  {
+    "date": "2026-06-26",
+    "category": "Food",
+    "transactionId": "351360337343",
+    "settlementDate": "2026-06-26",
+    "debit": 120.74,
+    "credit": 0.0,
+    "balance": 51273.17
+  },
+  {
+    "date": "2026-06-26",
+    "category": "Food",
+    "transactionId": "349784987769",
+    "settlementDate": "2026-06-26",
+    "debit": 150.91,
+    "credit": 0.0,
+    "balance": 51122.26
+  },
+  {
+    "date": "2026-06-27",
+    "category": "Food",
+    "transactionId": "381207959268",
+    "settlementDate": "2026-06-27",
+    "debit": 80.33,
+    "credit": 0.0,
+    "balance": 51041.93
+  },
+  {
+    "date": "2026-06-28",
+    "category": "Misc",
+    "transactionId": "341536913550",
+    "settlementDate": "2026-06-28",
+    "debit": 50.96,
+    "credit": 0.0,
+    "balance": 50990.97
+  },
+  {
+    "date": "2026-06-28",
+    "category": "Entertainment",
+    "transactionId": "346911653317",
+    "settlementDate": "2026-06-28",
+    "debit": 999.48,
+    "credit": 0.0,
+    "balance": 49991.49
+  },
+  {
+    "date": "2026-06-28",
+    "category": "Shopping",
+    "transactionId": "328925412179",
+    "settlementDate": "2026-06-28",
+    "debit": 1499.29,
+    "credit": 0.0,
+    "balance": 48492.2
+  },
+  {
+    "date": "2026-06-29",
+    "category": "Transport",
+    "transactionId": "325287974375",
+    "settlementDate": "2026-06-29",
+    "debit": 100.54,
+    "credit": 0.0,
+    "balance": 48391.66
+  },
+  {
+    "date": "2026-06-30",
+    "category": "Bills",
+    "transactionId": "325997866344",
+    "settlementDate": "2026-06-30",
+    "debit": 400.93,
+    "credit": 0.0,
+    "balance": 47990.73
+  },
+  {
+    "date": "2026-06-30",
+    "category": "Rent",
+    "transactionId": "344904236062",
+    "settlementDate": "2026-06-30",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 40531.73
+  },
+  {
+    "date": "2026-07-01",
+    "category": "Food",
+    "transactionId": "398215213239",
+    "settlementDate": "2026-07-01",
+    "debit": 20.3,
+    "credit": 0.0,
+    "balance": 40511.43
+  },
+  {
+    "date": "2026-07-01",
+    "category": "Shopping",
+    "transactionId": "390662982736",
+    "settlementDate": "2026-07-01",
+    "debit": 999.45,
+    "credit": 0.0,
+    "balance": 39511.98
+  },
+  {
+    "date": "2026-07-01",
+    "category": "Rent",
+    "transactionId": "385602533479",
+    "settlementDate": "2026-07-01",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 32511.98
+  },
+  {
+    "date": "2026-07-01",
+    "category": "Shopping",
+    "transactionId": "363274476883",
+    "settlementDate": "2026-07-01",
+    "debit": 799.81,
+    "credit": 0.0,
+    "balance": 31712.17
+  },
+  {
+    "date": "2026-07-01",
+    "category": "Entertainment",
+    "transactionId": "344115122787",
+    "settlementDate": "2026-07-01",
+    "debit": 999.65,
+    "credit": 0.0,
+    "balance": 30712.52
+  },
+  {
+    "date": "2026-07-02",
+    "category": "Bills",
+    "transactionId": "345288436227",
+    "settlementDate": "2026-07-02",
+    "debit": 800.57,
+    "credit": 0.0,
+    "balance": 29911.95
+  },
+  {
+    "date": "2026-07-02",
+    "category": "Transport",
+    "transactionId": "386452108572",
+    "settlementDate": "2026-07-02",
+    "debit": 300.83,
+    "credit": 0.0,
+    "balance": 29611.12
+  },
+  {
+    "date": "2026-07-02",
+    "category": "Food",
+    "transactionId": "344250980852",
+    "settlementDate": "2026-07-02",
+    "debit": 80.67,
+    "credit": 0.0,
+    "balance": 29530.45
+  },
+  {
+    "date": "2026-07-03",
+    "category": "Misc",
+    "transactionId": "351579678614",
+    "settlementDate": "2026-07-03",
+    "debit": 50.26,
+    "credit": 0.0,
+    "balance": 29480.19
+  },
+  {
+    "date": "2026-07-03",
+    "category": "Bills",
+    "transactionId": "359725412469",
+    "settlementDate": "2026-07-03",
+    "debit": 800.95,
+    "credit": 0.0,
+    "balance": 28679.24
+  },
+  {
+    "date": "2026-07-04",
+    "category": "Food",
+    "transactionId": "351166705490",
+    "settlementDate": "2026-07-04",
+    "debit": 60.65,
+    "credit": 0.0,
+    "balance": 28618.59
+  },
+  {
+    "date": "2026-07-04",
+    "category": "Entertainment",
+    "transactionId": "341535312769",
+    "settlementDate": "2026-07-04",
+    "debit": 149.47,
+    "credit": 0.0,
+    "balance": 28469.12
+  },
+  {
+    "date": "2026-07-04",
+    "category": "Entertainment",
+    "transactionId": "358494647257",
+    "settlementDate": "2026-07-04",
+    "debit": 399.69,
+    "credit": 0.0,
+    "balance": 28069.43
+  },
+  {
+    "date": "2026-07-05",
+    "category": "Salary",
+    "transactionId": "CHAS29233644807",
+    "settlementDate": "2026-07-05",
+    "debit": 0.0,
+    "credit": 30000.0,
+    "balance": 58069.43
+  },
+  {
+    "date": "2026-07-05",
+    "category": "Rent",
+    "transactionId": "368546510829",
+    "settlementDate": "2026-07-05",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 50069.43
+  },
+  {
+    "date": "2026-07-05",
+    "category": "Entertainment",
+    "transactionId": "348918040539",
+    "settlementDate": "2026-07-05",
+    "debit": 999.76,
+    "credit": 0.0,
+    "balance": 49069.67
+  },
+  {
+    "date": "2026-07-05",
+    "category": "Misc",
+    "transactionId": "331664258474",
+    "settlementDate": "2026-07-05",
+    "debit": 2000.75,
+    "credit": 0.0,
+    "balance": 47068.92
+  },
+  {
+    "date": "2026-07-06",
+    "category": "Entertainment",
+    "transactionId": "393220483278",
+    "settlementDate": "2026-07-06",
+    "debit": 499.08,
+    "credit": 0.0,
+    "balance": 46569.84
+  },
+  {
+    "date": "2026-07-06",
+    "category": "Food",
+    "transactionId": "346714933740",
+    "settlementDate": "2026-07-06",
+    "debit": 100.9,
+    "credit": 0.0,
+    "balance": 46468.94
+  },
+  {
+    "date": "2026-07-07",
+    "category": "Misc",
+    "transactionId": "377224811770",
+    "settlementDate": "2026-07-07",
+    "debit": 300.85,
+    "credit": 0.0,
+    "balance": 46168.09
+  },
+  {
+    "date": "2026-07-07",
+    "category": "Entertainment",
+    "transactionId": "383197647841",
+    "settlementDate": "2026-07-07",
+    "debit": 299.72,
+    "credit": 0.0,
+    "balance": 45868.37
+  },
+  {
+    "date": "2026-07-08",
+    "category": "Rent",
+    "transactionId": "379241674152",
+    "settlementDate": "2026-07-08",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 39368.37
+  },
+  {
+    "date": "2026-07-08",
+    "category": "Transport",
+    "transactionId": "328700003920",
+    "settlementDate": "2026-07-08",
+    "debit": 300.46,
+    "credit": 0.0,
+    "balance": 39067.91
+  },
+  {
+    "date": "2026-07-08",
+    "category": "Rent",
+    "transactionId": "323525146690",
+    "settlementDate": "2026-07-08",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 31757.91
+  },
+  {
+    "date": "2026-07-08",
+    "category": "Shopping",
+    "transactionId": "395178414859",
+    "settlementDate": "2026-07-08",
+    "debit": 199.75,
+    "credit": 0.0,
+    "balance": 31558.16
+  },
+  {
+    "date": "2026-07-10",
+    "category": "Food",
+    "transactionId": "329606882594",
+    "settlementDate": "2026-07-10",
+    "debit": 100.99,
+    "credit": 0.0,
+    "balance": 31457.17
+  },
+  {
+    "date": "2026-07-10",
+    "category": "Food",
+    "transactionId": "338922301213",
+    "settlementDate": "2026-07-10",
+    "debit": 60.41,
+    "credit": 0.0,
+    "balance": 31396.76
+  },
+  {
+    "date": "2026-07-11",
+    "category": "Entertainment",
+    "transactionId": "369581613078",
+    "settlementDate": "2026-07-11",
+    "debit": 699.37,
+    "credit": 0.0,
+    "balance": 30697.39
+  },
+  {
+    "date": "2026-07-11",
+    "category": "Bills",
+    "transactionId": "390242796714",
+    "settlementDate": "2026-07-11",
+    "debit": 1800.38,
+    "credit": 0.0,
+    "balance": 28897.01
+  },
+  {
+    "date": "2026-07-11",
+    "category": "Entertainment",
+    "transactionId": "389522043490",
+    "settlementDate": "2026-07-11",
+    "debit": 499.12,
+    "credit": 0.0,
+    "balance": 28397.89
+  },
+  {
+    "date": "2026-07-12",
+    "category": "Entertainment",
+    "transactionId": "323420364823",
+    "settlementDate": "2026-07-12",
+    "debit": 299.83,
+    "credit": 0.0,
+    "balance": 28098.06
+  },
+  {
+    "date": "2026-07-12",
+    "category": "Rent",
+    "transactionId": "375671159367",
+    "settlementDate": "2026-07-12",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 20098.06
+  },
+  {
+    "date": "2026-07-13",
+    "category": "Misc",
+    "transactionId": "340395976645",
+    "settlementDate": "2026-07-13",
+    "debit": 200.46,
+    "credit": 0.0,
+    "balance": 19897.6
+  },
+  {
+    "date": "2026-07-13",
+    "category": "Misc",
+    "transactionId": "325969170578",
+    "settlementDate": "2026-07-13",
+    "debit": 5000.77,
+    "credit": 0.0,
+    "balance": 14896.83
+  },
+  {
+    "date": "2026-07-14",
+    "category": "Transport",
+    "transactionId": "329208337018",
+    "settlementDate": "2026-07-14",
+    "debit": 40.24,
+    "credit": 0.0,
+    "balance": 14856.59
+  },
+  {
+    "date": "2026-07-14",
+    "category": "Transport",
+    "transactionId": "327362781292",
+    "settlementDate": "2026-07-14",
+    "debit": 40.45,
+    "credit": 0.0,
+    "balance": 14816.14
+  },
+  {
+    "date": "2026-07-14",
+    "category": "Entertainment",
+    "transactionId": "350679562681",
+    "settlementDate": "2026-07-14",
+    "debit": 99.4,
+    "credit": 0.0,
+    "balance": 14716.74
+  },
+  {
+    "date": "2026-07-15",
+    "category": "Bills",
+    "transactionId": "358351429015",
+    "settlementDate": "2026-07-15",
+    "debit": 150.14,
+    "credit": 0.0,
+    "balance": 14566.6
+  },
+  {
+    "date": "2026-07-16",
+    "category": "Entertainment",
+    "transactionId": "362354373770",
+    "settlementDate": "2026-07-16",
+    "debit": 499.58,
+    "credit": 0.0,
+    "balance": 14067.02
+  },
+  {
+    "date": "2026-07-16",
+    "category": "Shopping",
+    "transactionId": "387337342839",
+    "settlementDate": "2026-07-16",
+    "debit": 499.99,
+    "credit": 0.0,
+    "balance": 13567.03
+  },
+  {
+    "date": "2026-07-16",
+    "category": "Rent",
+    "transactionId": "356165452764",
+    "settlementDate": "2026-07-16",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 6257.03
+  },
+  {
+    "date": "2026-07-17",
+    "category": "Transport",
+    "transactionId": "375696840109",
+    "settlementDate": "2026-07-17",
+    "debit": 80.63,
+    "credit": 0.0,
+    "balance": 6176.4
+  },
+  {
+    "date": "2026-07-18",
+    "category": "Entertainment",
+    "transactionId": "361847655456",
+    "settlementDate": "2026-07-18",
+    "debit": 699.79,
+    "credit": 0.0,
+    "balance": 5476.61
+  },
+  {
+    "date": "2026-07-18",
+    "category": "Misc",
+    "transactionId": "MIR7795175922938192",
+    "settlementDate": "2026-07-18",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 8476.61
+  },
+  {
+    "date": "2026-07-18",
+    "category": "Rent",
+    "transactionId": "389608436962",
+    "settlementDate": "2026-07-18",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 1017.61
+  },
+  {
+    "date": "2026-07-18",
+    "category": "Misc",
+    "transactionId": "339965195567",
+    "settlementDate": "2026-07-18",
+    "debit": 200.3,
+    "credit": 0.0,
+    "balance": 817.31
+  },
+  {
+    "date": "2026-07-19",
+    "category": "Misc",
+    "transactionId": "MIR6825007863995780",
+    "settlementDate": "2026-07-19",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1817.31
+  },
+  {
+    "date": "2026-07-19",
+    "category": "Transport",
+    "transactionId": "331582954920",
+    "settlementDate": "2026-07-19",
+    "debit": 1200.13,
+    "credit": 0.0,
+    "balance": 617.18
+  },
+  {
+    "date": "2026-07-19",
+    "category": "Misc",
+    "transactionId": "398747382621",
+    "settlementDate": "2026-07-19",
+    "debit": 50.27,
+    "credit": 0.0,
+    "balance": 566.91
+  },
+  {
+    "date": "2026-07-19",
+    "category": "Food",
+    "transactionId": "396877716824",
+    "settlementDate": "2026-07-19",
+    "debit": 30.19,
+    "credit": 0.0,
+    "balance": 536.72
+  },
+  {
+    "date": "2026-07-19",
+    "category": "Entertainment",
+    "transactionId": "363425545658",
+    "settlementDate": "2026-07-19",
+    "debit": 299.48,
+    "credit": 0.0,
+    "balance": 237.24
+  },
+  {
+    "date": "2026-07-20",
+    "category": "Food",
+    "transactionId": "336901955461",
+    "settlementDate": "2026-07-20",
+    "debit": 50.94,
+    "credit": 0.0,
+    "balance": 186.3
+  },
+  {
+    "date": "2026-07-20",
+    "category": "Misc",
+    "transactionId": "MIR3549573227123710",
+    "settlementDate": "2026-07-20",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2186.3
+  },
+  {
+    "date": "2026-07-20",
+    "category": "Entertainment",
+    "transactionId": "369600632621",
+    "settlementDate": "2026-07-20",
+    "debit": 299.4,
+    "credit": 0.0,
+    "balance": 1886.9
+  },
+  {
+    "date": "2026-07-20",
+    "category": "Transport",
+    "transactionId": "367650632566",
+    "settlementDate": "2026-07-20",
+    "debit": 200.31,
+    "credit": 0.0,
+    "balance": 1686.59
+  },
+  {
+    "date": "2026-07-20",
+    "category": "Misc",
+    "transactionId": "MIR8563625363021224",
+    "settlementDate": "2026-07-20",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 4686.59
+  },
+  {
+    "date": "2026-07-21",
+    "category": "Misc",
+    "transactionId": "326704006325",
+    "settlementDate": "2026-07-21",
+    "debit": 300.31,
+    "credit": 0.0,
+    "balance": 4386.28
+  },
+  {
+    "date": "2026-07-21",
+    "category": "Bills",
+    "transactionId": "323380004069",
+    "settlementDate": "2026-07-21",
+    "debit": 600.74,
+    "credit": 0.0,
+    "balance": 3785.54
+  },
+  {
+    "date": "2026-07-22",
+    "category": "Transport",
+    "transactionId": "358263650505",
+    "settlementDate": "2026-07-22",
+    "debit": 3000.72,
+    "credit": 0.0,
+    "balance": 784.82
+  },
+  {
+    "date": "2026-07-22",
+    "category": "Misc",
+    "transactionId": "352636120880",
+    "settlementDate": "2026-07-22",
+    "debit": 300.23,
+    "credit": 0.0,
+    "balance": 484.59
+  },
+  {
+    "date": "2026-07-24",
+    "category": "Misc",
+    "transactionId": "MIR1304657165531309",
+    "settlementDate": "2026-07-24",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 984.59
+  },
+  {
+    "date": "2026-07-24",
+    "category": "Bills",
+    "transactionId": "327920702588",
+    "settlementDate": "2026-07-24",
+    "debit": 250.95,
+    "credit": 0.0,
+    "balance": 733.64
+  },
+  {
+    "date": "2026-07-25",
+    "category": "Salary",
+    "transactionId": "CHAS10648667392",
+    "settlementDate": "2026-07-25",
+    "debit": 0.0,
+    "credit": 30000.0,
+    "balance": 30733.64
+  },
+  {
+    "date": "2026-07-26",
+    "category": "Rent",
+    "transactionId": "328763395529",
+    "settlementDate": "2026-07-26",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 23423.64
+  },
+  {
+    "date": "2026-07-27",
+    "category": "Transport",
+    "transactionId": "323107099962",
+    "settlementDate": "2026-07-27",
+    "debit": 500.66,
+    "credit": 0.0,
+    "balance": 22922.98
+  },
+  {
+    "date": "2026-07-27",
+    "category": "Transport",
+    "transactionId": "323668457864",
+    "settlementDate": "2026-07-27",
+    "debit": 1200.41,
+    "credit": 0.0,
+    "balance": 21722.57
+  },
+  {
+    "date": "2026-07-27",
+    "category": "Entertainment",
+    "transactionId": "357118406723",
+    "settlementDate": "2026-07-27",
+    "debit": 399.54,
+    "credit": 0.0,
+    "balance": 21323.03
+  },
+  {
+    "date": "2026-07-28",
+    "category": "Entertainment",
+    "transactionId": "343214908010",
+    "settlementDate": "2026-07-28",
+    "debit": 699.81,
+    "credit": 0.0,
+    "balance": 20623.22
+  },
+  {
+    "date": "2026-07-28",
+    "category": "Food",
+    "transactionId": "345765484610",
+    "settlementDate": "2026-07-28",
+    "debit": 100.15,
+    "credit": 0.0,
+    "balance": 20523.07
+  },
+  {
+    "date": "2026-07-29",
+    "category": "Bills",
+    "transactionId": "371184846271",
+    "settlementDate": "2026-07-29",
+    "debit": 1200.27,
+    "credit": 0.0,
+    "balance": 19322.8
+  },
+  {
+    "date": "2026-07-29",
+    "category": "Shopping",
+    "transactionId": "352848651792",
+    "settlementDate": "2026-07-29",
+    "debit": 1999.46,
+    "credit": 0.0,
+    "balance": 17323.34
+  },
+  {
+    "date": "2026-07-30",
+    "category": "Entertainment",
+    "transactionId": "325200395400",
+    "settlementDate": "2026-07-30",
+    "debit": 149.65,
+    "credit": 0.0,
+    "balance": 17173.69
+  },
+  {
+    "date": "2026-07-31",
+    "category": "Rent",
+    "transactionId": "381160252954",
+    "settlementDate": "2026-07-31",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 9173.69
+  },
+  {
+    "date": "2026-07-31",
+    "category": "Entertainment",
+    "transactionId": "331636718857",
+    "settlementDate": "2026-07-31",
+    "debit": 99.7,
+    "credit": 0.0,
+    "balance": 9073.99
+  },
+  {
+    "date": "2026-08-01",
+    "category": "Salary",
+    "transactionId": "CHAS40247529489",
+    "settlementDate": "2026-08-01",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 43873.99
+  },
+  {
+    "date": "2026-08-01",
+    "category": "Misc",
+    "transactionId": "381391086098",
+    "settlementDate": "2026-08-01",
+    "debit": 5000.89,
+    "credit": 0.0,
+    "balance": 38873.1
+  },
+  {
+    "date": "2026-08-01",
+    "category": "Food",
+    "transactionId": "356683074772",
+    "settlementDate": "2026-08-01",
+    "debit": 30.68,
+    "credit": 0.0,
+    "balance": 38842.42
+  },
+  {
+    "date": "2026-08-01",
+    "category": "Transport",
+    "transactionId": "361116812751",
+    "settlementDate": "2026-08-01",
+    "debit": 40.18,
+    "credit": 0.0,
+    "balance": 38802.24
+  },
+  {
+    "date": "2026-08-01",
+    "category": "Misc",
+    "transactionId": "371182611003",
+    "settlementDate": "2026-08-01",
+    "debit": 1500.14,
+    "credit": 0.0,
+    "balance": 37302.1
+  },
+  {
+    "date": "2026-08-02",
+    "category": "Transport",
+    "transactionId": "370826960759",
+    "settlementDate": "2026-08-02",
+    "debit": 100.57,
+    "credit": 0.0,
+    "balance": 37201.53
+  },
+  {
+    "date": "2026-08-02",
+    "category": "Transport",
+    "transactionId": "338948790854",
+    "settlementDate": "2026-08-02",
+    "debit": 200.38,
+    "credit": 0.0,
+    "balance": 37001.15
+  },
+  {
+    "date": "2026-08-03",
+    "category": "Entertainment",
+    "transactionId": "365157656107",
+    "settlementDate": "2026-08-03",
+    "debit": 149.5,
+    "credit": 0.0,
+    "balance": 36851.65
+  },
+  {
+    "date": "2026-08-03",
+    "category": "Food",
+    "transactionId": "330465708674",
+    "settlementDate": "2026-08-03",
+    "debit": 80.23,
+    "credit": 0.0,
+    "balance": 36771.42
+  },
+  {
+    "date": "2026-08-03",
+    "category": "Transport",
+    "transactionId": "371930598266",
+    "settlementDate": "2026-08-03",
+    "debit": 3000.95,
+    "credit": 0.0,
+    "balance": 33770.47
+  },
+  {
+    "date": "2026-08-03",
+    "category": "Shopping",
+    "transactionId": "378626781451",
+    "settlementDate": "2026-08-03",
+    "debit": 199.63,
+    "credit": 0.0,
+    "balance": 33570.84
+  },
+  {
+    "date": "2026-08-03",
+    "category": "Misc",
+    "transactionId": "369563693201",
+    "settlementDate": "2026-08-03",
+    "debit": 300.55,
+    "credit": 0.0,
+    "balance": 33270.29
+  },
+  {
+    "date": "2026-08-04",
+    "category": "Transport",
+    "transactionId": "358956905222",
+    "settlementDate": "2026-08-04",
+    "debit": 300.09,
+    "credit": 0.0,
+    "balance": 32970.2
+  },
+  {
+    "date": "2026-08-05",
+    "category": "Salary",
+    "transactionId": "CHAS62201981543",
+    "settlementDate": "2026-08-05",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 67770.2
+  },
+  {
+    "date": "2026-08-05",
+    "category": "Entertainment",
+    "transactionId": "361487298927",
+    "settlementDate": "2026-08-05",
+    "debit": 199.74,
+    "credit": 0.0,
+    "balance": 67570.46
+  },
+  {
+    "date": "2026-08-06",
+    "category": "Food",
+    "transactionId": "355209770151",
+    "settlementDate": "2026-08-06",
+    "debit": 60.44,
+    "credit": 0.0,
+    "balance": 67510.02
+  },
+  {
+    "date": "2026-08-07",
+    "category": "Misc",
+    "transactionId": "392650229169",
+    "settlementDate": "2026-08-07",
+    "debit": 500.45,
+    "credit": 0.0,
+    "balance": 67009.57
+  },
+  {
+    "date": "2026-08-08",
+    "category": "Food",
+    "transactionId": "332740942859",
+    "settlementDate": "2026-08-08",
+    "debit": 30.35,
+    "credit": 0.0,
+    "balance": 66979.22
+  },
+  {
+    "date": "2026-08-08",
+    "category": "Transport",
+    "transactionId": "322413368711",
+    "settlementDate": "2026-08-08",
+    "debit": 200.86,
+    "credit": 0.0,
+    "balance": 66778.36
+  },
+  {
+    "date": "2026-08-09",
+    "category": "Bills",
+    "transactionId": "392360642799",
+    "settlementDate": "2026-08-09",
+    "debit": 250.72,
+    "credit": 0.0,
+    "balance": 66527.64
+  },
+  {
+    "date": "2026-08-09",
+    "category": "Transport",
+    "transactionId": "369282001119",
+    "settlementDate": "2026-08-09",
+    "debit": 1200.17,
+    "credit": 0.0,
+    "balance": 65327.47
+  },
+  {
+    "date": "2026-08-10",
+    "category": "Shopping",
+    "transactionId": "329279537578",
+    "settlementDate": "2026-08-10",
+    "debit": 999.49,
+    "credit": 0.0,
+    "balance": 64327.98
+  },
+  {
+    "date": "2026-08-11",
+    "category": "Rent",
+    "transactionId": "382940381893",
+    "settlementDate": "2026-08-11",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 57017.98
+  },
+  {
+    "date": "2026-08-11",
+    "category": "Food",
+    "transactionId": "352874059895",
+    "settlementDate": "2026-08-11",
+    "debit": 75.25,
+    "credit": 0.0,
+    "balance": 56942.73
+  },
+  {
+    "date": "2026-08-12",
+    "category": "Transport",
+    "transactionId": "334245480775",
+    "settlementDate": "2026-08-12",
+    "debit": 3000.2,
+    "credit": 0.0,
+    "balance": 53942.53
+  },
+  {
+    "date": "2026-08-12",
+    "category": "Shopping",
+    "transactionId": "363765926290",
+    "settlementDate": "2026-08-12",
+    "debit": 199.95,
+    "credit": 0.0,
+    "balance": 53742.58
+  },
+  {
+    "date": "2026-08-12",
+    "category": "Rent",
+    "transactionId": "377459420281",
+    "settlementDate": "2026-08-12",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 46432.58
+  },
+  {
+    "date": "2026-08-13",
+    "category": "Bills",
+    "transactionId": "398846564420",
+    "settlementDate": "2026-08-13",
+    "debit": 400.3,
+    "credit": 0.0,
+    "balance": 46032.28
+  },
+  {
+    "date": "2026-08-13",
+    "category": "Misc",
+    "transactionId": "371442671456",
+    "settlementDate": "2026-08-13",
+    "debit": 700.31,
+    "credit": 0.0,
+    "balance": 45331.97
+  },
+  {
+    "date": "2026-08-14",
+    "category": "Entertainment",
+    "transactionId": "352449917685",
+    "settlementDate": "2026-08-14",
+    "debit": 999.97,
+    "credit": 0.0,
+    "balance": 44332.0
+  },
+  {
+    "date": "2026-08-14",
+    "category": "Rent",
+    "transactionId": "371491932454",
+    "settlementDate": "2026-08-14",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 37022.0
+  },
+  {
+    "date": "2026-08-15",
+    "category": "Transport",
+    "transactionId": "390293195372",
+    "settlementDate": "2026-08-15",
+    "debit": 100.59,
+    "credit": 0.0,
+    "balance": 36921.41
+  },
+  {
+    "date": "2026-08-16",
+    "category": "Transport",
+    "transactionId": "380860603328",
+    "settlementDate": "2026-08-16",
+    "debit": 40.95,
+    "credit": 0.0,
+    "balance": 36880.46
+  },
+  {
+    "date": "2026-08-16",
+    "category": "Misc",
+    "transactionId": "329979357576",
+    "settlementDate": "2026-08-16",
+    "debit": 700.8,
+    "credit": 0.0,
+    "balance": 36179.66
+  },
+  {
+    "date": "2026-08-16",
+    "category": "Bills",
+    "transactionId": "338780039397",
+    "settlementDate": "2026-08-16",
+    "debit": 1800.67,
+    "credit": 0.0,
+    "balance": 34378.99
+  },
+  {
+    "date": "2026-08-17",
+    "category": "Shopping",
+    "transactionId": "369179419456",
+    "settlementDate": "2026-08-17",
+    "debit": 499.72,
+    "credit": 0.0,
+    "balance": 33879.27
+  },
+  {
+    "date": "2026-08-17",
+    "category": "Rent",
+    "transactionId": "382725179752",
+    "settlementDate": "2026-08-17",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 25879.27
+  },
+  {
+    "date": "2026-08-18",
+    "category": "Transport",
+    "transactionId": "367853374076",
+    "settlementDate": "2026-08-18",
+    "debit": 300.54,
+    "credit": 0.0,
+    "balance": 25578.73
+  },
+  {
+    "date": "2026-08-18",
+    "category": "Bills",
+    "transactionId": "352806094391",
+    "settlementDate": "2026-08-18",
+    "debit": 250.11,
+    "credit": 0.0,
+    "balance": 25328.62
+  },
+  {
+    "date": "2026-08-19",
+    "category": "Misc",
+    "transactionId": "393792596980",
+    "settlementDate": "2026-08-19",
+    "debit": 2000.61,
+    "credit": 0.0,
+    "balance": 23328.01
+  },
+  {
+    "date": "2026-08-19",
+    "category": "Entertainment",
+    "transactionId": "363954946593",
+    "settlementDate": "2026-08-19",
+    "debit": 699.97,
+    "credit": 0.0,
+    "balance": 22628.04
+  },
+  {
+    "date": "2026-08-19",
+    "category": "Rent",
+    "transactionId": "322205877984",
+    "settlementDate": "2026-08-19",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 16128.04
+  },
+  {
+    "date": "2026-08-20",
+    "category": "Transport",
+    "transactionId": "394337331022",
+    "settlementDate": "2026-08-20",
+    "debit": 1200.56,
+    "credit": 0.0,
+    "balance": 14927.48
+  },
+  {
+    "date": "2026-08-21",
+    "category": "Rent",
+    "transactionId": "396841351411",
+    "settlementDate": "2026-08-21",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 7468.48
+  },
+  {
+    "date": "2026-08-21",
+    "category": "Transport",
+    "transactionId": "324618371508",
+    "settlementDate": "2026-08-21",
+    "debit": 80.34,
+    "credit": 0.0,
+    "balance": 7388.14
+  },
+  {
+    "date": "2026-08-22",
+    "category": "Rent",
+    "transactionId": "335992620629",
+    "settlementDate": "2026-08-22",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 888.14
+  },
+  {
+    "date": "2026-08-23",
+    "category": "Misc",
+    "transactionId": "379942103498",
+    "settlementDate": "2026-08-23",
+    "debit": 300.31,
+    "credit": 0.0,
+    "balance": 587.83
+  },
+  {
+    "date": "2026-08-23",
+    "category": "Misc",
+    "transactionId": "MIR8297506110101811",
+    "settlementDate": "2026-08-23",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2587.83
+  },
+  {
+    "date": "2026-08-23",
+    "category": "Entertainment",
+    "transactionId": "364795752405",
+    "settlementDate": "2026-08-23",
+    "debit": 149.02,
+    "credit": 0.0,
+    "balance": 2438.81
+  },
+  {
+    "date": "2026-08-24",
+    "category": "Bills",
+    "transactionId": "352654044237",
+    "settlementDate": "2026-08-24",
+    "debit": 400.93,
+    "credit": 0.0,
+    "balance": 2037.88
+  },
+  {
+    "date": "2026-08-25",
+    "category": "Salary",
+    "transactionId": "CHAS42049278564",
+    "settlementDate": "2026-08-25",
+    "debit": 0.0,
+    "credit": 45000.0,
+    "balance": 47037.88
+  },
+  {
+    "date": "2026-08-25",
+    "category": "Bills",
+    "transactionId": "344787708952",
+    "settlementDate": "2026-08-25",
+    "debit": 1800.63,
+    "credit": 0.0,
+    "balance": 45237.25
+  },
+  {
+    "date": "2026-08-26",
+    "category": "Rent",
+    "transactionId": "399311875497",
+    "settlementDate": "2026-08-26",
+    "debit": 6500.0,
+    "credit": 0.0,
+    "balance": 38737.25
+  },
+  {
+    "date": "2026-08-26",
+    "category": "Rent",
+    "transactionId": "375517509245",
+    "settlementDate": "2026-08-26",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 30737.25
+  },
+  {
+    "date": "2026-08-26",
+    "category": "Food",
+    "transactionId": "356907803348",
+    "settlementDate": "2026-08-26",
+    "debit": 180.21,
+    "credit": 0.0,
+    "balance": 30557.04
+  },
+  {
+    "date": "2026-08-27",
+    "category": "Bills",
+    "transactionId": "389300746596",
+    "settlementDate": "2026-08-27",
+    "debit": 250.58,
+    "credit": 0.0,
+    "balance": 30306.46
+  },
+  {
+    "date": "2026-08-27",
+    "category": "Shopping",
+    "transactionId": "335381699808",
+    "settlementDate": "2026-08-27",
+    "debit": 1499.2,
+    "credit": 0.0,
+    "balance": 28807.26
+  },
+  {
+    "date": "2026-08-27",
+    "category": "Entertainment",
+    "transactionId": "361740992546",
+    "settlementDate": "2026-08-27",
+    "debit": 999.53,
+    "credit": 0.0,
+    "balance": 27807.73
+  },
+  {
+    "date": "2026-08-28",
+    "category": "Rent",
+    "transactionId": "335473581239",
+    "settlementDate": "2026-08-28",
+    "debit": 8000.0,
+    "credit": 0.0,
+    "balance": 19807.73
+  },
+  {
+    "date": "2026-08-28",
+    "category": "Shopping",
+    "transactionId": "359759797724",
+    "settlementDate": "2026-08-28",
+    "debit": 2499.62,
+    "credit": 0.0,
+    "balance": 17308.11
+  },
+  {
+    "date": "2026-08-29",
+    "category": "Entertainment",
+    "transactionId": "351427899285",
+    "settlementDate": "2026-08-29",
+    "debit": 199.31,
+    "credit": 0.0,
+    "balance": 17108.8
+  },
+  {
+    "date": "2026-08-29",
+    "category": "Food",
+    "transactionId": "339648494024",
+    "settlementDate": "2026-08-29",
+    "debit": 40.37,
+    "credit": 0.0,
+    "balance": 17068.43
+  },
+  {
+    "date": "2026-08-29",
+    "category": "Rent",
+    "transactionId": "397248033880",
+    "settlementDate": "2026-08-29",
+    "debit": 7459.0,
+    "credit": 0.0,
+    "balance": 9609.43
+  },
+  {
+    "date": "2026-08-30",
+    "category": "Rent",
+    "transactionId": "383782364690",
+    "settlementDate": "2026-08-30",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 2609.43
+  },
+  {
+    "date": "2026-08-30",
+    "category": "Transport",
+    "transactionId": "383410133983",
+    "settlementDate": "2026-08-30",
+    "debit": 80.55,
+    "credit": 0.0,
+    "balance": 2528.88
+  },
+  {
+    "date": "2026-08-31",
+    "category": "Shopping",
+    "transactionId": "322620344871",
+    "settlementDate": "2026-08-31",
+    "debit": 2499.62,
+    "credit": 0.0,
+    "balance": 29.26
+  },
+  {
+    "date": "2026-09-02",
+    "category": "Misc",
+    "transactionId": "MIR7854990266030464",
+    "settlementDate": "2026-09-02",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 529.26
+  },
+  {
+    "date": "2026-09-02",
+    "category": "Misc",
+    "transactionId": "MIR8032279525211716",
+    "settlementDate": "2026-09-02",
+    "debit": 0.0,
+    "credit": 2000.0,
+    "balance": 2529.26
+  },
+  {
+    "date": "2026-09-02",
+    "category": "Misc",
+    "transactionId": "379707362554",
+    "settlementDate": "2026-09-02",
+    "debit": 250.03,
+    "credit": 0.0,
+    "balance": 2279.23
+  },
+  {
+    "date": "2026-09-03",
+    "category": "Misc",
+    "transactionId": "MIR7981595044273673",
+    "settlementDate": "2026-09-03",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 2779.23
+  },
+  {
+    "date": "2026-09-03",
+    "category": "Bills",
+    "transactionId": "390983993176",
+    "settlementDate": "2026-09-03",
+    "debit": 2500.55,
+    "credit": 0.0,
+    "balance": 278.68
+  },
+  {
+    "date": "2026-09-03",
+    "category": "Misc",
+    "transactionId": "MIR2968450282835683",
+    "settlementDate": "2026-09-03",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 3278.68
+  },
+  {
+    "date": "2026-09-04",
+    "category": "Misc",
+    "transactionId": "325582896428",
+    "settlementDate": "2026-09-04",
+    "debit": 250.87,
+    "credit": 0.0,
+    "balance": 3027.81
+  },
+  {
+    "date": "2026-09-04",
+    "category": "Shopping",
+    "transactionId": "332571447714",
+    "settlementDate": "2026-09-04",
+    "debit": 1499.86,
+    "credit": 0.0,
+    "balance": 1527.95
+  },
+  {
+    "date": "2026-09-04",
+    "category": "Bills",
+    "transactionId": "351325354965",
+    "settlementDate": "2026-09-04",
+    "debit": 250.78,
+    "credit": 0.0,
+    "balance": 1277.17
+  },
+  {
+    "date": "2026-09-05",
+    "category": "Salary",
+    "transactionId": "CHAS98520400395",
+    "settlementDate": "2026-09-05",
+    "debit": 0.0,
+    "credit": 34800.0,
+    "balance": 36077.17
+  },
+  {
+    "date": "2026-09-05",
+    "category": "Rent",
+    "transactionId": "399249502403",
+    "settlementDate": "2026-09-05",
+    "debit": 7000.0,
+    "credit": 0.0,
+    "balance": 29077.17
+  },
+  {
+    "date": "2026-09-05",
+    "category": "Bills",
+    "transactionId": "328712112671",
+    "settlementDate": "2026-09-05",
+    "debit": 600.81,
+    "credit": 0.0,
+    "balance": 28476.36
+  },
+  {
+    "date": "2026-09-05",
+    "category": "Shopping",
+    "transactionId": "389280793819",
+    "settlementDate": "2026-09-05",
+    "debit": 3499.28,
+    "credit": 0.0,
+    "balance": 24977.08
+  },
+  {
+    "date": "2026-09-06",
+    "category": "Entertainment",
+    "transactionId": "355652348887",
+    "settlementDate": "2026-09-06",
+    "debit": 399.29,
+    "credit": 0.0,
+    "balance": 24577.79
+  },
+  {
+    "date": "2026-09-06",
+    "category": "Entertainment",
+    "transactionId": "373163657733",
+    "settlementDate": "2026-09-06",
+    "debit": 149.14,
+    "credit": 0.0,
+    "balance": 24428.65
+  },
+  {
+    "date": "2026-09-07",
+    "category": "Bills",
+    "transactionId": "337368088898",
+    "settlementDate": "2026-09-07",
+    "debit": 400.7,
+    "credit": 0.0,
+    "balance": 24027.95
+  },
+  {
+    "date": "2026-09-07",
+    "category": "Misc",
+    "transactionId": "352917626034",
+    "settlementDate": "2026-09-07",
+    "debit": 5000.32,
+    "credit": 0.0,
+    "balance": 19027.63
+  },
+  {
+    "date": "2026-09-07",
+    "category": "Bills",
+    "transactionId": "394779036456",
+    "settlementDate": "2026-09-07",
+    "debit": 1800.49,
+    "credit": 0.0,
+    "balance": 17227.14
+  },
+  {
+    "date": "2026-09-07",
+    "category": "Shopping",
+    "transactionId": "330780352629",
+    "settlementDate": "2026-09-07",
+    "debit": 1999.38,
+    "credit": 0.0,
+    "balance": 15227.76
+  },
+  {
+    "date": "2026-09-07",
+    "category": "Bills",
+    "transactionId": "356845932321",
+    "settlementDate": "2026-09-07",
+    "debit": 250.4,
+    "credit": 0.0,
+    "balance": 14977.36
+  },
+  {
+    "date": "2026-09-08",
+    "category": "Shopping",
+    "transactionId": "362724870012",
+    "settlementDate": "2026-09-08",
+    "debit": 2499.95,
+    "credit": 0.0,
+    "balance": 12477.41
+  },
+  {
+    "date": "2026-09-08",
+    "category": "Food",
+    "transactionId": "332884832186",
+    "settlementDate": "2026-09-08",
+    "debit": 220.85,
+    "credit": 0.0,
+    "balance": 12256.56
+  },
+  {
+    "date": "2026-09-08",
+    "category": "Rent",
+    "transactionId": "329954352670",
+    "settlementDate": "2026-09-08",
+    "debit": 7310.0,
+    "credit": 0.0,
+    "balance": 4946.56
+  },
+  {
+    "date": "2026-09-08",
+    "category": "Transport",
+    "transactionId": "375985673417",
+    "settlementDate": "2026-09-08",
+    "debit": 300.22,
+    "credit": 0.0,
+    "balance": 4646.34
+  },
+  {
+    "date": "2026-09-09",
+    "category": "Shopping",
+    "transactionId": "364687670209",
+    "settlementDate": "2026-09-09",
+    "debit": 1499.83,
+    "credit": 0.0,
+    "balance": 3146.51
+  },
+  {
+    "date": "2026-09-10",
+    "category": "Transport",
+    "transactionId": "327149330844",
+    "settlementDate": "2026-09-10",
+    "debit": 500.79,
+    "credit": 0.0,
+    "balance": 2645.72
+  },
+  {
+    "date": "2026-09-10",
+    "category": "Food",
+    "transactionId": "379117481970",
+    "settlementDate": "2026-09-10",
+    "debit": 150.78,
+    "credit": 0.0,
+    "balance": 2494.94
+  },
+  {
+    "date": "2026-09-11",
+    "category": "Bills",
+    "transactionId": "321559346003",
+    "settlementDate": "2026-09-11",
+    "debit": 400.44,
+    "credit": 0.0,
+    "balance": 2094.5
+  },
+  {
+    "date": "2026-09-12",
+    "category": "Entertainment",
+    "transactionId": "359270700744",
+    "settlementDate": "2026-09-12",
+    "debit": 199.88,
+    "credit": 0.0,
+    "balance": 1894.62
+  },
+  {
+    "date": "2026-09-13",
+    "category": "Shopping",
+    "transactionId": "353188498371",
+    "settlementDate": "2026-09-13",
+    "debit": 299.65,
+    "credit": 0.0,
+    "balance": 1594.97
+  },
+  {
+    "date": "2026-09-13",
+    "category": "Shopping",
+    "transactionId": "360879524067",
+    "settlementDate": "2026-09-13",
+    "debit": 499.05,
+    "credit": 0.0,
+    "balance": 1095.92
+  },
+  {
+    "date": "2026-09-13",
+    "category": "Entertainment",
+    "transactionId": "332855590022",
+    "settlementDate": "2026-09-13",
+    "debit": 299.43,
+    "credit": 0.0,
+    "balance": 796.49
+  },
+  {
+    "date": "2026-09-13",
+    "category": "Food",
+    "transactionId": "330242485313",
+    "settlementDate": "2026-09-13",
+    "debit": 20.21,
+    "credit": 0.0,
+    "balance": 776.28
+  },
+  {
+    "date": "2026-09-14",
+    "category": "Transport",
+    "transactionId": "336553456129",
+    "settlementDate": "2026-09-14",
+    "debit": 500.01,
+    "credit": 0.0,
+    "balance": 276.27
+  },
+  {
+    "date": "2026-09-14",
+    "category": "Misc",
+    "transactionId": "MIR8259412696878850",
+    "settlementDate": "2026-09-14",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 776.27
+  },
+  {
+    "date": "2026-09-14",
+    "category": "Entertainment",
+    "transactionId": "334210811807",
+    "settlementDate": "2026-09-14",
+    "debit": 199.48,
+    "credit": 0.0,
+    "balance": 576.79
+  },
+  {
+    "date": "2026-09-14",
+    "category": "Misc",
+    "transactionId": "MIR9943610724504972",
+    "settlementDate": "2026-09-14",
+    "debit": 0.0,
+    "credit": 1000.0,
+    "balance": 1576.79
+  },
+  {
+    "date": "2026-09-14",
+    "category": "Shopping",
+    "transactionId": "339173456403",
+    "settlementDate": "2026-09-14",
+    "debit": 1499.88,
+    "credit": 0.0,
+    "balance": 76.91
+  },
+  {
+    "date": "2026-09-15",
+    "category": "Misc",
+    "transactionId": "MIR7184038292727883",
+    "settlementDate": "2026-09-15",
+    "debit": 0.0,
+    "credit": 3000.0,
+    "balance": 3076.91
+  },
+  {
+    "date": "2026-09-15",
+    "category": "Entertainment",
+    "transactionId": "377333264702",
+    "settlementDate": "2026-09-15",
+    "debit": 299.63,
+    "credit": 0.0,
+    "balance": 2777.28
+  },
+  {
+    "date": "2026-09-16",
+    "category": "Food",
+    "transactionId": "396883841357",
+    "settlementDate": "2026-09-16",
+    "debit": 40.75,
+    "credit": 0.0,
+    "balance": 2736.53
+  },
+  {
+    "date": "2026-09-17",
+    "category": "Misc",
+    "transactionId": "352694205108",
+    "settlementDate": "2026-09-17",
+    "debit": 250.64,
+    "credit": 0.0,
+    "balance": 2485.89
+  },
+  {
+    "date": "2026-09-18",
+    "category": "Entertainment",
+    "transactionId": "324806957378",
+    "settlementDate": "2026-09-18",
+    "debit": 399.78,
+    "credit": 0.0,
+    "balance": 2086.11
+  },
+  {
+    "date": "2026-09-18",
+    "category": "Shopping",
+    "transactionId": "386302557660",
+    "settlementDate": "2026-09-18",
+    "debit": 799.52,
+    "credit": 0.0,
+    "balance": 1286.59
+  },
+  {
+    "date": "2026-09-18",
+    "category": "Entertainment",
+    "transactionId": "327941600554",
+    "settlementDate": "2026-09-18",
+    "debit": 699.3,
+    "credit": 0.0,
+    "balance": 587.29
+  },
+  {
+    "date": "2026-09-19",
+    "category": "Misc",
+    "transactionId": "MIR9004919365585085",
+    "settlementDate": "2026-09-19",
+    "debit": 0.0,
+    "credit": 500.0,
+    "balance": 1087.29
+  },
+  {
+    "date": "2026-09-19",
+    "category": "Misc",
+    "transactionId": "322487726245",
+    "settlementDate": "2026-09-19",
+    "debit": 700.39,
+    "credit": 0.0,
+    "balance": 386.9
   }
 ]

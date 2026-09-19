@@ -31,7 +31,11 @@ services:
       - "8000:8000"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - LLM_API_KEY=${OPENAI_API_KEY:-}
+      - COGNEE_STORAGE_DIR=/app/data/cognee
       - PYTHONUNBUFFERED=1
+    volumes:
+      - cognee_data:/app/data/cognee
     restart: unless-stopped
 
   # 3. Java 21 Spring Boot REST Backend
@@ -90,3 +94,4 @@ services:
 volumes:
   pgdata:
   n8n_data:
+  cognee_data:

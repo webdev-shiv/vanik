@@ -1,0 +1,426 @@
+{
+  "merchant_id": "m-001",
+  "nodes": [
+    {
+      "id": "merchant_root",
+      "label": "Sharma Tea Corner",
+      "type": "Merchant",
+      "weight": 2.0,
+      "details": {
+        "category": "Chai & Snacks",
+        "location": "Connaught Place, New Delhi",
+        "monthly_revenue": 284500
+      }
+    },
+    {
+      "id": "prod_masala_chai",
+      "label": "Special Masala Chai",
+      "type": "Product",
+      "weight": 1.8,
+      "details": {
+        "price": 15,
+        "units_daily": 412,
+        "margin_percent": 68.0
+      }
+    },
+    {
+      "id": "prod_ginger_chai",
+      "label": "Adrak (Ginger) Chai",
+      "type": "Product",
+      "weight": 1.4,
+      "details": {
+        "price": 18,
+        "units_daily": 194,
+        "margin_percent": 66.0
+      }
+    },
+    {
+      "id": "prod_samosa",
+      "label": "Crispy Aloo Samosa (2pc)",
+      "type": "Product",
+      "weight": 1.6,
+      "details": {
+        "price": 30,
+        "units_daily": 230,
+        "margin_percent": 54.0
+      }
+    },
+    {
+      "id": "prod_bun_maska",
+      "label": "Fresh Bun Maska",
+      "type": "Product",
+      "weight": 1.3,
+      "details": {
+        "price": 35,
+        "units_daily": 128,
+        "margin_percent": 62.0
+      }
+    },
+    {
+      "id": "prod_paneer_pakoda",
+      "label": "Paneer Pakoda Plate",
+      "type": "Product",
+      "weight": 1.2,
+      "details": {
+        "price": 60,
+        "units_daily": 74,
+        "margin_percent": 48.0
+      }
+    },
+    {
+      "id": "prod_cutting_chai",
+      "label": "Kadak Cutting Chai",
+      "type": "Product",
+      "weight": 1.5,
+      "details": {
+        "price": 10,
+        "units_daily": 310,
+        "margin_percent": 72.0
+      }
+    },
+    {
+      "id": "slot_morning_rush",
+      "label": "Morning Rush (7:30 - 10:30 AM)",
+      "type": "Time Slot",
+      "weight": 1.7,
+      "details": {
+        "revenue_share": 34.0,
+        "peak_product": "Special Masala Chai"
+      }
+    },
+    {
+      "id": "slot_lunch_peak",
+      "label": "Lunch Break (12:30 - 2:30 PM)",
+      "type": "Time Slot",
+      "weight": 1.3,
+      "details": {
+        "revenue_share": 21.0,
+        "peak_product": "Bun Maska & Chai"
+      }
+    },
+    {
+      "id": "slot_evening_commute",
+      "label": "Evening Commute (5:00 - 8:30 PM)",
+      "type": "Time Slot",
+      "weight": 1.9,
+      "details": {
+        "revenue_share": 28.0,
+        "anomaly_status": "SLUMP_DETECTED (-31.0%)"
+      }
+    },
+    {
+      "id": "slot_late_night",
+      "label": "Night Social (8:30 - 11:00 PM)",
+      "type": "Time Slot",
+      "weight": 1.1,
+      "details": {
+        "revenue_share": 17.0,
+        "peak_product": "Adrak Chai"
+      }
+    },
+    {
+      "id": "segment_champions",
+      "label": "Champions (VIP Regulars)",
+      "type": "Segment",
+      "weight": 1.8,
+      "details": {
+        "count": 84,
+        "aov": 74,
+        "frequency": "Daily"
+      }
+    },
+    {
+      "id": "segment_loyal_regulars",
+      "label": "Loyal Customers",
+      "type": "Segment",
+      "weight": 1.6,
+      "details": {
+        "count": 218,
+        "aov": 48,
+        "frequency": "3x / week"
+      }
+    },
+    {
+      "id": "segment_inactive_regulars",
+      "label": "312 Inactive Regulars",
+      "type": "Segment",
+      "weight": 2.0,
+      "details": {
+        "count": 312,
+        "days_absent": ">21 days",
+        "potential_winback": 41000
+      }
+    },
+    {
+      "id": "segment_at_risk",
+      "label": "At-Risk Churn",
+      "type": "Segment",
+      "weight": 1.5,
+      "details": {
+        "count": 142,
+        "churn_probability": 0.76
+      }
+    },
+    {
+      "id": "segment_new_walkins",
+      "label": "New Walk-ins",
+      "type": "Segment",
+      "weight": 1.2,
+      "details": {
+        "count": 96,
+        "conversion_rate": 0.38
+      }
+    },
+    {
+      "id": "camp_evening_combo_01",
+      "label": "\u20b949 Evening Combo Offer",
+      "type": "Campaign",
+      "weight": 1.8,
+      "details": {
+        "discount": 18,
+        "actual_lift": "+27.2%",
+        "roi": 4.8,
+        "status": "COMPLETED"
+      }
+    },
+    {
+      "id": "camp_winback_whatsapp",
+      "label": "\u20b930 Win-Back WhatsApp Coupon",
+      "type": "Campaign",
+      "weight": 1.6,
+      "details": {
+        "budget": 450,
+        "conversions": 154,
+        "roi": 4.1,
+        "status": "ACTIVE"
+      }
+    },
+    {
+      "id": "camp_weekend_family",
+      "label": "Weekend Platter Special",
+      "type": "Campaign",
+      "weight": 1.3,
+      "details": {
+        "discount": 15,
+        "actual_lift": "+18.4%",
+        "roi": 3.6,
+        "status": "PLANNED"
+      }
+    },
+    {
+      "id": "insight_evening_slump",
+      "label": "Evening Footfall Slump (-31.0%)",
+      "type": "Insight",
+      "weight": 2.0,
+      "details": {
+        "revenue_shortfall": 36500,
+        "confidence": 0.94,
+        "root_cause": "312 Dormant Regulars"
+      }
+    },
+    {
+      "id": "insight_morning_strength",
+      "label": "Morning Chai Growth (+4.2%)",
+      "type": "Insight",
+      "weight": 1.4,
+      "details": {
+        "driver": "Metro commuter footfall",
+        "confidence": 0.91
+      }
+    },
+    {
+      "id": "insight_combo_affinity",
+      "label": "Chai + Samosa Basket Lift",
+      "type": "Insight",
+      "weight": 1.5,
+      "details": {
+        "cross_sell_rate": 64.5,
+        "incremental_aov": "+\u20b922"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "merchant_root",
+      "target": "prod_masala_chai",
+      "relationship": "SELLS",
+      "weight": 2.0
+    },
+    {
+      "source": "merchant_root",
+      "target": "prod_ginger_chai",
+      "relationship": "SELLS",
+      "weight": 1.5
+    },
+    {
+      "source": "merchant_root",
+      "target": "prod_samosa",
+      "relationship": "SELLS",
+      "weight": 1.8
+    },
+    {
+      "source": "merchant_root",
+      "target": "prod_bun_maska",
+      "relationship": "SELLS",
+      "weight": 1.4
+    },
+    {
+      "source": "merchant_root",
+      "target": "prod_paneer_pakoda",
+      "relationship": "SELLS",
+      "weight": 1.2
+    },
+    {
+      "source": "merchant_root",
+      "target": "prod_cutting_chai",
+      "relationship": "SELLS",
+      "weight": 1.6
+    },
+    {
+      "source": "prod_masala_chai",
+      "target": "slot_morning_rush",
+      "relationship": "PEAKS_DURING",
+      "weight": 1.9
+    },
+    {
+      "source": "prod_cutting_chai",
+      "target": "slot_morning_rush",
+      "relationship": "PEAKS_DURING",
+      "weight": 1.7
+    },
+    {
+      "source": "prod_bun_maska",
+      "target": "slot_lunch_peak",
+      "relationship": "PEAKS_DURING",
+      "weight": 1.5
+    },
+    {
+      "source": "prod_samosa",
+      "target": "slot_evening_commute",
+      "relationship": "PEAKS_DURING",
+      "weight": 2.0
+    },
+    {
+      "source": "prod_ginger_chai",
+      "target": "slot_evening_commute",
+      "relationship": "PEAKS_DURING",
+      "weight": 1.7
+    },
+    {
+      "source": "prod_paneer_pakoda",
+      "target": "slot_evening_commute",
+      "relationship": "PEAKS_DURING",
+      "weight": 1.6
+    },
+    {
+      "source": "prod_ginger_chai",
+      "target": "slot_late_night",
+      "relationship": "PEAKS_DURING",
+      "weight": 1.4
+    },
+    {
+      "source": "segment_champions",
+      "target": "slot_morning_rush",
+      "relationship": "VISITS_DURING",
+      "weight": 1.8
+    },
+    {
+      "source": "segment_loyal_regulars",
+      "target": "prod_masala_chai",
+      "relationship": "PREFERS",
+      "weight": 1.7
+    },
+    {
+      "source": "segment_inactive_regulars",
+      "target": "slot_evening_commute",
+      "relationship": "HISTORICALLY_VISITED",
+      "weight": 2.0
+    },
+    {
+      "source": "segment_inactive_regulars",
+      "target": "prod_samosa",
+      "relationship": "PREVIOUS_FAVORITE",
+      "weight": 1.8
+    },
+    {
+      "source": "segment_new_walkins",
+      "target": "slot_lunch_peak",
+      "relationship": "DISCOVERS_AT",
+      "weight": 1.3
+    },
+    {
+      "source": "insight_evening_slump",
+      "target": "slot_evening_commute",
+      "relationship": "IMPACTS",
+      "weight": 2.0
+    },
+    {
+      "source": "insight_evening_slump",
+      "target": "segment_inactive_regulars",
+      "relationship": "CAUSED_BY_DROPOUT_OF",
+      "weight": 2.0
+    },
+    {
+      "source": "insight_morning_strength",
+      "target": "slot_morning_rush",
+      "relationship": "OBSERVED_IN",
+      "weight": 1.5
+    },
+    {
+      "source": "insight_combo_affinity",
+      "target": "prod_masala_chai",
+      "relationship": "PAIRS_WITH",
+      "weight": 1.8
+    },
+    {
+      "source": "insight_combo_affinity",
+      "target": "prod_samosa",
+      "relationship": "PAIRS_WITH",
+      "weight": 1.8
+    },
+    {
+      "source": "camp_evening_combo_01",
+      "target": "segment_inactive_regulars",
+      "relationship": "TARGETED",
+      "weight": 2.0
+    },
+    {
+      "source": "camp_evening_combo_01",
+      "target": "slot_evening_commute",
+      "relationship": "ACTIVE_DURING",
+      "weight": 1.9
+    },
+    {
+      "source": "camp_evening_combo_01",
+      "target": "prod_samosa",
+      "relationship": "BUNDLED",
+      "weight": 1.8
+    },
+    {
+      "source": "camp_evening_combo_01",
+      "target": "prod_masala_chai",
+      "relationship": "BUNDLED",
+      "weight": 1.8
+    },
+    {
+      "source": "camp_evening_combo_01",
+      "target": "insight_evening_slump",
+      "relationship": "REMEDIED",
+      "weight": 2.0
+    },
+    {
+      "source": "camp_winback_whatsapp",
+      "target": "segment_inactive_regulars",
+      "relationship": "OFFERED_TO",
+      "weight": 1.9
+    },
+    {
+      "source": "camp_weekend_family",
+      "target": "prod_paneer_pakoda",
+      "relationship": "FEATURED",
+      "weight": 1.4
+    }
+  ],
+  "total_nodes": 22,
+  "total_edges": 30
+}

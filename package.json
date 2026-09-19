@@ -1,0 +1,21 @@
+{
+  "name": "vanik-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VANIK - Merchant Growth AI & Cognee Memory Platform",
+  "scripts": {
+    "start": "npm --prefix frontend run start",
+    "dev": "concurrently -n \"AI-SERVICE,FRONTEND\" -c \"magenta.bold,cyan.bold\" \"npm run dev:ai\" \"npm run dev:frontend\"",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:ai": "ai-service\\.venv\\Scripts\\uvicorn.exe app.main:app --app-dir ai-service --port 8000 --reload",
+    "dev:backend": "mvn -f backend/pom.xml spring-boot:run",
+    "dev:all": "concurrently -n \"AI-SERVICE,FRONTEND,BACKEND\" -c \"magenta.bold,cyan.bold,yellow.bold\" \"npm run dev:ai\" \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:docker": "docker-compose up --build",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build",
+    "test:ai": "ai-service\\.venv\\Scripts\\pytest.exe ai-service -v",
+    "test": "npm run test:ai"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

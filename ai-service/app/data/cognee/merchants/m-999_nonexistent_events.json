@@ -1,0 +1,44 @@
+[
+  {
+    "id": "evt-1789800798725",
+    "type": "INSIGHT_GENERATED",
+    "timestamp": "2026-09-19T12:23:18Z",
+    "payload": {
+      "report_id": "rpt-m-999_nonexistent-2099-01-01",
+      "date": "2099-01-01",
+      "revenue": 0.0,
+      "transactions": 0,
+      "top_product": "Special Masala Chai",
+      "profit": 0.0,
+      "summary": "Aaj aapke store par koi transactions record nahi hue. Kal ke liye store timing aur Paytm Soundbox connectivity zaroor check karein."
+    }
+  },
+  {
+    "id": "evt-1789799792596",
+    "type": "INSIGHT_GENERATED",
+    "timestamp": "2026-09-19T12:06:32Z",
+    "payload": {
+      "report_id": "rpt-m-999_nonexistent-2099-01-01",
+      "date": "2099-01-01",
+      "revenue": 0.0,
+      "transactions": 0,
+      "top_product": "Special Masala Chai",
+      "profit": 0.0,
+      "summary": "Aaj aapke store par koi transactions record nahi hue. Kal ke liye store timing aur Paytm Soundbox connectivity zaroor check karein."
+    }
+  },
+  {
+    "id": "evt-1789799710540",
+    "type": "INSIGHT_GENERATED",
+    "timestamp": "2026-09-19T12:05:10Z",
+    "payload": {
+      "report_id": "rpt-m-999_nonexistent-2099-01-01",
+      "date": "2099-01-01",
+      "revenue": 0.0,
+      "transactions": 0,
+      "top_product": "Special Masala Chai",
+      "profit": null,
+      "summary": "Aaj aapke store par koi transactions record nahi hue. Kal ke liye store timing aur Paytm Soundbox connectivity zaroor check karein."
+    }
+  }
+]

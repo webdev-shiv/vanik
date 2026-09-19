@@ -29,6 +29,7 @@ public class CampaignService {
     private final MerchantRepository merchantRepository;
     private final TransactionRepository transactionRepository;
     private final CustomerRepository customerRepository;
+    private final MemoryService memoryService;
 
     public List<CampaignEntity> getCampaignsByMerchantId(String merchantId) {
         log.info("Fetching campaigns for merchant: {}", merchantId);
@@ -121,7 +122,22 @@ public class CampaignService {
                 .repeatCustomersAfter(null)
                 .build();
 
-        return campaignRepository.save(entity);
+        CampaignEntity saved = campaignRepository.save(entity);
+
+        try {
+            java.util.Map<String, Object> payload = new java.util.HashMap<>();
+            payload.put("campaignId", saved.getId());
+            payload.put("name", saved.getName());
+            payload.put("type", saved.getType());
+            payload.put("targetSegment", saved.getTargetSegment());
+            payload.put("budget", saved.getBudget());
+            payload.put("discountValue", saved.getDiscountValue());
+            memoryService.recordEventAsync(merchantId, "CAMPAIGN_LAUNCHED", payload);
+        } catch (Exception e) {
+            log.debug("Memory event skipped: {}", e.getMessage());
+        }
+
+        return saved;
     }
 
     public CampaignEntity createCampaign(CampaignEntity campaign) {
@@ -131,13 +147,39 @@ public class CampaignService {
         if (campaign.getStatus() == null) {
             campaign.setStatus("ACTIVE");
         }
-        return campaignRepository.save(campaign);
+        CampaignEntity saved = campaignRepository.save(campaign);
+
+        try {
+            java.util.Map<String, Object> payload = new java.util.HashMap<>();
+            payload.put("campaignId", saved.getId());
+            payload.put("name", saved.getName());
+            payload.put("type", saved.getType());
+            memoryService.recordEventAsync(saved.getMerchantId(), "CAMPAIGN_LAUNCHED", payload);
+        } catch (Exception e) {
+            log.debug("Memory event skipped: {}", e.getMessage());
+        }
+
+        return saved;
     }
 
     public Optional<CampaignEntity> updateStatus(String id, String status) {
         return campaignRepository.findById(id).map(entity -> {
             entity.setStatus(status);
-            return campaignRepository.save(entity);
+            CampaignEntity updated = campaignRepository.save(entity);
+
+            try {
+                java.util.Map<String, Object> payload = new java.util.HashMap<>();
+                payload.put("campaignId", updated.getId());
+                payload.put("name", updated.getName());
+                payload.put("status", updated.getStatus());
+                payload.put("actualImpactPercent", updated.getActualImpactPercent());
+                String eventType = "COMPLETED".equalsIgnoreCase(status) ? "CAMPAIGN_RESULT" : "CAMPAIGN_STATUS_CHANGED";
+                memoryService.recordEventAsync(updated.getMerchantId(), eventType, payload);
+            } catch (Exception e) {
+                log.debug("Memory event skipped: {}", e.getMessage());
+            }
+
+            return updated;
         });
     }
 

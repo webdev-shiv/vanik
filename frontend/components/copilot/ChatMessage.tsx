@@ -2,9 +2,11 @@
 
 import React from "react";
 import Link from "next/link";
-import { Bot, User, BarChart2, Lightbulb, CheckCircle2, ExternalLink, Sparkles } from "lucide-react";
+import { Bot, User, BarChart2, Lightbulb, CheckCircle2, ExternalLink, Sparkles, Brain } from "lucide-react";
 import { CopilotMessage } from "@/lib/types";
 import { cn } from "@/lib/utils";
+
+import { VoiceReadoutButton } from "@/components/ui/VoiceReadoutButton";
 
 interface ChatMessageProps {
   message: CopilotMessage;
@@ -38,13 +40,21 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message, onQuickAction
         {/* Timestamp & Sender Header */}
         <div
           className={cn(
-            "flex items-center gap-2 text-[11px] text-navy-400 font-medium px-1",
+            "flex items-center gap-2 text-[11px] text-navy-400 font-medium px-1 justify-between",
             !isAI && "justify-end"
           )}
         >
-          <span className="font-bold text-navy-800">{isAI ? "VANIK Saathi" : "You (Ramesh Sharma)"}</span>
-          <span>•</span>
-          <span>{message.timestamp}</span>
+          <div className="flex items-center gap-1.5">
+            <span className="font-bold text-navy-800">{isAI ? "VANIK Saathi" : "You (Ramesh Sharma)"}</span>
+            <span>•</span>
+            <span>{message.timestamp}</span>
+          </div>
+
+          {isAI && (
+            <VoiceReadoutButton
+              textToRead={`${message.content} ${message.insightSection || ""} ${message.recommendationSection || ""}`}
+            />
+          )}
         </div>
 
         {/* Paytm White/Blue Bubble */}
@@ -133,6 +143,35 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({ message, onQuickAction
                   >
                     {metric}
                   </span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Cognee Long-Term Memory Provenance Chips */}
+          {isAI && message.memorySources && message.memorySources.length > 0 && (
+            <div className="mt-3 pt-2.5 border-t border-navy-100">
+              <div className="flex items-center gap-1.5 mb-1.5">
+                <Link
+                  href="/memory"
+                  className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold bg-violet-100 dark:bg-violet-950 text-violet-700 dark:text-violet-300 border border-violet-200/80 dark:border-violet-800 hover:bg-violet-200/70 transition-colors"
+                >
+                  <Brain className="w-3 h-3" />
+                  <span>🧠 Used memory</span>
+                </Link>
+                <span className="text-[10px] text-navy-400 dark:text-slate-400">
+                  knowledge connections:
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-1.5">
+                {message.memorySources.map((source, i) => (
+                  <Link
+                    key={i}
+                    href="/memory"
+                    className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-md bg-violet-50/70 dark:bg-navy-900 text-violet-800 dark:text-violet-200 border border-violet-200/60 dark:border-violet-800 hover:border-violet-400 transition-colors"
+                  >
+                    {source}
+                  </Link>
                 ))}
               </div>
             </div>

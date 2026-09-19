@@ -197,3 +197,11 @@ def legacy_detect_anomalies(data: Optional[Dict[str, Any]] = None):
 def copilot_chat(req: CopilotChatRequest):
     return copilot_engine.answer_query(req)
 
+
+from app.api.memory_routes import router as memory_router
+router.include_router(memory_router)
+
+from app.api.daily_report_routes import daily_report_router
+router.include_router(daily_report_router)
+router.include_router(daily_report_router, prefix="/ai")
+

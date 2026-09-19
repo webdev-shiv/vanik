@@ -492,3 +492,52 @@ CREATE POLICY "Allow public read access to upi_ecosystem_statistics"
     ON upi_ecosystem_statistics FOR SELECT
     USING (true);
 
+-- ----------------------------------------------------------------------------
+-- 12. daily_reports (VANIK Daily Business Voice Brief)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS daily_reports (
+    id VARCHAR(64) PRIMARY KEY,
+    merchant_id VARCHAR(64) NOT NULL,
+    report_date VARCHAR(32) NOT NULL,
+    revenue NUMERIC(14, 2) NOT NULL DEFAULT 0.00,
+    transactions INT NOT NULL DEFAULT 0,
+    average_order_value NUMERIC(12, 2) NOT NULL DEFAULT 0.00,
+    profit NUMERIC(14, 2),
+    profit_margin NUMERIC(8, 2),
+    profit_label VARCHAR(64) NOT NULL DEFAULT 'Estimated Gross Profit',
+    has_reliable_cost BOOLEAN NOT NULL DEFAULT FALSE,
+    vs_yesterday NUMERIC(8, 2),
+    vs_7_day_average NUMERIC(8, 2),
+    top_product VARCHAR(255),
+    peak_hours VARCHAR(255),
+    insights_json TEXT,
+    recommendations_json TEXT,
+    voice_script TEXT NOT NULL,
+    voice_script_hinglish TEXT,
+    voice_script_hindi TEXT,
+    voice_script_english TEXT,
+    audio_url VARCHAR(255),
+    language VARCHAR(32) NOT NULL DEFAULT 'hinglish',
+    status VARCHAR(32) NOT NULL DEFAULT 'READY',
+    generated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT uq_daily_reports_merchant_date UNIQUE (merchant_id, report_date)
+);
+
+CREATE INDEX IF NOT EXISTS idx_daily_reports_merchant_date ON daily_reports(merchant_id, report_date DESC);
+
+-- 13. merchant_report_settings
+CREATE TABLE IF NOT EXISTS merchant_report_settings (
+    merchant_id VARCHAR(64) PRIMARY KEY,
+    enabled BOOLEAN NOT NULL DEFAULT TRUE,
+    report_time VARCHAR(16) NOT NULL DEFAULT '22:30',
+    language VARCHAR(32) NOT NULL DEFAULT 'hinglish',
+    report_length VARCHAR(32) NOT NULL DEFAULT 'standard',
+    include_sales BOOLEAN NOT NULL DEFAULT TRUE,
+    include_profit BOOLEAN NOT NULL DEFAULT TRUE,
+    include_products BOOLEAN NOT NULL DEFAULT TRUE,
+    include_insights BOOLEAN NOT NULL DEFAULT TRUE,
+    include_recommendations BOOLEAN NOT NULL DEFAULT TRUE,
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+

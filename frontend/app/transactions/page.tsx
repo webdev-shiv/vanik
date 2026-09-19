@@ -23,160 +23,28 @@ import {
   Download,
 } from "lucide-react";
 
-import { getUserTransactionItems } from "@/lib/user-dataset";
-
-const userCsvItems: any[] = getUserTransactionItems();
-
-const mockTransactionItems: any[] = [
-  ...userCsvItems,
-
-  {
-    id: "txn-101",
-    receiptNumber: "PAYTM-98214-001",
-    customerName: "Anand Verma",
-    customerPhone: "+91 98110•••••",
-    channel: "Paytm Soundbox",
-    amount: 180,
-    itemsCount: 3,
-    status: "SUCCESSFUL",
-    timestamp: "Today, 18:42 PM",
-    date: "2026-09-18",
-    time: "18:42",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-102",
-    receiptNumber: "PAYTM-98214-002",
-    customerName: "Priya Sharma",
-    customerPhone: "+91 98712•••••",
-    channel: "Paytm QR",
-    amount: 350,
-    itemsCount: 4,
-    status: "SUCCESSFUL",
-    timestamp: "Today, 18:15 PM",
-    date: "2026-09-18",
-    time: "18:15",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-103",
-    receiptNumber: "PAYTM-98214-003",
-    customerName: "Vikram Malhotra",
-    channel: "Card POS",
-    amount: 1250,
-    itemsCount: 6,
-    status: "SUCCESSFUL",
-    timestamp: "Today, 17:50 PM",
-    date: "2026-09-18",
-    time: "17:50",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-104",
-    receiptNumber: "PAYTM-98214-004",
-    customerName: "Rahul Gupta",
-    channel: "Paytm Soundbox",
-    amount: 95,
-    itemsCount: 2,
-    status: "PENDING",
-    timestamp: "Today, 17:10 PM",
-    date: "2026-09-18",
-    time: "17:10",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-105",
-    receiptNumber: "PAYTM-98214-005",
-    customerName: "Neha Sen",
-    channel: "Paytm QR",
-    amount: 220,
-    itemsCount: 3,
-    status: "REFUNDED",
-    timestamp: "Today, 16:30 PM",
-    date: "2026-09-18",
-    time: "16:30",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-106",
-    receiptNumber: "PAYTM-98214-006",
-    customerName: "Sanjay Singhania",
-    channel: "Card POS",
-    amount: 2800,
-    itemsCount: 8,
-    status: "SUCCESSFUL",
-    timestamp: "Yesterday, 20:15 PM",
-    date: "2026-09-17",
-    time: "20:15",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-107",
-    receiptNumber: "PAYTM-98214-007",
-    customerName: "Kavita Reddy",
-    channel: "Paytm Soundbox",
-    amount: 140,
-    itemsCount: 2,
-    status: "FAILED",
-    timestamp: "Yesterday, 15:40 PM",
-    date: "2026-09-17",
-    time: "15:40",
-    timeframeCategory: "day",
-  },
-  {
-    id: "txn-108",
-    receiptNumber: "PAYTM-98214-008",
-    customerName: "Deepak Kumar",
-    channel: "Paytm QR",
-    amount: 520,
-    itemsCount: 5,
-    status: "SUCCESSFUL",
-    timestamp: "Sep 15, 2026, 12:30 PM",
-    date: "2026-09-15",
-    time: "12:30",
-    timeframeCategory: "month",
-  },
-  {
-    id: "txn-109",
-    receiptNumber: "PAYTM-98214-009",
-    customerName: "Rohan Mehta",
-    channel: "Paytm Soundbox",
-    amount: 410,
-    itemsCount: 4,
-    status: "SUCCESSFUL",
-    timestamp: "Sep 10, 2026, 19:00 PM",
-    date: "2026-09-10",
-    time: "19:00",
-    timeframeCategory: "month",
-  },
-  {
-    id: "txn-110",
-    receiptNumber: "PAYTM-98214-010",
-    customerName: "Meenakshi Joshi",
-    channel: "Card POS",
-    amount: 4500,
-    itemsCount: 12,
-    status: "SUCCESSFUL",
-    timestamp: "Aug 24, 2026, 14:20 PM",
-    date: "2026-08-24",
-    time: "14:20",
-    timeframeCategory: "year",
-  },
-];
+import { getUserTransactionItems, syncCustomTransactions } from "@/lib/user-dataset";
+import { VoiceInputButton } from "@/components/ui/VoiceInputButton";
 
 function TransactionsContent() {
-  const [timeframeFilter, setTimeframeFilter] = useState<"day" | "month" | "year" | "all">("month");
+  const [timeframeFilter, setTimeframeFilter] = useState<"day" | "month" | "year" | "all">("day");
   const [statusFilter, setStatusFilter] = useState<string>("ALL");
   const [channelFilter, setChannelFilter] = useState<string>("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedReceipt, setSelectedReceipt] = useState<TransactionItem | null>(null);
+  const [refreshCount, setRefreshCount] = useState(0);
+  const [isMounted, setIsMounted] = useState(false);
 
   React.useEffect(() => {
+    setIsMounted(true);
+    syncCustomTransactions();
+    setRefreshCount((prev) => prev + 1);
+
     const handleTimeframeChange = (e: any) => {
       const tf = (e.detail?.timeframe || "").toUpperCase();
-      if (tf.includes("TODAY") || tf.includes("YESTERDAY")) {
+      if (tf.includes("TODAY") || tf.includes("YESTERDAY") || tf.includes("7D")) {
         setTimeframeFilter("day");
-      } else if (tf.includes("30D") || tf.includes("7D")) {
+      } else if (tf.includes("30D")) {
         setTimeframeFilter("month");
       } else if (tf.includes("90D") || tf.includes("1Y") || tf.includes("FY26")) {
         setTimeframeFilter("year");
@@ -185,18 +53,32 @@ function TransactionsContent() {
       }
     };
 
+    const handleTxnAdded = () => {
+      setRefreshCount((prev) => prev + 1);
+    };
+
     window.addEventListener("vanik_timeframe_change", handleTimeframeChange);
+    window.addEventListener("vanik_transaction_added", handleTxnAdded);
     return () => {
       window.removeEventListener("vanik_timeframe_change", handleTimeframeChange);
+      window.removeEventListener("vanik_transaction_added", handleTxnAdded);
     };
   }, []);
 
   const filteredTransactions = useMemo(() => {
-    return mockTransactionItems.filter((t) => {
+    if (!isMounted) return [];
+    const liveItems = getUserTransactionItems();
+    return liveItems.filter((t) => {
       // Timeframe Filter (Day / Month / Year)
-      if (timeframeFilter === "day" && t.timeframeCategory !== "day") return false;
-      if (timeframeFilter === "month" && t.timeframeCategory === "year") return false;
-      if (timeframeFilter === "year" && t.timeframeCategory !== "year" && t.timeframeCategory !== "month" && t.timeframeCategory !== "day") return false;
+      if (timeframeFilter === "day") {
+        if (t.timeframeCategory !== "day" && !t.timestamp.includes("2026-09-19") && !t.timestamp.includes("2026-09-18")) {
+          return false;
+        }
+      } else if (timeframeFilter === "month" && t.timeframeCategory === "year") {
+        return false;
+      } else if (timeframeFilter === "year" && t.timeframeCategory !== "year" && t.timeframeCategory !== "month" && t.timeframeCategory !== "day") {
+        return false;
+      }
 
       // Status Filter
       if (statusFilter !== "ALL" && t.status !== statusFilter) return false;
@@ -214,16 +96,16 @@ function TransactionsContent() {
 
       return true;
     });
-  }, [timeframeFilter, statusFilter, channelFilter, searchQuery]);
+  }, [timeframeFilter, statusFilter, channelFilter, searchQuery, refreshCount]);
 
   const stats = useMemo(() => {
     const totalVolume = filteredTransactions.reduce(
-      (acc, t) => acc + (t.status === "SUCCESSFUL" || t.status === "SETTLED" ? t.amount : 0),
+      (acc, t) => acc + (t.status === "SUCCESSFUL" ? t.amount : 0),
       0
     );
     const count = filteredTransactions.length;
     const successfulCount = filteredTransactions.filter(
-      (t) => t.status === "SUCCESSFUL" || t.status === "SETTLED"
+      (t) => t.status === "SUCCESSFUL"
     ).length;
     const successRate = count > 0 ? Math.round((successfulCount / count) * 100) : 0;
     const avgTicket = successfulCount > 0 ? Math.round(totalVolume / successfulCount) : 0;
@@ -290,15 +172,24 @@ function TransactionsContent() {
           </div>
 
           {/* Search Field */}
-          <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 absolute left-3.5 top-3 text-navy-400 dark:text-slate-400" />
+          <div className="relative w-full md:w-72 flex items-center">
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-navy-400 dark:text-slate-400 pointer-events-none" />
             <input
               type="text"
               placeholder="Search receipt ID or customer..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full text-xs bg-navy-50/50 dark:bg-[#0c162d] border border-navy-200/80 dark:border-navy-700 rounded-full pl-10 pr-4 py-2.5 text-navy-900 dark:text-white focus:bg-white dark:focus:bg-[#111c38] focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
+              className="w-full text-xs bg-navy-50/50 dark:bg-[#0c162d] border border-navy-200/80 dark:border-navy-700 rounded-full pl-10 pr-10 py-2.5 text-navy-900 dark:text-white focus:bg-white dark:focus:bg-[#111c38] focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 transition-all"
             />
+            <div className="absolute right-2 top-1/2 -translate-y-1/2">
+              <VoiceInputButton
+                onTranscript={(transcript) => setSearchQuery(transcript)}
+                tooltipLabel="Search transactions by voice"
+                size="sm"
+                variant="ghost"
+                badgePosition="bottom"
+              />
+            </div>
           </div>
         </div>
 

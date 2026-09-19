@@ -29,6 +29,10 @@ public class ChatMessageDto {
 
     private List<QuickActionDto> quickActions;
 
+    @JsonProperty("memory_sources")
+    @JsonAlias({"memorySources", "memory_sources"})
+    private List<String> memorySources;
+
 
     @Data
     @Builder

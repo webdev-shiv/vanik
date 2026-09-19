@@ -39,3 +39,7 @@ class CopilotChatResponse(BaseModel):
     )
     intent: Optional[str] = Field(None, description="Identified question intent")
     quickActions: List[QuickAction] = Field(default_factory=list)
+    memory_sources: List[str] = Field(
+        default_factory=list,
+        description="Cognee memory provenance sources and graph nodes"
+    )

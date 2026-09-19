@@ -205,6 +205,7 @@ export interface CopilotMessage {
   recommendationSection?: string;
   citedMetrics?: string[];
   intent?: string;
+  memorySources?: string[];
   quickActions?: {
     label: string;
     action: string;
@@ -364,5 +365,151 @@ export interface TransactionItem {
   time: string;
   timeframeCategory: "day" | "month" | "year";
 }
+
+// ============================================================================
+// Cognee VANIK Memory (Merchant Memory Graph & Episodic Telemetry)
+// ============================================================================
+
+export type MemoryNodeType = "Merchant" | "Product" | "Time Slot" | "Segment" | "Campaign" | "Insight";
+
+export interface MemoryNode {
+  id: string;
+  label: string;
+  type: MemoryNodeType;
+  weight: number;
+  details?: Record<string, unknown>;
+  x?: number;
+  y?: number;
+}
+
+export interface MemoryEdge {
+  source: string;
+  target: string;
+  relationship: string;
+  weight: number;
+}
+
+export interface MemoryGraphData {
+  merchantId: string;
+  nodes: MemoryNode[];
+  edges: MemoryEdge[];
+  totalNodes: number;
+  totalEdges: number;
+}
+
+export interface RotatingInsight {
+  text: string;
+  source: string;
+  nodeId?: string;
+}
+
+export interface MemoryStats {
+  merchantId: string;
+  nodeCount: number;
+  edgeCount: number;
+  documentCount: number;
+  lastUpdated: string;
+  topEntityTypes: Record<string, number>;
+  engineStatus: "ACTIVE" | "EMBEDDED_GRAPH" | "CACHED_FALLBACK";
+  totalMemories: number;
+  totalConnections: number;
+  rotatingInsights: RotatingInsight[];
+}
+
+export interface MemoryRecallResult {
+  query: string;
+  answer: string;
+  sources: string[];
+  relatedNodes: string[];
+  confidence: number;
+}
+
+export interface MemoryTimelineEvent {
+  id: string;
+  type: "TRANSACTION_RECORDED" | "CAMPAIGN_LAUNCHED" | "CAMPAIGN_RESULT" | "INSIGHT_GENERATED" | "COPILOT_CHAT";
+  title: string;
+  description: string;
+  timestamp: string;
+  badge: string;
+  badgeColor: "brand" | "emerald" | "rose" | "violet" | "slate";
+  relatedNodeId?: string;
+}
+
+export type DashboardViewMode = "easy" | "technical";
+
+export interface RecommendationItem {
+  action: string;
+  why: string;
+  confidence: "HIGH" | "MEDIUM" | "INSUFFICIENT";
+  product?: string;
+}
+
+export interface DailyReportProductMetric {
+  product_name: string;
+  quantity: number;
+  revenue: number;
+  trend: "UP" | "DOWN" | "STABLE";
+}
+
+export interface DailyBusinessReport {
+  id: string;
+  merchant_id: string;
+  date: string;
+  business_date?: string;
+  period_title?: string;
+  revenue: number;
+  transactions: number;
+  average_order_value: number;
+  profit?: number | null;
+  profit_margin?: number | null;
+  profit_label: string; // "Estimated Gross Profit" or "Gross Profit" or "Sales / Revenue"
+  has_reliable_cost: boolean;
+  data_sufficiency?: "HIGH" | "MEDIUM" | "INSUFFICIENT";
+  data_sufficiency_message?: string;
+  comparison: {
+    vs_yesterday?: number | null;
+    vs_7_day_average?: number | null;
+    yesterday_revenue?: number | null;
+    seven_day_avg_revenue?: number | null;
+    yesterday_diff_amount?: number | null;
+    yesterday_diff_direction?: "higher" | "lower" | "same";
+  };
+  top_products: DailyReportProductMetric[];
+  declining_products: DailyReportProductMetric[];
+  peak_hours: string[];
+  slow_hours: string[];
+  insights: string[];
+  recommendations: string[];
+  recommendation_items?: RecommendationItem[];
+  voice_script: string;
+  voice_script_hinglish: string;
+  voice_script_hindi: string;
+  voice_script_english: string;
+  audio_url?: string;
+  audio_cached?: boolean;
+  language: "hinglish" | "hindi" | "english" | string;
+  generated_at: string;
+  status: string;
+  soundbox_status?: string;
+  soundbox_message?: string;
+}
+
+export interface DailyReportSettings {
+  merchant_id: string;
+  enabled: boolean;
+  report_time: string; // "22:30"
+  opening_time?: string; // "09:00"
+  closing_time?: string; // "23:00"
+  timezone?: string; // "Asia/Kolkata"
+  view_mode_default?: DashboardViewMode;
+  language: "hinglish" | "hindi" | "english" | string;
+  report_length: "short" | "standard" | string;
+  include_sales: boolean;
+  include_profit: boolean;
+  include_products: boolean;
+  include_insights: boolean;
+  include_recommendations: boolean;
+}
+
 
 

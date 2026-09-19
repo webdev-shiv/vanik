@@ -8,6 +8,7 @@ import { vanikApi } from "@/lib/api";
 import { ChatMessage } from "./ChatMessage";
 import { SuggestedQuestion } from "./SuggestedQuestion";
 import { Button } from "@/components/ui/Button";
+import { VoiceInputButton } from "@/components/ui/VoiceInputButton";
 
 export const ChatWindow: React.FC = () => {
   const [messages, setMessages] = useState<CopilotMessage[]>(initialCopilotMessages);
@@ -134,20 +135,34 @@ export const ChatWindow: React.FC = () => {
           }}
           className="flex items-center gap-2"
         >
-          <input
-            type="text"
-            placeholder="Ask Saathi anything about your sales, customers, or promotions..."
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            disabled={isTyping}
-            className="flex-1 text-xs md:text-sm bg-navy-50/50 border border-navy-200/80 rounded-full px-4 py-2.5 text-navy-900 placeholder:text-navy-400 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 focus:bg-white transition-all"
-          />
+          <div className="relative flex-1 flex items-center">
+            <input
+              type="text"
+              placeholder="Ask Saathi anything about your sales, customers, or promotions..."
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
+              disabled={isTyping}
+              className="w-full text-xs md:text-sm bg-navy-50/50 border border-navy-200/80 rounded-full pl-4 pr-10 py-2.5 text-navy-900 placeholder:text-navy-400 focus:outline-none focus:border-brand-500 focus:ring-4 focus:ring-brand-500/10 focus:bg-white transition-all"
+            />
+            <div className="absolute right-1.5 top-1/2 -translate-y-1/2">
+              <VoiceInputButton
+                onTranscript={(transcript) => {
+                  setInputValue(transcript);
+                }}
+                tooltipLabel="Speak question to Saathi"
+                disabled={isTyping}
+                size="sm"
+                variant="ghost"
+                badgePosition="top"
+              />
+            </div>
+          </div>
           <Button
             type="submit"
             variant="primary"
             size="md"
             disabled={!inputValue.trim() || isTyping}
-            className="h-10 px-5 font-bold rounded-full shadow-xs"
+            className="h-10 px-5 font-bold rounded-full shadow-xs shrink-0"
           >
             <Send className="w-3.5 h-3.5" />
             <span className="hidden sm:inline ml-1">Send</span>

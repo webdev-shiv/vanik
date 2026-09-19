@@ -1,0 +1,155 @@
+{
+  "name": "04 - VANIK Memory Sync (Cognee Knowledge Graph Ingestion)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "node-nightly-schedule",
+      "name": "Nightly Schedule (2:00 AM IST)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.1,
+      "position": [160, 240]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "memory-sync",
+        "options": {}
+      },
+      "id": "node-webhook-memory-sync",
+      "name": "Webhook: On-Demand Memory Sync",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [160, 440]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/merchants",
+        "authentication": "none",
+        "options": {
+          "timeout": 8000
+        }
+      },
+      "id": "node-fetch-merchants",
+      "name": "Fetch Active Merchants",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [420, 340]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/memory/ingest",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"{{ $json.id || 'm-001' }}\",\n  \"force_refresh\": true\n}",
+        "options": {
+          "timeout": 15000
+        }
+      },
+      "id": "node-ingest-merchant-memory",
+      "name": "Ingest ML Knowledge Graph Snapshot",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [680, 340]
+    },
+    {
+      "parameters": {
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/campaigns/camp-evening-combo-01/results",
+        "options": {
+          "timeout": 8000
+        }
+      },
+      "id": "node-fetch-campaign-results",
+      "name": "Fetch Recent Campaign Telemetry",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [920, 340]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.BACKEND_URL || 'http://localhost:8080' }}/api/memory/event",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"merchant_id\": \"m-001\",\n  \"event_type\": \"CAMPAIGN_RESULT\",\n  \"payload\": {\n    \"campaign_id\": \"camp-evening-combo-01\",\n    \"name\": \"?49 Evening Chai & Snack Combo\",\n    \"lift_percent\": 27.2,\n    \"roi\": 4.8,\n    \"incremental_revenue\": 13464.0,\n    \"note\": \"Closed-loop outcome registered in Cognee memory graph\"\n  }\n}",
+        "options": {
+          "timeout": 8000
+        }
+      },
+      "id": "node-record-closed-loop-event",
+      "name": "Post Closed-Loop Memory Event",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1160, 340]
+    }
+  ],
+  "connections": {
+    "node-nightly-schedule": {
+      "main": [
+        [
+          {
+            "node": "node-fetch-merchants",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "node-webhook-memory-sync": {
+      "main": [
+        [
+          {
+            "node": "node-fetch-merchants",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "node-fetch-merchants": {
+      "main": [
+        [
+          {
+            "node": "node-ingest-merchant-memory",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "node-ingest-merchant-memory": {
+      "main": [
+        [
+          {
+            "node": "node-fetch-campaign-results",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "node-fetch-campaign-results": {
+      "main": [
+        [
+          {
+            "node": "node-record-closed-loop-event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
